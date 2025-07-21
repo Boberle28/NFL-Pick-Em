@@ -89,14 +89,14 @@
       btn.classList.add("selected");
     }
 
-    // Values to store games not picked
-    let GamesNotPicked=[];
-
     function submitPicks() {
       const name = document.getElementById("name").value.trim();
       const matchups = document.querySelectorAll(".matchup");
       let picks = [];
 
+      // Values to store games not picked
+      let GamesNotPicked=[];
+      
       matchups.forEach(matchup => {
         const gameTitle = matchup.getAttribute("data-game");
         const selected = matchup.querySelector("button.selected");
@@ -120,7 +120,6 @@
         window.location.href = `mailto:brando2885@hotmail.com?subject=${subject}&body=${body}`;
       }
       else{
-        GamesNotPicked = [];
         console.log(GamesNotPicked);
         alert("You can not submit until you've picked all the games!");
       }
