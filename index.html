@@ -96,7 +96,7 @@
 
       // Values to store games not picked
       let GamesNotPicked=[];
-      
+
       matchups.forEach(matchup => {
         const gameTitle = matchup.getAttribute("data-game");
         const selected = matchup.querySelector("button.selected");
@@ -120,6 +120,9 @@
         window.location.href = `mailto:brando2885@hotmail.com?subject=${subject}&body=${body}`;
       }
       else{
+        console.log(GamesNotPicked);
+        GamesNotPicked = [];
+        console.log("GamesNotPicked after being emptied");
         console.log(GamesNotPicked);
         alert("You can not submit until you've picked all the games!");
       }
