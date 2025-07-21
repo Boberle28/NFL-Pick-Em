@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NFL Pick'em - Week Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    .matchup {
+      margin: 20px 0;
+    }
+    .teams {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button.selected {
+      background-color: #007bff;
+      color: white;
+    }
+    #submitBtn {
+      margin-top: 30px;
+      width: 100%;
+      background-color: green;
+      color: white;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>NFL Pick'em - Week Demo</h1>
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" placeholder="Enter your name">
+
+  <div class="matchup" data-game="Game 1">
+    <strong>Chiefs vs Bears</strong>
+    <div class="teams">
+      <button onclick="selectWinner(this)">Chiefs</button>
+      <button onclick="selectWinner(this)">Bears</button>
+    </div>
+  </div>
+
+  <div class="matchup" data-game="Game 2">
+    <strong>Packers vs Lions</strong>
+    <div class="teams">
+      <button onclick="selectWinner(this)">Packers</button>
+      <button onclick="selectWinner(this)">Lions</button>
+    </div>
+  </div>
+
+  <div class="matchup" data-game="Game 3">
+    <strong>Jets vs Broncos</strong>
+    <div class="teams">
+      <button onclick="selectWinner(this)">Jets</button>
+      <button onclick="selectWinner(this)">Broncos</button>
+    </div>
+  </div>
+
+  <button id="submitBtn" onclick="submitPicks()">Submit Picks</button>
+
+  <script>
+    function selectWinner(btn) {
+      const teamBtns = btn.parentElement.querySelectorAll("button");
+      teamBtns.forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+    }
+
+    function submitPicks() {
+      const name = document.getElementById("name").value.trim();
+      const matchups = document.querySelectorAll(".matchup");
+      let picks = [];
+
+      matchups.forEach(matchup => {
+        const gameTitle = matchup.getAttribute("data-game");
+        const selected = matchup.querySelector("button.selected");
+        const pick = selected ? selected.textContent : "No Pick";
+        picks.push(`${gameTitle}: ${pick}`);
+      });
+
+      const body = encodeURIComponent(`Name: ${name}\n\nYour picks:\n${picks.join('\n')}`);
+      const subject = encodeURIComponent("NFL Weekly Picks Submission");
+      window.location.href = `mailto:brando2885@hotmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
