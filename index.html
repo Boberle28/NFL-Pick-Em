@@ -105,6 +105,7 @@
         // Check if a pick was selected
         if(pick == "No Pick"){
           GamesNotPicked.push(matchup);
+          Console.log("Added NoPick");
         }
       
         picks.push(`${gameTitle}: ${pick}`);
@@ -117,6 +118,7 @@
         window.location.href = `mailto:brando2885@hotmail.com?subject=${subject}&body=${body}`;
       }
       else{
+        Console.log(GamesNotPicked);
         alert("You can not submit until you've picked all the games!");
       }
       
