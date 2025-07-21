@@ -89,6 +89,9 @@
       btn.classList.add("selected");
     }
 
+    // Values to store games not picked
+    let GamesNotPicked=[];
+
     function submitPicks() {
       const name = document.getElementById("name").value.trim();
       const matchups = document.querySelectorAll(".matchup");
@@ -98,13 +101,27 @@
         const gameTitle = matchup.getAttribute("data-game");
         const selected = matchup.querySelector("button.selected");
         const pick = selected ? selected.textContent : "No Pick";
+
+        // Check if a pick was selected
+        if(pick == "No Pick"){
+          GamesNotPicked.push(matchup);
+        }
+      
         picks.push(`${gameTitle}: ${pick}`);
       });
 
-      const body = encodeURIComponent(`Name: ${name}\n\nYour picks:\n${picks.join('\n')}`);
-      const subject = encodeURIComponent("NFL Weekly Picks Submission");
-      window.location.href = `mailto:brando2885@hotmail.com?subject=${subject}&body=${body}`;
+      if(GamesNotPicked.length == 0)
+      {
+        const body = encodeURIComponent(`Name: ${name}\n\nYour picks:\n${picks.join('\n')}`);
+        const subject = encodeURIComponent("NFL Weekly Picks Submission");
+        window.location.href = `mailto:brando2885@hotmail.com?subject=${subject}&body=${body}`;
+      }
+      else{
+        alert("You can not submit until you've picked all the games!");
+      }
+      
     }
+     
   </script>
 </body>
 </html>
