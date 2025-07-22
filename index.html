@@ -121,7 +121,6 @@
 
     
     async function submitPicks() {
-      const name = document.getElementById("name").value.trim();
       const matchups = document.querySelectorAll(".matchup");
       let picks = [];
 
@@ -169,7 +168,7 @@
           return;
         }
 
-        const body = encodeURIComponent(`Name: ${name}\n\nYour picks:\n${picks.join('\n')}`);
+        const body = encodeURIComponent(`Name: ${user}\n\nYour picks:\n${picks.join('\n')}`);
         const subject = encodeURIComponent("NFL Weekly Picks Submission");
         window.location.href = `mailto:brando2885@hotmail.com?subject=${subject}&body=${body}`;
       }
