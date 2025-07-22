@@ -41,15 +41,12 @@ class Pair{
   teamNames.push(new Pair("Chicago Bears", "CHI")); //31
   teamNames.push(new Pair("Minnesota Vikings", "MIN")); //32
 
-  function GetShortName(name)
-  {
-    teamNames.forEach(n =>{
-        if(n.name == name)
-        {
-            return n.shortName;
-        }
-    });
+  
+  function GetShortName(name) {
+    const match = teamNames.find(n => n.name === name);
+    return match ? match.shortName : null;
   }
+  
 
   class Team{
     constructor(name, shortName, wins, losses, ties)
@@ -91,6 +88,7 @@ class Pair{
   {
     constructor (week){
         this.week = week;
+        this.games = [];
     }
     AddGame(away, home) {
         this.games.push(new Game(away, home));
