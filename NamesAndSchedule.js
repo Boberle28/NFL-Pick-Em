@@ -97,6 +97,10 @@ class Pair{
 
   class Season
   {
+    constructor()
+    {
+        this.weeks = [];
+    }
     AddWeek(week){
         this.weeks.push(week);
     }
