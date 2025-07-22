@@ -59,28 +59,28 @@
   <div class="matchup" data-game="Game 1">
     <strong>Chiefs vs Bears</strong>
     <div class="teams">
-      <button onclick="selectWinner(this)">Chiefs</button>
-      <button onclick="selectWinner(this)">Bears</button>
+      <button class="team-btn">Chiefs</button>
+      <button class="team-btn">Bears</button>
     </div>
   </div>
 
   <div class="matchup" data-game="Game 2">
     <strong>Packers vs Lions</strong>
     <div class="teams">
-      <button onclick="selectWinner(this)">Packers</button>
-      <button onclick="selectWinner(this)">Lions</button>
+      <button class="team-btn">Packers</button>
+      <button class="team-btn">Lions</button>
     </div>
   </div>
 
   <div class="matchup" data-game="Game 3">
     <strong>Jets vs Broncos</strong>
     <div class="teams">
-      <button onclick="selectWinner(this)">Jets</button>
-      <button onclick="selectWinner(this)">Broncos</button>
+      <button class="team-btn">Jets</button>
+      <button class="team-btn">Broncos</button>
     </div>
   </div>
 
-  <button id="submitBtn" onclick="submitPicks()">Submit Picks</button>
+  <button id="submitBtn">Submit Picks</button>
 
   <script src ="NamesAndSchedule.js"></script>
 
@@ -88,14 +88,14 @@
 
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-    import { 
+    import {
       getFirestore,
       collection,
       query,
       where,
-      gotDocs,
+      getDocs,
       addDoc
-    } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+    } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
     
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -183,17 +183,14 @@
       
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('submitBtn').addEventListener('click', submitPicks);
-      /*
-      const buttons = document.querySelectorAll('.team-btn');
-  
+    window.addEventListener('DOMContentLoaded', () => {
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.addEventListener('click', submitPicks);
+
+      const buttons = document.querySelectorAll('.teams button');
       buttons.forEach(button => {
-        button.addEventListener('click', function () {
-          selectWinner(this);
-        });
+         button.addEventListener('click', () => selectWinner(button));
       });
-      */
     });
      
   </script>
