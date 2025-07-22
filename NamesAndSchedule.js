@@ -941,7 +941,7 @@ class Pair{
   , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
   )
   
- 
+ /*
   let season = new Season();
   season.AddWeek(week1);
   season.AddWeek(week2);
@@ -961,4 +961,5 @@ class Pair{
   season.AddWeek(week16);
   season.AddWeek(week17);
   season.AddWeek(week18);
+  */
   
