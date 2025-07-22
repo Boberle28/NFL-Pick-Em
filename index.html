@@ -93,8 +93,8 @@
       collection,
       query,
       where,
-      gotDocs
-      //addDoc
+      gotDocs,
+      addDoc
     } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
     
     // Your web app's Firebase configuration
@@ -119,7 +119,7 @@
       btn.classList.add("selected");
     }
 
-    let team = new Team();
+    
     async function submitPicks() {
       const name = document.getElementById("name").value.trim();
       const matchups = document.querySelectorAll(".matchup");
@@ -182,6 +182,8 @@
       }
       
     }
+
+    document.getElementById('submitBtn').addEventListener('click', submitPicks);
      
   </script>
 </body>
