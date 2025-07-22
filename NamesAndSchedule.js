@@ -78,7 +78,7 @@ class Pair{
 
   class Game
   {
-    constructor(away, home){
+    constructor(home, away){
         this.away = away;
         this.home = home;
     }
@@ -90,8 +90,8 @@ class Pair{
         this.week = week;
         this.games = [];
     }
-    AddGame(away, home) {
-        this.games.push(new Game(away, home));
+    AddGame(home, away) {
+        this.games.push(new Game(home, away));
     }
   }
 
