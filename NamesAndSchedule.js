@@ -60,7 +60,7 @@ class Pair{
       this.losses = losses;
       this.ties = ties;
 
-      getPngImageDirectory();
+      this.getPngImageDirectory();
     }
 
     getName() {
