@@ -53,8 +53,8 @@
 <body>
 
   <h1>NFL Pick'em - Week Demo</h1>
-  <label for="name">Your Name:</label>
-  <input type="text" id="name" placeholder="Enter your name">
+  <label for="name">Your Username:</label>
+  <input type="text" id="username">
 
   <div class="matchup" data-game="Game 1">
     <strong>Chiefs vs Bears</strong>
@@ -82,14 +82,45 @@
 
   <button id="submitBtn" onclick="submitPicks()">Submit Picks</button>
 
-  <script>
+  <script src ="NamesAndSchedule.js"></script>
+
+  <script type="module">
+
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+    import { 
+      getFirestore,
+      collection,
+      query,
+      where,
+      gotDocs,
+      addDoc
+    } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+    
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAHTX6gGorh3Flmvbw0THBfk9i7ILeZ2E4",
+      authDomain: "football-pickem-1d2ab.firebaseapp.com",
+      projectId: "football-pickem-1d2ab",
+      storageBucket: "football-pickem-1d2ab.firebasestorage.app",
+      messagingSenderId: "1065963734942",
+      appId: "1:1065963734942:web:042b5fbe5082b9cd29788f",
+      measurementId: "G-K8JV62VJ6P"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const WEEK = 1;
+
     function selectWinner(btn) {
       const teamBtns = btn.parentElement.querySelectorAll("button");
       teamBtns.forEach(b => b.classList.remove("selected"));
       btn.classList.add("selected");
     }
 
-    function submitPicks() {
+    let team = new Team();
+    async function submitPicks() {
       const name = document.getElementById("name").value.trim();
       const matchups = document.querySelectorAll(".matchup");
       let picks = [];
@@ -112,9 +143,31 @@
       
         picks.push(`${gameTitle}: ${pick}`);
       });
-
+        
       if(GamesNotPicked.length == 0)
       {
+        // Check username
+        const user = document.getElementById('username').value.trim();
+        if(user.length == 0)
+        {
+          alert("You must enter you username, if you have not made a username yet you can enter whatever you'd like but you must use that same name every week with your picks");
+          return;
+        }
+
+        // Now check if user has already picked for the week
+        const picksRef = collection(db, "picks");
+        const q = query(picksRef, 
+          where("username", "==", user),
+          where("week", "==", WEEK)
+        );
+
+        const existing = await getDocs(q);
+        if(!existing.empty)
+        {
+          alert("You've already made your picks for the week!");
+          return;
+        }
+
         const body = encodeURIComponent(`Name: ${name}\n\nYour picks:\n${picks.join('\n')}`);
         const subject = encodeURIComponent("NFL Weekly Picks Submission");
         window.location.href = `mailto:brando2885@hotmail.com?subject=${subject}&body=${body}`;
@@ -132,3 +185,5 @@
   </script>
 </body>
 </html>
+
+
