@@ -69,7 +69,7 @@ class Pair{
 
     getPngImageDirectory()
     {
-        this.pngImageName = "Images/" + shortName + ".png";
+        this.pngImageName = "Images/" + this.shortName + ".png";
     }
   }
 
