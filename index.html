@@ -80,7 +80,7 @@
     </div>
   </div>
 
-  <button id="submitBtn">Submit Picks</button>
+  <button id="submitBtn" onclick="submitPicks()">Submit Picks</button>
 
   <script src ="NamesAndSchedule.js"></script>
 
@@ -183,7 +183,9 @@
       
     }
 
-    document.getElementById('submitBtn').addEventListener('click', submitPicks);
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('submitBtn').addEventListener('click', submitPicks);
+    });
      
   </script>
 </body>
