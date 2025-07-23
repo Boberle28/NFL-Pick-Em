@@ -504,6 +504,7 @@ week18.AddGame(HOU, IND);
   season.AddWeek(week18);
 
   function renderWeek(weekObj) {
+    console.log("Rendering WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEk!")
     const container = document.getElementById("matchupsContainer");
     container.innerHTML = ""; // Clear previous matchups
   
