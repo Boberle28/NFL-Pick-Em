@@ -12,92 +12,103 @@
       max-width: 600px;
       margin: auto;
     }
+
     h1 {
       text-align: center;
       color:rgb(23, 23, 24)
     }
+
     #matchupsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
 
-.matchup {
-  width: 100%;
-  max-width: 500px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
+    .matchup {
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
 
-.teams {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-}
+    .teams {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
 
-.team-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
+    .team-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
 
-.team-label {
-  font-size: 0.9em;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+    .team-label {
+      font-size: 0.9em;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-.team-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  font-size: 16px;
-  background-color: #eee;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
+    .team-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      font-size: 16px;
+      background-color: #eee;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
 
-.team-btn.selected {
-  border-color: #007bff;
-  background-color: rgba(0, 123, 255, 0.1);
-}
+    .team-btn.selected {
+      border-color: #007bff;
+      background-color: rgba(0, 123, 255, 0.1);
+    }
 
-.team-logo {
-  height: 28px;
-  width: auto;
-}
+    .team-logo {
+      height: 28px;
+      width: auto;
+    }
 
-.team-name {
-  font-weight: bold;
-}
+    .team-name {
+      font-weight: bold;
+    }
 
-.record {
-  font-size: 0.85em;
-  margin-top: 5px;
-  color: #333;
-}
+    .record {
+      font-size: 0.85em;
+      margin-top: 5px;
+      color: #333;
+    }
 
-@media (max-width: 600px) {
-  .teams {
-    flex-direction: column;
-  }
-}
+    @media (max-width: 600px) {
+      .teams {
+        flex-direction: column;
+      }
+    }
+
     input[type="text"] {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
+      margin-bottom: 10px;
       font-size: 16px;
       border-radius: 4px;
       border: 1px solid #ccc;
+    }
+
+    #submitBtn {
+      margin-top: 30px;
+      width: 100%;
+      background-color: green;
+      color: white;
     }
   </style>
 </head>
@@ -142,72 +153,73 @@
     const WEEK = 1;
 
     function selectWinner(btn) {
-      const teamBtns = btn.parentElement.querySelectorAll("team-btn");
+      const teamBtns = btn.parentElement.querySelectorAll("button");
       teamBtns.forEach(b => b.classList.remove("selected"));
-      
+      console.log("In selectWinner!!!!!!!!!!!!!!!!");
+      console.log(teamBtns);
       btn.classList.toggle("selected");
     }
 
     function renderWeek(weekObj) {
-  const container = document.getElementById("matchupsContainer");
-  container.innerHTML = ""; // Clear previous content
+      const container = document.getElementById("matchupsContainer");
+      container.innerHTML = ""; // Clear previous content
 
-  weekObj.games.forEach((game, index) => {
-    const matchupDiv = document.createElement("div");
-    matchupDiv.classList.add("matchup");
-    matchupDiv.dataset.game = `Game ${index + 1}`;
+      weekObj.games.forEach((game, index) => {
+        const matchupDiv = document.createElement("div");
+        matchupDiv.classList.add("matchup");
+        matchupDiv.dataset.game = `Game ${index + 1}`;
 
-    const teamsDiv = document.createElement("div");
-    teamsDiv.classList.add("teams");
+        const teamsDiv = document.createElement("div");
+        teamsDiv.classList.add("teams");
 
-    function createTeamCard(team, isHome) {
-  const wrapper = document.createElement("div");
-  wrapper.classList.add("team-card");
+        function createTeamCard(team, isHome) {
+          const wrapper = document.createElement("div");
+          wrapper.classList.add("team-card");
 
-  const label = document.createElement("div");
-  label.classList.add("team-label");
-  label.textContent = isHome ? "Home" : "Away";
-  wrapper.appendChild(label);
+          const label = document.createElement("div");
+          label.classList.add("team-label");
+          label.textContent = isHome ? "Home" : "Away";
+          wrapper.appendChild(label);
 
-  const btn = document.createElement("button");
-  btn.classList.add("team-btn");
+          const btn = document.createElement("button");
+          btn.classList.add("team-btn");
 
-  // Add logo
-  const img = document.createElement("img");
-  img.src = `Images/${team.shortName}.png`;
-  img.alt = team.name;
-  img.classList.add("team-logo");
+          // Add logo
+          const img = document.createElement("img");
+          img.src = `Images/${team.shortName}.png`;
+          img.alt = team.name;
+          img.classList.add("team-logo");
 
-  // Add team name
-  const span = document.createElement("span");
-  span.textContent = team.name;
-  span.classList.add("team-name");
+          // Add team name
+          const span = document.createElement("span");
+          span.textContent = team.name;
+          span.classList.add("team-name");
 
-  btn.appendChild(img);   // logo first
-  btn.appendChild(span);  // then text
+          btn.appendChild(img);   // logo first
+          btn.appendChild(span);  // then text
 
-  btn.addEventListener("click", function () {
-    selectWinner(this);
-  });
+          btn.addEventListener("click", function () {
+            selectWinner(this);
+          });
 
-  wrapper.appendChild(btn);
+          wrapper.appendChild(btn);
 
-  const record = document.createElement("div");
-  record.classList.add("record");
-  record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}`;
-  wrapper.appendChild(record);
+          const record = document.createElement("div");
+          record.classList.add("record");
+          record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}`;
+          wrapper.appendChild(record);
 
-  return wrapper;
-}
+          return wrapper;
+        }
 
-    // Home team on the left, Away on the right
-    teamsDiv.appendChild(createTeamCard(game.home, true));
-    teamsDiv.appendChild(createTeamCard(game.away, false));
+        // Home team on the left, Away on the right
+        teamsDiv.appendChild(createTeamCard(game.home, true));
+        teamsDiv.appendChild(createTeamCard(game.away, false));
 
-    matchupDiv.appendChild(teamsDiv);
-    container.appendChild(matchupDiv);
-  });
-}
+        matchupDiv.appendChild(teamsDiv);
+        container.appendChild(matchupDiv);
+      });
+    }
     
     async function submitPicks() {
       const matchups = document.querySelectorAll(".matchup");
