@@ -144,7 +144,8 @@
     function selectWinner(btn) {
       const teamBtns = btn.parentElement.querySelectorAll("team-btn");
       teamBtns.forEach(b => b.classList.remove("selected"));
-      btn.classList.add("selected");
+      
+      btn.classList.toggle("selected");
     }
 
     function renderWeek(weekObj) {
