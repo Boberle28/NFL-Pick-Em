@@ -14,6 +14,7 @@
     }
     h1 {
       text-align: center;
+      color:rgb(183, 202, 219)
     }
     .matchup {
       margin: 20px 0;
@@ -97,42 +98,65 @@
     }
 
     function renderWeek(weekObj) {
-    console.log("Rendering WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEk!")
-    const container = document.getElementById("matchupsContainer");
-    container.innerHTML = ""; // Clear previous matchups
-  
-    weekObj.games.forEach((game, index) => {
-      const matchupDiv = document.createElement("div");
-      matchupDiv.classList.add("matchup");
-      matchupDiv.dataset.game = `Game ${index + 1}`;
-  
-      const title = document.createElement("strong");
-      title.textContent = `${game.home.name} vs ${game.away.name}`;
-  
-      const teamsDiv = document.createElement("div");
-      teamsDiv.classList.add("teams");
-  
-      const homeBtn = document.createElement("button");
-      homeBtn.textContent = game.home.name;
-      homeBtn.classList.add("team-btn");
-      homeBtn.addEventListener("click", function () {
-        selectWinner(this);
-      });
+  const container = document.getElementById("matchupsContainer");
+  container.innerHTML = ""; // Clear previous content
 
-      const awayBtn = document.createElement("button");
-      awayBtn.textContent = game.away.name;
-      awayBtn.classList.add("team-btn");
-      awayBtn.addEventListener("click", function () {
-        selectWinner(this);
-      });
-  
-      teamsDiv.appendChild(homeBtn);
-      teamsDiv.appendChild(awayBtn);
-      matchupDiv.appendChild(title);
-      matchupDiv.appendChild(teamsDiv);
-      container.appendChild(matchupDiv);
-    });
-  }
+  weekObj.games.forEach((game, index) => {
+    const matchupDiv = document.createElement("div");
+    matchupDiv.classList.add("matchup");
+    matchupDiv.dataset.game = `Game ${index + 1}`;
+
+    const teamsDiv = document.createElement("div");
+    teamsDiv.classList.add("teams");
+
+    function createTeamCard(team, isHome) {
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("team-card");
+
+  const label = document.createElement("div");
+  label.classList.add("team-label");
+  label.textContent = isHome ? "Home" : "Away";
+  wrapper.appendChild(label);
+
+  const btn = document.createElement("button");
+  btn.classList.add("team-btn");
+
+  // Add logo
+  const img = document.createElement("img");
+  img.src = `Images/${team.shortName}.png`;
+  img.alt = team.name;
+  img.classList.add("team-logo");
+
+  // Add team name
+  const span = document.createElement("span");
+  span.textContent = team.name;
+  span.classList.add("team-name");
+
+  btn.appendChild(img);   // logo first
+  btn.appendChild(span);  // then text
+
+  btn.addEventListener("click", function () {
+    selectWinner(this);
+  });
+
+  wrapper.appendChild(btn);
+
+  const record = document.createElement("div");
+  record.classList.add("record");
+  record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}`;
+  wrapper.appendChild(record);
+
+  return wrapper;
+}
+
+    // Home team on the left, Away on the right
+    teamsDiv.appendChild(createTeamCard(game.home, true));
+    teamsDiv.appendChild(createTeamCard(game.away, false));
+
+    matchupDiv.appendChild(teamsDiv);
+    container.appendChild(matchupDiv);
+  });
+}
     renderWeek(week1);
     
     async function submitPicks() {
