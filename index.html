@@ -94,6 +94,11 @@
       }
     }
 
+    .parent {
+      display: flex;
+      justify-content: center;
+    }
+
     input[type="text"] {
       width: 100%;
       padding: 10px;
@@ -117,7 +122,10 @@
   <h1>NFL Pick'em</h1>
 
   <label for="name">Your Username:</label>
-  <input type="text" id="username">
+
+  <div class="parent">
+    <input type="text" id="username" class="centered-input">
+  </div>
 
   <div id="matchupsContainer"></div>
   <button id="submitBtn">Submit Picks</button>
