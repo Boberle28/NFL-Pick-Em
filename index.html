@@ -207,7 +207,6 @@
     container.appendChild(matchupDiv);
   });
 }
-    renderWeek(week1);
     
     async function submitPicks() {
       const matchups = document.querySelectorAll(".matchup");
@@ -273,6 +272,8 @@
     window.addEventListener('DOMContentLoaded', () => {
       const submitBtn = document.getElementById('submitBtn');
       submitBtn.addEventListener('click', submitPicks);
+
+      renderWeek(week1);
 
       const buttons = document.querySelectorAll('.teams button');
       buttons.forEach(button => {
