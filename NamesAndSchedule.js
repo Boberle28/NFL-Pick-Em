@@ -106,842 +106,383 @@ class Pair{
     }
   }
 
-  let week1 = new Week(1);
-  week1.AddGame(new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  , new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  )
-  week1.AddGame(new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  let week2 = new Week(2);
-  week2.AddGame(new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week2.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  )
-  let week3 = new Week(3);
-  week3.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  , new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  , new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  , new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  , new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  )
-  week3.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  let week4 = new Week(4);
-  week4.AddGame(new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  , new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  , new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  , new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  )
-  week4.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  )
-  let week5 = new Week(5);
-  week5.AddGame(new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  , new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  , new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  , new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  )
-  week5.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  )
-  let week6 = new Week(6);
-  week6.AddGame(new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  , new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  , new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  , new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  )
-  week6.AddGame(new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  let week7 = new Week(7);
-  week7.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week7.AddGame(new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  , new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  )
-  let week8 = new Week(8);
-  week8.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  , new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  , new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week8.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  let week9 = new Week(9);
-  week9.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week9.AddGame(new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  let week10 = new Week(10);
-  week10.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  , new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  , new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  )
-  week10.AddGame(new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  let week11 = new Week(11);
-  week11.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  week11.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  let week12 = new Week(12);
-  week12.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  , new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  , new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week12.AddGame(new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  let week13 = new Week(13);
-  week13.AddGame(new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  , new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  , new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  )
-  week13.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  let week14 = new Week(14);
-  week14.AddGame(new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  )
-  week14.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  let week15 = new Week(15);
-  week15.AddGame(new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  , new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  , new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  , new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  week15.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  )
-  let week16 = new Week(16);
-  week16.AddGame(new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  , new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  , new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  , new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  , new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  , new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  , new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  )
-  week16.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  )
-  let week17 = new Week(17);
-  week17.AddGame(new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  , new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  , new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  , new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  , new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  , new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  , new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  , new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  , new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  )
-  week17.AddGame(new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  , new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  )
-  let week18 = new Week(18);
-  week18.AddGame(new Team("Atlanta Falcons", GetShortName("Atlanta Falcons"), 0, 0, 0)
-  , new Team("New Orleans Saints", GetShortName("New Orleans Saints"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Buffalo Bills", GetShortName("Buffalo Bills"), 0, 0, 0)
-  , new Team("New York Jets", GetShortName("New York Jets"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Chicago Bears", GetShortName("Chicago Bears"), 0, 0, 0)
-  , new Team("Detroit Lions", GetShortName("Detroit Lions"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Cincinnati Bengals", GetShortName("Cincinnati Bengals"), 0, 0, 0)
-  , new Team("Cleveland Browns", GetShortName("Cleveland Browns"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Denver Broncos", GetShortName("Denver Broncos"), 0, 0, 0)
-  , new Team("Los Angeles Chargers", GetShortName("Los Angeles Chargers"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Las Vegas Raiders", GetShortName("Las Vegas Raiders"), 0, 0, 0)
-  , new Team("Kansas City Chiefs", GetShortName("Kansas City Chiefs"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Los Angeles Rams", GetShortName("Los Angeles Rams"), 0, 0, 0)
-  , new Team("Arizona Cardinals", GetShortName("Arizona Cardinals"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Minnesota Vikings", GetShortName("Minnesota Vikings"), 0, 0, 0)
-  , new Team("Green Bay Packers", GetShortName("Green Bay Packers"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("New England Patriots", GetShortName("New England Patriots"), 0, 0, 0)
-  , new Team("Miami Dolphins", GetShortName("Miami Dolphins"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("New York Giants", GetShortName("New York Giants"), 0, 0, 0)
-  , new Team("Dallas Cowboys", GetShortName("Dallas Cowboys"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Philadelphia Eagles", GetShortName("Philadelphia Eagles"), 0, 0, 0)
-  , new Team("Washington Commanders", GetShortName("Washington Commanders"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Pittsburgh Steelers", GetShortName("Pittsburgh Steelers"), 0, 0, 0)
-  , new Team("Baltimore Ravens", GetShortName("Baltimore Ravens"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("San Francisco 49ers", GetShortName("San Francisco 49ers"), 0, 0, 0)
-  , new Team("Seattle Seahawks", GetShortName("Seattle Seahawks"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Tampa Bay Buccaneers", GetShortName("Tampa Bay Buccaneers"), 0, 0, 0)
-  , new Team("Carolina Panthers", GetShortName("Carolina Panthers"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Jacksonville Jaguars", GetShortName("Jacksonville Jaguars"), 0, 0, 0)
-  , new Team("Tennessee Titans", GetShortName("Tennessee Titans"), 0, 0, 0)
-  )
-  week18.AddGame(new Team("Houston Texans", GetShortName("Houston Texans"), 0, 0, 0)
-  , new Team("Indianapolis Colts", GetShortName("Indianapolis Colts"), 0, 0, 0)
-  )
+  let NFLteams = [];
+  // Team objects
+  let PHI = new Team("Philadelphia Eagles", "PHI", 0, 0, 0);
+NFLteams.push(PHI);
+let DAL = new Team("Dallas Cowboys", "DAL", 0, 0, 0);
+NFLteams.push(DAL);
+let LAC = new Team("Los Angeles Chargers", "LAC", 0, 0, 0);
+NFLteams.push(LAC);
+let KC = new Team("Kansas City Chiefs", "KC", 0, 0, 0);
+NFLteams.push(KC);
+let ATL = new Team("Atlanta Falcons", "ATL", 0, 0, 0);
+NFLteams.push(ATL);
+let TB = new Team("Tampa Bay Buccaneers", "TB", 0, 0, 0);
+NFLteams.push(TB);
+let CLE = new Team("Cleveland Browns", "CLE", 0, 0, 0);
+NFLteams.push(CLE);
+let CIN = new Team("Cincinnati Bengals", "CIN", 0, 0, 0);
+NFLteams.push(CIN);
+let IND = new Team("Indianapolis Colts", "IND", 0, 0, 0);
+NFLteams.push(IND);
+let MIA = new Team("Miami Dolphins", "MIA", 0, 0, 0);
+NFLteams.push(MIA);
+let NE = new Team("New England Patriots", "NE", 0, 0, 0);
+NFLteams.push(NE);
+let LV = new Team("Las Vegas Raiders", "LV", 0, 0, 0);
+NFLteams.push(LV);
+let NO = new Team("New Orleans Saints", "NO", 0, 0, 0);
+NFLteams.push(NO);
+let ARI = new Team("Arizona Cardinals", "ARI", 0, 0, 0);
+NFLteams.push(ARI);
+let NYJ = new Team("New York Jets", "NYJ", 0, 0, 0);
+NFLteams.push(NYJ);
+let PIT = new Team("Pittsburgh Steelers", "PIT", 0, 0, 0);
+NFLteams.push(PIT);
+let WAS = new Team("Washington Commanders", "WAS", 0, 0, 0);
+NFLteams.push(WAS);
+let NYG = new Team("New York Giants", "NYG", 0, 0, 0);
+NFLteams.push(NYG);
+let JAX = new Team("Jacksonville Jaguars", "JAX", 0, 0, 0);
+NFLteams.push(JAX);
+let CAR = new Team("Carolina Panthers", "CAR", 0, 0, 0);
+NFLteams.push(CAR);
+let DEN = new Team("Denver Broncos", "DEN", 0, 0, 0);
+NFLteams.push(DEN);
+let TEN = new Team("Tennessee Titans", "TEN", 0, 0, 0);
+NFLteams.push(TEN);
+let SEA = new Team("Seattle Seahawks", "SEA", 0, 0, 0);
+NFLteams.push(SEA);
+let SF = new Team("San Francisco 49ers", "SF", 0, 0, 0);
+NFLteams.push(SF);
+let GB = new Team("Green Bay Packers", "GB", 0, 0, 0);
+NFLteams.push(GB);
+let DET = new Team("Detroit Lions", "DET", 0, 0, 0);
+NFLteams.push(DET);
+let LAR = new Team("Los Angeles Rams", "LAR", 0, 0, 0);
+NFLteams.push(LAR);
+let HOU = new Team("Houston Texans", "HOU", 0, 0, 0);
+NFLteams.push(HOU);
+let BUF = new Team("Buffalo Bills", "BUF", 0, 0, 0);
+NFLteams.push(BUF);
+let BAL = new Team("Baltimore Ravens", "BAL", 0, 0, 0);
+NFLteams.push(BAL);
+let CHI = new Team("Chicago Bears", "CHI", 0, 0, 0);
+NFLteams.push(CHI);
+let MIN = new Team("Minnesota Vikings", "MIN", 0, 0, 0);
+NFLteams.push(MIN);
+
+let week1 = new Week(1);
+week1.AddGame(PHI, DAL);
+week1.AddGame(LAC, KC);
+week1.AddGame(ATL, TB);
+week1.AddGame(CLE, CIN);
+week1.AddGame(IND, MIA);
+week1.AddGame(NE, LV);
+week1.AddGame(NO, ARI);
+week1.AddGame(NYJ, PIT);
+week1.AddGame(WAS, NYG);
+week1.AddGame(JAX, CAR);
+week1.AddGame(DEN, TEN);
+week1.AddGame(SEA, SF);
+week1.AddGame(GB, DET);
+week1.AddGame(LAR, HOU);
+week1.AddGame(BUF, BAL);
+week1.AddGame(CHI, MIN);
+
+let week2 = new Week(2);
+week2.AddGame(GB, WAS);
+week2.AddGame(CIN, JAX);
+week2.AddGame(DAL, NYG);
+week2.AddGame(DET, CHI);
+week2.AddGame(TEN, LAR);
+week2.AddGame(MIA, NE);
+week2.AddGame(NO, SF);
+week2.AddGame(NYJ, BUF);
+week2.AddGame(PIT, SEA);
+week2.AddGame(BAL, CLE);
+week2.AddGame(IND, DEN);
+week2.AddGame(ARI, CAR);
+week2.AddGame(KC, PHI);
+week2.AddGame(MIN, ATL);
+week2.AddGame(HOU, TB);
+week2.AddGame(LV, LAC);
+
+let week3 = new Week(3);
+week3.AddGame(BUF, MIA);
+week3.AddGame(CLE, GB);
+week3.AddGame(TEN, IND);
+week3.AddGame(MIN, CIN);
+week3.AddGame(NE, PIT);
+week3.AddGame(PHI, LAR);
+week3.AddGame(TB, NYJ);
+week3.AddGame(WAS, LV);
+week3.AddGame(CAR, ATL);
+week3.AddGame(JAX, HOU);
+week3.AddGame(LAC, DEN);
+week3.AddGame(SEA, NO);
+week3.AddGame(CHI, DAL);
+week3.AddGame(SF, ARI);
+week3.AddGame(NYG, KC);
+week3.AddGame(BAL, DET);
+
+let week4 = new Week(4);
+week4.AddGame(ARI, SEA);
+week4.AddGame(PIT, MIN);
+week4.AddGame(ATL, WAS);
+week4.AddGame(BUF, NO);
+week4.AddGame(DET, CLE);
+week4.AddGame(NE, CAR);
+week4.AddGame(NYG, LAC);
+week4.AddGame(TB, PHI);
+week4.AddGame(HOU, TEN);
+week4.AddGame(LAR, IND);
+week4.AddGame(SF, JAX);
+week4.AddGame(KC, BAL);
+week4.AddGame(LV, CHI);
+week4.AddGame(DAL, GB);
+week4.AddGame(MIA, NYJ);
+week4.AddGame(DEN, CIN);
+
+let week5 = new Week(5);
+week5.AddGame(LAR, SF);
+week5.AddGame(CLE, MIN);
+week5.AddGame(IND, LV);
+week5.AddGame(NO, NYG);
+week5.AddGame(NYJ, DAL);
+week5.AddGame(PHI, DEN);
+week5.AddGame(CAR, MIA);
+week5.AddGame(BAL, HOU);
+week5.AddGame(ARI, TEN);
+week5.AddGame(SEA, TB);
+week5.AddGame(CIN, DET);
+week5.AddGame(LAC, WAS);
+week5.AddGame(BUF, NE);
+week5.AddGame(JAX, KC);
+
+let week6 = new Week(6);
+week6.AddGame(NYG, PHI);
+week6.AddGame(NYJ, DEN);
+week6.AddGame(IND, ARI);
+week6.AddGame(MIA, LAC);
+week6.AddGame(PIT, CLE);
+week6.AddGame(TB, SF);
+week6.AddGame(CAR, DAL);
+week6.AddGame(JAX, SEA);
+week6.AddGame(BAL, LAR);
+week6.AddGame(LV, TEN);
+week6.AddGame(GB, CIN);
+week6.AddGame(NO, NE);
+week6.AddGame(KC, DET);
+week6.AddGame(ATL, BUF);
+week6.AddGame(WAS, CHI);
+
+let week7 = new Week(7);
+week7.AddGame(CIN, PIT);
+week7.AddGame(JAX, LAR);
+week7.AddGame(CHI, NO);
+week7.AddGame(CLE, MIA);
+week7.AddGame(TEN, NE);
+week7.AddGame(KC, LV);
+week7.AddGame(MIN, PHI);
+week7.AddGame(NYJ, CAR);
+week7.AddGame(DEN, NYG);
+week7.AddGame(LAC, IND);
+week7.AddGame(DAL, WAS);
+week7.AddGame(ARI, GB);
+week7.AddGame(SF, ATL);
+week7.AddGame(DET, TB);
+week7.AddGame(SEA, HOU);
+
+let week8 = new Week(8);
+week8.AddGame(LAC, MIN);
+week8.AddGame(ATL, MIA);
+week8.AddGame(CIN, NYJ);
+week8.AddGame(NE, CLE);
+week8.AddGame(PHI, NYG);
+week8.AddGame(CAR, BUF);
+week8.AddGame(BAL, CHI);
+week8.AddGame(HOU, SF);
+week8.AddGame(NO, TB);
+week8.AddGame(DEN, DAL);
+week8.AddGame(IND, TEN);
+week8.AddGame(PIT, GB);
+week8.AddGame(KC, WAS);
+
+let week9 = new Week(9);
+week9.AddGame(MIA, BAL);
+week9.AddGame(CIN, CHI);
+week9.AddGame(DET, MIN);
+week9.AddGame(GB, CAR);
+week9.AddGame(TEN, LAC);
+week9.AddGame(NE, ATL);
+week9.AddGame(NYG, SF);
+week9.AddGame(PIT, IND);
+week9.AddGame(HOU, DEN);
+week9.AddGame(LV, JAX);
+week9.AddGame(LAR, NO);
+week9.AddGame(BUF, KC);
+week9.AddGame(WAS, SEA);
+week9.AddGame(DAL, ARI);
+
+let week10 = new Week(10);
+week10.AddGame(DEN, LV);
+week10.AddGame(IND, ATL);
+week10.AddGame(CHI, NYG);
+week10.AddGame(MIA, BUF);
+week10.AddGame(MIN, BAL);
+week10.AddGame(NYJ, CLE);
+week10.AddGame(TB, NE);
+week10.AddGame(CAR, NO);
+week10.AddGame(HOU, JAX);
+week10.AddGame(SEA, ARI);
+week10.AddGame(SF, LAR);
+week10.AddGame(WAS, DET);
+week10.AddGame(LAC, PIT);
+week10.AddGame(GB, PHI);
+
+let week11 = new Week(11);
+week11.AddGame(NE, NYJ);
+week11.AddGame(MIA, WAS);
+week11.AddGame(ATL, CAR);
+week11.AddGame(BUF, TB);
+week11.AddGame(TEN, HOU);
+week11.AddGame(MIN, CHI);
+week11.AddGame(NYG, GB);
+week11.AddGame(PIT, CIN);
+week11.AddGame(JAX, LAC);
+week11.AddGame(LAR, SEA);
+week11.AddGame(ARI, SF);
+week11.AddGame(CLE, BAL);
+week11.AddGame(DEN, KC);
+week11.AddGame(PHI, DET);
+week11.AddGame(LV, DAL);
+
+let week12 = new Week(12);
+week12.AddGame(HOU, BUF);
+week12.AddGame(CHI, PIT);
+week12.AddGame(CIN, NE);
+week12.AddGame(DET, NYG);
+week12.AddGame(GB, MIN);
+week12.AddGame(TEN, SEA);
+week12.AddGame(KC, IND);
+week12.AddGame(BAL, NYJ);
+week12.AddGame(LV, CLE);
+week12.AddGame(ARI, JAX);
+week12.AddGame(DAL, PHI);
+week12.AddGame(NO, ATL);
+week12.AddGame(LAR, TB);
+week12.AddGame(SF, CAR);
+
+let week13 = new Week(13);
+week13.AddGame(DET, GB);
+week13.AddGame(DAL, KC);
+week13.AddGame(BAL, CIN);
+week13.AddGame(PHI, CHI);
+week13.AddGame(CLE, SF);
+week13.AddGame(TEN, JAX);
+week13.AddGame(IND, HOU);
+week13.AddGame(MIA, NO);
+week13.AddGame(NYJ, ATL);
+week13.AddGame(TB, ARI);
+week13.AddGame(CAR, LAR);
+week13.AddGame(SEA, MIN);
+week13.AddGame(PIT, BUF);
+week13.AddGame(LAC, LV);
+week13.AddGame(WAS, DEN);
+week13.AddGame(NE, NYG);
+
+let week14 = new Week(14);
+week14.AddGame(DET, DAL);
+week14.AddGame(ATL, SEA);
+week14.AddGame(CLE, TEN);
+week14.AddGame(GB, CHI);
+week14.AddGame(MIN, WAS);
+week14.AddGame(NYJ, MIA);
+week14.AddGame(TB, NO);
+week14.AddGame(JAX, IND);
+week14.AddGame(BAL, PIT);
+week14.AddGame(LV, DEN);
+week14.AddGame(BUF, CIN);
+week14.AddGame(ARI, LAR);
+week14.AddGame(KC, HOU);
+week14.AddGame(LAC, PHI);
+
+let week15 = new Week(15);
+week15.AddGame(TB, ATL);
+week15.AddGame(CHI, CLE);
+week15.AddGame(CIN, BAL);
+week15.AddGame(KC, LAC);
+week15.AddGame(NE, BUF);
+week15.AddGame(NYG, WAS);
+week15.AddGame(PHI, LV);
+week15.AddGame(JAX, NYJ);
+week15.AddGame(HOU, ARI);
+week15.AddGame(DEN, GB);
+week15.AddGame(LAR, DET);
+week15.AddGame(NO, CAR);
+week15.AddGame(SF, TEN);
+week15.AddGame(SEA, IND);
+week15.AddGame(DAL, MIN);
+week15.AddGame(PIT, MIA);
+
+let week16 = new Week(16);
+week16.AddGame(SEA, LAR);
+week16.AddGame(CHI, GB);
+week16.AddGame(WAS, PHI);
+week16.AddGame(CLE, BUF);
+week16.AddGame(DAL, LAC);
+week16.AddGame(TEN, KC);
+week16.AddGame(NO, NYJ);
+week16.AddGame(NYG, MIN);
+week16.AddGame(CAR, TB);
+week16.AddGame(BAL, NE);
+week16.AddGame(DEN, JAX);
+week16.AddGame(ARI, ATL);
+week16.AddGame(DET, PIT);
+week16.AddGame(HOU, LV);
+week16.AddGame(MIA, CIN);
+week16.AddGame(IND, SF);
+
+let week17 = new Week(17);
+week17.AddGame(WAS, DAL);
+week17.AddGame(MIN, DET);
+week17.AddGame(KC, DEN);
+week17.AddGame(CIN, ARI);
+week17.AddGame(GB, BAL);
+week17.AddGame(LV, NYG);
+week17.AddGame(LAC, HOU);
+week17.AddGame(CAR, SEA);
+week17.AddGame(CLE, PIT);
+week17.AddGame(TEN, NO);
+week17.AddGame(IND, JAX);
+week17.AddGame(MIA, TB);
+week17.AddGame(NYJ, NE);
+week17.AddGame(BUF, PHI);
+week17.AddGame(SF, CHI);
+week17.AddGame(ATL, LAR);
+
+let week18 = new Week(18);
+week18.AddGame(ATL, NO);
+week18.AddGame(BUF, NYJ);
+week18.AddGame(CHI, DET);
+week18.AddGame(CIN, CLE);
+week18.AddGame(DEN, LAC);
+week18.AddGame(LV, KC);
+week18.AddGame(LAR, ARI);
+week18.AddGame(MIN, GB);
+week18.AddGame(NE, MIA);
+week18.AddGame(NYG, DAL);
+week18.AddGame(PHI, WAS);
+week18.AddGame(PIT, BAL);
+week18.AddGame(SF, SEA);
+week18.AddGame(TB, CAR);
+week18.AddGame(JAX, TEN);
+week18.AddGame(HOU, IND);
+
   
- /*
+ 
   let season = new Season();
   season.AddWeek(week1);
   season.AddWeek(week2);
@@ -961,5 +502,5 @@ class Pair{
   season.AddWeek(week16);
   season.AddWeek(week17);
   season.AddWeek(week18);
-  */
+  
   
