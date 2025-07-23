@@ -502,5 +502,42 @@ week18.AddGame(HOU, IND);
   season.AddWeek(week16);
   season.AddWeek(week17);
   season.AddWeek(week18);
+
+  function renderWeek(weekObj) {
+    const container = document.getElementById("matchupsContainer");
+    container.innerHTML = ""; // Clear previous matchups
+  
+    weekObj.games.forEach((game, index) => {
+      const matchupDiv = document.createElement("div");
+      matchupDiv.classList.add("matchup");
+      matchupDiv.dataset.game = `Game ${index + 1}`;
+  
+      const title = document.createElement("strong");
+      title.textContent = `${game.home.name} vs ${game.away.name}`;
+  
+      const teamsDiv = document.createElement("div");
+      teamsDiv.classList.add("teams");
+  
+      const homeBtn = document.createElement("button");
+      homeBtn.textContent = game.home.name;
+      homeBtn.classList.add("team-btn");
+      homeBtn.addEventListener("click", function () {
+        selectWinner(this);
+      });
+
+      const awayBtn = document.createElement("button");
+      awayBtn.textContent = game.away.name;
+      awayBtn.classList.add("team-btn");
+      awayBtn.addEventListener("click", function () {
+        selectWinner(this);
+      });
+  
+      teamsDiv.appendChild(homeBtn);
+      teamsDiv.appendChild(awayBtn);
+      matchupDiv.appendChild(title);
+      matchupDiv.appendChild(teamsDiv);
+      container.appendChild(matchupDiv);
+    });
+  }
   
   

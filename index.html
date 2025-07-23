@@ -51,35 +51,8 @@
   </style>
 </head>
 <body>
-
-  <h1>NFL Pick'em - Week Demo</h1>
-  <label for="name">Your Username:</label>
-  <input type="text" id="username">
-
-  <div class="matchup" data-game="Game 1">
-    <strong>Chiefs vs Bears</strong>
-    <div class="teams">
-      <button class="team-btn">Chiefs</button>
-      <button class="team-btn">Bears</button>
-    </div>
-  </div>
-
-  <div class="matchup" data-game="Game 2">
-    <strong>Packers vs Lions</strong>
-    <div class="teams">
-      <button class="team-btn">Packers</button>
-      <button class="team-btn">Lions</button>
-    </div>
-  </div>
-
-  <div class="matchup" data-game="Game 3">
-    <strong>Jets vs Broncos</strong>
-    <div class="teams">
-      <button class="team-btn">Jets</button>
-      <button class="team-btn">Broncos</button>
-    </div>
-  </div>
-
+  <h1>NFL Pick'em</h1>
+  <div id="matchupsContainer"></div>
   <button id="submitBtn">Submit Picks</button>
 
   <script src ="NamesAndSchedule.js"></script>
@@ -119,6 +92,7 @@
       btn.classList.add("selected");
     }
 
+    renderWeek(week1);
     
     async function submitPicks() {
       const matchups = document.querySelectorAll(".matchup");
