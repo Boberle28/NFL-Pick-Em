@@ -81,6 +81,9 @@ class Pair{
     constructor(home, away){
         this.away = away;
         this.home = home;
+
+        this.awayOdds = 1.00;
+        this.homeOdds = 1.00;
     }
   }
 
