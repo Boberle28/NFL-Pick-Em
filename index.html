@@ -167,7 +167,6 @@
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-    const WEEK = toString(1);
 
     function selectWinner(btn) {
       const teamBtns = btn.parentElement.parentElement.querySelectorAll("button");
@@ -276,7 +275,7 @@
       }
 
       // Check username
-      const user = toString(document.getElementById('username').value.trim());
+      const user = document.getElementById('username').value.trim();
       if(user.length == 0)
       {
         alert("You must enter your username, if you have not made a username yet, you can enter whatever you'd like but you must use that same name every week with your picks");
@@ -290,6 +289,7 @@
         timestamp: new Date()
       };
 
+      const WEEK = String(1);
       console.log("picks", pickData);
       console.log("Username:", user);
       console.log("Week:", WEEK);
@@ -299,7 +299,7 @@
 
       console.log("picksRef");
       console.log(picksRef);
-      
+
       const q = query(picksRef, 
         where("username", "==", user),
         where("week", "==", WEEK)
