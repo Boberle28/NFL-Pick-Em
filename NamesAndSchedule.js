@@ -84,6 +84,94 @@ class Pair{
 
         this.awayOdds = 1.00;
         this.homeOdds = 1.00;
+
+        // We use the odds to calculate the value of the picks
+        // The favorite will always be 1 and the underdog will be relative to that
+        this.awayValue = 1.00;
+        this.homeValue = 1.00;
+
+        this.awayScore = 0;
+        this.homeScore = 0;
+
+        this.gameName = 0;
+
+        this.homeFavorite = true;
+    }
+
+    SetGameName(gameName){
+      this.gameName = gameName;
+    }
+
+    SetScore(homeScore, awayScore){
+      this.homeScore = homeScore;
+      this.awayScore = awayScore;
+      Number()
+    }
+
+    SetOdds(homeOdds, awayOdds){
+      this.homeOdds = homeOdds;
+      this.awayOdds = awayOdds;
+
+      this.homeFavorite = this.homeOdds < this.awayOdds ? true : false;
+
+      this.homeValue = Number(this.homeOdds);
+      this.awayValue = Number(this.awayNumber);
+
+      // Calc value for home team
+      if(this.homeValue < 0){
+        let MoneyBet = 100;
+        let MoneyWinnings = this.homeValue;
+        this.homeValue = MoneyBet / MoneyWinnings
+      }
+      else{
+        let MoneyBet = this.homeValue;
+        let MoneyWinnings = 100;
+        this.homeValue = MoneyBet / MoneyWinnings
+      }
+
+      // Calc value for away team
+      if(this.awayValue < 0){
+        let MoneyBet = 100;
+        let MoneyWinnings = this.awayValue;
+        this.awayValue = MoneyBet / MoneyWinnings
+      }
+      else{
+        let MoneyBet = this.awayValue;
+        let MoneyWinnings = 100;
+        this.awayValue = MoneyBet / MoneyWinnings
+      }
+
+      // Make favored team's value to one and adjust underdog relative to that
+      let valDifference = this.homeFavorite ? this.homeValue - 1 : this.awayValue - 1
+      if(valDifference < 0){
+        // We need to add to both
+        homeValue += Math.abs(valDifference);
+        awayValue += Math.abs(valDifference);
+      }
+      if(valDifference > 0){
+        // We need to subtract both
+        homeValue -= valDifference;
+        awayValue -= valDifference;
+      }
+    }
+
+    // Get the value of the home team and away team. Not the original odds
+    GetPickValues(homeVal, awayVal){
+      homeVal = this.homeValue;
+      awayVal = this.awayValue;
+    }
+
+    GetScore(homeScore, awayScore){
+      homeScore = this.awayScore;
+      awayScore = this.awayScore;
+    }
+
+    GetWinnerTeamName(){
+      if (this.homeScore == this.awayScore){
+        return "No Winner";
+      }
+
+      return this.awayScore > this.homeScore ? this.away.name : this.home.name
     }
   }
 
@@ -178,6 +266,7 @@ NFLteams.push(MIN);
 
 let week1 = new Week(1);
 week1.AddGame(PHI, DAL);
+week1.games[0].SetOdds(-250, +185);
 week1.AddGame(LAC, KC);
 week1.AddGame(ATL, TB);
 week1.AddGame(CLE, CIN);

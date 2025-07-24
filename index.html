@@ -185,6 +185,13 @@
         matchupDiv.classList.add("matchup");
         matchupDiv.dataset.game = `Game ${index + 1}`;
 
+        if(game.home.shortName == "PHI"){
+          console.log("HomeValue:");
+          console.log(game.homeValue);
+          console.log("AwayValue:");
+          console.log(game.awayValue);
+        }
+
         const teamsDiv = document.createElement("div");
         teamsDiv.classList.add("teams");
 
