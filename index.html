@@ -167,7 +167,7 @@
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-    const WEEK = "1";
+    const WEEK = toString(1);
 
     function selectWinner(btn) {
       const teamBtns = btn.parentElement.parentElement.querySelectorAll("button");
@@ -276,12 +276,23 @@
       }
 
       // Check username
-      const user = document.getElementById('username').value.trim();
+      const user = toString(document.getElementById('username').value.trim());
       if(user.length == 0)
       {
         alert("You must enter your username, if you have not made a username yet, you can enter whatever you'd like but you must use that same name every week with your picks");
         return;
       }
+
+      const pickData = {
+        username: user,
+        week: WEEK,
+        picks: picksObject,
+        timestamp: new Date()
+      };
+
+      console.log("picks", pickData);
+      console.log("Username:", user);
+      console.log("Week:", WEEK);
 
       // Now check if user has already picked for the week
       const picksRef = collection(db, "picks");
@@ -299,17 +310,6 @@
 
       const submitBtn = document.getElementById("submitBtn");
       submitBtn.disabled = true;
-
-      const pickData = {
-        username: user,
-        week: WEEK,
-        picks: picksObject,
-        timestamp: new Date()
-      };
-
-      console.log("Game titles and picks:", pickData);
-      console.log("Username:", user);
-      console.log("Week:", WEEK);
 
       // Everything is good so we try submit picks
       try {
