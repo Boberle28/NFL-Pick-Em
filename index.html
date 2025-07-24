@@ -167,7 +167,7 @@
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-    const WEEK = 1;
+    const WEEK = "1";
 
     function selectWinner(btn) {
       const teamBtns = btn.parentElement.parentElement.querySelectorAll("button");
@@ -305,9 +305,13 @@
         const pickData = {
           username: user,
           week: WEEK,
-          picks: picksObject,
+          picksOb: picksObject,
           timestamp: new Date()
         };
+
+        console.log("Game titles and picks:", picksObject);
+        console.log("Username:", user);
+        console.log("Week:", WEEK);
 
         await setDoc(doc(db, "picks", `${user}_week${WEEK}`), pickData);
         alert("✅ Your picks have been submitted successfully!");
