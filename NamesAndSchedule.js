@@ -109,8 +109,19 @@ class Pair{
     }
 
     SetOdds(homeOdds, awayOdds){
+
+      console.log("Start SetOdds??????????????????????????");
+      console.log("per homeOdds:");
+      console.log(homeOdds);
+      console.log("per awayOdds");
+      console.log(awayOdds);
       this.homeOdds = homeOdds;
       this.awayOdds = awayOdds;
+
+      console.log("this.homeOdds:");
+      console.log(this.homeOdds)
+      console.log("this.awayOdds:");
+      console.log(this.awayOdds);
 
       this.homeFavorite = this.homeOdds < this.awayOdds ? true : false;
 
@@ -153,6 +164,7 @@ class Pair{
         this.homeValue -= valDifference;
         this.awayValue -= valDifference;
       }
+      console.log("End SetOdds??????????????????????????");
     }
 
     // Get the value of the home team and away team. Not the original odds
