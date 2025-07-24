@@ -306,6 +306,11 @@
         where("week", "==", WEEK)
       );
 
+      console.log("We are past query");
+
+      console.log("q");
+      console.log(q);
+
       const existing = await getDocs(q);
       if(!existing.empty)
       {
@@ -313,11 +318,14 @@
         return;
       }
 
+      console.log("We are past await getDocs");
+
       const submitBtn = document.getElementById("submitBtn");
       submitBtn.disabled = true;
 
       // Everything is good so we try submit picks
       try {
+        console.log("We are now attempting to setDoc");
         await setDoc(doc(db, "picks", `${user}_week${WEEK}`), pickData);
         alert("✅ Your picks have been submitted successfully!");
 
