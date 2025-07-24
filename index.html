@@ -296,6 +296,10 @@
 
       // Now check if user has already picked for the week
       const picksRef = collection(db, "picks");
+
+      console.log("picksRef");
+      console.log(picksRef);
+      
       const q = query(picksRef, 
         where("username", "==", user),
         where("week", "==", WEEK)
