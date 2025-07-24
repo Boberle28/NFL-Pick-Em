@@ -300,19 +300,19 @@
       const submitBtn = document.getElementById("submitBtn");
       submitBtn.disabled = true;
 
+      const pickData = {
+        username: user,
+        week: WEEK,
+        picksOb: picksObject,
+        timestamp: new Date()
+      };
+
+      console.log("Game titles and picks:", picksObject);
+      console.log("Username:", user);
+      console.log("Week:", WEEK);
+
       // Everything is good so we try submit picks
       try {
-        const pickData = {
-          username: user,
-          week: WEEK,
-          picksOb: picksObject,
-          timestamp: new Date()
-        };
-
-        console.log("Game titles and picks:", picksObject);
-        console.log("Username:", user);
-        console.log("Week:", WEEK);
-
         await setDoc(doc(db, "picks", `${user}_week${WEEK}`), pickData);
         alert("✅ Your picks have been submitted successfully!");
 
