@@ -145,13 +145,13 @@ class Pair{
       let valDifference = this.homeFavorite ? this.homeValue - 1 : this.awayValue - 1
       if(valDifference < 0){
         // We need to add to both
-        homeValue += Math.abs(valDifference);
-        awayValue += Math.abs(valDifference);
+        this.homeValue += Math.abs(valDifference);
+        this.awayValue += Math.abs(valDifference);
       }
       if(valDifference > 0){
         // We need to subtract both
-        homeValue -= valDifference;
-        awayValue -= valDifference;
+        this.homeValue -= valDifference;
+        this.awayValue -= valDifference;
       }
     }
 
