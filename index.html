@@ -297,15 +297,28 @@
         return;
       }
 
-      // Everything is good so we submit picks
-      const pickData = {
-        username: user,
-        week: WEEK,
-        picks: picksObject,
-        timestamp: new Date()
-      };
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
 
-      await setDoc(doc(db, "picks", `${user}_week${WEEK}`), pickData);
+      // Everything is good so we try submit picks
+      try {
+        const pickData = {
+          username: user,
+          week: WEEK,
+          picks: picksObject,
+          timestamp: new Date()
+        };
+
+        await setDoc(doc(db, "picks", `${user}_week${WEEK}`), pickData);
+        alert("✅ Your picks have been submitted successfully!");
+
+      } catch (error) {
+        console.error("❌ Error submitting picks:", error);
+        alert("⚠️ There was a problem submitting your picks. Please try again later.");
+
+      }finally{
+        submitBtn.disabled = false;
+      }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
