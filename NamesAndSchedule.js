@@ -207,8 +207,11 @@ class Pair{
       return 0;
     }
 
-    IsGame(teamname){
-      return this.home.IsTeam(teamname) || this.away.IsTeam(teamname);
+    IsGame(name){
+      if(this.gameName == name)
+        return true;
+
+      return this.home.IsTeam(name) || this.away.IsTeam(name);
     }
 
     IsWinner(teamname){
@@ -231,12 +234,12 @@ class Pair{
         this.games.push(new Game(home, away));
     }
 
-    GetWinners(array){
+    GetWinners(obj){
       let count = 0;
       let value = 0;
-      array.forEach(name =>{
+      Object.entries(obj).forEach(([key, name]) =>{
 
-        const game = this.games.find(game=>{game.IsGame(name)});
+        const game = this.games.find(game=>{game.IsGame(key)});
         if(game == undefined)
         {
           console.log("Could not find game for team " + name);
