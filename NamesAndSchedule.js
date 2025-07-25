@@ -239,7 +239,7 @@ class Pair{
       let value = 0;
       Object.entries(obj).forEach(([key, name]) =>{
 
-        const game = this.games.find(game=>{game.IsGame(key)});
+        const game = this.games.find(game=>{game.IsGame(name)});
         if(game == undefined)
         {
           console.log("Could not find game for team " + name);
