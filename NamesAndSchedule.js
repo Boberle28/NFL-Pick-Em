@@ -70,6 +70,8 @@ class Pair{
     }
 
     IsTeam(teamname){
+      console.log("In is team name");
+      console.log(teamname + " == " + this.name);
       return teamname == this.name || teamname == this.shortName;
     }
   }
