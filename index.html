@@ -305,6 +305,16 @@
 
       // Now check if user has already picked for the week
       const picksRef = collection(db, "picks");
+      const picksRef2 = collection(db, "someshit");
+      if(!picksRef2){
+        console.log("picksRef2 is NULL!");
+      }
+      else{
+        console.log("picksRef2 is not NULL!");
+      }
+
+      console.log("picksRef2");
+      console.log(picksRef2);
 
       console.log("picksRef");
       console.log(picksRef);
