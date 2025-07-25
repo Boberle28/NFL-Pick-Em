@@ -136,7 +136,7 @@
           leaderboard[username] = { wins: 0, points: 0 };
         }
 
-        consol.log(data.picks);
+        console.log(data.picks);
         let result = week1.GetWinners(data.picks);
         leaderboard[username].wins += result.wins;
         leaderboard[username].points += result.points;
