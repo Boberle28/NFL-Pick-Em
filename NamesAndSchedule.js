@@ -130,25 +130,25 @@ class Pair{
 
       // Calc value for home team
       if(this.homeValue < 0){
-        let MoneyBet = 100;
-        let MoneyWinnings = this.homeValue;
+        let MoneyBet = this.homeValue;
+        let MoneyWinnings = 100;
         this.homeValue = MoneyBet / MoneyWinnings
       }
       else{
-        let MoneyBet = this.homeValue;
-        let MoneyWinnings = 100;
+        let MoneyBet = 100;
+        let MoneyWinnings = this.homeValue;
         this.homeValue = MoneyBet / MoneyWinnings
       }
 
       // Calc value for away team
       if(this.awayValue < 0){
-        let MoneyBet = 100;
-        let MoneyWinnings = this.awayValue;
+        let MoneyBet = this.awayValue;
+        let MoneyWinnings = 100;
         this.awayValue = MoneyBet / MoneyWinnings
       }
       else{
-        let MoneyBet = this.awayValue;
-        let MoneyWinnings = 100;
+        let MoneyBet = 100;
+        let MoneyWinnings = this.awayValue;
         this.awayValue = MoneyBet / MoneyWinnings
       }
 
