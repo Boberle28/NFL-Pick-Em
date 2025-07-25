@@ -68,6 +68,10 @@ class Pair{
     {
         this.pngImageName = "Images/" + this.shortName + ".png";
     }
+
+    IsTeam(teamname){
+      return teamname == this.name || teamname == this.shortName;
+    }
   }
 
   // Fill Teamarray
@@ -185,6 +189,35 @@ class Pair{
 
       return this.awayScore > this.homeScore ? this.away.name : this.home.name
     }
+
+    GetWinner(){
+      if (this.homeScore == this.awayScore){
+        return undefined;
+      }
+
+      return this.awayScore > this.homeScore ? this.away : this.home
+    }
+
+    GetTeamValue(teamname){
+      if(teamname == this.home.name)
+        return this.homeValue;
+      if(teamname == this.away.name)
+        return this.awayValue;
+      
+      return 0;
+    }
+
+    IsGame(teamname){
+      return this.home.IsTeam(teamname) || this.away.IsTeam(teamname);
+    }
+
+    IsWinner(teamname){
+      const winner = this.GetWinner();
+      if(winner == undefined)
+        return false;
+
+      return winner.IsTeam(teamname);
+    }
   }
 
   class Week
@@ -193,8 +226,31 @@ class Pair{
         this.week = week;
         this.games = [];
     }
+
     AddGame(home, away) {
         this.games.push(new Game(home, away));
+    }
+
+    GetWinners(array){
+      let count = 0;
+      let value = 0;
+      array.forEach(name =>{
+
+        const game = this.games.find(game=>{game.IsGame(name)});
+        if(game == undefined)
+        {
+          console.log("Could not find game for team " + name);
+          return {wins: count, points: value};
+        }
+
+        if(game.IsWinner(name))
+        {
+          count++;
+          value += game.GetTeamValue(name);
+        }
+      });
+
+      return {wins: count, points: value};
     }
   }
 
