@@ -280,11 +280,11 @@ class Pair{
         this.weeks.push(week);
     }
 
-    DoneAddingWeeks(){
+    async DoneAddingWeeks(){
       let count = 1;
-      this.weeks.forEach(week=>{
+      const weekPromises = this.weeks.forEach(week=>{
 
-        fetch(String("week" + count + ".json"))
+        return fetch(String("week" + count + ".json"))
         .then(response => response.json())
         .then(data => {
           let games = data.week1;
@@ -314,7 +314,7 @@ class Pair{
         ++count;
       });
       
-      
+      await Promise.all(weekPromises);
     }
   }
 
