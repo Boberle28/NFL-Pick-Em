@@ -312,6 +312,7 @@ class Pair{
               }
             }
 
+            console.log("Got week " + count + " odds filled!!!!");
             if(count == 18)
             {
               this.doneAddingOdds = true;
