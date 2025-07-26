@@ -88,6 +88,12 @@
       color: #333;
     }
 
+    .teamvalue{
+      font-size: 0.85em;
+      margin-top: 5px;
+      color: #333;
+    }
+
     @media (max-width: 600px) {
       .teams {
         flex-direction: column;
@@ -196,14 +202,6 @@
         matchupDiv.classList.add("matchup");
         matchupDiv.dataset.game = `Game ${index + 1}`;
 
-        if(game.home.shortName == "PHI"){
-          console.log(game);
-          console.log("HomeValue:");
-          console.log(Number(game.homeValue).toFixed(2));
-          console.log("AwayValue:");
-          console.log(Number(game.awayValue).toFixed(2));
-        }
-
         const teamsDiv = document.createElement("div");
         teamsDiv.classList.add("teams");
 
@@ -216,6 +214,11 @@
           label.textContent = isHome ? "Home" : "Away";
           wrapper.appendChild(label);
 
+          const teamvalue = label.textContext == "Home" ? game.homeValue : game.awayValue;
+          const teamVal = document.CreateElement("div");
+          teamVal.classList.add("teamvalue");
+          teamVal.add(teamvalue);
+          
           const btn = document.createElement("button");
           btn.classList.add("team-btn");
 
