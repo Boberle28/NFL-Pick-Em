@@ -115,48 +115,19 @@ class Pair{
       this.homeOdds = homeOdds;
       this.awayOdds = awayOdds;
 
-      this.homeFavorite = this.homeOdds < this.awayOdds ? true : false;
+      this.homeFavorite = homeOdds < awayOdds;
 
-      this.homeValue = Number(this.homeOdds);
-      this.awayValue = Number(this.awayOdds);
+      // Base values
+      let homeValue = homeOdds < 0 ? homeOdds / 100 : 100 / homeOdds;
+      let awayValue = awayOdds < 0 ? awayOdds / 100 : 100 / awayOdds;
 
-      // Calc value for home team
-      if(this.homeValue < 0){
-        let MoneyBet = this.homeValue;
-        let MoneyWinnings = 100;
-        this.homeValue = MoneyBet / MoneyWinnings
-      }
-      else{
-        let MoneyBet = 100;
-        let MoneyWinnings = this.homeValue;
-        this.homeValue = MoneyBet / MoneyWinnings
-      }
+      // Normalize to make favored team = 1.0
+      let favoredValue = this.homeFavorite ? homeValue : awayValue;
+      let scale = 1 / Math.abs(favoredValue);
 
-      // Calc value for away team
-      if(this.awayValue < 0){
-        let MoneyBet = this.awayValue;
-        let MoneyWinnings = 100;
-        this.awayValue = MoneyBet / MoneyWinnings
-      }
-      else{
-        let MoneyBet = 100;
-        let MoneyWinnings = this.awayValue;
-        this.awayValue = MoneyBet / MoneyWinnings
-      }
+      this.homeValue = Math.abs(homeValue * scale);
+      this.awayValue = Math.abs(awayValue * scale);
 
-      // Make favored team's value to one and adjust underdog relative to that
-      let valDifference = this.homeFavorite ? this.homeValue - 1 : this.awayValue - 1
-      if(valDifference < 0){
-        // We need to add to both
-        this.homeValue += Math.abs(valDifference);
-        this.awayValue += Math.abs(valDifference);
-      }
-      if(valDifference > 0){
-        // We need to subtract both
-        this.homeValue -= valDifference;
-        this.awayValue -= valDifference;
-      }
-    
       console.log("homeValue " + this.homeValue + " for " + this.home.name);
       console.log("awayValue " + this.awayValue + " for " + this.away.name);
 
