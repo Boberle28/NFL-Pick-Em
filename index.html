@@ -217,7 +217,7 @@
           const teamvalue = label.textContext == "Home" ? game.homeValue : game.awayValue;
           const teamVal = document.createElement("div");
           teamVal.classList.add("teamvalue");
-          teamVal.textContext(teamvalue);
+          teamVal.textContext = String(Number(teamvalue).toFixed(2));
           
           const btn = document.createElement("button");
           btn.classList.add("team-btn");
