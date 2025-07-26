@@ -271,7 +271,7 @@ class Pair{
     {
         this.weeks = [];
     }
-    
+
     AddWeek(week){
         this.weeks.push(week);
     }
@@ -283,11 +283,11 @@ class Pair{
         fetch(String("week" + count + ".json"))
         .then(response => response.json())
         .then(data => {
-          const games = data.week1;
+          let games = data.week1;
 
           for (const [gameKey, game] of Object.entries(games)) {
             
-            let game1 = week.FindGame(game.home);
+            const game1 = week.FindGame(game.home);
             if(game1 == undefined)
             {
               console.log("Could not find game for " + game.home);
@@ -382,7 +382,6 @@ NFLteams.push(MIN);
 
 let week1 = new Week(1);
 week1.AddGame(PHI, DAL);
-week1.games[0].SetOdds(-250, +185);
 week1.AddGame(LAC, KC);
 week1.AddGame(ATL, TB);
 week1.AddGame(CLE, CIN);
