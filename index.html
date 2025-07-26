@@ -229,6 +229,8 @@
           label.textContent = isHome ? "Home" : "Away";
           wrapper.appendChild(label);
 
+          console.log(game);
+          console.log("isHome: " + isHome);
           const teamvalue = isHome ? game.homeValue : game.awayValue;
           
           const btn = document.createElement("button");
