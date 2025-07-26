@@ -218,8 +218,8 @@
           console.log(teamvalue);
           const teamVal = document.createElement("div");
           teamVal.classList.add("teamvalue");
-          teamVal.textContext = String(Number(teamvalue).toFixed(2));
-          console.log("textContext: " + teamVal.textContext);
+          teamVal.textContent = String(Number(teamvalue).toFixed(2));
+          console.log("textContext: " + teamVal.textContent);
           wrapper.appendChild(teamVal);
           
           const btn = document.createElement("button");
