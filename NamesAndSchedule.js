@@ -311,11 +311,14 @@ class Pair{
                 game1.SetScore(game.homeScore, game.awayScore);
               }
             }
+
+            if(count == 18)
+            {
+              this.doneAddingOdds = true;
+              console.log("this.doneAddingOdds is true and DoneAddingWeeks has finished running")
+            }
           })
           .catch(err => console.error("Error fetching JSON: for week " + count, err));
-      }
-      else{
-        this.doneAddingOdds = true;
       }
 
         ++count;
