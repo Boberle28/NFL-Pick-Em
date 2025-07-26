@@ -244,7 +244,7 @@ class Pair{
         let gamefound = undefined;
         for(const game of this.games){
           if(game.IsGame(name)){
-            findgame = gamefound;
+            gamefound = game;
             break;
           }
         }
