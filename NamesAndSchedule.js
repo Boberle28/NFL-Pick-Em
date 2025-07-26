@@ -274,15 +274,17 @@ class Pair{
     constructor()
     {
         this.weeks = [];
+        this.doneAddingOdds = false;
     }
 
     AddWeek(week){
         this.weeks.push(week);
     }
 
-    async DoneAddingWeeks(){
+    DoneAddingWeeks(){
       let count = 1;
-      const weekPromises = this.weeks.forEach(week=>{
+      this.doneAddingOdds = false;
+      this.weeks.forEach(week=>{
 
         if(count < 19){
           return fetch(String("week" + count + ".json"))
@@ -312,11 +314,13 @@ class Pair{
           })
           .catch(err => console.error("Error fetching JSON: for week " + count, err));
       }
+      else{
+        this.doneAddingOdds = true;
+      }
 
         ++count;
       });
       
-      await Promise.all(weekPromises);
     }
   }
 

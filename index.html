@@ -388,11 +388,12 @@
       }
     }
 
-    window.addEventListener('DOMContentLoaded', async() => {
+    window.addEventListener('DOMContentLoaded', () => {
       const submitBtn = document.getElementById('submitBtn');
       submitBtn.addEventListener('click', submitPicks);
 
-      await season.DoneAddingWeeks();
+      season.DoneAddingWeeks();
+      while(!season.doneAddingOdds){}
       renderWeek(season.weeks[0]);
 
       const buttons = document.querySelectorAll('.teams button');
