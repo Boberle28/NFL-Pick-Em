@@ -285,7 +285,7 @@ class Pair{
 
       if(games == undefined || games == null)
         return;
-      
+
       for (const [gameKey, game] of Object.entries(games)){
         const game1 = week.FindGame(game.home);
 
@@ -309,6 +309,8 @@ class Pair{
 
     LoadOdds(data){
 
+      console.log(this.weeks[0]);
+      console.log(data.week1);
       this.LoadWeekOdds(this.weeks[0], data.week1);
       this.LoadWeekOdds(this.weeks[1], data.week2);
       this.LoadWeekOdds(this.weeks[2], data.week3);

@@ -391,6 +391,7 @@
     async function Init(){
       const data = await fetch("weekdata.json").then(res => res.json());
 
+      console.log(data);
       season.LoadOdds(data);
       renderWeek(season.weeks[0]);
 
