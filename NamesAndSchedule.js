@@ -157,6 +157,11 @@ class Pair{
         this.awayValue -= valDifference;
       }
     
+      console.log("homeValue " + this.homeValue + " for " + this.home.name);
+      console.log("awayValue " + this.awayValue + " for " + this.away.name);
+
+      console.log("homeOdds " + this.homeOdds + " for " + this.home.name);
+      console.log("awayOdds " + this.awayOdds + " for " + this.away.name);
     }
 
     // Get the value of the home team and away team. Not the original odds
@@ -292,8 +297,7 @@ class Pair{
               break;
             }
 
-            console.log(" homeMoneyline " + game.homeMoneyline + " for " + game.home);
-            console.log(" awayMoneyline " + game.awayMoneyline + " for " + game.home);  
+            console.log("Setting Odds!!!!!!!!!!!!!!!!!!!!!");
             // Add odds to game
             game1.SetOdds(game.homeMoneyline, game.awayMoneyline);
             
