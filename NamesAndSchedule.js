@@ -271,9 +271,11 @@ class Pair{
     {
         this.weeks = [];
     }
+    
     AddWeek(week){
         this.weeks.push(week);
     }
+
     DoneAddingWeeks(){
       let count = 1;
       this.weeks.forEach(week=>{
