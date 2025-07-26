@@ -109,23 +109,11 @@ class Pair{
     SetScore(homeScore, awayScore){
       this.homeScore = homeScore;
       this.awayScore = awayScore;
-      Number()
     }
 
     SetOdds(homeOdds, awayOdds){
-
-      console.log("Start SetOdds??????????????????????????");
-      console.log("per homeOdds:");
-      console.log(homeOdds);
-      console.log("per awayOdds");
-      console.log(awayOdds);
       this.homeOdds = homeOdds;
       this.awayOdds = awayOdds;
-
-      console.log("this.homeOdds:");
-      console.log(this.homeOdds)
-      console.log("this.awayOdds:");
-      console.log(this.awayOdds);
 
       this.homeFavorite = this.homeOdds < this.awayOdds ? true : false;
 
@@ -168,7 +156,7 @@ class Pair{
         this.homeValue -= valDifference;
         this.awayValue -= valDifference;
       }
-      console.log("End SetOdds??????????????????????????");
+    
     }
 
     // Get the value of the home team and away team. Not the original odds
@@ -262,6 +250,19 @@ class Pair{
 
       return {wins: count, points: value};
     }
+
+    FindGame(teamname){
+      let gamefound = undefined;
+
+      for(const game of this.games){
+        if(game.IsGame(teamname)){
+          gamefound = game;
+          break;
+        }
+      }
+
+      return gamefound;
+    }
   }
 
   class Season
@@ -272,6 +273,41 @@ class Pair{
     }
     AddWeek(week){
         this.weeks.push(week);
+    }
+    DoneAddingWeeks(){
+      let count = 1;
+      this.weeks.forEach(week=>{
+
+        fetch(String("week" + count + ".json"))
+        .then(response => response.json())
+        .then(data => {
+          const games = data.week1;
+
+          for (const [gameKey, game] of Object.entries(games)) {
+            
+            let game1 = week.FindGame(game.home);
+            if(game1 == undefined)
+            {
+              console.log("Could not find game for " + game.home);
+              break;
+            }
+
+            // Add odds to game
+            game1.SetOdds(game.homeMoneyline, game.awayMoneyline);
+            
+            // Check if we have scores
+            if(game1.homeScore != -1){
+              // We have scores
+              game1.SetScore(game.homeScore, game.awayScore);
+            }
+          }
+        })
+        .catch(err => console.error("Error fetching JSON: for week " + count, err));
+
+        ++count;
+      });
+      
+      
     }
   }
 
@@ -672,6 +708,8 @@ week18.AddGame(HOU, IND);
   season.AddWeek(week16);
   season.AddWeek(week17);
   season.AddWeek(week18);
+
+  season.DoneAddingWeeks();
 
   
   
