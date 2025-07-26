@@ -284,6 +284,45 @@ class Pair{
     DoneAddingWeeks(){
       let count = 1;
       this.doneAddingOdds = false;
+      for(const item of this.weeks)
+      {
+        fetch(String("week" + count + ".json"))
+          .then(response => response.json())
+          .then(data => {
+            let games = data.week1;
+
+            for (const [gameKey, game] of Object.entries(games)) {
+            
+              const game1 = week.FindGame(game.home);
+              if(game1 == undefined)
+              {
+                console.log("Could not find game for " + game.home);
+                break;
+              }
+
+              console.log("Setting Odds!!!!!!!!!!!!!!!!!!!!!");
+              // Add odds to game
+              game1.SetOdds(game.homeMoneyline, game.awayMoneyline);
+            
+              // Check if we have scores
+              if(game1.homeScore != -1){
+                // We have scores
+                game1.SetScore(game.homeScore, game.awayScore);
+              }
+            }
+
+            console.log("Got week " + count + " odds filled!!!!");
+            if(count == 18)
+            {
+              this.doneAddingOdds = true;
+              return;
+            }
+          })
+          .catch(err => console.error("Error fetching JSON: for week " + count, err));
+        count++;
+      }
+
+      /*
       this.weeks.forEach(week=>{
 
         if(count < 19){
@@ -324,6 +363,7 @@ class Pair{
 
         ++count;
       });
+      */
       
     }
   }
