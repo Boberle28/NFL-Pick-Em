@@ -241,17 +241,24 @@ class Pair{
       let value = 0;
       Object.entries(obj).forEach(([key, name]) =>{
 
-        const game = this.games.find(game=>{game.IsGame(name)});
-        if(game == undefined)
+        let gamefound = undefined;
+        for(const game of this.games){
+          if(game.IsGame(name)){
+            findgame = gamefound;
+            break;
+          }
+        }
+    
+        if(gamefound == undefined)
         {
           console.log("Could not find game for team " + name);
           return {wins: count, points: value};
         }
 
-        if(game.IsWinner(name))
+        if(gamefound.IsWinner(name))
         {
           count++;
-          value += game.GetTeamValue(name);
+          value += gamefound.GetTeamValue(name);
         }
       });
 
