@@ -709,8 +709,6 @@ week18.AddGame(HOU, IND);
   season.AddWeek(week17);
   season.AddWeek(week18);
 
-  season.DoneAddingWeeks();
-
   
   
   
