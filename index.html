@@ -388,18 +388,24 @@
       }
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const submitBtn = document.getElementById('submitBtn');
-      submitBtn.addEventListener('click', submitPicks);
-
-      season.DoneAddingWeeks();
+    async function Init(){
+      const data = await fetch("weekdata.json").then(res => res.json());
       
+      season.LoadGames(data);
       renderWeek(season.weeks[0]);
 
       const buttons = document.querySelectorAll('.teams button');
       buttons.forEach(button => {
          button.addEventListener('click', () => selectWinner(button));
       });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.addEventListener('click', submitPicks);
+
+      Init();
+
     });
      
   </script>

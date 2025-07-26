@@ -281,6 +281,51 @@ class Pair{
         this.weeks.push(week);
     }
 
+    LoadWeekOdds(week, games){
+      for (const [gameKey, game] of Object.entries(games)){
+        const game1 = week.FindGame(game.home);
+
+        // Make sure we found the game
+        if(game1 == undefined)
+        {
+          console.log("Could not find game for " + game.home);
+          continue;
+        }
+
+        // Add odds to game
+        game1.SetOdds(game.homeMoneyline, game.awayMoneyline);
+            
+        // Check if we have scores
+        if(game1.homeScore != -1){
+          // We have scores
+          game1.SetScore(game.homeScore, game.awayScore);
+        }
+      }
+    }
+
+    LoadOdds(data){
+
+      this.LoadWeekOdds(this.weeks[0], data.week1);
+      this.LoadWeekOdds(this.weeks[1], data.week2);
+      this.LoadWeekOdds(this.weeks[2], data.week3);
+      this.LoadWeekOdds(this.weeks[3], data.week4);
+      this.LoadWeekOdds(this.weeks[4], data.week5);
+      this.LoadWeekOdds(this.weeks[5], data.week6);
+      this.LoadWeekOdds(this.weeks[6], data.week7);
+      this.LoadWeekOdds(this.weeks[7], data.week8);
+      this.LoadWeekOdds(this.weeks[8], data.week9);
+      this.LoadWeekOdds(this.weeks[9], data.week10);
+      this.LoadWeekOdds(this.weeks[10], data.week11);
+      this.LoadWeekOdds(this.weeks[11], data.week12);
+      this.LoadWeekOdds(this.weeks[12], data.week13);
+      this.LoadWeekOdds(this.weeks[13], data.week14);
+      this.LoadWeekOdds(this.weeks[14], data.week15);
+      this.LoadWeekOdds(this.weeks[15], data.week16);
+      this.LoadWeekOdds(this.weeks[16], data.week17);
+      this.LoadWeekOdds(this.weeks[17], data.week18);
+
+    }
+
     DoneAddingWeeks(){
       let count = 1;
       this.doneAddingOdds = false;
@@ -745,7 +790,6 @@ week18.AddGame(HOU, IND);
  
   let season = new Season();
   season.AddWeek(week1);
-  
   season.AddWeek(week2);
   season.AddWeek(week3);
   season.AddWeek(week4);
