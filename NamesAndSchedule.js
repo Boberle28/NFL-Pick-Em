@@ -287,7 +287,7 @@ class Pair{
       this.weeks.forEach(week=>{
 
         if(count < 19){
-          return fetch(String("week" + count + ".json"))
+          fetch(String("week" + count + ".json"))
           .then(response => response.json())
           .then(data => {
             let games = data.week1;

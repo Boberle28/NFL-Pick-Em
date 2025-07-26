@@ -393,7 +393,6 @@
       submitBtn.addEventListener('click', submitPicks);
 
       season.DoneAddingWeeks();
-      while(!season.doneAddingOdds){}
       renderWeek(season.weeks[0]);
 
       const buttons = document.querySelectorAll('.teams button');
