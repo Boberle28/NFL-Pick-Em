@@ -284,32 +284,34 @@ class Pair{
       let count = 1;
       const weekPromises = this.weeks.forEach(week=>{
 
-        return fetch(String("week" + count + ".json"))
-        .then(response => response.json())
-        .then(data => {
-          let games = data.week1;
+        if(count < 19){
+          return fetch(String("week" + count + ".json"))
+          .then(response => response.json())
+          .then(data => {
+            let games = data.week1;
 
-          for (const [gameKey, game] of Object.entries(games)) {
+            for (const [gameKey, game] of Object.entries(games)) {
             
-            const game1 = week.FindGame(game.home);
-            if(game1 == undefined)
-            {
-              console.log("Could not find game for " + game.home);
-              break;
-            }
+              const game1 = week.FindGame(game.home);
+              if(game1 == undefined)
+              {
+                console.log("Could not find game for " + game.home);
+                break;
+              }
 
-            console.log("Setting Odds!!!!!!!!!!!!!!!!!!!!!");
-            // Add odds to game
-            game1.SetOdds(game.homeMoneyline, game.awayMoneyline);
+              console.log("Setting Odds!!!!!!!!!!!!!!!!!!!!!");
+              // Add odds to game
+              game1.SetOdds(game.homeMoneyline, game.awayMoneyline);
             
-            // Check if we have scores
-            if(game1.homeScore != -1){
-              // We have scores
-              game1.SetScore(game.homeScore, game.awayScore);
+              // Check if we have scores
+              if(game1.homeScore != -1){
+                // We have scores
+                game1.SetScore(game.homeScore, game.awayScore);
+              }
             }
-          }
-        })
-        .catch(err => console.error("Error fetching JSON: for week " + count, err));
+          })
+          .catch(err => console.error("Error fetching JSON: for week " + count, err));
+      }
 
         ++count;
       });
