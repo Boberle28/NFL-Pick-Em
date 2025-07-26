@@ -214,7 +214,7 @@
           label.textContent = isHome ? "Home" : "Away";
           wrapper.appendChild(label);
 
-          const teamvalue = label.textContext == "Home" ? game.homeValue : game.awayValue;
+          const teamvalue = isHome ? game.homeValue : game.awayValue;
           console.log(teamvalue);
           const teamVal = document.createElement("div");
           teamVal.classList.add("teamvalue");
@@ -247,7 +247,7 @@
 
           const record = document.createElement("div");
           record.classList.add("record");
-          record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}`;
+          record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}` + "  " + teamVal.textContext;
           wrapper.appendChild(record);
 
           return wrapper;
