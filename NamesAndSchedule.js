@@ -156,6 +156,9 @@ class Pair{
         this.homeValue -= valDifference;
         this.awayValue -= valDifference;
       }
+
+      console.log("this.homeValue" + this.homeValue + " for " + this.home.name);
+      console.log("this.awayValue" + this.awayValue + " for " + this.away.name);
     }
 
     // Get the value of the home team and away team. Not the original odds
