@@ -310,7 +310,7 @@ class Pair{
     LoadOdds(data){
 
       console.log(this.weeks[0]);
-      console.log(data.week1);
+      console.log(data.weeks.week1);
       this.LoadWeekOdds(this.weeks[0], data.weeks.week1);
       this.LoadWeekOdds(this.weeks[1], data.weeks.week2);
       this.LoadWeekOdds(this.weeks[2], data.weeks.week3);
