@@ -311,24 +311,24 @@ class Pair{
 
       console.log(this.weeks[0]);
       console.log(data.week1);
-      this.LoadWeekOdds(this.weeks[0], data.week1);
-      this.LoadWeekOdds(this.weeks[1], data.week2);
-      this.LoadWeekOdds(this.weeks[2], data.week3);
-      this.LoadWeekOdds(this.weeks[3], data.week4);
-      this.LoadWeekOdds(this.weeks[4], data.week5);
-      this.LoadWeekOdds(this.weeks[5], data.week6);
-      this.LoadWeekOdds(this.weeks[6], data.week7);
-      this.LoadWeekOdds(this.weeks[7], data.week8);
-      this.LoadWeekOdds(this.weeks[8], data.week9);
-      this.LoadWeekOdds(this.weeks[9], data.week10);
-      this.LoadWeekOdds(this.weeks[10], data.week11);
-      this.LoadWeekOdds(this.weeks[11], data.week12);
-      this.LoadWeekOdds(this.weeks[12], data.week13);
-      this.LoadWeekOdds(this.weeks[13], data.week14);
-      this.LoadWeekOdds(this.weeks[14], data.week15);
-      this.LoadWeekOdds(this.weeks[15], data.week16);
-      this.LoadWeekOdds(this.weeks[16], data.week17);
-      this.LoadWeekOdds(this.weeks[17], data.week18);
+      this.LoadWeekOdds(this.weeks[0], data.weeks.week1);
+      this.LoadWeekOdds(this.weeks[1], data.weeks.week2);
+      this.LoadWeekOdds(this.weeks[2], data.weeks.week3);
+      this.LoadWeekOdds(this.weeks[3], data.weeks.week4);
+      this.LoadWeekOdds(this.weeks[4], data.weeks.week5);
+      this.LoadWeekOdds(this.weeks[5], data.weeks.week6);
+      this.LoadWeekOdds(this.weeks[6], data.weeks.week7);
+      this.LoadWeekOdds(this.weeks[7], data.weeks.week8);
+      this.LoadWeekOdds(this.weeks[8], data.weeks.week9);
+      this.LoadWeekOdds(this.weeks[9], data.weeks.week10);
+      this.LoadWeekOdds(this.weeks[10], data.weeks.week11);
+      this.LoadWeekOdds(this.weeks[11], data.weeks.week12);
+      this.LoadWeekOdds(this.weeks[12], data.weeks.week13);
+      this.LoadWeekOdds(this.weeks[13], data.weeks.week14);
+      this.LoadWeekOdds(this.weeks[14], data.weeks.week15);
+      this.LoadWeekOdds(this.weeks[15], data.weeks.week16);
+      this.LoadWeekOdds(this.weeks[16], data.weeks.week17);
+      this.LoadWeekOdds(this.weeks[17], data.weeks.week18);
 
     }
 
