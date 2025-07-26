@@ -215,9 +215,11 @@
           wrapper.appendChild(label);
 
           const teamvalue = label.textContext == "Home" ? game.homeValue : game.awayValue;
+          console.log(teamvalue);
           const teamVal = document.createElement("div");
           teamVal.classList.add("teamvalue");
           teamVal.textContext = String(Number(teamvalue).toFixed(2));
+          wrapper.appendChild(teamVal);
           
           const btn = document.createElement("button");
           btn.classList.add("team-btn");
