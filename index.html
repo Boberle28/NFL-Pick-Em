@@ -390,8 +390,8 @@
 
     async function Init(){
       const data = await fetch("weekdata.json").then(res => res.json());
-      
-      season.LoadGames(data);
+
+      season.LoadOdds(data);
       renderWeek(season.weeks[0]);
 
       const buttons = document.querySelectorAll('.teams button');
