@@ -282,6 +282,10 @@ class Pair{
     }
 
     LoadWeekOdds(week, games){
+
+      if(games == undefined || games == null)
+        return;
+      
       for (const [gameKey, game] of Object.entries(games)){
         const game1 = week.FindGame(game.home);
 
