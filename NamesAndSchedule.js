@@ -252,16 +252,14 @@ class Pair{
     }
 
     FindGame(teamname){
-      let gamefound = undefined;
 
       for(const game of this.games){
         if(game.IsGame(teamname)){
-          gamefound = game;
-          break;
+          return game;
         }
       }
 
-      return gamefound;
+      return undefined;
     }
   }
 
