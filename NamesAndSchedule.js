@@ -115,24 +115,47 @@ class Pair{
       this.homeOdds = homeOdds;
       this.awayOdds = awayOdds;
 
-      this.homeFavorite = homeOdds < awayOdds;
+      this.homeFavorite = this.homeOdds < this.awayOdds ? true : false;
 
-      // Base values
-      let homeValue = homeOdds < 0 ? homeOdds / 100 : 100 / homeOdds;
-      let awayValue = awayOdds < 0 ? awayOdds / 100 : 100 / awayOdds;
+      this.homeValue = Number(this.homeOdds);
+      this.awayValue = Number(this.awayOdds);
 
-      // Normalize to make favored team = 1.0
-      let favoredValue = this.homeFavorite ? homeValue : awayValue;
-      let scale = 1 / Math.abs(favoredValue);
+      // Calc value for home team
+      if(this.homeValue < 0){
+        let MoneyBet = this.homeValue;
+        let MoneyWinnings = 100;
+        this.homeValue = MoneyBet / MoneyWinnings
+      }
+      else{
+        let MoneyBet = 100;
+        let MoneyWinnings = this.homeValue;
+        this.homeValue = MoneyBet / MoneyWinnings
+      }
 
-      this.homeValue = Math.abs(homeValue * scale);
-      this.awayValue = Math.abs(awayValue * scale);
+      // Calc value for away team
+      if(this.awayValue < 0){
+        let MoneyBet = this.awayValue;
+        let MoneyWinnings = 100;
+        this.awayValue = MoneyBet / MoneyWinnings
+      }
+      else{
+        let MoneyBet = 100;
+        let MoneyWinnings = this.awayValue;
+        this.awayValue = MoneyBet / MoneyWinnings
+      }
 
-      console.log("homeValue " + this.homeValue + " for " + this.home.name);
-      console.log("awayValue " + this.awayValue + " for " + this.away.name);
-
-      console.log("homeOdds " + this.homeOdds + " for " + this.home.name);
-      console.log("awayOdds " + this.awayOdds + " for " + this.away.name);
+      // Make favored team's value to one and adjust underdog relative to that
+      let valDifference = this.homeFavorite ? this.homeValue - 1 : this.awayValue - 1
+      if(valDifference < 0){
+        // We need to add to both
+        this.homeValue += Math.abs(valDifference);
+        this.awayValue += Math.abs(valDifference);
+      }
+      if(valDifference > 0){
+        // We need to subtract both
+        this.homeValue -= valDifference;
+        this.awayValue -= valDifference;
+      }
     }
 
     // Get the value of the home team and away team. Not the original odds
