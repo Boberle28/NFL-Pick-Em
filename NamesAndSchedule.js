@@ -292,6 +292,8 @@ class Pair{
               break;
             }
 
+            console.log(" homeMoneyline " + game.homeMoneyline + " for " + game.home);
+            console.log(" awayMoneyline " + game.awayMoneyline + " for " + game.home);
             // Add odds to game
             game1.SetOdds(game.homeMoneyline, game.awayMoneyline);
             
