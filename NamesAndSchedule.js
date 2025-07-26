@@ -405,7 +405,6 @@ week1.AddGame(LAR, HOU);
 week1.AddGame(BUF, BAL);
 week1.AddGame(CHI, MIN);
 
-/*
 let week2 = new Week(2);
 week2.AddGame(GB, WAS);
 week2.AddGame(CIN, JAX);
@@ -695,12 +694,10 @@ week18.AddGame(SF, SEA);
 week18.AddGame(TB, CAR);
 week18.AddGame(JAX, TEN);
 week18.AddGame(HOU, IND);
-
-  */
  
   let season = new Season();
   season.AddWeek(week1);
-  /*
+  
   season.AddWeek(week2);
   season.AddWeek(week3);
   season.AddWeek(week4);
@@ -718,7 +715,7 @@ week18.AddGame(HOU, IND);
   season.AddWeek(week16);
   season.AddWeek(week17);
   season.AddWeek(week18);
-  */
+  
 
   
   
