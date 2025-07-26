@@ -241,7 +241,7 @@
 
           const record = document.createElement("div");
           record.classList.add("record");
-          record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}` + "      " + String(Number(teamvalue).toFixed(2));
+          record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}` + "                  " + String(Number(teamvalue).toFixed(2));
           wrapper.appendChild(record);
 
           return wrapper;
