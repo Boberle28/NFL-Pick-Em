@@ -91,8 +91,8 @@ class Pair{
 
         // We use the odds to calculate the value of the picks
         // The favorite will always be 1 and the underdog will be relative to that
-        this.awayValue = 1.00;
-        this.homeValue = 1.00;
+        this.awayValue = 0;
+        this.homeValue = 0;
 
         this.awayScore = 0;
         this.homeScore = 0;
