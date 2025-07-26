@@ -233,6 +233,7 @@
           console.log("isHome: " + isHome);
           console.log("game.homeValue " + game.homeValue);
           console.log("game.awayValue " + game.awayValue);
+          console.log("Rendering team card for:", isHome ? game.home.name : game.away.name);
           const teamvalue = isHome ? game.homeValue : game.awayValue;
           
           const btn = document.createElement("button");

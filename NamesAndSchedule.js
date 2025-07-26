@@ -117,8 +117,8 @@ class Pair{
 
       this.homeFavorite = this.homeOdds < this.awayOdds ? true : false;
 
-      this.homeValue = Number(this.homeOdds);
-      this.awayValue = Number(this.awayOdds);
+      this.homeValue = this.homeOdds;
+      this.awayValue = this.awayOdds;
 
       // Calc value for home team
       if(this.homeValue < 0){
