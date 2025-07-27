@@ -508,6 +508,7 @@ preWeek1.AddGame(CAR, CLE);
 preWeek1.AddGame(NE, WAS);
 preWeek1.AddGame(BUF, NYG);
 preWeek1.AddGame(MIN, HOU);
+preWeek1.AddGame(JAX, PIT);
 preWeek1.AddGame(LAR, DAL);
 preWeek1.AddGame(TB, TEN);
 preWeek1.AddGame(GB, NYJ);
