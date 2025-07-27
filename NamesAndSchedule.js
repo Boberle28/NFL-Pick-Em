@@ -60,6 +60,12 @@ class Pair{
       this.getPngImageDirectory();
     }
 
+    updateRecords(wins, losses, ties){
+      this.wins = wins;
+      this.losses = losses;
+      this.ties = ties;
+    }
+
     getName() {
       return this.name;
     }
@@ -1009,6 +1015,14 @@ week18.AddGame(HOU, IND);
     // ⛔ During an active week
     return null;
 
+  }
+
+  function UpdateRecords(records) {
+     const teamKeys = Object.keys(records);
+
+     for (let i = 0; i < teamKeys.length - 1; i++){
+      NFLteams[i].updateRecords(teamKeys[i].wins, teamKeys[i].losses, teamKeys[i].ties);
+     }
   }
   
 

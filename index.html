@@ -9,6 +9,7 @@
       font-weight: bold;
       margin-top: 0.5em;
       text-align: center;
+      padding: 5px;
     }
     .open {
       color: green;
@@ -302,6 +303,8 @@
       });
     }
     
+    let WEEK = 1;
+
     async function submitPicks() {
       const matchups = document.querySelectorAll(".matchup");
       let picks = [];
@@ -346,8 +349,6 @@
         alert("You must enter your username, if you have not made a username yet, you can enter whatever you'd like but you must use that same name every week with your picks");
         return;
       }
-
-      let WEEK = 1;
 
       const pickData = {
         picks: picksObject,
@@ -404,6 +405,11 @@
       const data = await fetch("weekdata.json").then(res => res.json());
 
       const seasonJson = await fetch("weeklydates.json").then(res => res.json());
+
+      // For updating team records
+      const records = await fetch("teamRecords.json").then(res => res.json());
+
+      UpdateRecords(records.teams);
 
       season.LoadOdds(data)
       season.LoadOddsPreseason(predata);
