@@ -275,10 +275,15 @@ class Pair{
     {
         this.weeks = [];
         this.doneAddingOdds = false;
+        this.preseasonWeeks = [];
     }
 
     AddWeek(week){
         this.weeks.push(week);
+    }
+
+    AddPreseasonWeek(week){
+        this.preseasonWeeks.push(week);
     }
 
     LoadWeekOdds(week, games){
@@ -330,6 +335,13 @@ class Pair{
       this.LoadWeekOdds(this.weeks[16], data.weeks.week17);
       this.LoadWeekOdds(this.weeks[17], data.weeks.week18);
 
+    }
+
+    LoadOddsPreseason(data)
+    {
+      this.LoadWeekOdds(this.preseasonWeeks[0], data.weeks.week1);
+      this.LoadWeekOdds(this.preseasonWeeks[1], data.weeks.week2);
+      this.LoadWeekOdds(this.preseasonWeeks[2], data.weeks.week3);
     }
 
     DoneAddingWeeks(){
@@ -485,6 +497,44 @@ let CHI = new Team("Chicago Bears", "CHI", 0, 0, 0);
 NFLteams.push(CHI);
 let MIN = new Team("Minnesota Vikings", "MIN", 0, 0, 0);
 NFLteams.push(MIN);
+
+let preWeek1 = new Week(1);
+preWeek1.AddGame(DET, LAC);
+preWeek1.AddGame(BAL, IND);
+preWeek1.AddGame(PHI, CIN);
+preWeek1.AddGame(SEA, LV);
+preWeek1.AddGame(ATL, DET);
+preWeek1.AddGame(CAR, CLE);
+preWeek1.AddGame(NE, WAS);
+preWeek1.AddGame(BUF, NYG);
+preWeek1.AddGame(MIN, HOU);
+preWeek1.AddGame(LAR, DAL);
+preWeek1.AddGame(TB, TEN);
+preWeek1.AddGame(GB, NYJ);
+preWeek1.AddGame(ARI, KC);
+preWeek1.AddGame(SF, DEN);
+preWeek1.AddGame(CHI, MIA);
+preWeek1.AddGame(LAC, NO);
+
+let preWeek2 = new Week(2);
+preWeek1.AddGame(ATL, TEN);
+preWeek1.AddGame(SEA, KC);
+preWeek1.AddGame(DET, MIA);
+preWeek1.AddGame(HOU, CAR);
+preWeek1.AddGame(IND, GB);
+preWeek1.AddGame(MIN, NE);
+preWeek1.AddGame(PHI, CLE);
+preWeek1.AddGame(LV, SF);
+preWeek1.AddGame(DAL, BAL);
+preWeek1.AddGame(LAR, LAC);
+preWeek1.AddGame(NYG, NYJ);
+preWeek1.AddGame(PIT, TB);
+preWeek1.AddGame(DEN, ARI);
+preWeek1.AddGame(NO, JAX);
+preWeek1.AddGame(CHI, BUF);
+preWeek1.AddGame(WAS, CIN);
+
+let preWeek3 = new Week(3);
 
 let week1 = new Week(1);
 week1.AddGame(PHI, DAL);
@@ -813,6 +863,10 @@ week18.AddGame(HOU, IND);
   season.AddWeek(week16);
   season.AddWeek(week17);
   season.AddWeek(week18);
+
+  season.AddPreseasonWeek(preWeek1);
+  season.AddPreseasonWeek(preWeek2);
+  season.AddPreseasonWeek(preWeek3);
   
 
   

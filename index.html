@@ -389,11 +389,12 @@
     }
 
     async function Init(){
-      const data = await fetch("preseason.json").then(res => res.json());
+      const predata = await fetch("preseason.json").then(res => res.json());
+      const data = await fetch(weekdata.json).then(res => res.json());
 
-      console.log(data);
-      season.LoadOdds(data);
-      renderWeek(season.weeks[0]);
+      season.LoadpreOdds(data);
+      season.LoadOddsPreseason(predata);
+      renderWeek(season.preseasonWeeks[0]);
 
       const buttons = document.querySelectorAll('.teams button');
       buttons.forEach(button => {
