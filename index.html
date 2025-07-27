@@ -390,7 +390,7 @@
 
     async function Init(){
       const predata = await fetch("preseason.json").then(res => res.json());
-      const data = await fetch(weekdata.json).then(res => res.json());
+      const data = await fetch("weekdata.json").then(res => res.json());
 
       season.LoadOdds(data)
       season.LoadOddsPreseason(predata);
