@@ -10,8 +10,8 @@
       "game2": {
         "away": "Indianapolis Colts",
         "home": "Baltimore Ravens",
-        "awayMoneyline": -100,
-        "homeMoneyline": -100
+        "homeMoneyline": -102,
+        "awayMoneyline": -120
       },
       "game3": {
         "away": "Cincinnati Bengals",
