@@ -208,6 +208,10 @@ class Pair{
       return this.home.IsTeam(name) || this.away.IsTeam(name);
     }
 
+    IsGameBothTeams(home, away){
+      return this.home.IsTeam(home) && this.away.IsTeam(away);
+    }
+
     IsWinner(teamname){
       const winner = this.GetWinner();
       if(winner == undefined)
@@ -267,6 +271,16 @@ class Pair{
 
       return undefined;
     }
+
+    FindGameByTeams(home, away){
+      for(const game of this.games){
+        if(game.IsGameBothTeams(home, away)){
+          return game;
+        }
+      }
+
+      return undefined;
+    }
   }
 
   class Season
@@ -293,7 +307,7 @@ class Pair{
 
       console.log("\n\nWeek " + week.week);
       for (const [gameKey, game] of Object.entries(games)){
-        const game1 = week.FindGame(game.home);
+        const game1 = week.FindGameByTeams(game.home, game.away);
 
         // Make sure we found the game
         if(game1 == undefined)
