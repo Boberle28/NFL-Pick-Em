@@ -568,6 +568,21 @@ preWeek2.AddGame(CHI, BUF);
 preWeek2.AddGame(WAS, CIN);
 
 let preWeek3 = new Week(3);
+preWeek3.AddGame(CAR, PIT);
+preWeek3.AddGame(NYG, NE);
+preWeek3.AddGame(NYJ, PHI);
+preWeek3.AddGame(DAL, ATL);
+preWeek3.AddGame(TEN, MIN);
+preWeek3.AddGame(KC, CHI);
+preWeek3.AddGame(WAS, BAL);
+preWeek3.AddGame(CIN, IND);
+preWeek3.AddGame(CLE, LAR);
+preWeek3.AddGame(DET, HOU);
+preWeek3.AddGame(GB, SEA);
+preWeek3.AddGame(MIA, JAX);
+preWeek3.AddGame(TB, BUF);
+preWeek3.AddGame(SF, LAC);
+preWeek3.AddGame(ARI, LV);
 
 let week1 = new Week(1);
 week1.AddGame(PHI, DAL);
