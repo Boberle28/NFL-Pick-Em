@@ -307,7 +307,7 @@ class Pair{
       }
     }
 
-    LoadOdds(data){
+    LoadOdds(data){ 
 
       console.log(this.weeks[0]);
       console.log(data.weeks.week1);
