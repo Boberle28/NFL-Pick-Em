@@ -83,8 +83,8 @@
         margin-bottom: 5px;
       }
 
-      .userrow{
-        #c4c3be
+      td.userrow{
+       background-color: #c4c3be;
       }
     }
   </style>
@@ -140,7 +140,7 @@
       players.forEach(player => {
         const row = document.createElement("tr");
         row.innerHTML = `
-          <td data-label="Username">${player.username}</td>
+          <td data-label="Username" class="userrow">${player.username}</td>
           <td data-label="Wins">${player.wins}</td>
           <td data-label="Points">${player.points}</td>
           <td data-label="Win Percentage">${player.winpercent}</td>
