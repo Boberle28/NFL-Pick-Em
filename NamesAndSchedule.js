@@ -979,44 +979,7 @@ week18.AddGame(HOU, IND);
 
     // ✅ Before the first week starts
     if (now < seasonStart) {
-      return true;
-    }
-
-    // ⛔ After the season ends
-    if (now > seasonEnd) {
-      return false;
-    }
-
-    // ✅ Between any two weeks
-    for (let i = 0; i < weekKeys.length - 1; i++) {
-      const currentWeek = seasonjson[weekKeys[i]];
-      const nextWeek = seasonjson[weekKeys[i + 1]];
-
-      const endOfCurrent = new Date(currentWeek.end);
-      const startOfNext = new Date(nextWeek.begin);
-
-      if (now > endOfCurrent && now < startOfNext) {
-        return true;
-      }
-    }
-
-    // ⛔ During an active week
-    return false;
-  }
-
-  function isBettingWindowOpen(currentDate, seasonjson) {
-    const now = new Date(currentDate);
-
-    const weekKeys = Object.keys(seasonjson);
-    const firstWeek = seasonjson[weekKeys[0]];
-    const lastWeek = seasonjson[weekKeys[weekKeys.length - 1]];
-
-    const seasonStart = new Date(firstWeek.begin);
-    const seasonEnd = new Date(lastWeek.end);
-
-    // ✅ Before the first week starts
-    if (now < seasonStart) {
-      return season.GetPreseasonWeek(1);
+      return season.GetPreseasonWeek(0);
     }
 
     // ⛔ After the season ends
@@ -1039,7 +1002,7 @@ week18.AddGame(HOU, IND);
         }
 
         // Else we call season.GetWeek
-        return season.GetWeek(i + 1);
+        return season.GetWeek((i + 1) - 3);
       }
     }
 

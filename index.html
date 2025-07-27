@@ -8,6 +8,7 @@
     #betting-status {
       font-weight: bold;
       margin-top: 0.5em;
+      text-align: center;
     }
     .open {
       color: green;
@@ -346,7 +347,7 @@
         return;
       }
 
-      const WEEK = 1;
+      let WEEK = 1;
 
       const pickData = {
         picks: picksObject,
@@ -418,15 +419,17 @@
 
       // Show current week or upcoming betting target
       if (currentWeek) {
-        title.textContent = `NFL Pick'em - ${currentWeek}`;
-        weekHeading.textContent = `NFL Pick'em - ${currentWeek}`;
+        WEEK = currentWeek.week;
+        title.textContent = `NFL Pick'em - ${currentWeek.week}`;
+        weekHeading.textContent = `NFL Pick'em - ${currentWeek.week}`;
         bettingStatus.textContent = "Betting is Closed";
         bettingStatus.className = "closed";
 
         renderWeek(currentWeek);
       } else if (bettingTarget) {
-        title.textContent = `NFL Pick'em - ${bettingTarget}`;
-        weekHeading.textContent = `NFL Pick'em - ${bettingTarget}`;
+        WEEK = bettingTarget.week;
+        title.textContent = `NFL Pick'em - ${bettingTarget.week}`;
+        weekHeading.textContent = `NFL Pick'em - ${bettingTarget.week}`;
         bettingStatus.textContent = "Betting is Open";
         bettingStatus.className = "open";
 
