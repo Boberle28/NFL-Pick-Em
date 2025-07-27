@@ -89,10 +89,6 @@ class Pair{
   class Game
   {
     constructor(home, away){
-        console.log("Calling constructor for Game!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        console.log("home: " + home.name);
-        console.log("away: " + away.name);
-        console.log("Leaving Constructor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         this.away = away;
         this.home = home;
 
