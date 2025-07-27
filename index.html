@@ -426,16 +426,16 @@
       // Show current week or upcoming betting target
       if (currentWeek) {
         WEEK = currentWeek.week;
-        title.textContent = `NFL Pick'em - ${currentWeek.week}`;
-        weekHeading.textContent = `NFL Pick'em - ${currentWeek.week}`;
+        title.textContent = `NFL Pick'em - Week ${currentWeek.week}`;
+        weekHeading.textContent = `NFL Pick'em - Week ${currentWeek.week}`;
         bettingStatus.textContent = "Betting is Closed";
         bettingStatus.className = "closed";
 
         renderWeek(currentWeek);
       } else if (bettingTarget) {
         WEEK = bettingTarget.week;
-        title.textContent = `NFL Pick'em - ${bettingTarget.week}`;
-        weekHeading.textContent = `NFL Pick'em - ${bettingTarget.week}`;
+        title.textContent = `NFL Pick'em - Week ${bettingTarget.week}`;
+        weekHeading.textContent = `NFL Pick'em - Week ${bettingTarget.week}`;
         bettingStatus.textContent = "Betting is Open";
         bettingStatus.className = "open";
 

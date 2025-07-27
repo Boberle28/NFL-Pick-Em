@@ -1018,14 +1018,16 @@ week18.AddGame(HOU, IND);
   }
 
   function UpdateRecords(records) {
-     const teamKeys = Object.keys(records);
+    const teamKeys = Object.keys(records);
 
-     for (let i = 0; i < teamKeys.length - 1; i++){
-      NFLteams[i].updateRecords(teamKeys[i].wins, teamKeys[i].losses, teamKeys[i].ties);
-     }
-  }
+    for (let i = 0; i < teamKeys.length; i++) {
+      const teamCode = teamKeys[i];
+      const record = records[teamCode]; // This gives you the { wins, losses, ties }
+
+    NFLteams[i].updateRecords(record.wins, record.losses, record.ties);
+    }
   
-
+  }
   
   
   
