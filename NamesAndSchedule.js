@@ -941,7 +941,7 @@ week18.AddGame(HOU, IND);
     });
 
     // sort players
-    const sorted = Object.entries(players)
+    players = Object.entries(players)
       .map(([username, stats]) => ({ username, ...stats }))
       .sort((a, b) => {
         if (b.wins !== a.wins) {
