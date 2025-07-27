@@ -291,6 +291,7 @@ class Pair{
       if(games == undefined || games == null)
         return;
 
+      console.log("\n\nWeek " + week.week);
       for (const [gameKey, game] of Object.entries(games)){
         const game1 = week.FindGame(game.home);
 
@@ -310,6 +311,7 @@ class Pair{
           game1.SetScore(game.homeScore, game.awayScore);
         }
       }
+      console.log("End Week " + week.week + "\n\n");
     }
 
     LoadOdds(data){ 
