@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NFL Pick'em - Week Demo</title>
+  <title id="page-title">NFL Pick'em</title>
   <style>
+    #betting-status {
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
+    .open {
+      color: green;
+    }
+    .closed {
+      color: red;
+    }
+
     body {
       font-family: sans-serif;
       background: #e0d9d9;
@@ -141,7 +152,9 @@
   </style>
 </head>
 <body>
-  <h1>NFL Pick'em</h1>
+  <h1 id="current-week-heading">NFL Pick'em</h1>
+  <div id="betting-status">Checking status...</div>
+
   <div class="parent">
     <a href="leaderboard.html">Leaderboard</a>
   </div>
@@ -333,7 +346,7 @@
         return;
       }
 
-      const WEEK = String(1);
+      const WEEK = 1;
 
       const pickData = {
         picks: picksObject,
@@ -389,9 +402,41 @@
       const predata = await fetch("preseason.json").then(res => res.json());
       const data = await fetch("weekdata.json").then(res => res.json());
 
+      const date_data = await fetch("weeklydates.json").then(res => res.json());
+
       season.LoadOdds(data)
       season.LoadOddsPreseason(predata);
-      renderWeek(season.preseasonWeeks[0]);
+
+      const now = new Date();
+
+      const currentWeek = getCurrentWeek(now, seasonJson.season);
+      const bettingTarget = isBettingWindowOpen(now, seasonJson.season);
+
+      const title = document.getElementById("page-title");
+      const weekHeading = document.getElementById("current-week-heading");
+      const bettingStatus = document.getElementById("betting-status");
+
+      // Show current week or upcoming betting target
+      if (currentWeek) {
+        title.textContent = `NFL Pick'em - ${currentWeek}`;
+        weekHeading.textContent = `NFL Pick'em - ${currentWeek}`;
+        bettingStatus.textContent = "Betting is Closed";
+        bettingStatus.className = "closed";
+
+        renderWeek(currentWeek);
+      } else if (bettingTarget) {
+        title.textContent = `NFL Pick'em - ${bettingTarget}`;
+        weekHeading.textContent = `NFL Pick'em - ${bettingTarget}`;
+        bettingStatus.textContent = "Betting is Open";
+        bettingStatus.className = "open";
+
+        renderWeek(bettingTarget);
+      } else {
+        title.textContent = "NFL Pick'em - Season Over";
+        weekHeading.textContent = "NFL Pick'em - Season Over";
+        bettingStatus.textContent = "Betting is Closed";
+        bettingStatus.className = "closed";
+      }
 
       // Pull users and get wins
       const picksRef = collection(db, "picks");

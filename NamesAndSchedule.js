@@ -951,6 +951,102 @@ week18.AddGame(HOU, IND);
         }
       });
   }
+
+  function getCurrentWeek(currentDate, seasonjson) {
+    const now = new Date(currentDate);
+
+    for (const [week, window] of Object.entries(seasonjson)) {
+      const begin = new Date(window.begin);
+      const end = new Date(window.end);
+
+      if (now >= begin && now <= end) {
+        return week;
+      }
+    }
+
+    return null; // Not in any NFL week
+  }
+
+  function isBettingWindowOpen(currentDate, seasonjson) {
+    const now = new Date(currentDate);
+
+    const weekKeys = Object.keys(seasonjson);
+    const firstWeek = seasonjson[weekKeys[0]];
+    const lastWeek = seasonjson[weekKeys[weekKeys.length - 1]];
+
+    const seasonStart = new Date(firstWeek.begin);
+    const seasonEnd = new Date(lastWeek.end);
+
+    // ✅ Before the first week starts
+    if (now < seasonStart) {
+      return true;
+    }
+
+    // ⛔ After the season ends
+    if (now > seasonEnd) {
+      return false;
+    }
+
+    // ✅ Between any two weeks
+    for (let i = 0; i < weekKeys.length - 1; i++) {
+      const currentWeek = seasonjson[weekKeys[i]];
+      const nextWeek = seasonjson[weekKeys[i + 1]];
+
+      const endOfCurrent = new Date(currentWeek.end);
+      const startOfNext = new Date(nextWeek.begin);
+
+      if (now > endOfCurrent && now < startOfNext) {
+        return true;
+      }
+    }
+
+    // ⛔ During an active week
+    return false;
+  }
+
+  function isBettingWindowOpen(currentDate, seasonjson) {
+    const now = new Date(currentDate);
+
+    const weekKeys = Object.keys(seasonjson);
+    const firstWeek = seasonjson[weekKeys[0]];
+    const lastWeek = seasonjson[weekKeys[weekKeys.length - 1]];
+
+    const seasonStart = new Date(firstWeek.begin);
+    const seasonEnd = new Date(lastWeek.end);
+
+    // ✅ Before the first week starts
+    if (now < seasonStart) {
+      return season.GetPreseasonWeek(1);
+    }
+
+    // ⛔ After the season ends
+    if (now > seasonEnd) {
+      return null;
+    }
+
+    // ✅ Between any two weeks
+    for (let i = 0; i < weekKeys.length - 1; i++) {
+      const currentWeek = seasonjson[weekKeys[i]];
+      const nextWeek = seasonjson[weekKeys[i + 1]];
+
+      const endOfCurrent = new Date(currentWeek.end);
+      const startOfNext = new Date(nextWeek.begin);
+
+      if (now > endOfCurrent && now < startOfNext) {
+        // If it's less than 2 we call season.GetPreseasonWeek
+        if(i + 1 < 2) {
+          return season.GetPreseasonWeek(i + 1);
+        }
+
+        // Else we call season.GetWeek
+        return season.GetWeek(i + 1);
+      }
+    }
+
+    // ⛔ During an active week
+    return null;
+
+  }
   
 
   
