@@ -517,22 +517,22 @@ preWeek1.AddGame(CHI, MIA);
 preWeek1.AddGame(LAC, NO);
 
 let preWeek2 = new Week(2);
-preWeek1.AddGame(ATL, TEN);
-preWeek1.AddGame(SEA, KC);
-preWeek1.AddGame(DET, MIA);
-preWeek1.AddGame(HOU, CAR);
-preWeek1.AddGame(IND, GB);
-preWeek1.AddGame(MIN, NE);
-preWeek1.AddGame(PHI, CLE);
-preWeek1.AddGame(LV, SF);
-preWeek1.AddGame(DAL, BAL);
-preWeek1.AddGame(LAR, LAC);
-preWeek1.AddGame(NYG, NYJ);
-preWeek1.AddGame(PIT, TB);
-preWeek1.AddGame(DEN, ARI);
-preWeek1.AddGame(NO, JAX);
-preWeek1.AddGame(CHI, BUF);
-preWeek1.AddGame(WAS, CIN);
+preWeek2.AddGame(ATL, TEN);
+preWeek2.AddGame(SEA, KC);
+preWeek2.AddGame(DET, MIA);
+preWeek2.AddGame(HOU, CAR);
+preWeek2.AddGame(IND, GB);
+preWeek2.AddGame(MIN, NE);
+preWeek2.AddGame(PHI, CLE);
+preWeek2.AddGame(LV, SF);
+preWeek2.AddGame(DAL, BAL);
+preWeek2.AddGame(LAR, LAC);
+preWeek2.AddGame(NYG, NYJ);
+preWeek2.AddGame(PIT, TB);
+preWeek2.AddGame(DEN, ARI);
+preWeek2.AddGame(NO, JAX);
+preWeek2.AddGame(CHI, BUF);
+preWeek2.AddGame(WAS, CIN);
 
 let preWeek3 = new Week(3);
 
