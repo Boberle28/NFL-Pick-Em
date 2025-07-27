@@ -94,6 +94,8 @@
         <th>Username</th>
         <th>Wins</th>
         <th>Points</th>
+        <th>Win Percentage</th>
+        <th>Picks Made</th>
       </tr>
     </thead>
     <tbody id="leaderboard-body">
@@ -121,38 +123,24 @@
     const db = getFirestore(app);
 
     async function buildLeaderboard() {
-      const picksRef = collection(db, "picks");
-      const snapshot = await getDocs(picksRef);
 
-      const leaderboard = {};
+      // if players is empty we will try to fill it before building the table
+      if(!players.length){
+         const picksRef = collection(db, "picks");
+         const snapshot = await getDocs(picksRef);
 
-      snapshot.forEach(doc => {
-        const data = doc.data();
-        const username = data.username;
-        const correct = data.correct || 0;
-        const totalGames = Object.keys(data.picks || {}).length;
-
-        if (!leaderboard[username]) {
-          leaderboard[username] = { wins: 0, points: 0 };
-        }
-
-        console.log(data.picks);
-        let result = week1.GetWinners(data.picks);
-        leaderboard[username].wins += result.wins;
-        leaderboard[username].points += result.points;
-      });
-
-      const sorted = Object.entries(leaderboard)
-        .map(([username, stats]) => ({ username, ...stats }))
-        .sort((a, b) => b.wins - a.wins);
-
+         PullUsersAndGetWins(snapshot);
+      }
+    
       const tbody = document.getElementById("leaderboard-body");
-      sorted.forEach(player => {
+      players.forEach(player => {
         const row = document.createElement("tr");
         row.innerHTML = `
           <td data-label="Username">${player.username}</td>
           <td data-label="Wins">${player.wins}</td>
           <td data-label="Points">${player.points}</td>
+          <td data-label="Win Percentage">${player.winpercent}</td>
+          <td data-label="Picks Made">${player.picksMade}</td>
         `;
         tbody.appendChild(row);
       });

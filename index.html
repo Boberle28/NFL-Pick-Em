@@ -346,29 +346,19 @@
       console.log("Week:", WEEK);
 
       // Now check if user has already picked for the week
-      const picksRef = collection(db, "picks");
+      const userRef = doc(db, "picks", user);
+      const userSnap = await getDoc(userRef);
 
-      console.log("picksRef");
-      console.log(picksRef);
+      if (userSnap.exists()) {
+        const data = userSnap.data();
+        const weekPicks = data[`week${WEEK}`];
 
-      const q = query(picksRef, 
-        where("username", "==", user),
-        where("week", "==", WEEK)
-      );
-
-      console.log("We are past query");
-
-      console.log("q");
-      console.log(q);
-
-      const existing = await getDocs(q);
-      if(!existing.empty)
-      {
-        alert("You've already made your picks for the week!");
-        return;
-      }
-
-      console.log("We are past await getDocs");
+        if (weekPicks) {
+          // They already made picks for that week
+          alert("You've already made your picks for the week!");
+          return;
+        } 
+      } 
 
       const submitBtn = document.getElementById("submitBtn");
       submitBtn.disabled = true;
@@ -376,7 +366,15 @@
       // Everything is good so we try submit picks
       try {
         console.log("We are now attempting to setDoc");
-        await setDoc(doc(db, "picks", `${user}_week${WEEK}`), pickData);
+        
+        const userRef = doc(db, "picks", user); // One document per user in "picks"
+        await setDoc(userRef, {
+          [`week${WEEK}`]: {
+            picks: picksObject,
+            timestamp: new Date()
+          }
+        }, { merge: true });
+
         alert("✅ Your picks have been submitted successfully!");
 
       } catch (error) {
@@ -396,6 +394,12 @@
       season.LoadOddsPreseason(predata);
       renderWeek(season.preseasonWeeks[0]);
 
+      // Pull users and get wins
+      const picksRef = collection(db, "picks");
+      const snapshot = await getDocs(picksRef);
+
+      PullUsersAndGetWins(snapshot);
+      
       const buttons = document.querySelectorAll('.teams button');
       buttons.forEach(button => {
          button.addEventListener('click', () => selectWinner(button));

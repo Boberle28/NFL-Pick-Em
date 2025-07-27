@@ -300,6 +300,20 @@ class Pair{
         this.preseasonWeeks.push(week);
     }
 
+    GetWeek(index){
+      if(index < this.weeks.length)
+        return this.weeks[index];
+
+      return undefined;
+    }
+
+    GetPreseasonWeek(index){
+      if(index < this.preseasonWeeks.length)
+        return this.preseasonWeeks[index];
+
+      return undefined;
+    }
+
     LoadWeekOdds(week, games){
 
       if(games == undefined || games == null)
@@ -884,6 +898,59 @@ week18.AddGame(HOU, IND);
   season.AddPreseasonWeek(preWeek1);
   season.AddPreseasonWeek(preWeek2);
   season.AddPreseasonWeek(preWeek3);
+
+  let playersStats = { wins: 0, points: 0, picksMade: 0 };
+  let players = [];
+
+  function PullUsersAndGetWins(snapshot){
+
+    snapshot.forEach(doc => {
+      const username = doc.id; // document ID is the username
+      const data = doc.data();
+
+      let totalWins = 0;
+      let totalPoints = 0;
+      let picksMade = 0;
+
+      let count = 1;
+      // Loop through each week's picks
+      Object.keys(data).forEach(weekKey => {
+        const weekData = data[weekKey];
+        if (weekData?.picks) {
+          const week = season.GetPreseasonWeek(count);
+          if(week !== undefined){
+            const result = week.GetWinners(weekData.picks);
+            totalWins += result.wins;
+            totalPoints += result.points;
+          }
+          else{
+            console.log("weeks is undefined!");
+          }
+            
+          picksMade += Object.keys(weekData.picks).length;
+        }
+        ++count;
+      });
+
+      players[username] = {
+        wins: totalWins,
+        points: totalPoints,
+        picksMade: picksMade,
+        winpercent: picksMade > 0 ? totalWins / picksMade : 0
+      };
+    });
+
+    // sort players
+    const sorted = Object.entries(players)
+      .map(([username, stats]) => ({ username, ...stats }))
+      .sort((a, b) => {
+        if (b.wins !== a.wins) {
+          return b.wins - a.wins; // sort by wins first
+        } else {
+          return b.points - a.points; // tiebreaker: sort by points
+        }
+      });
+  }
   
 
   
