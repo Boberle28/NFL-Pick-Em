@@ -428,7 +428,7 @@
         WEEK = currentWeek.week;
         title.textContent = `NFL Pick'em - Week ${currentWeek.week}`;
         weekHeading.textContent = `NFL Pick'em - Week ${currentWeek.week}`;
-        bettingStatus.textContent = "Betting is Closed";
+        bettingStatus.textContent = "Betting Window Closed";
         bettingStatus.className = "closed";
 
         renderWeek(currentWeek);
@@ -436,7 +436,7 @@
         WEEK = bettingTarget.week;
         title.textContent = `NFL Pick'em - Week ${bettingTarget.week}`;
         weekHeading.textContent = `NFL Pick'em - Week ${bettingTarget.week}`;
-        bettingStatus.textContent = "Betting is Open";
+        bettingStatus.textContent = "Betting Window Open";
         bettingStatus.className = "open";
 
         renderWeek(bettingTarget);
