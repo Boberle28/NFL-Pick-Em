@@ -1,0 +1,164 @@
+{
+    "teams": {
+        "PHI": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "DAL": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "LAC": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "KC": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "ATL": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "TB": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "CLE": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "CIN": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "IND": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "MIA": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "NE": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "LV": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "NO": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "ARI": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "NYJ": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "PIT": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "WAS": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "NYG": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "JAX": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "CAR": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "DEN": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "TEN": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "SEA": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "SF": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "GB": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "DET": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        }, 
+        "LAR": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "HOU": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "BUF": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "BAL": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "CHI": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        },
+        "MIN": {
+            "wins": 0,
+            "losses": 0,
+            "ties": 0
+        }
+    }
+}
