@@ -1024,7 +1024,7 @@ week18.AddGame(HOU, IND);
       const teamCode = teamKeys[i];
       const record = records[teamCode]; // This gives you the { wins, losses, ties }
 
-    NFLteams[i].updateRecords(record.wins, record.losses, record.ties);
+      NFLteams[i].updateRecords(record.wins, record.losses, record.ties);
     }
   
   }
