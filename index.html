@@ -4,61 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NFL Pick'em Login</title>
-  
+
   <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
   import { firebaseConfig } from "./firebase-config.js";
 
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
+  window.addEventListener("DOMContentLoaded", () => {
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
 
-  const usernameInput = document.getElementById("username");
-  const passwordInput = document.getElementById("password");
-  const statusText = document.getElementById("status");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const statusText = document.getElementById("status");
 
-  function formatUsernameAsEmail(username) {
-    return `${username}@fake.com`;
-  }
-
-  document.getElementById("login-btn").addEventListener("click", async () => {
-    const email = formatUsernameAsEmail(usernameInput.value);
-    const password = passwordInput.value;
-
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      // Redirect after login
-      window.location.href = "picks.html";
-    } catch (err) {
-      statusText.textContent = `⛔ Login failed: ${err.message}`;
-      statusText.style.color = "red";
+    function formatUsernameAsEmail(username) {
+      return `${username}@fake.com`;
     }
-  });
 
-  document.getElementById("create-btn").addEventListener("click", async () => {
-    const email = formatUsernameAsEmail(usernameInput.value);
-    const password = passwordInput.value;
+    document.getElementById("login-btn").addEventListener("click", async () => {
+      const email = formatUsernameAsEmail(usernameInput.value);
+      const password = passwordInput.value;
 
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      statusText.textContent = `✅ Account created for ${usernameInput.value}`;
-      statusText.style.color = "green";
-    } catch (err) {
-      statusText.textContent = `⛔ Account creation failed: ${err.message}`;
-      statusText.style.color = "red";
-    }
-  });
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        window.location.href = "picks.html";
+      } catch (err) {
+        statusText.textContent = `⛔ Login failed: ${err.message}`;
+        statusText.style.color = "red";
+      }
+    });
 
-  // ✅ Display logged-in user on page load
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      const username = user.email.split("@")[0]; // Get username from fake email
-      document.getElementById("status").textContent = `🔓 Logged in as ${username}`;
-      document.getElementById("status").style.color = "green";
-    }
+    document.getElementById("create-btn").addEventListener("click", async () => {
+      const email = formatUsernameAsEmail(usernameInput.value);
+      const password = passwordInput.value;
+
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        statusText.textContent = `✅ Account created for ${usernameInput.value}`;
+        statusText.style.color = "green";
+      } catch (err) {
+        statusText.textContent = `⛔ Account creation failed: ${err.message}`;
+        statusText.style.color = "red";
+      }
+    });
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const username = user.email.split("@")[0];
+        statusText.textContent = `🔓 Logged in as ${username}`;
+        statusText.style.color = "green";
+      }
+    });
   });
 </script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
