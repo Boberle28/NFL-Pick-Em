@@ -39,6 +39,7 @@
 <script src ="NamesAndSchedule.js"></script>
 
 <script type="module">
+
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
   import {
     getFirestore,
@@ -120,6 +121,12 @@
         }
         statusText.textContent = `✅ Account created for ${usernameInput.value}`;
         statusText.style.color = "green";
+
+        const username = email.split("@")[0];
+        localStorage.setItem("username", username);
+
+        window.location.href = "picks.html";
+
       } catch (err) {
         statusText.textContent = `⛔ Account creation failed: ${err.message}`;
         statusText.style.color = "red";

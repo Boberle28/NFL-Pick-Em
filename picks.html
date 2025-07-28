@@ -172,6 +172,15 @@
   <script src ="NamesAndSchedule.js"></script>
 
   <script type="module">
+    // check if logged in
+    const username = localStorage.getItem("username");
+    if (username) {
+      // Use this to store picks
+      console.log("Logged in as", username);
+    } else {
+      // Redirect to login if not logged in
+      window.location.href = "login.html";
+    }
 
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
@@ -326,14 +335,6 @@
         return;
       }
 
-      // Check username
-      const user = document.getElementById('username').value.trim();
-      if(user.length == 0)
-      {
-        alert("You must enter your username, if you have not made a username yet, you can enter whatever you'd like but you must use that same name every week with your picks");
-        return;
-      }
-
       const pickData = {
         picks: picksObject,
         timestamp: new Date()
@@ -344,7 +345,7 @@
       console.log("Week:", WEEK);
 
       // Now check if user has already picked for the week
-      const userRef = doc(db, "picks", user);
+      const userRef = doc(db, "picks", username);
       const userSnap = await getDoc(userRef);
 
       if (userSnap.exists()) {
@@ -353,7 +354,7 @@
 
         if (weekPicks) {
           // They already made picks for that week
-          alert(user + ", you've already made your picks for the week dumbass!");
+          alert(username + ", you've already made your picks for the week dumbass!");
           return;
         } 
       } 
@@ -365,7 +366,7 @@
       try {
         console.log("We are now attempting to setDoc");
         
-        const userRef = doc(db, "picks", user); // One document per user in "picks"
+        const userRef = doc(db, "picks", username); // One document per user in "picks"
         await setDoc(userRef, {
           [`week${WEEK}`]: {
             picks: picksObject,
