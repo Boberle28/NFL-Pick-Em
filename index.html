@@ -57,7 +57,9 @@
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-    onAuthStateChanged
+    onAuthStateChanged,
+    setPersistence, 
+    browserSessionPersistence
   } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
   const firebaseConfig = {
@@ -85,11 +87,13 @@
     
     PullUsers();
 
-  window.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("DOMContentLoaded", async () => {
 
     const usernameInput = document.getElementById("username");
     const passwordInput = document.getElementById("password");
     const statusText = document.getElementById("status");
+
+    await setPersistence(auth, browserSessionPersistence);
 
     function formatUsernameAsEmail(username) {
       return `${username}@fake.com`;
