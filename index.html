@@ -202,22 +202,9 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    const picksRef2 = collection(db, "someshit");
-    if(!picksRef2){
-      console.log("picksRef2 is NULL!");
-    }
-    else{
-      console.log("picksRef2 is not NULL!");
-    }
-
-    console.log("picksRef2");
-    console.log(picksRef2);
-
     function selectWinner(btn) {
       const teamBtns = btn.parentElement.parentElement.querySelectorAll("button");
       teamBtns.forEach(b => b.classList.remove("selected"));
-      console.log("In selectWinner!!!!!!!!!!!!!!!!");
-      console.log(teamBtns);
       btn.classList.toggle("selected");
     }
 
