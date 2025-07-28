@@ -3,456 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title id="page-title">NFL Pick'em</title>
+  <title>NFL Pick'em Login</title>
+  
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+  import { firebaseConfig } from "./firebase-config.js";
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
+  const statusText = document.getElementById("status");
+
+  function formatUsernameAsEmail(username) {
+    return `${username}@fake.com`;
+  }
+
+  document.getElementById("login-btn").addEventListener("click", async () => {
+    const email = formatUsernameAsEmail(usernameInput.value);
+    const password = passwordInput.value;
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      // Redirect after login
+      window.location.href = "picks.html";
+    } catch (err) {
+      statusText.textContent = `⛔ Login failed: ${err.message}`;
+      statusText.style.color = "red";
+    }
+  });
+
+  document.getElementById("create-btn").addEventListener("click", async () => {
+    const email = formatUsernameAsEmail(usernameInput.value);
+    const password = passwordInput.value;
+
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      statusText.textContent = `✅ Account created for ${usernameInput.value}`;
+      statusText.style.color = "green";
+    } catch (err) {
+      statusText.textContent = `⛔ Account creation failed: ${err.message}`;
+      statusText.style.color = "red";
+    }
+  });
+
+  // ✅ Display logged-in user on page load
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const username = user.email.split("@")[0]; // Get username from fake email
+      document.getElementById("status").textContent = `🔓 Logged in as ${username}`;
+      document.getElementById("status").style.color = "green";
+    }
+  });
+</script>
   <style>
-    #betting-status {
-      font-weight: bold;
-      margin-top: 0.5em;
-      text-align: center;
-      padding: 5px;
-    }
-    .open {
-      color: green;
-    }
-    .closed {
-      color: red;
-    }
-
     body {
-      font-family: sans-serif;
-      background: #e0d9d9;
-      padding: 20px;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    h1 {
+      font-family: Arial, sans-serif;
       text-align: center;
-      color:rgb(23, 23, 24)
+      padding: 2em;
     }
-
-    #matchupsContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
+    input {
+      padding: 0.5em;
+      margin: 0.5em;
+      width: 200px;
     }
-
-    .matchup {
-      width: 100%;
-      max-width: 500px;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 12px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .row {
-      display: flex;
-      gap: 30px; /* optional spacing between them */
-      justify-content: center; /* centers children in the parent */
-      align-items: center; 
-      border-radius: 5px;
-      background: #f3f3f3;
-      margin-top: 5px;
-    }
-
-    .teams {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .team-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1;
-    }
-
-    .team-label {
-      font-size: 0.9em;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    .team-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      font-size: 16px;
-      background-color: #eee;
-      border: 2px solid transparent;
-      border-radius: 8px;
+    button {
+      padding: 0.5em 1em;
+      margin: 0.5em;
       cursor: pointer;
-      transition: background-color 0.2s ease;
     }
-
-    .team-btn.selected {
-      border-color: #007bff;
-      background-color: rgba(0, 123, 255, 0.1);
-    }
-
-    .team-logo {
-      height: 28px;
-      width: auto;
-    }
-
-    .team-name {
+    #status {
+      margin-top: 1em;
       font-weight: bold;
-    }
-
-    .record {
-      padding: 5px;
-      font-size: 0.85em;
-      color: #333;
-      font-weight: bold;
-    }
-
-    .teamvalue{
-      padding: 5px;
-      font-size: 0.85em;
-      color: #333;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      .teams {
-        flex-direction: column;
-      }
-    }
-
-    .parent {
-      display: flex;
-      justify-content: center;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      font-size: 16px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    #submitBtn {
-      margin-top: 30px;
-      padding: 10px;
-      width: 50%;
-      border-radius: 10px;
-      background-color: green;
-      color: white;
     }
   </style>
 </head>
 <body>
-  <h1 id="current-week-heading">NFL Pick'em</h1>
-  <div id="betting-status">Checking status...</div>
+  <h1>NFL Pick'em Login</h1>
+  <input id="username" type="text" placeholder="Username" /><br />
+  <input id="password" type="password" placeholder="Password" /><br />
+  <button id="login-btn">Login</button>
+  <button id="create-btn">Create Account</button>
 
-  <div class="parent">
-    <a href="leaderboard.html">Leaderboard</a>
-  </div>
-  <label for="name">Your Username:</label>
-
-  <div class="parent">
-    <input type="text" id="username" class="centered-input">
-  </div>
-
-  <div id="matchupsContainer"></div>
-
-  <div class="parent">
-    <button id="submitBtn">Submit Picks</button>
-  </div>
-
-  <script src ="NamesAndSchedule.js"></script>
-
-  <script type="module">
-
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-    import {
-      getFirestore,
-      collection,
-      query,
-      where,
-      getDocs,
-      getDoc,
-      addDoc,
-      setDoc,
-      doc
-    } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-    
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyAHTX6gGorh3Flmvbw0THBfk9i7ILeZ2E4",
-      authDomain: "football-pickem-1d2ab.firebaseapp.com",
-      projectId: "football-pickem-1d2ab",
-      storageBucket: "football-pickem-1d2ab.firebasestorage.app",
-      messagingSenderId: "1065963734942",
-      appId: "1:1065963734942:web:042b5fbe5082b9cd29788f",
-      measurementId: "G-K8JV62VJ6P"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-
-    function selectWinner(btn) {
-      const teamBtns = btn.parentElement.parentElement.querySelectorAll("button");
-      teamBtns.forEach(b => b.classList.remove("selected"));
-      btn.classList.toggle("selected");
-    }
-
-    function renderWeek(weekObj) {
-      const container = document.getElementById("matchupsContainer");
-      container.innerHTML = ""; // Clear previous content
-
-      weekObj.games.forEach((game, index) => {
-        const matchupDiv = document.createElement("div");
-        matchupDiv.classList.add("matchup");
-        matchupDiv.dataset.game = `Game ${index + 1}`;
-
-        const teamsDiv = document.createElement("div");
-        teamsDiv.classList.add("teams");
-
-        function createTeamCard(team, isHome) {
-          const wrapper = document.createElement("div");
-          wrapper.classList.add("team-card");
-
-          const label = document.createElement("div");
-          label.classList.add("team-label");
-          label.textContent = isHome ? "Home" : "Away";
-          wrapper.appendChild(label);
-
-          console.log(game);
-          console.log("isHome: " + isHome);
-          console.log("game.homeValue " + game.homeValue);
-          console.log("game.awayValue " + game.awayValue);
-          console.log("Rendering team card for:", isHome ? game.home.name : game.away.name);
-          const teamvalue = isHome ? game.homeValue : game.awayValue;
-          
-          const btn = document.createElement("button");
-          btn.classList.add("team-btn");
-
-          // Add logo
-          const img = document.createElement("img");
-          img.src = `Images/${team.shortName}.png`;
-          img.alt = team.name;
-          img.classList.add("team-logo");
-
-          // Add team name
-          const span = document.createElement("span");
-          span.textContent = team.name;
-          span.classList.add("team-name");
-
-          btn.appendChild(img);   // logo first
-          btn.appendChild(span);  // then text
-
-          btn.addEventListener("click", function () {
-            selectWinner(this);
-          });
-
-          wrapper.appendChild(btn);
-
-          const row = document.createElement("div");
-          row.classList.add("row");
-
-          const teamVal = document.createElement("div");
-          teamVal.classList.add("teamvalue")
-          teamVal.textContent = (Number(teamvalue).toFixed(2));
-
-          const record = document.createElement("div");
-          record.classList.add("record");
-          record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}`;
-
-          row.appendChild(teamVal);
-          row.appendChild(record);
-
-          wrapper.appendChild(row);
-
-          return wrapper;
-        }
-
-        // Home team on the left, Away on the right
-        teamsDiv.appendChild(createTeamCard(game.home, true));
-        teamsDiv.appendChild(createTeamCard(game.away, false));
-
-        matchupDiv.appendChild(teamsDiv);
-        container.appendChild(matchupDiv);
-      });
-    }
-    
-    let WEEK = 1;
-
-    async function submitPicks() {
-      const matchups = document.querySelectorAll(".matchup");
-      let picks = [];
-
-      // Values to store games not picked
-      let GamesNotPicked=[];
-
-      const picksObject = {};
-      let bool = 0;
-
-      matchups.forEach(matchup => {
-        const gameTitle = matchup.getAttribute("data-game");
-        const selected = matchup.querySelector("button.selected");
-        const pick = selected ? selected.textContent : "No Pick";
-
-        console.log(selected);
-
-        // Check if a pick was selected
-        if(pick == "No Pick"){
-          GamesNotPicked.push(matchup);
-          bool = 1;
-        }
-        else
-        {
-          picksObject[gameTitle] = selected.textContent;
-        }
-      
-        picks.push(`${gameTitle}: ${pick}`);
-      });
-
-      // Check if all picks are made
-      if(bool == 1)
-      {
-        alert("You can not submit until you've picked all the games!");
-        return;
-      }
-
-      // Check username
-      const user = document.getElementById('username').value.trim();
-      if(user.length == 0)
-      {
-        alert("You must enter your username, if you have not made a username yet, you can enter whatever you'd like but you must use that same name every week with your picks");
-        return;
-      }
-
-      const pickData = {
-        picks: picksObject,
-        timestamp: new Date()
-      };
-
-      console.log("picks", pickData);
-      console.log("Username:", user);
-      console.log("Week:", WEEK);
-
-      // Now check if user has already picked for the week
-      const userRef = doc(db, "picks", user);
-      const userSnap = await getDoc(userRef);
-
-      if (userSnap.exists()) {
-        const data = userSnap.data();
-        const weekPicks = data[`week${WEEK}`];
-
-        if (weekPicks) {
-          // They already made picks for that week
-          alert(user + ", you've already made your picks for the week dumbass!");
-          return;
-        } 
-      } 
-
-      const submitBtn = document.getElementById("submitBtn");
-      submitBtn.disabled = true;
-
-      // Everything is good so we try submit picks
-      try {
-        console.log("We are now attempting to setDoc");
-        
-        const userRef = doc(db, "picks", user); // One document per user in "picks"
-        await setDoc(userRef, {
-          [`week${WEEK}`]: {
-            picks: picksObject,
-            timestamp: new Date()
-          }
-        }, { merge: true });
-
-        alert("✅ Your picks have been submitted successfully!");
-
-      } catch (error) {
-        console.error("❌ Error submitting picks:", error);
-        alert("⚠️ There was a problem submitting your picks. Please try again later.");
-
-      }finally{
-        submitBtn.disabled = false;
-      }
-    }
-
-    async function Init(){
-      const predata = await fetch("preseason.json").then(res => res.json());
-      const data = await fetch("weekdata.json").then(res => res.json());
-
-      const seasonJson = await fetch("weeklydates.json").then(res => res.json());
-
-      // For updating team records
-      const records = await fetch("teamRecords.json").then(res => res.json());
-
-      UpdateRecords(records.teams);
-
-      season.LoadOdds(data)
-      season.LoadOddsPreseason(predata);
-
-      const now = new Date();
-
-      const currentWeek = getCurrentWeek(now, seasonJson.season);
-      const bettingTarget = isBettingWindowOpen(now, seasonJson.season);
-
-      const title = document.getElementById("page-title");
-      const weekHeading = document.getElementById("current-week-heading");
-      const bettingStatus = document.getElementById("betting-status");
-
-      // Show current week or upcoming betting target
-      if (currentWeek) {
-        WEEK = currentWeek.week;
-        title.textContent = `NFL Pick'em - Week ${currentWeek.week}`;
-        weekHeading.textContent = `NFL Pick'em - Week ${currentWeek.week}`;
-        bettingStatus.textContent = "Betting Window Closed";
-        bettingStatus.className = "closed";
-
-        renderWeek(currentWeek);
-      } else if (bettingTarget) {
-        WEEK = bettingTarget.week;
-        title.textContent = `NFL Pick'em - Week ${bettingTarget.week}`;
-        weekHeading.textContent = `NFL Pick'em - Week ${bettingTarget.week}`;
-        bettingStatus.textContent = "Betting Window Open";
-        bettingStatus.className = "open";
-
-        renderWeek(bettingTarget);
-      } else {
-        title.textContent = "NFL Pick'em - Season Over";
-        weekHeading.textContent = "NFL Pick'em - Season Over";
-        bettingStatus.textContent = "Betting is Closed";
-        bettingStatus.className = "closed";
-      }
-
-      // Pull users and get wins
-      const picksRef = collection(db, "picks");
-      const snapshot = await getDocs(picksRef);
-
-      PullUsersAndGetWins(snapshot);
-      
-      const buttons = document.querySelectorAll('.teams button');
-      buttons.forEach(button => {
-         button.addEventListener('click', () => selectWinner(button));
-      });
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const submitBtn = document.getElementById('submitBtn');
-      submitBtn.addEventListener('click', submitPicks);
-
-      Init();
-
-    });
-     
-  </script>
+  <div id="status"></div>
 </body>
 </html>
-
-
