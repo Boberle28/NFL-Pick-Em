@@ -30,7 +30,7 @@
 <body>
   <h1>NFL Pick'em Login</h1>
   <input id="username" type="text" placeholder="Username" /><br />
-  <input id="password" type="password" placeholder="Password" /><br />
+  <input id="password" type="text" placeholder="Password" /><br />
   <button id="login-btn">Login</button>
   <button id="create-btn">Create Account</button>
 
@@ -103,8 +103,12 @@
       const email = formatUsernameAsEmail(usernameInput.value);
       const password = passwordInput.value;
 
+      const username = email.split("@")[0];
+      localStorage.setItem("username", usernameInput.value);
+
       try {
         await signInWithEmailAndPassword(auth, email, password);
+        localStorage.setItem("username", username);
         window.location.href = "picks.html";
       } catch (err) {
         statusText.textContent = `⛔ Login failed: ${err.message}`;
@@ -129,6 +133,11 @@
         
         statusText.textContent = `✅ Account created for ${usernameInput.value}`;
         statusText.style.color = "green";
+
+        // Store username in the firestore
+        const userDocRef = doc(db, "picks", username);
+        await setDoc(userDocRef, {}); // create an empty user document
+        
         localStorage.setItem("username", username);
 
         window.location.href = "picks.html";
