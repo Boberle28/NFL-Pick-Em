@@ -112,17 +112,19 @@
       const email = formatUsernameAsEmail(usernameInput.value);
       const password = passwordInput.value;
 
+      const username = email.split("@")[0];
+
       try {
-        await createUserWithEmailAndPassword(auth, email, password);
         if (players[username]) {
           statusText.textContent = "⛔ That username is already taken.";
           statusText.style.color = "red";
           return;
         }
+
+        await createUserWithEmailAndPassword(auth, email, password);
+        
         statusText.textContent = `✅ Account created for ${usernameInput.value}`;
         statusText.style.color = "green";
-
-        const username = email.split("@")[0];
         localStorage.setItem("username", username);
 
         window.location.href = "picks.html";
