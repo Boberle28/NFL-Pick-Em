@@ -104,11 +104,12 @@
       const password = passwordInput.value;
 
       const username = email.split("@")[0];
-      localStorage.setItem("username", usernameInput.value);
+      localStorage.setItem("password", password)
 
       try {
         await signInWithEmailAndPassword(auth, email, password);
         localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
         window.location.href = "picks.html";
       } catch (err) {
         statusText.textContent = `⛔ Login failed: ${err.message}`;
@@ -137,8 +138,9 @@
         // Store username in the firestore
         const userDocRef = doc(db, "picks", username);
         await setDoc(userDocRef, {}); // create an empty user document
-        
+
         localStorage.setItem("username", username);
+        localStorage.setItem("password", password)
 
         window.location.href = "picks.html";
 

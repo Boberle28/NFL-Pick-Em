@@ -922,19 +922,28 @@ week18.AddGame(HOU, IND);
   function PullUsersAndGetWins(snapshot){
 
     snapshot.forEach(doc => {
-      const username = doc.id; // document ID is the username
+      const storageId = doc.id; // document ID is the username
+      const username = storageId.split("_")[0];
       const data = doc.data();
 
       let totalWins = 0;
       let totalPoints = 0;
       let picksMade = 0;
 
-      let count = 1;
       // Loop through each week's picks
       Object.keys(data).forEach(weekKey => {
         const weekData = data[weekKey];
+
         if (weekData?.picks) {
-          const week = season.GetPreseasonWeek(count);
+
+          const weekNumberMatch = weekKey.match(/\d+/); // extracts the number from "week1"
+          if (!weekNumberMatch) return; // skip if no number
+
+          const weekNumber = parseInt(weekNumberMatch[0]);
+          
+          const regulareSeasonStart = Date.now() >= new Date("2025-09-04T19:20:00");
+          const week = regulareSeasonStart ? season.GetWeek(weekNumber - 1) : season.GetPreseasonWeek(weekNumber - 1);
+          
           if(week !== undefined){
             const result = week.GetWinners(weekData.picks);
             totalWins += result.wins;
@@ -946,7 +955,6 @@ week18.AddGame(HOU, IND);
             
           picksMade += Object.keys(weekData.picks).length;
         }
-        ++count;
       });
 
       players[username] = {
