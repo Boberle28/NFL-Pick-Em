@@ -136,7 +136,8 @@
         statusText.style.color = "green";
 
         // Store username in the firestore
-        const userDocRef = doc(db, "picks", username);
+        const storageId = username + "_" + password;
+        const userDocRef = doc(db, "picks", storageId);
         await setDoc(userDocRef, {}); // create an empty user document
 
         localStorage.setItem("username", username);
