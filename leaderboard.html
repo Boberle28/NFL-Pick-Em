@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NFL Pick'em Leaderboard</title>
+  <title>Pigskin Pick'em Leaderboard</title>
   <style>
     body {
       font-family: sans-serif;
@@ -91,7 +91,7 @@
   </style>
 </head>
 <body>
-  <h1>NFL Pick'em Leaderboard</h1>
+  <h1>Pigskin Pick'em Leaderboard</h1>
   <a href="picks.html">⬅ Back to Picks</a>
   <table>
     <thead>
@@ -141,6 +141,9 @@
       players.forEach(player => {
         const row = document.createElement("tr");
         row.innerHTML = `
+          <td data-label="Username" class="userrow">
+            <a href="userstats.html?user=${player.username}">${player.username}</a>
+          </td>
           <td data-label="Username" class="userrow">${player.username}</td>
           <td data-label="Wins">${player.wins}</td>
           <td data-label="Points">${player.points}</td>

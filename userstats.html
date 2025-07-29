@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <title id="page-title">Pigskin Pick'em Player Stats</title>
+        </head>
+        <style>
+            a {
+                display: inline-block;
+                margin-bottom: 1rem;
+                color: #007bff;
+                text-decoration: none;
+            }
+
+            body {
+                font-family: sans-serif;
+                background: #e0d9d9;
+                padding: 20px;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            h1 {
+                text-align: center;
+                color:rgb(23, 23, 24)
+            }
+
+            #matchupsContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .matchup {
+                width: 100%;
+                max-width: 500px;
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 12px;
+                background-color: #ffffff;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            }
+
+            .teams {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .team-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex: 1;
+            }
+
+            .team-label {
+                font-size: 0.9em;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .team-btn {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 14px;
+                font-size: 16px;
+                background-color: #eee;
+                border: 2px solid transparent;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+            }
+
+            .team-btn.selected {
+                border-color: #007bff;
+                background-color: rgba(0, 123, 255, 0.1);
+            }
+
+            .team-logo {
+                height: 28px;
+                width: auto;
+            }
+
+            .team-name {
+                font-weight: bold;
+            }
+
+            .record {
+                padding: 5px;
+                font-size: 0.85em;
+                color: #333;
+                font-weight: bold;
+            }
+
+            .teamvalue{
+                padding: 5px;
+                font-size: 0.85em;
+                color: #333;
+                font-weight: bold;
+            }
+
+
+        </style>
+
+        <script src ="NamesAndSchedule.js"></script>
+
+        <body>
+            <h1 id="stats-name">Pigskin Pick'em </h1>
+            <a href="leaderboard.html">⬅ Back to Leaderboard</a>
+            <div id="user-stats-container"></div>
+        </body>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const username = params.get("user");
+
+            const player = players[username];
+
+            function renderWeek(weekObj, container) {
+    
+                weekObj.games.forEach((game, index) => {
+                    const matchupDiv = document.createElement("div");
+                    matchupDiv.classList.add("matchup");
+                    matchupDiv.dataset.game = `Game ${index + 1}`;
+
+                    const teamsDiv = document.createElement("div");
+                    teamsDiv.classList.add("teams");
+
+                    function createTeamCard(team, isHome) {
+                        const wrapper = document.createElement("div");
+                        wrapper.classList.add("team-card");
+
+                        const label = document.createElement("div");
+                        label.classList.add("team-label");
+                        label.textContent = isHome ? "Home" : "Away";
+                        wrapper.appendChild(label);
+
+                        console.log(game);
+                        console.log("isHome: " + isHome);
+                        console.log("game.homeValue " + game.homeValue);
+                        console.log("game.awayValue " + game.awayValue);
+                        console.log("Rendering team card for:", isHome ? game.home.name : game.away.name);
+                        const teamvalue = isHome ? game.homeValue : game.awayValue;
+          
+                        const btn = document.createElement("button");
+                        btn.classList.add("team-btn");
+
+                        // Add logo
+                        const img = document.createElement("img");
+                        img.src = `Images/${team.shortName}.png`;
+                        img.alt = team.name;
+                        img.classList.add("team-logo");
+
+                        // Add team name
+                        const span = document.createElement("span");
+                        span.textContent = team.name;
+                        span.classList.add("team-name");
+
+                        btn.appendChild(img);   // logo first
+                        btn.appendChild(span);  // then text
+
+                        wrapper.appendChild(btn);
+
+                        const row = document.createElement("div");
+                        row.classList.add("row");
+
+                        const teamVal = document.createElement("div");
+                        teamVal.classList.add("teamvalue")
+                        teamVal.textContent = (Number(teamvalue).toFixed(2));
+
+                        const record = document.createElement("div");
+                        record.classList.add("record");
+                        record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}`;
+
+                        row.appendChild(teamVal);
+                        row.appendChild(record);
+
+                        wrapper.appendChild(row);
+
+                        return wrapper;
+                    }
+
+                    // Home team on the left, Away on the right
+                    teamsDiv.appendChild(createTeamCard(game.home, true));
+                    teamsDiv.appendChild(createTeamCard(game.away, false));
+
+                    matchupDiv.appendChild(teamsDiv);
+                    container.appendChild(matchupDiv);
+                });
+            }
+
+            function buildPlayerStats()
+            {
+                document.getElementById("stats-name").innerText = `Stats for ${username}`;
+
+                const container = document.getElementById("user-stats-container");
+
+                for (let i = 0; i < allWeeks.length; i++) {
+                    const week = allWeeks[i]; // assuming week is something like { weekNumber: 1, games: [...] }
+
+                    const header = document.createElement("h3");
+                    header.textContent = `Week ${week.weekNumber}`;
+
+                    const weekDiv = document.createElement("div");
+                    weekDiv.classList.add("week-section");
+
+                    // renderWeekStats is your function to create matchup UI for this week
+                    renderWeekStats(week.games, weekDiv); 
+
+                    container.appendChild(header);
+                    container.appendChild(weekDiv);
+                }
+            }
+
+            window.addEventListener("DOMContentLoaded", buildPlayerStats);
+
+            
+        </script>
+
+</html>
