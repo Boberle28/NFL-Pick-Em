@@ -104,7 +104,6 @@
       const password = passwordInput.value;
 
       const username = email.split("@")[0];
-      localStorage.setItem("password", password)
 
       try {
         await signInWithEmailAndPassword(auth, email, password);
