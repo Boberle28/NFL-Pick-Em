@@ -122,10 +122,13 @@
 
             function renderWeekStats(weekObj, container) {
     
-                weekObj.games.forEach((game, index) => {
+                let index = 1;
+                weekObj.games.forEach((game) => {
                     const matchupDiv = document.createElement("div");
                     matchupDiv.classList.add("matchup");
-                    matchupDiv.dataset.game = `Game ${index + 1}`;
+                    matchupDiv.dataset.game = `Game ${index}`;
+
+                    ++index;
 
                     const teamsDiv = document.createElement("div");
                     teamsDiv.classList.add("teams");
@@ -211,7 +214,7 @@
                     weekDiv.classList.add("week-section");
 
                     // renderWeekStats is your function to create matchup UI for this week
-                    renderWeekStats(week.games, weekDiv); 
+                    renderWeekStats(week, weekDiv); 
 
                     container.appendChild(header);
                     container.appendChild(weekDiv);
