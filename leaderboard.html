@@ -140,14 +140,16 @@
       const tbody = document.getElementById("leaderboard-body");
       players.forEach(player => {
         const row = document.createElement("tr");
+        const perc = player.winpercent == 0 ? 0 : Number(player.winpercent).toFixed(3);
+        const points = player.points == 0 ? 0 : Number(player.points).toFixed(2);
         row.innerHTML = `
           <td data-label="Username" class="userrow">
             <a href="userstats.html?user=${player.username}">${player.username}</a>
           </td>
           <td data-label="Wins">${player.wins}</td>
           <td data-label="Points">${player.points}</td>
-          <td data-label="Win Percentage">${player.winpercent}</td>
-          <td data-label="Picks Made">${player.picksMade}</td>
+          <td data-label="Win Percentage">${perc}</td>
+          <td data-label="Picks Made">${points}</td>
         `;
         tbody.appendChild(row);
       });
