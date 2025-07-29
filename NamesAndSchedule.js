@@ -930,10 +930,19 @@ week18.AddGame(HOU, IND);
       let totalPoints = 0;
       let picksMade = 0;
 
+      let weekStats = []
       // Loop through each week's picks
       Object.keys(data).forEach(weekKey => {
         const weekData = data[weekKey];
 
+        let weekStats = [];
+        function fillWeekStats()
+        {
+          for (let i = 0; i < 18; i++) {
+            weekStats.push({ wins: 0, points: 0 });
+          }
+        }
+        
         if (weekData?.picks) {
 
           const weekNumberMatch = weekKey.match(/\d+/); // extracts the number from "week1"
@@ -946,6 +955,7 @@ week18.AddGame(HOU, IND);
           
           if(week !== undefined){
             const result = week.GetWinners(weekData.picks);
+            weekStats[weekNumber] = {wins: result.wins, points: result.points};
             totalWins += result.wins;
             totalPoints += result.points;
           }
@@ -961,7 +971,8 @@ week18.AddGame(HOU, IND);
         wins: totalWins,
         points: totalPoints,
         picksMade: picksMade,
-        winpercent: picksMade > 0 ? totalWins / picksMade : 0
+        winpercent: picksMade > 0 ? totalWins / picksMade : 0,
+        weekStat: weekStats
       };
     });
 

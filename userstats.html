@@ -26,7 +26,7 @@
                 color:rgb(23, 23, 24)
             }
 
-            #matchupsContainer {
+            #user-stats-container {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
@@ -41,6 +41,16 @@
                 border-radius: 12px;
                 background-color: #ffffff;
                 box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            }
+
+            .row {
+                display: flex;
+                gap: 30px; /* optional spacing between them */
+                justify-content: center; /* centers children in the parent */
+                align-items: center; 
+                border-radius: 5px;
+                background: #f3f3f3;
+                margin-top: 5px;
             }
 
             .teams {
@@ -205,10 +215,11 @@
                 const allWeeks = season.preseasonWeeks;
 
                 for (let i = 0; i < allWeeks.length; i++) {
-                    const week = allWeeks[i]; // assuming week is something like { weekNumber: 1, games: [...] }
+                    const week = i + 1; // assuming week is something like { weekNumber: 1, games: [...] }
 
                     const header = document.createElement("h3");
                     header.textContent = `Week ${week.weekNumber}`;
+                    header.textContent += " Wins " + player.weekStats[i].wins + " Points " + player.weekStats[i].points;
 
                     const weekDiv = document.createElement("div");
                     weekDiv.classList.add("week-section");
