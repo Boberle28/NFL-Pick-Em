@@ -281,14 +281,14 @@
 
 
                 const container = document.getElementById("user-stats-container");
-                
+
                 for (let i = 0; i < allWeeks.length; i++) {
                     const week = i + 1; // assuming week is something like { weekNumber: 1, games: [...] }
 
                     console.log("player");
                     console.log(player);
                     const header = document.createElement("h3");
-                    header.textContent = `Week ${week.weekNumber}`;
+                    header.textContent = `Week ${week}`;
                     header.textContent += " Wins " + player.weekStats[i].wins + " Points " + player.weekStats[i].points;
 
                     const weekDiv = document.createElement("div");
