@@ -231,7 +231,7 @@ class Pair{
     }
 
     AddGame(home, away) {
-        let gameNum = "Game " + this.games.length + 1;
+        let gameNum = `Game ${this.games.length + 1}`;
         this.games.push(new Game(home, away, gameNum));
     }
 
