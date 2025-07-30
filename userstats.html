@@ -150,7 +150,14 @@
                         const label = document.createElement("div");
                         label.classList.add("team-label");
                         label.textContent = isHome ? "Home" : "Away";
+                        const score = label.textContent == "Home" ? game.homeScore : game.awayScore;
                         wrapper.appendChild(label);
+
+                        const scoreLabel = document.CreateElement("div");
+                        scoreLabel.classList.add("team-score");
+                        scoreLable.textContent = "Score: " + score;
+
+                        wrapper.appendChild(scoreLabel);
 
                         console.log(game);
                         console.log("isHome: " + isHome);
