@@ -215,13 +215,18 @@
                 });
             }
 
-            function buildPlayerStats()
+            async function buildPlayerStats()
             {
                 document.getElementById("stats-name").innerText = `Stats for ${username}`;
 
                 const container = document.getElementById("user-stats-container");
 
                 const allWeeks = season.preseasonWeeks;
+
+                const picksRef = collection(db, "picks");
+                const snapshot = await getDocs(picksRef);
+
+                PullUsersAndGetWins(snapshot);
 
                 for (let i = 0; i < allWeeks.length; i++) {
                     const week = i + 1; // assuming week is something like { weekNumber: 1, games: [...] }
