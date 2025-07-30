@@ -262,10 +262,18 @@
 
                 let snapshot = await asyncStuff();
                 PullUsersAndGetWins(snapshot);
-                
+
                 console.log("players");
                 console.log(players);
-                const player = players[username];
+
+                let player = null;
+                for(item of players){
+                    if(username == item.username){
+                        player = item
+                        break;
+                    }
+                }
+
 
                 for (let i = 0; i < allWeeks.length; i++) {
                     const week = i + 1; // assuming week is something like { weekNumber: 1, games: [...] }
