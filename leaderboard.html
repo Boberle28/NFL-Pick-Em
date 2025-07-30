@@ -147,9 +147,9 @@
             <a href="userstats.html?user=${player.username}">${player.username}</a>
           </td>
           <td data-label="Wins">${player.wins}</td>
-          <td data-label="Points">${player.points}</td>
+          <td data-label="Points">${points}</td>
           <td data-label="Win Percentage">${perc}</td>
-          <td data-label="Picks Made">${points}</td>
+          <td data-label="Picks Made">${player.picksMade}</td>
         `;
         tbody.appendChild(row);
       });

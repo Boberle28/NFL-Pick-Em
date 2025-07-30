@@ -114,6 +114,10 @@
                 font-weight: bold;
             }
 
+            .parent {
+                display: flex;
+                justify-content: center;
+            }
 
         </style>
 
@@ -121,7 +125,9 @@
 
         <body>
             <h1 id="stats-name">Pigskin Pick'em </h1>
-            <a href="leaderboard.html">⬅ Back to Leaderboard</a>
+            <div class="parent">
+                <a href="leaderboard.html">⬅ Back to Leaderboard</a>
+            </div>
             <div id="user-stats-container"></div>
         </body>
         <script type="module">

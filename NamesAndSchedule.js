@@ -970,6 +970,8 @@ week18.AddGame(HOU, IND);
             console.log("weeks is undefined!");
           }
             
+          console.log("Oject.keys(weekData.picks).length");
+          console.log(Object.keys(weekData.picks).length);
           picksMade += Object.keys(weekData.picks).length;
         }
       });
@@ -982,7 +984,6 @@ week18.AddGame(HOU, IND);
         weekStats: weekStats
       };
 
-      return players;
     });
 
     // sort players
@@ -995,6 +996,8 @@ week18.AddGame(HOU, IND);
           return b.points - a.points; // tiebreaker: sort by points
         }
       });
+
+      return players;
   }
 
   function getCurrentWeek(currentDate, seasonjson) {
