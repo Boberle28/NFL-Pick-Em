@@ -267,9 +267,11 @@
                 console.log(players);
 
                 let player = null;
-                for (let player of Object.values(players)){
-                    if(username == player.username){
-                        player = player
+                for (let p of Object.values(players)){
+                    console.log("inside let player of Object.values(players)")
+                    if(username == p.username){
+                        console.log("username match!!!");
+                        player = p
                         break;
                     }
                 }
