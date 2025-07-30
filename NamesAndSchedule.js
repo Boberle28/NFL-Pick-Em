@@ -981,6 +981,8 @@ week18.AddGame(HOU, IND);
         winpercent: picksMade > 0 ? totalWins / picksMade : 0,
         weekStats: weekStats
       };
+
+      return players;
     });
 
     // sort players

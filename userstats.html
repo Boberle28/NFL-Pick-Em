@@ -259,7 +259,9 @@
 
                 const allWeeks = season.preseasonWeeks;
 
-                const player = players[username];
+                const players1 = PullUsersAndGetWins(snapshot);
+                const player = players1[username];
+                
                 console.log("players");
                 console.log(players);
 
