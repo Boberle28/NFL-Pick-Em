@@ -167,8 +167,7 @@
                 const picksRef = collection(db, "picks");
                 const snapshot = await getDocs(picksRef);
 
-                PullUsersAndGetWins(snapshot);
-                players1 = PullUsersAndGetWins(snapshot);
+                return snapshot;
             }
 
             function renderWeekStats(weekObj, container) {
@@ -261,7 +260,9 @@
                 const allWeeks = season.preseasonWeeks;
 
 
-                await asyncStuff();
+                let snapshot = await asyncStuff();
+                PullUsersAndGetWins(snapshot);
+                
                 console.log("players");
                 console.log(players);
                 const player = players[username];
