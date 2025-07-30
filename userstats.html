@@ -149,8 +149,6 @@
             async function asyncStuff(){
                 document.getElementById("stats-name").innerText = `Stats for ${username}`;
 
-                const container = document.getElementById("user-stats-container");
-
                 const predata = await fetch("preseason.json").then(res => res.json());
                 const data = await fetch("weekdata.json").then(res => res.json());
 
@@ -282,6 +280,7 @@
                 }
 
 
+                const container = document.getElementById("user-stats-container");
                 for (let i = 0; i < allWeeks.length; i++) {
                     const week = i + 1; // assuming week is something like { weekNumber: 1, games: [...] }
 
