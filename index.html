@@ -100,8 +100,10 @@
     }
 
     document.getElementById("login-btn").addEventListener("click", async () => {
-      const email = formatUsernameAsEmail(usernameInput.value);
-      const password = passwordInput.value;
+      const trimmed = usernameInput.value.trim();
+      const email = formatUsernameAsEmail(trimmed);
+      const password = passwordInput.value.trim();
+
 
       const username = email.split("@")[0];
 
@@ -117,8 +119,9 @@
     });
 
     document.getElementById("create-btn").addEventListener("click", async () => {
-      const email = formatUsernameAsEmail(usernameInput.value);
-      const password = passwordInput.value;
+      const trimmed = usernameInput.value.trim();
+      const email = formatUsernameAsEmail(trimmed);
+      const password = passwordInput.value.trim();
 
       const username = email.split("@")[0];
 
