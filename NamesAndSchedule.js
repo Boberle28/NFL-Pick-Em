@@ -242,7 +242,7 @@ class Pair{
 
         let gamefound = undefined;
         for(const game of this.games){
-          if(game.IsGame(name)){
+          if(game.IsGame(key)){
             gamefound = game;
             break;
           }
