@@ -935,7 +935,6 @@ week18.AddGame(HOU, IND);
       Object.keys(data).forEach(weekKey => {
         const weekData = data[weekKey];
 
-        let weekStats = [];
         function fillWeekStats()
         {
           for (let i = 0; i < 18; i++) {
