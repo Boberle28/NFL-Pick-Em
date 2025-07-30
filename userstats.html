@@ -267,7 +267,7 @@
                 console.log(players);
 
                 let player = null;
-                for(item of players){
+                for (let player of Object.values(players)){
                     if(username == item.username){
                         player = item
                         break;
