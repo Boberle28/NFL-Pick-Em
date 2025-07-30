@@ -326,7 +326,7 @@ class Pair{
         // Make sure we found the game
         if(game1 == undefined)
         {
-          console.log("Could not find game for " + game.home);
+          console.log("Could not find game for home:" + game.home  + " away:" + game.away);
           continue;
         }
 
@@ -343,6 +343,7 @@ class Pair{
 
     LoadOdds(data){ 
 
+      console.log("\n\Start LoadOdds()");
       console.log(this.weeks[0]);
       console.log(data.weeks.week1);
       this.LoadWeekOdds(this.weeks[0], data.weeks.week1);
@@ -363,14 +364,17 @@ class Pair{
       this.LoadWeekOdds(this.weeks[15], data.weeks.week16);
       this.LoadWeekOdds(this.weeks[16], data.weeks.week17);
       this.LoadWeekOdds(this.weeks[17], data.weeks.week18);
+      console.log("Leave LoadOdds()\n\n");
 
     }
 
     LoadOddsPreseason(data)
     {
+      console.log("\n\Start LoadOddsPreseason()");
       this.LoadWeekOdds(this.preseasonWeeks[0], data.weeks.week1);
       this.LoadWeekOdds(this.preseasonWeeks[1], data.weeks.week2);
       this.LoadWeekOdds(this.preseasonWeeks[2], data.weeks.week3);
+      console.log("Leave LoadOddsPreseason()\n\n");
     }
 
     DoneAddingWeeks(){
