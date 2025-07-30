@@ -162,9 +162,6 @@ class Pair{
         this.homeValue -= valDifference;
         this.awayValue -= valDifference;
       }
-
-      console.log("this.homeValue" + this.homeValue + " for " + this.home.name);
-      console.log("this.awayValue" + this.awayValue + " for " + this.away.name);
     }
 
     // Get the value of the home team and away team. Not the original odds
@@ -342,7 +339,6 @@ class Pair{
           game1.SetScore(game.homeScore, game.awayScore);
         }
       }
-      console.log("End Week " + week.week + "\n\n");
     }
 
     LoadOdds(data){ 
@@ -945,7 +941,7 @@ week18.AddGame(HOU, IND);
         {
           weekStats = [];
           for (let i = 0; i < 18; i++) {
-            weekStats.push({ wins: 0, points: 0 });
+            weekStats.push({ wins: 0, points: 0, weekPicks: null});
           }
         }
 
@@ -963,7 +959,7 @@ week18.AddGame(HOU, IND);
           
           if(week !== undefined){
             const result = week.GetWinners(weekData.picks);
-            weekStats[weekNumber - 1] = {wins: result.wins, points: result.points};
+            weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, weekPicks: weekData.picks};
             totalWins += result.wins;
             totalPoints += result.points;
           }
@@ -971,8 +967,6 @@ week18.AddGame(HOU, IND);
             console.log("weeks is undefined!");
           }
             
-          console.log("Oject.keys(weekData.picks).length");
-          console.log(Object.keys(weekData.picks).length);
           picksMade += Object.keys(weekData.picks).length;
         }
       });

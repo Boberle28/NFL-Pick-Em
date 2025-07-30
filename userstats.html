@@ -174,7 +174,7 @@
                 return snapshot;
             }
 
-            function renderWeekStats(weekObj, container) {
+            function renderWeekStats(weekObj, container, weekPicks) {
     
                 let index = 1;
                 console.log("weekObj");
@@ -182,7 +182,8 @@
                 weekObj.games.forEach((game) => {
                     const matchupDiv = document.createElement("div");
                     matchupDiv.classList.add("matchup");
-                    matchupDiv.dataset.game = `Game ${index}`;
+                    const gameName = `Game ${index}`;
+                    matchupDiv.dataset.game = gameName;
 
                     ++index;
 
@@ -198,6 +199,9 @@
                         label.textContent = isHome ? "Home" : "Away";
                         const score = label.textContent == "Home" ? game.homeScore : game.awayScore;
                         wrapper.appendChild(label);
+                        console.log("weekPicks in renderWeekStats in userstats.html");
+                        console.log(weekPicks);
+                        const it = weekPicks[gameName];
 
                         const scoreLabel = document.createElement("div");
                         scoreLabel.classList.add("team-score");
@@ -300,8 +304,9 @@
                     const weekDiv = document.createElement("div");
                     weekDiv.classList.add("week-section");
 
+                    const weekPicks = player.weekPicks[i];
                     // renderWeekStats is your function to create matchup UI for this week
-                    renderWeekStats(allWeeks[i], weekDiv); 
+                    renderWeekStats(allWeeks[i], weekDiv, weekPicks); 
 
                     container.appendChild(header);
                     container.appendChild(weekDiv);
