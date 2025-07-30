@@ -125,6 +125,22 @@
             <div id="user-stats-container"></div>
         </body>
         <script>
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+            import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+            const firebaseConfig = {
+            apiKey: "AIzaSyAHTX6gGorh3Flmvbw0THBfk9i7ILeZ2E4",
+            authDomain: "football-pickem-1d2ab.firebaseapp.com",
+            projectId: "football-pickem-1d2ab",
+            storageBucket: "football-pickem-1d2ab.firebasestorage.app",
+            messagingSenderId: "1065963734942",
+            appId: "1:1065963734942:web:042b5fbe5082b9cd29788f",
+            measurementId: "G-K8JV62VJ6P"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            const db = getFirestore(app);
+
             const params = new URLSearchParams(window.location.search);
             const username = params.get("user");
 
