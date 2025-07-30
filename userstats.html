@@ -171,8 +171,6 @@
                 players1 = PullUsersAndGetWins(snapshot);
             }
 
-            asyncStuff();
-
             function renderWeekStats(weekObj, container) {
     
                 let index = 1;
@@ -262,6 +260,8 @@
 
                 const allWeeks = season.preseasonWeeks;
 
+
+                await asyncStuff();
                 console.log("players");
                 console.log(players);
                 const player = players[username];
