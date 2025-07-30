@@ -128,10 +128,6 @@
             const params = new URLSearchParams(window.location.search);
             const username = params.get("user");
 
-            const player = players[username];
-            console.log("players");
-            console.log(players);
-
             function renderWeekStats(weekObj, container) {
     
                 let index = 1;
@@ -227,6 +223,10 @@
                 const snapshot = await getDocs(picksRef);
 
                 PullUsersAndGetWins(snapshot);
+
+                const player = players[username];
+                console.log("players");
+                console.log(players);
 
                 for (let i = 0; i < allWeeks.length; i++) {
                     const week = i + 1; // assuming week is something like { weekNumber: 1, games: [...] }
