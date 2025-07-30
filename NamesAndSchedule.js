@@ -917,7 +917,7 @@ week18.AddGame(HOU, IND);
   season.AddPreseasonWeek(preWeek3);
 
   let playersStats = { wins: 0, points: 0, picksMade: 0 };
-  let players = [];
+  let players = {};
 
   function PullUsersAndGetWins(snapshot){
 
@@ -947,6 +947,8 @@ week18.AddGame(HOU, IND);
             weekStats.push({ wins: 0, points: 0 });
           }
         }
+
+        fillWeekStats();
         
         if (weekData?.picks) {
 
