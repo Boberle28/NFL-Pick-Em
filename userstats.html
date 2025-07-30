@@ -260,7 +260,10 @@
                 document.getElementById("stats-name").innerText = `Stats for ${username}`;
 
                 const allWeeks = season.preseasonWeeks;
-
+                console.log("allWeeks");
+                console.log(allWeeks);
+                console.log("season");
+                console.log(season);
 
                 let snapshot = await asyncStuff();
                 PullUsersAndGetWins(snapshot);
