@@ -942,6 +942,7 @@ week18.AddGame(HOU, IND);
 
         function fillWeekStats()
         {
+          weekStats = [];
           for (let i = 0; i < 18; i++) {
             weekStats.push({ wins: 0, points: 0 });
           }
