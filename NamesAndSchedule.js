@@ -959,7 +959,7 @@ week18.AddGame(HOU, IND);
           
           if(week !== undefined){
             const result = week.GetWinners(weekData.picks);
-            weekStats[weekNumber] = {wins: result.wins, points: result.points};
+            weekStats[weekNumber - 1] = {wins: result.wins, points: result.points};
             totalWins += result.wins;
             totalPoints += result.points;
           }
