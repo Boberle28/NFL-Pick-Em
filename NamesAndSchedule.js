@@ -88,7 +88,7 @@ class Pair{
 
   class Game
   {
-    constructor(home, away){
+    constructor(home, away, gameName){
         this.away = away;
         this.home = home;
 
@@ -103,7 +103,7 @@ class Pair{
         this.awayScore = 0;
         this.homeScore = 0;
 
-        this.gameName = 0;
+        this.gameName = gameName;
 
         this.homeFavorite = true;
     }
@@ -231,7 +231,8 @@ class Pair{
     }
 
     AddGame(home, away) {
-        this.games.push(new Game(home, away));
+        let gameNum = "Game " + this.games.length + 1;
+        this.games.push(new Game(home, away, gameNum));
     }
 
     GetWinners(obj){
