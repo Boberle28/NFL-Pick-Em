@@ -233,6 +233,17 @@
 
                 const container = document.getElementById("user-stats-container");
 
+                const predata = await fetch("preseason.json").then(res => res.json());
+                const data = await fetch("weekdata.json").then(res => res.json());
+
+                // For updating team records
+                const records = await fetch("teamRecords.json").then(res => res.json());
+
+                UpdateRecords(records.teams);
+
+                season.LoadOdds(data)
+                season.LoadOddsPreseason(predata);
+
                 const allWeeks = season.preseasonWeeks;
 
                 const picksRef = collection(db, "picks");
