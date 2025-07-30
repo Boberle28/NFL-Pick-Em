@@ -972,7 +972,7 @@ week18.AddGame(HOU, IND);
         points: totalPoints,
         picksMade: picksMade,
         winpercent: picksMade > 0 ? totalWins / picksMade : 0,
-        weekStat: weekStats
+        weekStats: weekStats
       };
     });
 
