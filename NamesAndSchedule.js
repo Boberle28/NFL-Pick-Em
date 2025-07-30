@@ -921,10 +921,15 @@ week18.AddGame(HOU, IND);
 
   function PullUsersAndGetWins(snapshot){
 
+    console.log("In PullUsersAndGetWins");
     snapshot.forEach(doc => {
+      console.log("In snapshot.forEach");
       const storageId = doc.id; // document ID is the username
       const username = storageId.split("_")[0];
       const data = doc.data();
+
+      console.log("username");
+      console.log(username);
 
       let totalWins = 0;
       let totalPoints = 0;
