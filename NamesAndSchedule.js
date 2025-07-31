@@ -976,6 +976,7 @@ week18.AddGame(HOU, IND);
       });
 
       players[username] = {
+        username: username, // ✅ Add this
         wins: totalWins,
         points: totalPoints,
         picksMade: picksMade,
