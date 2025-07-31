@@ -343,7 +343,7 @@ class Pair{
 
     LoadOdds(data){ 
 
-      console.log("\n\Start LoadOdds()");
+      console.log("\n\nStart LoadOdds()");
       console.log(this.weeks[0]);
       console.log(data.weeks.week1);
       this.LoadWeekOdds(this.weeks[0], data.weeks.week1);
@@ -370,7 +370,7 @@ class Pair{
 
     LoadOddsPreseason(data)
     {
-      console.log("\n\Start LoadOddsPreseason()");
+      console.log("\n\nStart LoadOddsPreseason()");
       this.LoadWeekOdds(this.preseasonWeeks[0], data.weeks.week1);
       this.LoadWeekOdds(this.preseasonWeeks[1], data.weeks.week2);
       this.LoadWeekOdds(this.preseasonWeeks[2], data.weeks.week3);
