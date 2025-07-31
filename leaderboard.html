@@ -127,16 +127,33 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
+    async function asyncStuff(){
+        document.getElementById("stats-name").innerText = `Stats for ${username}`;
+
+        const predata = await fetch("preseason.json").then(res => res.json());
+        const data = await fetch("weekdata.json").then(res => res.json());
+
+        // For updating team records
+        const records = await fetch("teamRecords.json").then(res => res.json());
+
+        UpdateRecords(records.teams);
+
+        season.LoadOdds(data)
+        season.LoadOddsPreseason(predata);
+
+        const allWeeks = season.preseasonWeeks;
+
+        const picksRef = collection(db, "picks");
+        const snapshot = await getDocs(picksRef);
+
+        return snapshot;
+    }
+
     async function buildLeaderboard() {
-
-      // if players is empty we will try to fill it before building the table
-      if(!players.length){
-         const picksRef = collection(db, "picks");
-         const snapshot = await getDocs(picksRef);
-
-         PullUsersAndGetWins(snapshot);
-      }
     
+      let snapshot = await asyncStuff();
+      PullUsersAndGetWins(snapshot);
+      
       const tbody = document.getElementById("leaderboard-body");
       Object.values(players).forEach(player => {
         const row = document.createElement("tr");
