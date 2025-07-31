@@ -181,6 +181,9 @@
       window.location.href = "index.html";
     }
 
+    // Global var used to determine if we are inside a betting window
+    let bettingTarget = null;
+
     const password = localStorage.getItem("password");
 
     // Import the functions you need from the SDKs you need
@@ -302,6 +305,12 @@
     let WEEK = 1;
 
     async function submitPicks() {
+
+      // Very first thing we do is make sure the betting window is open
+      if(!bettingTarget){
+        alert("You are outside the betting window for the week");
+        return;
+      }
       const matchups = document.querySelectorAll(".matchup");
       let picks = [];
 
@@ -409,7 +418,7 @@
       const now = new Date();
 
       const currentWeek = getCurrentWeek(now, seasonJson.season);
-      const bettingTarget = isBettingWindowOpen(now, seasonJson.season);
+      bettingTarget = isBettingWindowOpen(now, seasonJson.season);
 
       const title = document.getElementById("page-title");
       const weekHeading = document.getElementById("current-week-heading");
