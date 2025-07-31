@@ -6,8 +6,8 @@
         "home": "Detroit Lions",
         "awayMoneyline": 180,
         "homeMoneyline": -150,
-        "homeScore": 31,
-        "awayScore": 23
+        "homeScore": -1,
+        "awayScore": -1
       },
       "game2": {
         "away": "Indianapolis Colts",
