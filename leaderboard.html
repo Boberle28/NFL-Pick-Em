@@ -128,8 +128,6 @@
     const db = getFirestore(app);
 
     async function asyncStuff(){
-        document.getElementById("stats-name").innerText = `Stats for ${username}`;
-
         const predata = await fetch("preseason.json").then(res => res.json());
         const data = await fetch("weekdata.json").then(res => res.json());
 
@@ -153,7 +151,7 @@
     
       let snapshot = await asyncStuff();
       PullUsersAndGetWins(snapshot);
-      
+
       const tbody = document.getElementById("leaderboard-body");
       Object.values(players).forEach(player => {
         const row = document.createElement("tr");
