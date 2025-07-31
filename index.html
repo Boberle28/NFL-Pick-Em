@@ -101,15 +101,18 @@
 
     document.getElementById("login-btn").addEventListener("click", async () => {
 
-      
       const trimmed = usernameInput.value.trim();
       const email = formatUsernameAsEmail(trimmed);
       const password = passwordInput.value.trim();
-
-      let username = Object.values(players).find(player =>
-                        player.username.toLowerCase() === trimmed.toLowerCase()
-                      );
       
+      let matchedPlayer = Object.values(players).find(p =>
+                        p.username.toLowerCase() === trimmed.toLowerCase()
+                      );
+
+      let username = null;
+      if(matchedPlayer){
+        username = matchedPlayer.username;
+      }
 
       try {
         await signInWithEmailAndPassword(auth, email, password);
@@ -127,12 +130,14 @@
       const email = formatUsernameAsEmail(trimmed);
       const password = passwordInput.value.trim();
 
+      let username = trimmed;
+
       try {
-        let username = Object.values(players).find(player =>
-                        player.username.toLowerCase() === trimmed.toLowerCase()
+        let matchedPlayer = Object.values(players).find(p =>
+                        p.username.toLowerCase() === trimmed.toLowerCase()
                       );
 
-        if (username == undefined || username == null) {
+        if (matchedPlayer) {
           statusText.textContent = "⛔ That username is already taken.";
           statusText.style.color = "red";
           return;
