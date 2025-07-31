@@ -920,6 +920,7 @@ week18.AddGame(HOU, IND);
   let playersStats = { wins: 0, points: 0, picksMade: 0 };
   let players = {};
 
+  /*
   function PullUsersAndGetWins(snapshot){
 
     console.log("In PullUsersAndGetWins");
@@ -1003,6 +1004,90 @@ week18.AddGame(HOU, IND);
 
       return players;
   }
+  */
+
+  function PullUsersAndGetWins(snapshot){
+
+    console.log("In PullUsersAndGetWins");
+    snapshot.forEach(doc => {
+      console.log("In snapshot.forEach");
+      const storageId = doc.id; // document ID is the username
+      const username = storageId.split("_")[0];
+      const data = doc.data();
+
+      console.log("username");
+      console.log(username);
+
+      let totalWins = 0;
+      let totalPoints = 0;
+      let picksMade = 0;
+
+      let weekStats = [];
+      function fillWeekStats()
+      {
+        weekStats = [];
+        for (let i = 0; i < 18; i++) {
+          weekStats.push({ wins: 0, points: 0, weekPicks: null});
+        }
+      }
+
+      // We call this first to make sure weekStats is filled with 18 weeks just in case they have no picks for any weeks
+      // Because it will never enter the forEach loop and fill weekStats
+      fillWeekStats();
+
+      // Loop through each week's picks
+      Object.keys(data).forEach(weekKey => {
+        const weekData = data[weekKey];
+        
+        if (weekData?.picks) {
+
+          const weekNumberMatch = weekKey.match(/\d+/); // extracts the number from "week1"
+          if (!weekNumberMatch) return; // skip if no number
+
+          const weekNumber = parseInt(weekNumberMatch[0]);
+          
+          const regulareSeasonStart = Date.now() >= new Date("2025-09-04T19:20:00");
+          const week = regulareSeasonStart ? season.GetWeek(weekNumber - 1) : season.GetPreseasonWeek(weekNumber - 1);
+          
+          if(week !== undefined){
+            const result = week.GetWinners(weekData.picks);
+            weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, weekPicks: weekData.picks};
+            totalWins += result.wins;
+            totalPoints += result.points;
+          }
+          else{
+            console.log("weeks is undefined!");
+          }
+            
+          picksMade += Object.keys(weekData.picks).length;
+        }
+      });
+
+      players[username] = {
+        username: username, // ✅ Add this
+        wins: totalWins,
+        points: totalPoints,
+        picksMade: picksMade,
+        winpercent: picksMade > 0 ? totalWins / picksMade : 0,
+        weekStats: weekStats
+      };
+
+    });
+
+    // sort players
+    players = Object.entries(players)
+      .map(([username, stats]) => ({ username, ...stats }))
+      .sort((a, b) => {
+        if (b.wins !== a.wins) {
+          return b.wins - a.wins; // sort by wins first
+        } else {
+          return b.points - a.points; // tiebreaker: sort by points
+        }
+      });
+
+      return players;
+  }
+
 
   function getCurrentWeek(currentDate, seasonjson) {
     const now = new Date(currentDate);
