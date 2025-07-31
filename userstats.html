@@ -215,8 +215,8 @@
 
                         console.log("Keys in weekPicks:", Object.keys(weekPicks)); // verify "Game 6" is present
                         console.log("Exact match exists?", Object.keys(weekPicks).includes(gameName));
-                        
-                        const pick = weekPicks[gameName];
+
+                        const pick = weekPicks.weekPicks[gameName];
                         console.log("gameName", gameName);
                         console.log("pick:");
                         console.log(pick);
