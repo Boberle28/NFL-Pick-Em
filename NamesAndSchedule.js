@@ -1051,10 +1051,12 @@ week18.AddGame(HOU, IND);
           const week = regulareSeasonStart ? season.GetWeek(weekNumber - 1) : season.GetPreseasonWeek(weekNumber - 1);
           
           if(week !== undefined){
+            console.log(`Week ${weekNumber}: result.wins = ${result.wins}, result.points = ${result.points}`);
             const result = week.GetWinners(weekData.picks);
             weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, weekPicks: weekData.picks};
             totalWins += result.wins;
             totalPoints += result.points;
+            console.log(`Accumulated totals → totalWins = ${totalWins}, totalPoints = ${totalPoints}`);
           }
           else{
             console.log("weeks is undefined!");
