@@ -107,7 +107,7 @@
       const password = passwordInput.value.trim();
 
       let username = Object.values(players).find(player =>
-                        player.username.toLowerCase() === name.toLowerCase()
+                        player.username.toLowerCase() === trimmed.toLowerCase()
                       );
       
 
@@ -127,10 +127,11 @@
       const email = formatUsernameAsEmail(trimmed);
       const password = passwordInput.value.trim();
 
-      const username = email.split("@")[0];
-
       try {
-        const result = FindUserAllLowercase(trimmed);
+        let username = Object.values(players).find(player =>
+                        player.username.toLowerCase() === trimmed.toLowerCase()
+                      );
+
         if (result == undefined || result == null) {
           statusText.textContent = "⛔ That username is already taken.";
           statusText.style.color = "red";
