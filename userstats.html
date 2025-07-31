@@ -201,7 +201,6 @@
                         wrapper.appendChild(label);
                         console.log("weekPicks in renderWeekStats in userstats.html");
                         console.log(weekPicks);
-                        const it = weekPicks[gameName];
 
                         const scoreLabel = document.createElement("div");
                         scoreLabel.classList.add("team-score");
@@ -209,10 +208,15 @@
 
                         wrapper.appendChild(scoreLabel);
 
-                        const teamvalue = isHome ? game.homeValue : game.awayValue;
+                        const teamvalue = isHome ? game.homeValue : game.awayValue; 
           
                         const btn = document.createElement("button");
                         btn.classList.add("team-btn");
+
+                        const pick = weekPicks[gameName];
+                        if(pick == team.name){
+                            btn.classList.add("selected");
+                        }
 
                         // Add logo
                         const img = document.createElement("img");
