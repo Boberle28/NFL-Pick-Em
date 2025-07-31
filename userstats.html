@@ -216,13 +216,11 @@
                         console.log("Keys in weekPicks:", Object.keys(weekPicks)); // verify "Game 6" is present
                         console.log("Exact match exists?", Object.keys(weekPicks).includes(gameName));
 
-                        const pick = weekPicks.weekPicks[gameName];
-                        console.log("gameName", gameName);
-                        console.log("pick:");
-                        console.log(pick);
-                        if(pick == team.name){
-                            console.log("In pick == team.name!");
-                            btn.classList.add("selected");
+                        if(weekPicks.weekPicks){
+                            if(team.name == weekPicks.weekPicks[gameName]){
+                                console.log("In pick == team.name!");
+                                btn.classList.add("selected");
+                            }
                         }
 
                         // Add logo
