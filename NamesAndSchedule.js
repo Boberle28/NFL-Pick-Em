@@ -1054,6 +1054,7 @@ week18.AddGame(HOU, IND);
             const result = week.GetWinners(weekData.picks);
             console.log(`Week ${weekNumber}: result.wins = ${result.wins}, result.points = ${result.points}`);
             weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, weekPicks: weekData.picks};
+            console.log("weekStats[1] = ", weekStats[weekNumber - 1]);
             totalWins += result.wins;
             totalPoints += result.points;
             console.log(`Accumulated totals → totalWins = ${totalWins}, totalPoints = ${totalPoints}`);
