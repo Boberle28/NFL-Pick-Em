@@ -999,6 +999,12 @@ week18.AddGame(HOU, IND);
       return players;
   }
 
+  function FindUserAllLowercase(name){
+    return Object.values(players).find(player =>
+      player.username.toLowerCase() === name.toLowerCase()
+    );
+  }
+
   function getCurrentWeek(currentDate, seasonjson) {
     const now = new Date(currentDate);
 
