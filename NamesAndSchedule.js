@@ -1039,6 +1039,7 @@ week18.AddGame(HOU, IND);
       Object.keys(data).forEach(weekKey => {
         const weekData = data[weekKey];
         
+        
         if (weekData?.picks) {
 
           const weekNumberMatch = weekKey.match(/\d+/); // extracts the number from "week1"
