@@ -106,7 +106,10 @@
       const email = formatUsernameAsEmail(trimmed);
       const password = passwordInput.value.trim();
 
-      let username = FindUserAllLowercase(trimmed);
+      let username = Object.values(players).find(player =>
+                        player.username.toLowerCase() === name.toLowerCase()
+                      );
+      
 
       try {
         await signInWithEmailAndPassword(auth, email, password);
