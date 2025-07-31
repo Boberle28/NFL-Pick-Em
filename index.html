@@ -130,9 +130,37 @@
       const email = formatUsernameAsEmail(trimmed);
       const password = passwordInput.value.trim();
 
+
       let username = trimmed;
 
       try {
+        // First make sure they didnt leave the username field empty
+        if(trimmed === ""){
+          statusText.textContent = "⛔ You must enter a username";
+          statusText.style.color = "red";
+          return;
+        }
+
+        // Check for empty username and any chars in username that will trip up firestore
+        
+        const invalidChars = /[./#\[\]$?\\]/;
+
+        if (!username.trim()) {
+          statusText.textContent = "⛔ You must enter a username";
+          statusText.style.color = "red";
+          return;
+        } 
+        else if (invalidChars.test(username)) {
+          statusText.textContent = "⛔ Username contains invalid characters: . / # [ ] $ ? \\";
+          statusText.style.color = "red";
+          return;
+        } 
+        else if (username.startsWith("__")) {
+          statusText.textContent = "⛔ Username cannot start with '__' (double underscores).";
+          statusText.style.color = "red";
+          return;
+        }
+        
         let matchedPlayer = Object.values(players).find(p =>
                         p.username.toLowerCase() === trimmed.toLowerCase()
                       );

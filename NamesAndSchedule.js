@@ -936,18 +936,22 @@ week18.AddGame(HOU, IND);
       let totalPoints = 0;
       let picksMade = 0;
 
-      let weekStats = []
+      let weekStats = [];
+      function fillWeekStats()
+      {
+        weekStats = [];
+        for (let i = 0; i < 18; i++) {
+          weekStats.push({ wins: 0, points: 0, weekPicks: null});
+        }
+      }
+
+      // We call this first to make sure weekStats is filled with 18 weeks just in case they have no picks for any weeks
+      // Because it will never enter the forEach loop and fill weekStats
+      fillWeekStats();
+
       // Loop through each week's picks
       Object.keys(data).forEach(weekKey => {
         const weekData = data[weekKey];
-
-        function fillWeekStats()
-        {
-          weekStats = [];
-          for (let i = 0; i < 18; i++) {
-            weekStats.push({ wins: 0, points: 0, weekPicks: null});
-          }
-        }
 
         fillWeekStats();
         
