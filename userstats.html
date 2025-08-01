@@ -303,7 +303,7 @@
                     console.log(player);
                     const header = document.createElement("h3");
                     header.textContent = `Week ${week}`;
-                    header.textContent += " Wins " + player.weekStats[i].wins + " Points " + player.weekStats[i].points;
+                    header.textContent += " Wins " + player.weekStats[i].wins + " Points " + Number(player.weekStats[i].points).toFixed(2);
 
                     const weekDiv = document.createElement("div");
                     weekDiv.classList.add("week-section");
