@@ -441,6 +441,11 @@
       // Show current week or upcoming betting target
       if (currentWeek) {
         let seasonWeek = null;
+        let match = currentWeek.match(/\d+/); // pulls the number as a string
+        console.log("match: ", match);
+        if(match){
+          WEEK = parseInt(match[0], 10); // turn "1" into 1
+        }
         if(currentWeek.includes("preseasonWeek")){
           console.log("Inside if(currentWeek.includes(preseasonWeek))");
           // It is a preseason week
