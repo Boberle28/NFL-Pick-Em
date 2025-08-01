@@ -184,6 +184,9 @@
     // Global var used to determine if we are inside a betting window
     let bettingTarget = null;
 
+    // Global var used to get dates between weeks
+    let seasonJson = null;
+
     const password = localStorage.getItem("password");
 
     // Import the functions you need from the SDKs you need
@@ -307,10 +310,20 @@
     async function submitPicks() {
 
       // Very first thing we do is make sure the betting window is open
+      const now = new Date();
+      bettingTarget = isBettingWindowOpen(now, seasonJson.season);
+
       if(!bettingTarget){
+        const weekHeading = document.getElementById("current-week-heading");
+        const bettingStatus = document.getElementById("betting-status");
+
+        bettingStatus.textContent = "Betting Window Closed";
+        bettingStatus.className = "closed";
+
         alert("You are outside the betting window for the week");
         return;
       }
+
       const matchups = document.querySelectorAll(".matchup");
       let picks = [];
 
@@ -405,7 +418,7 @@
       const predata = await fetch("preseason.json").then(res => res.json());
       const data = await fetch("weekdata.json").then(res => res.json());
 
-      const seasonJson = await fetch("weeklydates.json").then(res => res.json());
+      seasonJson = await fetch("weeklydates.json").then(res => res.json());
 
       // For updating team records
       const records = await fetch("teamRecords.json").then(res => res.json());
