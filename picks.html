@@ -440,6 +440,9 @@
       // Show current week or upcoming betting target
       if (currentWeek) {
         WEEK = currentWeek.week;
+        console.log("In init!!");
+        console.log("WEEK ", WEEK);
+        console.log("currentWeek: ", currentWeek);
         title.textContent = `Pigskin Pick'em - Week ${currentWeek.week}`;
         weekHeading.textContent = `Pigskin Pick'em - Week ${currentWeek.week}`;
         bettingStatus.textContent = "Betting Window Closed";
