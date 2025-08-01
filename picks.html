@@ -449,13 +449,11 @@
         if(currentWeek.includes("preseasonWeek")){
           console.log("Inside if(currentWeek.includes(preseasonWeek))");
           // It is a preseason week
-          WEEK = currentWeek.match(/\d+/);
           seasonWeek = season.GetPreseasonWeek(WEEK - 1);
         }
         else{
           // It's the regular season
           console.log("inside else statement of the if if(currentWeek.includes(preseasonWeek))")
-          WEEK = currentWeek.match(/\d+/);
           seasonWeek = season.GetWeek(WEEK - 1);
         }
 
