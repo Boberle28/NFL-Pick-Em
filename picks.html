@@ -416,22 +416,25 @@
 
     async function Init(){
       const predata = await fetch("preseason.json").then(res => res.json());
-      const data = await fetch("weekdata.json").then(res => res.json());
+      const data = await fetch("weeklyData.json").then(res => res.json());
 
       seasonJson = await fetch("weeklydates.json").then(res => res.json());
 
       // For updating team records
       const records = await fetch("teamRecords.json").then(res => res.json());
 
-      UpdateRecords(records.teams);
+      UpdateRecords(data.teams);
 
-      season.LoadOdds(data)
+      season.LoadOdds(data.weeks)
       season.LoadOddsPreseason(predata);
 
       const now = new Date();
 
-      const currentWeek = getCurrentWeek(now, seasonJson.season);
-      bettingTarget = isBettingWindowOpen(now, seasonJson.season);
+      //const currentWeek = getCurrentWeek(now, seasonJson.season);
+      //bettingTarget = isBettingWindowOpen(now, seasonJson.season);
+
+      const currentWeek = getCurrentWeek(now);
+      bettingTarget = isBettingWindowOpen(now);
 
       const title = document.getElementById("page-title");
       const weekHeading = document.getElementById("current-week-heading");

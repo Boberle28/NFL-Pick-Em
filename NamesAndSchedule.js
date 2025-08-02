@@ -72,7 +72,7 @@ class Pair{
 
     getPngImageDirectory()
     {
-        this.pngImageName = "Images/" + this.shortName + ".png";
+      this.pngImageName = `Images/${this.shortName}.png`;
     }
 
     IsTeam(teamname){
@@ -222,9 +222,11 @@ class Pair{
 
   class Week
   {
-    constructor (week){
+    constructor (week, startDateStr, endDateStr){
         this.week = week;
         this.games = [];
+        this.startDate = new Date(startDateStr).getTime();
+        this.endDate = new Date(endDateStr).getTime();
     }
 
     AddGame(home, away) {
@@ -531,7 +533,7 @@ NFLteams.push(CHI);
 let MIN = new Team("Minnesota Vikings", "MIN", 0, 0, 0);
 NFLteams.push(MIN);
 
-let preWeek1 = new Week(1);
+let preWeek1 = new Week(1, "2025-08-01T00:00:00Z", "2025-08-11T04:00:00Z");
 preWeek1.AddGame(DET, LAC);
 preWeek1.AddGame(BAL, IND);
 preWeek1.AddGame(PHI, CIN);
@@ -550,7 +552,7 @@ preWeek1.AddGame(SF, DEN);
 preWeek1.AddGame(CHI, MIA);
 preWeek1.AddGame(LAC, NO);
 
-let preWeek2 = new Week(2);
+let preWeek2 = new Week(2, "2025-08-15T23:00:00Z", "2025-08-18T04:00:00Z");
 preWeek2.AddGame(ATL, TEN);
 preWeek2.AddGame(SEA, KC);
 preWeek2.AddGame(DET, MIA);
@@ -568,7 +570,7 @@ preWeek2.AddGame(NO, JAX);
 preWeek2.AddGame(CHI, BUF);
 preWeek2.AddGame(WAS, CIN);
 
-let preWeek3 = new Week(3);
+let preWeek3 = new Week(3, "2025-08-22T23:00:00Z", "2025-08-24T04:00:00Z");
 preWeek3.AddGame(CAR, PIT);
 preWeek3.AddGame(NYG, NE);
 preWeek3.AddGame(NYJ, PHI);
@@ -585,7 +587,7 @@ preWeek3.AddGame(TB, BUF);
 preWeek3.AddGame(SF, LAC);
 preWeek3.AddGame(ARI, LV);
 
-let week1 = new Week(1);
+let week1 = new Week(1, "2025-09-05T00:20:00Z", "2025-09-09T04:00:00Z");
 week1.AddGame(PHI, DAL);
 week1.AddGame(LAC, KC);
 week1.AddGame(ATL, TB);
@@ -603,7 +605,7 @@ week1.AddGame(LAR, HOU);
 week1.AddGame(BUF, BAL);
 week1.AddGame(CHI, MIN);
 
-let week2 = new Week(2);
+let week2 = new Week(2, "2025-09-12T04:20:00Z", "2025-09-16T08:00:00Z");
 week2.AddGame(GB, WAS);
 week2.AddGame(CIN, JAX);
 week2.AddGame(DAL, NYG);
@@ -621,7 +623,7 @@ week2.AddGame(MIN, ATL);
 week2.AddGame(HOU, TB);
 week2.AddGame(LV, LAC);
 
-let week3 = new Week(3);
+let week3 = new Week(3, "2025-09-19T04:20:00Z", "2025-09-23T08:00:00Z");
 week3.AddGame(BUF, MIA);
 week3.AddGame(CLE, GB);
 week3.AddGame(TEN, IND);
@@ -639,7 +641,7 @@ week3.AddGame(SF, ARI);
 week3.AddGame(NYG, KC);
 week3.AddGame(BAL, DET);
 
-let week4 = new Week(4);
+let week4 = new Week(4, "2025-09-26T04:20:00Z", "2025-09-30T08:00:00Z");
 week4.AddGame(ARI, SEA);
 week4.AddGame(PIT, MIN);
 week4.AddGame(ATL, WAS);
@@ -657,7 +659,7 @@ week4.AddGame(DAL, GB);
 week4.AddGame(MIA, NYJ);
 week4.AddGame(DEN, CIN);
 
-let week5 = new Week(5);
+let week5 = new Week(5, "2025-10-03T04:20:00Z", "2025-10-07T08:00:00Z");
 week5.AddGame(LAR, SF);
 week5.AddGame(CLE, MIN);
 week5.AddGame(IND, LV);
@@ -673,7 +675,7 @@ week5.AddGame(LAC, WAS);
 week5.AddGame(BUF, NE);
 week5.AddGame(JAX, KC);
 
-let week6 = new Week(6);
+let week6 = new Week(6, "2025-10-10T04:20:00Z", "2025-10-14T08:00:00Z");
 week6.AddGame(NYG, PHI);
 week6.AddGame(NYJ, DEN);
 week6.AddGame(IND, ARI);
@@ -690,7 +692,7 @@ week6.AddGame(KC, DET);
 week6.AddGame(ATL, BUF);
 week6.AddGame(WAS, CHI);
 
-let week7 = new Week(7);
+let week7 = new Week(7, "2025-10-17T04:20:00Z", "2025-10-21T08:00:00Z");
 week7.AddGame(CIN, PIT);
 week7.AddGame(JAX, LAR);
 week7.AddGame(CHI, NO);
@@ -707,7 +709,7 @@ week7.AddGame(SF, ATL);
 week7.AddGame(DET, TB);
 week7.AddGame(SEA, HOU);
 
-let week8 = new Week(8);
+let week8 = new Week(8, "2025-10-24T04:20:00Z", "2025-10-28T08:00:00Z");
 week8.AddGame(LAC, MIN);
 week8.AddGame(ATL, MIA);
 week8.AddGame(CIN, NYJ);
@@ -722,7 +724,7 @@ week8.AddGame(IND, TEN);
 week8.AddGame(PIT, GB);
 week8.AddGame(KC, WAS);
 
-let week9 = new Week(9);
+let week9 = new Week(9, "2025-10-31T04:20:00Z", "2025-11-04T10:00:00Z");
 week9.AddGame(MIA, BAL);
 week9.AddGame(CIN, CHI);
 week9.AddGame(DET, MIN);
@@ -738,7 +740,7 @@ week9.AddGame(BUF, KC);
 week9.AddGame(WAS, SEA);
 week9.AddGame(DAL, ARI);
 
-let week10 = new Week(10);
+let week10 = new Week(10, "2025-11-07T06:20:00Z", "2025-11-11T10:00:00Z");
 week10.AddGame(DEN, LV);
 week10.AddGame(IND, ATL);
 week10.AddGame(CHI, NYG);
@@ -754,7 +756,7 @@ week10.AddGame(WAS, DET);
 week10.AddGame(LAC, PIT);
 week10.AddGame(GB, PHI);
 
-let week11 = new Week(11);
+let week11 = new Week(11, "2025-11-14T06:20:00Z", "2025-11-18T10:00:00Z");
 week11.AddGame(NE, NYJ);
 week11.AddGame(MIA, WAS);
 week11.AddGame(ATL, CAR);
@@ -771,7 +773,7 @@ week11.AddGame(DEN, KC);
 week11.AddGame(PHI, DET);
 week11.AddGame(LV, DAL);
 
-let week12 = new Week(12);
+let week12 = new Week(12, "2025-11-21T06:20:00Z", "2025-11-25T10:00:00Z");
 week12.AddGame(HOU, BUF);
 week12.AddGame(CHI, PIT);
 week12.AddGame(CIN, NE);
@@ -787,7 +789,7 @@ week12.AddGame(NO, ATL);
 week12.AddGame(LAR, TB);
 week12.AddGame(SF, CAR);
 
-let week13 = new Week(13);
+let week13 = new Week(13, "2025-11-28T06:20:00Z", "2025-12-03T10:00:00Z");
 week13.AddGame(DET, GB);
 week13.AddGame(DAL, KC);
 week13.AddGame(BAL, CIN);
@@ -805,7 +807,7 @@ week13.AddGame(LAC, LV);
 week13.AddGame(WAS, DEN);
 week13.AddGame(NE, NYG);
 
-let week14 = new Week(14);
+let week14 = new Week(14, "2025-12-05T06:20:00Z", "2025-12-09T10:00:00Z");
 week14.AddGame(DET, DAL);
 week14.AddGame(ATL, SEA);
 week14.AddGame(CLE, TEN);
@@ -821,7 +823,7 @@ week14.AddGame(ARI, LAR);
 week14.AddGame(KC, HOU);
 week14.AddGame(LAC, PHI);
 
-let week15 = new Week(15);
+let week15 = new Week(15, "2025-12-12T06:20:00Z", "2025-12-16T10:00:00Z");
 week15.AddGame(TB, ATL);
 week15.AddGame(CHI, CLE);
 week15.AddGame(CIN, BAL);
@@ -839,7 +841,7 @@ week15.AddGame(SEA, IND);
 week15.AddGame(DAL, MIN);
 week15.AddGame(PIT, MIA);
 
-let week16 = new Week(16);
+let week16 = new Week(16, "2025-12-19T06:20:00Z", "2025-12-23T10:00:00Z");
 week16.AddGame(SEA, LAR);
 week16.AddGame(CHI, GB);
 week16.AddGame(WAS, PHI);
@@ -857,7 +859,7 @@ week16.AddGame(HOU, LV);
 week16.AddGame(MIA, CIN);
 week16.AddGame(IND, SF);
 
-let week17 = new Week(17);
+let week17 = new Week(17, "2025-12-25T23:00:00Z", "2025-12-30T10:00:00Z");
 week17.AddGame(WAS, DAL);
 week17.AddGame(MIN, DET);
 week17.AddGame(KC, DEN);
@@ -875,7 +877,7 @@ week17.AddGame(BUF, PHI);
 week17.AddGame(SF, CHI);
 week17.AddGame(ATL, LAR);
 
-let week18 = new Week(18);
+let week18 = new Week(18, "2026-01-04T23:00:00Z", "2026-01-05T06:00:00Z");
 week18.AddGame(ATL, NO);
 week18.AddGame(BUF, NYJ);
 week18.AddGame(CHI, DET);
@@ -1092,7 +1094,64 @@ week18.AddGame(HOU, IND);
       return players;
   }
 
+  function getCurrentWeek() {
+    const now = Date.now();
 
+    for (const week of season.weeks) {
+      if (now >= week.startDate && now <= week.endDate) {
+        return week;
+      }
+    }   
+
+    return null; // Not in any regular season NFL week
+  }
+
+  function getCurrentPreseasonWeek(currentDate){
+    const now = new Date(currentDate).getTime();
+
+    for (const week of season.preseasonWeeks) {
+      if (now >= week.startDate && now <= week.endDate) {
+        return week;
+      }
+    }   
+
+    return null; // Not in any preseason NFL week
+  }
+
+  function isBettingWindowOpen(currentDate) {
+  const now = new Date(currentDate).getTime();
+
+  const allWeeks = [...preseasonWeeks, ...regularWeeks];
+
+  const firstWeek = allWeeks[0];
+  const lastWeek = allWeeks[allWeeks.length - 1];
+
+  if (now < firstWeek.startDate) {
+    return season.GetPreseasonWeek(0);
+  }
+
+  if (now > lastWeek.endDate) {
+    return null;
+  }
+
+  for (let i = 0; i < allWeeks.length - 1; i++) {
+    const currentWeek = allWeeks[i];
+    const nextWeek = allWeeks[i + 1];
+
+    if (now > currentWeek.endDate && now < nextWeek.startDate) {
+      if (i + 1 < 3) {
+        return season.GetPreseasonWeek(i + 1);
+      } else {
+        return season.GetWeek((i + 1) - 3 + 1); // +1 because GetWeek uses 1-based indexing
+      }
+    }
+  }
+
+  return null; // currently inside a week, not in between
+}
+
+
+  /*
   function getCurrentWeek(currentDate, seasonjson) {
     const now = new Date(currentDate);
 
@@ -1107,7 +1166,7 @@ week18.AddGame(HOU, IND);
 
     return null; // Not in any NFL week
   }
-
+ 
   function isBettingWindowOpen(currentDate, seasonjson) {
     const now = new Date(currentDate);
 
@@ -1151,6 +1210,7 @@ week18.AddGame(HOU, IND);
     return null;
 
   }
+    */
 
   function UpdateRecords(records) {
     const teamKeys = Object.keys(records);
