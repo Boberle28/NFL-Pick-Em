@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firestore Migration</title>
+</head>
+<body>
+  <h1>Migrating Firestore Picks from Username to UID</h1>
+  <pre id="output">Running migration...</pre>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      doc,
+      getDocs,
+      setDoc,
+      deleteDoc
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    // Your Firebase config here
+    const firebaseConfig = {
+      apiKey: "AIzaSyAHTX6gGorh3Flmvbw0THBfk9i7ILeZ2E4",
+      authDomain: "football-pickem-1d2ab.firebaseapp.com",
+      projectId: "football-pickem-1d2ab",
+      storageBucket: "football-pickem-1d2ab.firebasestorage.app",
+      messagingSenderId: "1065963734942",
+      appId: "1:1065963734942:web:042b5fbe5082b9cd29788f",
+      measurementId: "G-K8JV62VJ6P"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // 🔁 Map of usernames → UIDs
+    const usernameToUidMap = {
+
+        "Amccalister88_Avamarie24!*": "eFdLWqXgA4MpXvPP9vMJ9TfmwB83",
+
+        "Avamarie2409_Chicaisme123": "ZSPhXDny5VPDk6iYGJiTspm5o1r1",
+
+        "Awalter_Wipaire123": "fgfqHZDPtoWAZgKFK7rJautQm983",
+
+        "BennyMac38_Benjamin86": "2ywssjs7rwbeXJW8qaCWYAmoB0A2",
+
+        "Brando_Winner": "XgfGB0s8tjPqas5hwetXrOTUdio2",
+
+        "Jessetyge_Jm@n5858!!": "L47cb8h53KUgLr0lt0Smr3wXxE43",
+
+        "Kelly_032866": "rkWaZpps1QeAbe2dqherou4JLQD2",
+
+        "Lenchogobosho1_Horalencho$1": "oSEszYYW4KNbKAEbkKvEIbcRdvv1",
+
+        "Michael_Pizzahut0913!": "w4B7y5bWjGNj0UQfho2ASC0VRVB3",
+
+        "Oberlej_61578426": "GIcADWActEV5uNvZJJoV9KMFBhA2",
+
+        "Plee22_CornDog69@": "FWVhKGTs6WTuATgLYvWTUWc0d4f1",
+
+        "goberle_NamathJoe25": "dWenw8ENRFP46AOjmV1QWOYEUpD3"
+
+    };
+
+    
+
+    const log = msg => {
+      console.log(msg);
+      document.getElementById("output").textContent += `\n${msg}`;
+    };
+
+    async function migratePicksToUid() {
+      const snapshot = await getDocs(collection(db, "picks"));
+
+      for (const docSnap of snapshot.docs) {
+        const username = docSnap.id;
+        const data = docSnap.data();
+
+        const uid = usernameToUidMap[username];
+        if (!uid) {
+          log(`⚠️ No UID found for "${username}", skipping...`);
+          continue;
+        }
+
+        const newDocRef = doc(db, "picks", uid);
+
+        // Add username to each week object (optional)
+        const updatedData = {};
+        for (const [week, weekData] of Object.entries(data)) {
+          updatedData[week] = {
+            ...weekData,
+            username: username
+          };
+        }
+
+        try {
+          await setDoc(newDocRef, updatedData, { merge: true });
+          log(`✅ Migrated "${username}" → "${uid}"`);
+        } catch (err) {
+          log(`❌ Failed to migrate "${username}": ${err.message}`);
+        }
+      }
+
+      log("🎉 Migration complete!");
+    }
+
+    migratePicksToUid();
+  </script>
+</body>
+</html>

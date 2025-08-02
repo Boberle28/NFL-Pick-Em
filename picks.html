@@ -307,8 +307,9 @@
     
     let WEEK = 1;
 
-    async function submitPicks() {
+    async function submitPicks(userid) {
 
+      const id = userid.uid;
       // Very first thing we do is make sure the betting window is open
       const now = new Date();
       bettingTarget = isBettingWindowOpen(now, seasonJson.season);
@@ -476,12 +477,22 @@
       });
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener("DOMContentLoaded", () => {
       const submitBtn = document.getElementById('submitBtn');
-      submitBtn.addEventListener('click', submitPicks);
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // Now safe to use Firebase and we have the user info
 
-      Init();
+          submitBtn.addEventListener("click", () => {
+            submitPicks(user); // pass the user into the function
+          });
 
+          Init();
+
+        } else {
+          window.location.href = "login.html"; // force login if not signed in
+        }
+      });
     });
      
   </script>
