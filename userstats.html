@@ -222,19 +222,6 @@
                         const btn = document.createElement("button");
                         btn.classList.add("team-btn");
 
-                        // Now here we are going to check three things.
-                        // Has the game already been played
-                        // Has the user picked for this week
-                        if(weekPicks && game.homeValue != -1){
-                            // And if so did they pick correctly
-                            if(game.IsWinner(weekPicks[`Game ${index}`])){
-                                btn.classList.add("right")
-                            }
-                            else{
-                                btn.classList.add("wrong")
-                            }
-                        }
-
                         if(weekPicks){
                             if(team.name == weekPicks[gameName]){
                                 console.log("In pick == team.name!");
