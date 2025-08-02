@@ -91,6 +91,16 @@
                 background-color: rgba(0, 123, 255, 0.1);
             }
 
+            .team-btn.wrong {
+                border-color: #007bff;
+                background-color: rgba(255, 0, 0, 0.1); /* light transparent red */
+            }
+            
+            .team-btn.right {
+                border-color: #007bff;
+                background-color: rgba(0, 0, 255, 0.1); /* light transparent red */
+            }
+
             .team-logo {
                 height: 28px;
                 width: auto;
@@ -156,17 +166,12 @@
                 document.getElementById("stats-name").innerText = `Stats for ${username}`;
 
                 const predata = await fetch("preseason.json").then(res => res.json());
-                const data = await fetch("weekdata.json").then(res => res.json());
+                const data = await fetch("weeklyData.json").then(res => res.json());
 
-                // For updating team records
-                const records = await fetch("teamRecords.json").then(res => res.json());
+                UpdateRecords(data.teams);
 
-                UpdateRecords(records.teams);
-
-                season.LoadOdds(data)
+                season.LoadOdds(data.weeks)
                 season.LoadOddsPreseason(predata);
-
-                const allWeeks = season.preseasonWeeks;
 
                 const picksRef = collection(db, "picks");
                 const snapshot = await getDocs(picksRef);
@@ -185,7 +190,6 @@
                     const gameName = `Game ${index}`;
                     matchupDiv.dataset.game = gameName;
 
-                    ++index;
 
                     const teamsDiv = document.createElement("div");
                     teamsDiv.classList.add("teams");
@@ -213,6 +217,21 @@
                         const btn = document.createElement("button");
                         btn.classList.add("team-btn");
 
+                        // Now here we are going to check three things.
+                        // Has the game already been played
+                        // Has the user picked for this week
+                        if(weekPicks && game.homeValue != -1){
+                            // And if so did they pick correctly
+                            if(game.IsWinner(weekPicks[index - 1])){
+                                btn.classList.add("right")
+                            }
+                            else{
+                                btn.classList.add("wrong")
+                            }
+                        }
+
+                        ++index;
+                        
                         console.log("Keys in weekPicks:", Object.keys(weekPicks)); // verify "Game 6" is present
                         console.log("Exact match exists?", Object.keys(weekPicks).includes(gameName));
 
@@ -271,7 +290,14 @@
             {
                 document.getElementById("stats-name").innerText = `Stats for ${username}`;
 
-                const allWeeks = season.preseasonWeeks;
+                const now = Date.now();
+                let allWeeks = null;
+
+                if(season.preseasonWeeks[preseasonWeeks.length - 1].endDate > now)
+                    allWeeks = season.preseasonWeeks;
+                else
+                    allWeeks = season.weeks;
+
                 console.log("allWeeks");
                 console.log(allWeeks);
                 console.log("season");
@@ -308,7 +334,7 @@
                     const weekDiv = document.createElement("div");
                     weekDiv.classList.add("week-section");
 
-                    const weekPicks = player.weekStats[i];
+                    const weekPicks = player.weekStats[i].weekPicks;
                     // renderWeekStats is your function to create matchup UI for this week
                     renderWeekStats(allWeeks[i], weekDiv, weekPicks); 
 
