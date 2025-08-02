@@ -293,7 +293,7 @@
                 const now = Date.now();
                 let allWeeks = null;
 
-                if(season.preseasonWeeks[preseasonWeeks.length - 1].endDate > now)
+                if(season.preseasonWeeks[season.preseasonWeeks.length - 1].endDate > now)
                     allWeeks = season.preseasonWeeks;
                 else
                     allWeeks = season.weeks;
