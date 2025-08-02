@@ -222,7 +222,7 @@
                         // Has the user picked for this week
                         if(weekPicks && game.homeValue != -1){
                             // And if so did they pick correctly
-                            if(game.IsWinner(weekPicks[index - 1])){
+                            if(game.IsWinner(weekPicks[`Game ${index}`])){
                                 btn.classList.add("right")
                             }
                             else{
