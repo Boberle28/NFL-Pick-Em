@@ -93,12 +93,12 @@
 
             .team-btn.wrong {
                 border-color: #007bff;
-                background-color: rgba(255, 0, 0, 20); /* light transparent red */
+                background-color: rgba(255, 0, 0, 1); /* light transparent red */
             }
             
             .team-btn.right {
                 border-color: #007bff;
-                background-color: rgba(0, 0, 255, 20); /* light transparent red */
+                background-color: rgba(0, 255, 0, 1); /* light transparent green */
             }
 
             .team-logo {
@@ -227,7 +227,7 @@
                                 console.log("In pick == team.name!");
                                 btn.classList.add("selected");
 
-                                if(game.homeValue != -1)
+                                if(game.homeScore != -1)
                                 {
                                     if(game.IsWinner(weekPicks[gameName]))
                                         btn.classList.add("right");
