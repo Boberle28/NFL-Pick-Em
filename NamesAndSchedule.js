@@ -1013,9 +1013,10 @@ week18.AddGame(HOU, IND);
     console.log("In PullUsersAndGetWins");
     snapshot.forEach(doc => {
       console.log("In snapshot.forEach");
-      const storageId = doc.id; // document ID is the username
-      const username = storageId.split("_")[0];
       const data = doc.data();
+
+      const storageId = data.username; // document ID is the username
+      const username = storageId.split("_")[0];
 
       console.log("username");
       console.log(username);
@@ -1039,9 +1040,9 @@ week18.AddGame(HOU, IND);
 
       // Loop through each week's picks
       Object.keys(data).forEach(weekKey => {
+        if (weekKey === "username") return;
+
         const weekData = data[weekKey];
-        
-        
         if (weekData?.picks) {
 
           const weekNumberMatch = weekKey.match(/\d+/); // extracts the number from "week1"
@@ -1096,7 +1097,7 @@ week18.AddGame(HOU, IND);
 
   function getCurrentWeek(currentDate) {
     const now = new Date(currentDate).getTime();
-    
+
     const allWeeks = [...season.preseasonWeeks, ...season.weeks];
 
     for (const week of allWeeks) {
