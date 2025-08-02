@@ -190,6 +190,7 @@
                     const gameName = `Game ${index}`;
                     matchupDiv.dataset.game = gameName;
 
+                    ++index;
 
                     const teamsDiv = document.createElement("div");
                     teamsDiv.classList.add("teams");
@@ -201,7 +202,11 @@
                         const label = document.createElement("div");
                         label.classList.add("team-label");
                         label.textContent = isHome ? "Home" : "Away";
-                        const score = label.textContent == "Home" ? game.homeScore : game.awayScore;
+                        let score = label.textContent == "Home" ? game.homeScore : game.awayScore;
+
+                        // If the score is -1 which means the game has not been played yet display it as 0
+                        score = score == -1 ? 0 : score;
+                        
                         wrapper.appendChild(label);
                         console.log("weekPicks in renderWeekStats in userstats.html");
                         console.log(weekPicks);
@@ -230,15 +235,18 @@
                             }
                         }
 
-                        ++index;
-                        
-                        console.log("Keys in weekPicks:", Object.keys(weekPicks)); // verify "Game 6" is present
-                        console.log("Exact match exists?", Object.keys(weekPicks).includes(gameName));
-
-                        if(weekPicks.weekPicks){
-                            if(team.name == weekPicks.weekPicks[gameName]){
+                        if(weekPicks){
+                            if(team.name == weekPicks[gameName]){
                                 console.log("In pick == team.name!");
                                 btn.classList.add("selected");
+
+                                if(game.homeValue != -1)
+                                {
+                                    if(game.IsWinner(weekPicks[gameName]))
+                                        btn.classList.add("right");
+                                    else
+                                        btn.classList.add("wrong");
+                                }
                             }
                         }
 
