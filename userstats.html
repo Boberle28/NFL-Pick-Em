@@ -157,6 +157,9 @@
             const app = initializeApp(firebaseConfig);
             const db = getFirestore(app);
 
+            import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+            const auth = getAuth(app);
 
             let players1 = {};
             const params = new URLSearchParams(window.location.search);
@@ -338,7 +341,15 @@
                 }
             }
 
-            window.addEventListener("DOMContentLoaded", buildPlayerStats);
+            window.addEventListener("DOMContentLoaded", () => {
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        buildPlayerStats(); // safe to access Firestore now
+                    } else {
+                        window.location.href = "login.html"; // redirect if not logged in
+                    }
+                });
+            });
 
             
         </script>

@@ -131,16 +131,6 @@
 
     const auth = getAuth(app);
 
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in — now it’s safe to pull picks
-        buildLeaderboard();
-      } else {
-        // Not signed in — redirect or show login
-        window.location.href = "login.html"; // or display a message
-      }
-    });
-
     async function asyncStuff(){
         const predata = await fetch("preseason.json").then(res => res.json());
         const data = await fetch("weeklyData.json").then(res => res.json());
@@ -179,7 +169,16 @@
       });
     }
 
-    window.addEventListener("DOMContentLoaded", onAuthStateChanged);
+    window.addEventListener("DOMContentLoaded", () => {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          buildLeaderboard(); // safe to access Firestore now
+        } else {
+          window.location.href = "login.html"; // redirect if not logged in
+        }
+      });
+    });
+
   </script>
 </body>
 </html>
