@@ -418,10 +418,8 @@
       const predata = await fetch("preseason.json").then(res => res.json());
       const data = await fetch("weeklyData.json").then(res => res.json());
 
-      seasonJson = await fetch("weeklydates.json").then(res => res.json());
-
-      // For updating team records
-      const records = await fetch("teamRecords.json").then(res => res.json());
+      //seasonJson = await fetch("weeklydates.json").then(res => res.json());
+      //const records = await fetch("teamRecords.json").then(res => res.json());
 
       UpdateRecords(data.teams);
 
@@ -429,9 +427,6 @@
       season.LoadOddsPreseason(predata);
 
       const now = new Date();
-
-      //const currentWeek = getCurrentWeek(now, seasonJson.season);
-      //bettingTarget = isBettingWindowOpen(now, seasonJson.season);
 
       const currentWeek = getCurrentWeek(now);
       bettingTarget = isBettingWindowOpen(now);
@@ -443,23 +438,7 @@
 
       // Show current week or upcoming betting target
       if (currentWeek) {
-        let seasonWeek = null;
-        let match = currentWeek.match(/\d+/); // pulls the number as a string
-        console.log("match: ", match);
-        if(match){
-          WEEK = parseInt(match[0], 10); // turn "1" into 1
-        }
-        if(currentWeek.includes("preseasonWeek")){
-          console.log("Inside if(currentWeek.includes(preseasonWeek))");
-          // It is a preseason week
-          seasonWeek = season.GetPreseasonWeek(WEEK - 1);
-        }
-        else{
-          // It's the regular season
-          console.log("inside else statement of the if if(currentWeek.includes(preseasonWeek))")
-          seasonWeek = season.GetWeek(WEEK - 1);
-        }
-
+        WEEK = currentWeek.week;
         console.log("In init!!");
         console.log("WEEK ", WEEK);
         title.textContent = `Pigskin Pick'em - Week ${WEEK}`;
@@ -467,12 +446,7 @@
         bettingStatus.textContent = "Betting Window Closed";
         bettingStatus.className = "closed";
 
-        if(seasonWeek != undefined){
-          renderWeek(seasonWeek);
-        }
-        else{
-          console.log("Uh oh seasonWeek is undefined!");
-        }
+        renderWeek(currentWeek);
 
       } else if (bettingTarget) {
         WEEK = bettingTarget.week;

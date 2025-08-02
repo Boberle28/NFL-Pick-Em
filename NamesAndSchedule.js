@@ -347,25 +347,25 @@ class Pair{
 
       console.log("\n\nStart LoadOdds()");
       console.log(this.weeks[0]);
-      console.log(data.weeks.week1);
-      this.LoadWeekOdds(this.weeks[0], data.weeks.week1);
-      this.LoadWeekOdds(this.weeks[1], data.weeks.week2);
-      this.LoadWeekOdds(this.weeks[2], data.weeks.week3);
-      this.LoadWeekOdds(this.weeks[3], data.weeks.week4);
-      this.LoadWeekOdds(this.weeks[4], data.weeks.week5);
-      this.LoadWeekOdds(this.weeks[5], data.weeks.week6);
-      this.LoadWeekOdds(this.weeks[6], data.weeks.week7);
-      this.LoadWeekOdds(this.weeks[7], data.weeks.week8);
-      this.LoadWeekOdds(this.weeks[8], data.weeks.week9);
-      this.LoadWeekOdds(this.weeks[9], data.weeks.week10);
-      this.LoadWeekOdds(this.weeks[10], data.weeks.week11);
-      this.LoadWeekOdds(this.weeks[11], data.weeks.week12);
-      this.LoadWeekOdds(this.weeks[12], data.weeks.week13);
-      this.LoadWeekOdds(this.weeks[13], data.weeks.week14);
-      this.LoadWeekOdds(this.weeks[14], data.weeks.week15);
-      this.LoadWeekOdds(this.weeks[15], data.weeks.week16);
-      this.LoadWeekOdds(this.weeks[16], data.weeks.week17);
-      this.LoadWeekOdds(this.weeks[17], data.weeks.week18);
+      console.log(data.week1);
+      this.LoadWeekOdds(this.weeks[0], data.week1);
+      this.LoadWeekOdds(this.weeks[1], data.week2);
+      this.LoadWeekOdds(this.weeks[2], data.week3);
+      this.LoadWeekOdds(this.weeks[3], data.week4);
+      this.LoadWeekOdds(this.weeks[4], data.week5);
+      this.LoadWeekOdds(this.weeks[5], data.week6);
+      this.LoadWeekOdds(this.weeks[6], data.week7);
+      this.LoadWeekOdds(this.weeks[7], data.week8);
+      this.LoadWeekOdds(this.weeks[8], data.week9);
+      this.LoadWeekOdds(this.weeks[9], data.week10);
+      this.LoadWeekOdds(this.weeks[10], data.week11);
+      this.LoadWeekOdds(this.weeks[11], data.week12);
+      this.LoadWeekOdds(this.weeks[12], data.week13);
+      this.LoadWeekOdds(this.weeks[13], data.week14);
+      this.LoadWeekOdds(this.weeks[14], data.week15);
+      this.LoadWeekOdds(this.weeks[15], data.week16);
+      this.LoadWeekOdds(this.weeks[16], data.week17);
+      this.LoadWeekOdds(this.weeks[17], data.week18);
       console.log("Leave LoadOdds()\n\n");
 
     }
@@ -1094,60 +1094,46 @@ week18.AddGame(HOU, IND);
       return players;
   }
 
-  function getCurrentWeek() {
-    const now = Date.now();
-
-    for (const week of season.weeks) {
-      if (now >= week.startDate && now <= week.endDate) {
-        return week;
-      }
-    }   
-
-    return null; // Not in any regular season NFL week
-  }
-
-  function getCurrentPreseasonWeek(currentDate){
+  function getCurrentWeek(currentDate) {
     const now = new Date(currentDate).getTime();
+    
+    const allWeeks = [...season.preseasonWeeks, ...season.weeks];
 
-    for (const week of season.preseasonWeeks) {
+    for (const week of allWeeks) {
       if (now >= week.startDate && now <= week.endDate) {
-        return week;
+        return week;  // Found the current week
       }
-    }   
+    }
 
-    return null; // Not in any preseason NFL week
+    return null;  // Not currently in any week
   }
 
   function isBettingWindowOpen(currentDate) {
-  const now = new Date(currentDate).getTime();
+    const now = new Date(currentDate).getTime();
 
-  const allWeeks = [...preseasonWeeks, ...regularWeeks];
+    const allWeeks = [...season.preseasonWeeks, ...season.weeks];
 
-  const firstWeek = allWeeks[0];
-  const lastWeek = allWeeks[allWeeks.length - 1];
+    const firstWeek = allWeeks[0];
+    const lastWeek = allWeeks[allWeeks.length - 1];
 
-  if (now < firstWeek.startDate) {
-    return season.GetPreseasonWeek(0);
-  }
+    if (now < firstWeek.startDate) {
+      return season.GetPreseasonWeek(0);
+  } 
 
-  if (now > lastWeek.endDate) {
-    return null;
-  }
+    if (now > lastWeek.endDate) {
+      return null;
+    }
 
-  for (let i = 0; i < allWeeks.length - 1; i++) {
-    const currentWeek = allWeeks[i];
-    const nextWeek = allWeeks[i + 1];
+    for (let i = 0; i < allWeeks.length - 1; i++) {
+      const currentWeek = allWeeks[i];
+      const nextWeek = allWeeks[i + 1];
 
-    if (now > currentWeek.endDate && now < nextWeek.startDate) {
-      if (i + 1 < 3) {
-        return season.GetPreseasonWeek(i + 1);
-      } else {
-        return season.GetWeek((i + 1) - 3 + 1); // +1 because GetWeek uses 1-based indexing
+      if (now > currentWeek.endDate && now < nextWeek.startDate) {
+        return nextWeek;
       }
     }
-  }
 
-  return null; // currently inside a week, not in between
+    return null; // currently inside a week, not in between
 }
 
 
