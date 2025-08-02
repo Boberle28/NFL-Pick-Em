@@ -127,6 +127,20 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in — now it’s safe to pull picks
+        buildLeaderboard();
+      } else {
+        // Not signed in — redirect or show login
+        window.location.href = "login.html"; // or display a message
+      }
+    });
+
     async function asyncStuff(){
         const predata = await fetch("preseason.json").then(res => res.json());
         const data = await fetch("weeklyData.json").then(res => res.json());
@@ -165,7 +179,7 @@
       });
     }
 
-    window.addEventListener("DOMContentLoaded", buildLeaderboard);
+    window.addEventListener("DOMContentLoaded", onAuthStateChanged);
   </script>
 </body>
 </html>
