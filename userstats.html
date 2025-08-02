@@ -93,12 +93,12 @@
 
             .team-btn.wrong {
                 border-color: #007bff;
-                background-color: rgba(255, 0, 0, 0.1); /* light transparent red */
+                background-color: rgba(255, 0, 0, 100); /* light transparent red */
             }
             
             .team-btn.right {
                 border-color: #007bff;
-                background-color: rgba(0, 0, 255, 0.1); /* light transparent red */
+                background-color: rgba(0, 0, 255, 100); /* light transparent red */
             }
 
             .team-logo {
@@ -206,7 +206,7 @@
 
                         // If the score is -1 which means the game has not been played yet display it as 0
                         score = score == -1 ? 0 : score;
-                        
+
                         wrapper.appendChild(label);
                         console.log("weekPicks in renderWeekStats in userstats.html");
                         console.log(weekPicks);
