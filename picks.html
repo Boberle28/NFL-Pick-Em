@@ -373,9 +373,7 @@
       console.log("Username:", username);
       console.log("Week:", WEEK);
 
-      // Now check if user has already picked for the week
-      const storageId = username + '_' + password;
-      const userRef = doc(db, "picks", storageId);
+      const userRef = doc(db, "picks", id);
       const userSnap = await getDoc(userRef);
 
       if (userSnap.exists()) {
@@ -396,7 +394,7 @@
       try {
         console.log("We are now attempting to setDoc");
         
-        const userRef = doc(db, "picks", storageId); // One document per user in "picks"
+        const userRef = doc(db, "picks", id); // One document per user in "picks"
         await setDoc(userRef, {
           [`week${WEEK}`]: {
             picks: picksObject,

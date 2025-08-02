@@ -171,18 +171,22 @@
           return;
         }
 
-        await createUserWithEmailAndPassword(auth, email, password);
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        // Store username in the firestore
+        const storageId = username + "_" + password;
+        localStorage.setItem("username", username);
+
+        // Save username in Firestore
+        const userRef = doc(db, "picks", user.uid);
+        await setDoc(userRef, {
+          username: storageId
+        }, { merge: true });
         
         statusText.textContent = `✅ Account created for ${usernameInput.value}`;
         statusText.style.color = "green";
 
-        // Store username in the firestore
-        const storageId = username + "_" + password;
-        const userDocRef = doc(db, "picks", storageId);
-        await setDoc(userDocRef, {}); // create an empty user document
-
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", password)
 
         window.location.href = "picks.html";
 
