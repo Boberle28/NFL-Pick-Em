@@ -69,40 +69,40 @@
     };
 
     async function migratePicksToUid() {
-      const snapshot = await getDocs(collection(db, "picks"));
+  for (const [username, uid] of Object.entries(usernameToUidMap)) {
+    const oldDocRef = doc(db, "picks", username);
+    const oldDocSnap = await getDoc(oldDocRef);
 
-      for (const docSnap of snapshot.docs) {
-        const username = docSnap.id;
-        const data = docSnap.data();
+    const updatedData = {
+      username: username
+    };
 
-        const uid = usernameToUidMap[username];
-        if (!uid) {
-          log(`⚠️ No UID found for "${username}", skipping...`);
-          continue;
-        }
+    if (oldDocSnap.exists()) {
+      const data = oldDocSnap.data();
 
-        const newDocRef = doc(db, "picks", uid);
-
-        // Add username to each week object (optional)
-        const updatedData = {};
-        for (const [week, weekData] of Object.entries(data)) {
-          updatedData[week] = {
-            ...weekData,
-            username: username
-          };
-        }
-
-        try {
-          await setDoc(newDocRef, updatedData, { merge: true });
-          log(`✅ Migrated "${username}" → "${uid}"`);
-        } catch (err) {
-          log(`❌ Failed to migrate "${username}": ${err.message}`);
-        }
+      // Add week data directly to the root
+      for (const [weekKey, weekData] of Object.entries(data)) {
+        updatedData[weekKey] = { ...weekData };
       }
 
-      log("🎉 Migration complete!");
+      log(`✅ Migrated picks for "${username}"`);
+    } else {
+      log(`🆕 Created empty record for "${username}"`);
     }
 
+    const newDocRef = doc(db, "picks", uid);
+    try{
+    await setDoc(newDocRef, updatedData, { merge: true });
+    }catch(err){
+        log(`❌ Failed to migrate "${username}": ${err.message}`);
+    }
+
+  }
+
+  log("🎉 Migration complete!");
+}
+
+    
     migratePicksToUid();
   </script>
 </body>
