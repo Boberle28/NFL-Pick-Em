@@ -216,7 +216,7 @@
     };
 
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-    
+
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
     const auth = getAuth(app);
@@ -491,7 +491,7 @@
           Init();
 
         } else {
-          window.location.href = "login.html"; // force login if not signed in
+          window.location.href = "index.html"; // force login if not signed in
         }
       });
     });
