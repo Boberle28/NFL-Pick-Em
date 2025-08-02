@@ -215,10 +215,11 @@
       measurementId: "G-K8JV62VJ6P"
     };
 
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+    
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-
-    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+    const auth = getAuth(app);
 
     function selectWinner(btn) {
       const teamBtns = btn.parentElement.parentElement.querySelectorAll("button");
