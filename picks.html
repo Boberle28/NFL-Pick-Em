@@ -476,6 +476,7 @@
         bettingStatus.textContent = "Betting Window Open";
         bettingStatus.className = "open";
 
+        // Betting is open so we get this week number and the closing date of betting for that week
         const betClosing = new Date(bettingTarget.startDate);
         const displayDate = formatDisplayDate(betClosing);
         bettingDateOpenClose.textContent = `Betting for Week ${WEEK} Closes On ${displayDate}`;
