@@ -11,9 +11,18 @@
       text-align: center;
       padding: 5px;
     }
+
+    #betting-open-close-date{
+      font-weight: bold;
+      margin-top: 0.5em;
+      text-align: center;
+      padding: 5px;
+    }
+
     .open {
       color: green;
     }
+
     .closed {
       color: red;
     }
@@ -157,6 +166,7 @@
 <body>
   <h1 id="current-week-heading">Pigskin Pick'em</h1>
   <div id="betting-status">Checking status...</div>
+  <div id="betting-open-close-date"></div>
 
   <div class="parent">
     <a href="leaderboard.html">Leaderboard</a>
@@ -437,6 +447,8 @@
       const title = document.getElementById("page-title");
       const weekHeading = document.getElementById("current-week-heading");
       const bettingStatus = document.getElementById("betting-status");
+      const bettingDateOpenClose = document.getElementById("betting-open-close-date");
+
       console.log("currentWeek ", currentWeek);
 
       // Show current week or upcoming betting target
@@ -449,6 +461,12 @@
         bettingStatus.textContent = "Betting Window Closed";
         bettingStatus.className = "closed";
 
+        // Betting is closed so we get the next week number and the opening date of betting for that week
+        const nextWeek = WEEK + 1;
+        const betOpening = new Date(currentWeek.endDate);
+        const displayDate = formatDisplayDate(betOpening);
+        bettingDateOpenClose.textContent = `Betting for Week ${nextWeek} Opens On ${displayDate}`;
+
         renderWeek(currentWeek);
 
       } else if (bettingTarget) {
@@ -457,6 +475,10 @@
         weekHeading.textContent = `Pigskin Pick'em - Week ${bettingTarget.week}`;
         bettingStatus.textContent = "Betting Window Open";
         bettingStatus.className = "open";
+
+        const betClosing = new Date(bettingTarget.startDate);
+        const displayDate = formatDisplayDate(betClosing);
+        bettingDateOpenClose.textContent = `Betting for Week ${WEEK} Closes On ${displayDate}`;
 
         renderWeek(bettingTarget);
       } else {

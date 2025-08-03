@@ -1209,8 +1209,36 @@ week18.AddGame(HOU, IND);
 
       NFLteams[i].updateRecords(record.wins, record.losses, record.ties);
     }
-  
   }
+
+  function getOrdinalSuffix(day) {
+    if (day >= 11 && day <= 13) return "th";
+    switch (day % 10) {
+      case 1: return "st";
+      case 2: return "nd";
+      case 3: return "rd";
+      default: return "th";
+    }
+  }
+
+  function formatDisplayDate(date) {
+    const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    const weekday = weekdays[date.getDay()];
+    const month = months[date.getMonth()];
+    const day = date.getDate();
+    const ordinal = getOrdinalSuffix(day);
+
+    let hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+    const ampm = hours >= 12 ? "pm" : "am";
+    hours = hours % 12 || 12; // convert 0 to 12-hour format
+
+  return `${weekday} ${month} ${day}${ordinal} ${hours}:${minutes}${ampm}`;
+}
+
   
   
   
