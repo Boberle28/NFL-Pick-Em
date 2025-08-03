@@ -315,7 +315,7 @@
       const id = userid.uid;
       // Very first thing we do is make sure the betting window is open
       const now = new Date();
-      bettingTarget = isBettingWindowOpen(now, seasonJson.season);
+      bettingTarget = isBettingWindowOpen(now);
 
       if(!bettingTarget){
         const weekHeading = document.getElementById("current-week-heading");

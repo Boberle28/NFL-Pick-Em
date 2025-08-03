@@ -222,11 +222,12 @@ class Pair{
 
   class Week
   {
-    constructor (week, startDateStr, endDateStr){
+    constructor (week, startDateStr, endDateStr, regular = true){
         this.week = week;
         this.games = [];
         this.startDate = new Date(startDateStr).getTime();
         this.endDate = new Date(endDateStr).getTime();
+        this.regularSeason = regular;
     }
 
     AddGame(home, away) {
@@ -534,58 +535,58 @@ let MIN = new Team("Minnesota Vikings", "MIN", 0, 0, 0);
 NFLteams.push(MIN);
 
 let preWeek1 = new Week(1, "2025-08-01T00:00:00Z", "2025-08-11T04:00:00Z");
-preWeek1.AddGame(DET, LAC);
-preWeek1.AddGame(BAL, IND);
-preWeek1.AddGame(PHI, CIN);
-preWeek1.AddGame(SEA, LV);
-preWeek1.AddGame(ATL, DET);
-preWeek1.AddGame(CAR, CLE);
-preWeek1.AddGame(NE, WAS);
-preWeek1.AddGame(BUF, NYG);
-preWeek1.AddGame(MIN, HOU);
-preWeek1.AddGame(JAX, PIT);
-preWeek1.AddGame(LAR, DAL);
-preWeek1.AddGame(TB, TEN);
-preWeek1.AddGame(GB, NYJ);
-preWeek1.AddGame(ARI, KC);
-preWeek1.AddGame(SF, DEN);
-preWeek1.AddGame(CHI, MIA);
-preWeek1.AddGame(LAC, NO);
+preWeek1.AddGame(DET, LAC, false);
+preWeek1.AddGame(BAL, IND, false);
+preWeek1.AddGame(PHI, CIN, false);
+preWeek1.AddGame(SEA, LV, false);
+preWeek1.AddGame(ATL, DET, false);
+preWeek1.AddGame(CAR, CLE, false);
+preWeek1.AddGame(NE, WAS, false);
+preWeek1.AddGame(BUF, NYG, false);
+preWeek1.AddGame(MIN, HOU, false);
+preWeek1.AddGame(JAX, PIT, false);
+preWeek1.AddGame(LAR, DAL, false);
+preWeek1.AddGame(TB, TEN, false);
+preWeek1.AddGame(GB, NYJ, false);
+preWeek1.AddGame(ARI, KC, false);
+preWeek1.AddGame(SF, DEN, false);
+preWeek1.AddGame(CHI, MIA, false);
+preWeek1.AddGame(LAC, NO, false);
 
 let preWeek2 = new Week(2, "2025-08-15T23:00:00Z", "2025-08-18T04:00:00Z");
-preWeek2.AddGame(ATL, TEN);
-preWeek2.AddGame(SEA, KC);
-preWeek2.AddGame(DET, MIA);
-preWeek2.AddGame(HOU, CAR);
-preWeek2.AddGame(IND, GB);
-preWeek2.AddGame(MIN, NE);
-preWeek2.AddGame(PHI, CLE);
-preWeek2.AddGame(LV, SF);
-preWeek2.AddGame(DAL, BAL);
-preWeek2.AddGame(LAR, LAC);
-preWeek2.AddGame(NYG, NYJ);
-preWeek2.AddGame(PIT, TB);
-preWeek2.AddGame(DEN, ARI);
-preWeek2.AddGame(NO, JAX);
-preWeek2.AddGame(CHI, BUF);
-preWeek2.AddGame(WAS, CIN);
+preWeek2.AddGame(ATL, TEN, false);
+preWeek2.AddGame(SEA, KC, false);
+preWeek2.AddGame(DET, MIA, false);
+preWeek2.AddGame(HOU, CAR, false);
+preWeek2.AddGame(IND, GB, false);
+preWeek2.AddGame(MIN, NE, false);
+preWeek2.AddGame(PHI, CLE, false);
+preWeek2.AddGame(LV, SF, false);
+preWeek2.AddGame(DAL, BAL, false);
+preWeek2.AddGame(LAR, LAC, false);
+preWeek2.AddGame(NYG, NYJ, false);
+preWeek2.AddGame(PIT, TB, false);
+preWeek2.AddGame(DEN, ARI, false);
+preWeek2.AddGame(NO, JAX, false);
+preWeek2.AddGame(CHI, BUF, false);
+preWeek2.AddGame(WAS, CIN, false);
 
 let preWeek3 = new Week(3, "2025-08-22T23:00:00Z", "2025-08-24T04:00:00Z");
-preWeek3.AddGame(CAR, PIT);
-preWeek3.AddGame(NYG, NE);
-preWeek3.AddGame(NYJ, PHI);
-preWeek3.AddGame(DAL, ATL);
-preWeek3.AddGame(TEN, MIN);
-preWeek3.AddGame(KC, CHI);
-preWeek3.AddGame(WAS, BAL);
-preWeek3.AddGame(CIN, IND);
-preWeek3.AddGame(CLE, LAR);
-preWeek3.AddGame(DET, HOU);
-preWeek3.AddGame(GB, SEA);
-preWeek3.AddGame(MIA, JAX);
-preWeek3.AddGame(TB, BUF);
-preWeek3.AddGame(SF, LAC);
-preWeek3.AddGame(ARI, LV);
+preWeek3.AddGame(CAR, PIT, false);
+preWeek3.AddGame(NYG, NE, false);
+preWeek3.AddGame(NYJ, PHI, false);
+preWeek3.AddGame(DAL, ATL, false);
+preWeek3.AddGame(TEN, MIN, false);
+preWeek3.AddGame(KC, CHI, false);
+preWeek3.AddGame(WAS, BAL, false);
+preWeek3.AddGame(CIN, IND, false);
+preWeek3.AddGame(CLE, LAR, false);
+preWeek3.AddGame(DET, HOU, false);
+preWeek3.AddGame(GB, SEA, false);
+preWeek3.AddGame(MIA, JAX, false);
+preWeek3.AddGame(TB, BUF, false);
+preWeek3.AddGame(SF, LAC, false);
+preWeek3.AddGame(ARI, LV, false);
 
 let week1 = new Week(1, "2025-09-05T00:20:00Z", "2025-09-09T04:00:00Z");
 week1.AddGame(PHI, DAL);
@@ -1119,7 +1120,7 @@ week18.AddGame(HOU, IND);
 
     if (now < firstWeek.startDate) {
       return season.GetPreseasonWeek(0);
-  } 
+    } 
 
     if (now > lastWeek.endDate) {
       return null;
