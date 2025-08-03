@@ -31,7 +31,6 @@
                 flex-direction: column;
                 gap: 20px;
                 align-items: center;
-                justify-content: center;
             }
 
             .matchup {
@@ -336,15 +335,12 @@
                     header.textContent = `Week ${week}`;
                     header.textContent += " Wins " + player.weekStats[i].wins + " Points " + Number(player.weekStats[i].points).toFixed(2);
 
-                    const weekDiv = document.createElement("div");
-                    weekDiv.classList.add("week-section");
+                    container.appendChild(header);
 
                     const weekPicks = player.weekStats[i].weekPicks;
                     // renderWeekStats is your function to create matchup UI for this week
-                    renderWeekStats(allWeeks[i], weekDiv, weekPicks); 
+                    renderWeekStats(allWeeks[i], container, weekPicks); 
 
-                    container.appendChild(header);
-                    container.appendChild(weekDiv);
                 }
             }
 
