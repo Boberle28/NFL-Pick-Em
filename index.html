@@ -25,6 +25,45 @@
       margin-top: 1em;
       font-weight: bold;
     }
+
+    .login-info {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+.login-info h2, .login-info h3 {
+  color: #1a1a1a;
+  margin-top: 1.2em;
+}
+
+.login-info ul {
+  padding-left: 1.2em;
+  list-style-type: disc;
+}
+
+.login-info li {
+  margin-bottom: 8px;
+}
+
+.login-info code {
+  background-color: #f0f0f0;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.login-info .humor {
+  margin-top: 20px;
+  font-style: italic;
+  color: #444;
+}
   </style>
 </head>
 <body>
@@ -35,6 +74,52 @@
   <button id="create-btn">Create Account</button>
 
   <div id="status"></div>
+  <div class="login-info">
+  <h2>Welcome to Pigskin Pick'em</h2>
+  <p>No fantasy football. No weird scoring systems. Just straight-up: <strong>pick the winner</strong>. Simple as that.</p>
+
+  <h3>How it works:</h3>
+  <ul>
+    <li><strong>Betting windows</strong> open and close between each NFL week.</li>
+    <li>Once the final game of a week finishes (usually Sunday or Monday night), the next week's window opens.</li>
+    <li>The window closes when the first game of the next week kicks off.</li>
+  </ul>
+
+  <p>When you log in:</p>
+  <ul>
+    <li>If we’re <strong>in an active week</strong>, you'll see when the next window opens.</li>
+    <li>If we’re <strong>between weeks</strong>, you'll see when the current one closes.</li>
+  </ul>
+
+  <p><strong>No picks after the window closes. No exceptions.</strong></p>
+  <p><strong>One submission per week.</strong> Once you hit <em>Submit</em>, it’s locked in. No take-backs.</p>
+
+  <h3>About the Numbers:</h3>
+  <p>You’ll see a number under each team:</p>
+  <ul>
+    <li>The favorite always has a value of <code>1.00</code>.</li>
+    <li>Underdogs have a higher number — the higher it is, the more Vegas doubts them.</li>
+  </ul>
+  <p>These numbers are used for tiebreakers:</p>
+  <ul>
+    <li><strong>Wins come first.</strong></li>
+    <li>If wins are tied, we total your <strong>points</strong> (based on the value of correct picks).</li>
+    <li>Picking correct underdogs gives you an edge.</li>
+  </ul>
+
+  <h3>Payouts:</h3>
+  <ul>
+    <li><strong>1st place:</strong> Takes the big pot</li>
+    <li><strong>2nd place:</strong> $100</li>
+    <li><strong>3rd place:</strong> Gets their bet back</li>
+  </ul>
+
+  <p class="humor">And if you have a gambling problem, just remember:<br>
+    <em>99% of gamblers quit just before they hit it big.</em><br>
+    So don’t be a quitter.
+  </p>
+</div>
+
 </body>
 <script src ="NamesAndSchedule.js"></script>
 
