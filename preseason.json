@@ -14,16 +14,16 @@
         "home": "Baltimore Ravens",
         "homeMoneyline": -265,
         "awayMoneyline": 215,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 16
       },
       "game3": {
         "away": "Cincinnati Bengals",
         "home": "Philadelphia Eagles",
         "awayMoneyline": -258,
         "homeMoneyline": 210,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 20
       },
       "game4": {
         "away": "Las Vegas Raiders",
