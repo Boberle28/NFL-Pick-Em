@@ -23,15 +23,15 @@
         "awayMoneyline": -258,
         "homeMoneyline": 210,
         "homeScore": 34,
-        "awayScore": 20
+        "awayScore": 27
       },
       "game4": {
         "away": "Las Vegas Raiders",
         "home": "Seattle Seahawks",
         "awayMoneyline": -230,
         "homeMoneyline": 190,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 23
       },
       "game5": {
         "away": "Detroit Lions",
