@@ -70,8 +70,8 @@
         "home": "Minnesota Vikings",
         "awayMoneyline": 110,
         "homeMoneyline": -130,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 10
       },
       "game10": {
         "away": "Pittsburgh Steelers",
