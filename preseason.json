@@ -38,24 +38,24 @@
         "home": "Atlanta Falcons",
         "awayMoneyline": -205,
         "homeMoneyline": 170,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 17
       },
       "game6": {
         "away": "Cleveland Browns",
         "home": "Carolina Panthers",
         "awayMoneyline": 220,
         "homeMoneyline": -270,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 7,
+        "awayScore": 24
       },
       "game7": {
         "away": "Washington Commanders",
         "home": "New England Patriots",
         "awayMoneyline": 235,
         "homeMoneyline": -290,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 11
       },
       "game8": {
         "away": "New York Giants",
