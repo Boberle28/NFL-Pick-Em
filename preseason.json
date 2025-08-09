@@ -62,8 +62,8 @@
         "home": "Buffalo Bills",
         "awayMoneyline": -135,
         "homeMoneyline": 114,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 25,
+        "awayScore": 34
       },
       "game9": {
         "away": "Houston Texans",
@@ -193,7 +193,7 @@
         "awayMoneyline": -100,
         "homeMoneyline": -100,
         "homeScore": -1,
-                "awayScore": -1
+        "awayScore": -1
       },
       "game8": {
         "away": "San Francisco 49ers",
@@ -201,7 +201,7 @@
         "awayMoneyline": -100,
         "homeMoneyline": -100,
         "homeScore": -1,
-                "awayScore": -1
+        "awayScore": -1
       },
       "game9": {
         "away": "Baltimore Ravens",
