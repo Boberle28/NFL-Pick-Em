@@ -118,8 +118,8 @@
         "home": "San Francisco 49ers",
         "awayMoneyline": -265,
         "homeMoneyline": 215,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 9,
+        "awayScore": 23
       },
       "game16": {
         "away": "Miami Dolphins",
