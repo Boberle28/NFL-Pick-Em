@@ -218,6 +218,22 @@ class Pair{
 
       return winner.IsTeam(teamname);
     }
+
+    GetResult(teamname){
+      // We return 1 if it is a winner 2 if a loser and 3 if it has not been played yet
+      const winner = this.GetWinner();
+      if(winner == undefined){
+        if(this.awayScore == -1)
+          return 3;
+        else // game must have ended in a tie
+          return 2;
+      }
+
+      if(winner.IsTeam(teamname))
+        return 1;
+      else 
+        return 2;
+    }
   }
 
   class Week
@@ -237,6 +253,7 @@ class Pair{
 
     GetWinners(obj){
       let count = 0;
+      let losses = 0;
       let value = 0;
       Object.entries(obj).forEach(([key, name]) =>{
 
@@ -254,14 +271,22 @@ class Pair{
           return {wins: count, points: value};
         }
 
-        if(gamefound.IsWinner(name))
-        {
+      //  if(gamefound.IsWinner(name))
+      //  {
+      //    count++;
+      //    value += gamefound.GetTeamValue(name);
+      //  }
+
+        let r = gamefound.GetResult(name);
+        if(r == 1){
           count++;
           value += gamefound.GetTeamValue(name);
         }
+        else if(r == 2)
+          ++losses;
       });
 
-      return {wins: count, points: value};
+      return {wins: count, losses: losses, points: value};
     }
 
     FindGame(teamname){
@@ -1023,6 +1048,7 @@ week18.AddGame(HOU, IND);
       console.log(username);
 
       let totalWins = 0;
+      let totalLosses = 0;
       let totalPoints = 0;
       let picksMade = 0;
 
@@ -1060,6 +1086,7 @@ week18.AddGame(HOU, IND);
             weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, weekPicks: weekData.picks};
             console.log("weekStats[1] = ", weekStats[weekNumber - 1]);
             totalWins += result.wins;
+            totalLosses += result.losses;
             totalPoints += result.points;
             console.log(`Accumulated totals → totalWins = ${totalWins}, totalPoints = ${totalPoints}`);
           }
@@ -1074,9 +1101,10 @@ week18.AddGame(HOU, IND);
       players[username] = {
         username: username, // ✅ Add this
         wins: totalWins,
+        losses: totalLosses,
         points: totalPoints,
         picksMade: picksMade,
-        winpercent: picksMade > 0 ? totalWins / picksMade : 0,
+        winpercent: totalWins + totalLosses > 0 ? totalWins / (totalWins + totalLosses) : 0,
         weekStats: weekStats
       };
 
