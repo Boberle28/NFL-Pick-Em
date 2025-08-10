@@ -126,8 +126,8 @@
         "home": "Chicago Bears",
         "awayMoneyline": 145,
         "homeMoneyline": -175,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 24
       },
       "game17": {
         "away": "New Orleans Saints",
