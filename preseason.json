@@ -102,8 +102,8 @@
         "home": "Green Bay Packers",
         "awayMoneyline": 130,
         "homeMoneyline": -155,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 30
       },
       "game14": {
         "away": "Kansas City Chiefs",
