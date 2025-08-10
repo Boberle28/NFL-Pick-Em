@@ -110,8 +110,8 @@
         "home": "Arizona Cardinals",
         "awayMoneyline": 114,
         "homeMoneyline": -135,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 17
       },
       "game15": {
         "away": "Denver Broncos",
