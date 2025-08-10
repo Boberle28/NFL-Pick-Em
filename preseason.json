@@ -78,24 +78,24 @@
         "home": "Jacksonville Jaguars",
         "awayMoneyline": 130,
         "homeMoneyline": -155,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 25,
+        "awayScore": 31
       },
       "game11": {
         "away": "Dallas Cowboys",
         "home": "Los Angeles Rams",
         "awayMoneyline": -142,
         "homeMoneyline": 120,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 31
       },
       "game12": {
         "away": "Tennessee Titans",
         "home": "Tampa Bay Buccaneers",
         "awayMoneyline": -175,
         "homeMoneyline": 145,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 29,
+        "awayScore": 7
       },
       "game13": {
         "away": "New York Jets",
