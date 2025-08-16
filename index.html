@@ -203,13 +203,13 @@
       }
 
       try {
-        await signInWithEmailAndPassword(auth, email, password);
         localStorage.setItem("username", username);
-        localStorage.setItem("password", password);
+        await signInWithEmailAndPassword(auth, email, password);
         window.location.href = "picks.html";
       } catch (err) {
         statusText.textContent = `⛔ Login failed: ${err.message}`;
         statusText.style.color = "red";
+        localStorage.removeItem("username");
       }
     });
 
@@ -286,7 +286,7 @@
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        const username = user.email.split("@")[0];
+        const username = localStorage.getItem("username");
         statusText.textContent = `🔓 Logged in as ${username}`;
         statusText.style.color = "green";
       }
