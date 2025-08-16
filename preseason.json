@@ -152,8 +152,8 @@
         "home": "Seattle Seahawks",
         "awayMoneyline": -140,
         "homeMoneyline": 120,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 33
       },
       "game3": {
         "away": "Miami Dolphins",
