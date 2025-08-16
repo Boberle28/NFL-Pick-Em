@@ -144,8 +144,8 @@
         "home": "Atlanta Falcons",
         "awayMoneyline": -175,
         "homeMoneyline": 150,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 23
       },
       "game2": {
         "away": "Kansas City Chiefs",
