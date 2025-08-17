@@ -208,32 +208,32 @@
         "home": "Dallas Cowboys",
         "awayMoneyline": -115,
         "homeMoneyline": -105,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 31
       },
       "game10": {
         "away": "Los Angeles Chargers",
         "home": "Los Angeles Rams",
         "awayMoneyline": -135,
         "homeMoneyline": 115,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 22
       },
       "game11": {
         "away": "New York Jets",
         "home": "New York Giants",
         "awayMoneyline": -125,
         "homeMoneyline": 105,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 12
       },
       "game12": {
         "away": "Tampa Bay Buccaneers",
         "home": "Pittsburgh Steelers",
         "awayMoneyline": -140,
         "homeMoneyline": 120,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 14,
+        "awayScore": 17
       },
       "game13": {
         "away": "Arizona Cardinals",
