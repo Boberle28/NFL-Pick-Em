@@ -240,8 +240,8 @@
         "home": "Denver Broncos",
         "awayMoneyline": 145,
         "homeMoneyline": -170,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 7
       },
       "game14": {
         "away": "Jacksonville Jaguars",
