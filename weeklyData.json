@@ -2214,7 +2214,7 @@
 		}
     },
     "teams": {
-       "Philadelphia Eagles": {
+     "Philadelphia Eagles": {
       "wins": 1,
       "losses": 1,
       "ties": 0
@@ -2356,7 +2356,7 @@
     },
     "Buffalo Bills": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Baltimore Ravens": {
@@ -2365,7 +2365,7 @@
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 1
     },
