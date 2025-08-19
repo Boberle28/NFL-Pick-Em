@@ -604,6 +604,7 @@ preWeek3.AddGame(DAL, ATL, false);
 preWeek3.AddGame(TEN, MIN, false);
 preWeek3.AddGame(KC, CHI, false);
 preWeek3.AddGame(WAS, BAL, false);
+preWeek3.AddGame(NO, DEN, false)
 preWeek3.AddGame(CIN, IND, false);
 preWeek3.AddGame(CLE, LAR, false);
 preWeek3.AddGame(DET, HOU, false);
