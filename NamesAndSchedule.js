@@ -559,7 +559,7 @@ NFLteams.push(CHI);
 let MIN = new Team("Minnesota Vikings", "MIN", 0, 0, 0);
 NFLteams.push(MIN);
 
-let preWeek1 = new Week(1, "2025-08-01T00:00:00Z", "2025-08-10T23:05:00Z");
+let preWeek1 = new Week(1, "2025-08-01T00:00:00Z", "2025-08-10T23:05:00Z", false);
 preWeek1.AddGame(DET, LAC, false);
 preWeek1.AddGame(BAL, IND, false);
 preWeek1.AddGame(PHI, CIN, false);
@@ -578,7 +578,7 @@ preWeek1.AddGame(SF, DEN, false);
 preWeek1.AddGame(CHI, MIA, false);
 preWeek1.AddGame(LAC, NO, false);
 
-let preWeek2 = new Week(2, "2025-08-15T23:00:00Z", "2025-08-19T03:00:00Z"); 
+let preWeek2 = new Week(2, "2025-08-15T23:00:00Z", "2025-08-19T03:00:00Z", false); 
 preWeek2.AddGame(ATL, TEN, false);
 preWeek2.AddGame(SEA, KC, false);
 preWeek2.AddGame(DET, MIA, false);
@@ -596,7 +596,7 @@ preWeek2.AddGame(NO, JAX, false);
 preWeek2.AddGame(CHI, BUF, false);
 preWeek2.AddGame(WAS, CIN, false);
 
-let preWeek3 = new Week(3, "2025-08-21T23:00:00Z", "2025-08-24T04:00:00Z"); 
+let preWeek3 = new Week(3, "2025-08-21T23:00:00Z", "2025-08-31T16:00:00Z", false); 
 preWeek3.AddGame(CAR, PIT, false);
 preWeek3.AddGame(NYG, NE, false);
 preWeek3.AddGame(NYJ, PHI, false);
