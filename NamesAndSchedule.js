@@ -1259,13 +1259,13 @@ week18.AddGame(HOU, IND);
     const month = months[date.getMonth()];
     const day = date.getDate();
     const ordinal = getOrdinalSuffix(day);
-
+    
     let hours = date.getHours();
     const minutes = date.getMinutes().toString().padStart(2, "0");
     const ampm = hours >= 12 ? "pm" : "am";
     hours = hours % 12 || 12; // convert 0 to 12-hour format
 
-  return `${weekday} ${month} ${day}${ordinal} ${hours}:${minutes}${ampm}`;
+  return `${weekday}, ${month} ${day}${ordinal}, at ${hours}:${minutes}${ampm}`;
 }
 
   
