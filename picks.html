@@ -465,10 +465,10 @@
         bettingStatus.className = "closed";
 
         // Betting is closed so we get the next week number and the opening date of betting for that week
-        let nextWeek = WEEK;
+        let nextWeek = WEEK + 1;
         if(!currentWeek.regularSeason) 
           nextWeek = WEEK + 1 == 4 ? 1 : WEEK + 1;
-        
+
         const betOpening = new Date(currentWeek.endDate);
         const displayDate = formatDisplayDate(betOpening);
         bettingDateOpenClose.textContent = `Betting for Week ${nextWeek} Opens On ${displayDate}`;
