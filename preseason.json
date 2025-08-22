@@ -282,8 +282,8 @@
         "home": "New York Giants",
         "awayMoneyline": 158,
         "homeMoneyline": -188,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 35,
+        "awayScore": 10
       },
       "game3": {
         "away": "Philadelphia Eagles",

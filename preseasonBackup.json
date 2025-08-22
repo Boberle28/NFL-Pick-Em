@@ -274,8 +274,8 @@
         "home": "Carolina Panthers",
         "awayMoneyline": -215,
         "homeMoneyline": 180,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 19
       },
       "game2": {
         "away": "New England Patriots",
@@ -436,7 +436,7 @@
       "ties": 0
     },
     "Cincinnati Bengals": {
-      "wins": 1,
+      "wins": 0,
       "losses": 1,
       "ties": 0
     },
@@ -482,7 +482,7 @@
     },
     "Washington Commanders": {
       "wins": 0,
-      "losses": 2,
+      "losses": 1,
       "ties": 0
     },
     "New York Giants": {
