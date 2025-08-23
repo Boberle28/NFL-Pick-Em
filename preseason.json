@@ -322,40 +322,40 @@
         "home": "Washington Commanders",
         "awayMoneyline": -148,
         "homeMoneyline": 126,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 3,
+        "awayScore": 30
       },
       "game8": {
         "away": "Denver Broncos",
         "home": "New Orleans Saints",
         "awayMoneyline": -225,
         "homeMoneyline": 188,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 28
       },
       "game9": {
         "away": "Indianapolis Colts",
         "home": "Cincinnati Bengals",
         "awayMoneyline": -152,
         "homeMoneyline": 128,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 14,
+        "awayScore": 41
       },
       "game10": {
         "away": "Los Angeles Rams",
         "home": "Cleveland Browns",
         "awayMoneyline": 200,
         "homeMoneyline": -245,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 17
       },
       "game11": {
         "away": "Houston Texans",
         "home": "Detroit Lions",
         "awayMoneyline": 108,
         "homeMoneyline": -126,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 7,
+        "awayScore": 26
       },
       "game12": {
         "away": "Seattle Seahawks",

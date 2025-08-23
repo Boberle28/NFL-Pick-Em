@@ -282,7 +282,7 @@
         "home": "New York Giants",
         "awayMoneyline": 158,
         "homeMoneyline": -188,
-        "homeScore": 35,
+        "homeScore": 42,
         "awayScore": 10
       },
       "game3": {
@@ -290,32 +290,32 @@
         "home": "New York Jets",
         "awayMoneyline": 100,
         "homeMoneyline": -118,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 19
       },
       "game4": {
         "away": "Atlanta Falcons",
         "home": "Dallas Cowboys",
         "awayMoneyline": 160,
         "homeMoneyline": -190,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 13
       },
       "game5": {
         "away": "Minnesota Vikings",
         "home": "Tennessee Titans",
         "awayMoneyline": 136,
         "homeMoneyline": -162,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 13
       },
       "game6": {
         "away": "Chicago Bears",
         "home": "Kansas City Chiefs",
         "awayMoneyline": 176,
         "homeMoneyline": -210,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 29
       },
       "game7": {
         "away": "Baltimore Ravens",
