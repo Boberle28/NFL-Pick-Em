@@ -362,8 +362,8 @@
         "home": "Green Bay Packers",
         "awayMoneyline": -112,
         "homeMoneyline": -104,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 7
       },
       "game13": {
         "away": "Jacksonville Jaguars",
