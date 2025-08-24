@@ -94,14 +94,16 @@
 
     .team-btn {
       display: flex;
-      align-items: center;
+      align-items: center;  
       gap: 8px;
       padding: 8px 14px;
       font-size: 16px;
-      background-image:
-        linear-gradient(to bottom, #404241, #2a2b2b),
-        radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 60%);
-      background-blend-mode: overlay;
+      background-image: linear-gradient(
+        to bottom,
+        #404241 0%,
+        #353636 50%,
+        #2a2b2b 100%
+      );
       border: 2px solid transparent;
       cursor: pointer;
       transition: background-color 0.2s ease;
