@@ -378,24 +378,24 @@
         "home": "Tampa Bay Buccaneers",
         "awayMoneyline": -130,
         "homeMoneyline": 110,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 23
       },
       "game15": {
         "away": "Los Angeles Chargers",
         "home": "San Francisco 49ers",
         "awayMoneyline": 194,
         "homeMoneyline": -235,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 30,
+        "awayScore": 23
       },
       "game16": {
         "away": "Las Vegas Raiders",
         "home": "Arizona Cardinals",
         "awayMoneyline": 106,
         "homeMoneyline": -124,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 10
       }
     }
   },

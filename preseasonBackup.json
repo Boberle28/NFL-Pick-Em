@@ -370,8 +370,8 @@
         "home": "Miami Dolphins",
         "awayMoneyline": 148,
         "homeMoneyline": -176,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 14,
+        "awayScore": 6
       },
       "game14": {
         "away": "Buffalo Bills",
