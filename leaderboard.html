@@ -18,6 +18,18 @@
       color: #d4d2d2;
     }
 
+    .total-pot {
+      margin-bottom: 1rem;
+      color: #d4d2d2;
+    }
+
+    .total-pot .pot{
+      background: linear-gradient(90deg, #7bdcff, #a29bfe);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
     a {
       display: inline-block;
       margin-bottom: 1rem;
@@ -99,6 +111,9 @@
 </head>
 <body>
   <h1>Pigskin Pick'em Leaderboard</h1>
+  <h2 class="total-pot">
+    Total Pot: <span class="pot"></span> (Estimated)
+  </h2>
   <a href="picks.html">⬅ Back to Picks</a>
   <table>
     <thead>
@@ -157,6 +172,10 @@
     
       let snapshot = await asyncStuff();
       PullUsersAndGetWins(snapshot);
+      let pot = 50 * Object.values(players).length();
+      
+      let elem = document.getElementsByClassName("pot");
+      elem[0].textContent = String(elem);
 
       const tbody = document.getElementById("leaderboard-body");
       Object.values(players).forEach(player => {
