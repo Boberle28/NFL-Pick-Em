@@ -175,7 +175,7 @@
       let pot = 50 * Object.values(players).length;
       
       let elem = document.getElementsByClassName("pot");
-      elem[0].textContent = String(elem);
+      elem[0].textContent = String(pot);
 
       const tbody = document.getElementById("leaderboard-body");
       Object.values(players).forEach(player => {
