@@ -98,12 +98,10 @@
       gap: 8px;
       padding: 8px 14px;
       font-size: 16px;
-      background-image: linear-gradient(
-        to bottom,
-        #404241 0%,
-        #353636 50%,
-        #2a2b2b 100%
-      );
+      background-image:
+        linear-gradient(to bottom, #404241, #2a2b2b),
+        radial-gradient(circle at top, rgba(0,0,0,0.2), transparent 60%);
+      background-blend-mode: overlay;
       border: 2px solid transparent;
       cursor: pointer;
       transition: background-color 0.2s ease;
