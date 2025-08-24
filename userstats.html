@@ -33,6 +33,13 @@
                 -webkit-backdrop-filter: blur(2px);
             }
 
+            .week .games {
+                display: flex;              /* or: display: grid; justify-items: center; */
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;    
+            }
+
             a {
                 display: inline-block;
                 margin-bottom: 1rem;
@@ -51,15 +58,13 @@
             }
 
             #user-stats-container {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
                 align-items: stretch;
             }
 
             .matchup {
                 width: 100%;
                 max-width: 500px;
+                margin: 0 auto;
                 border: 1px solid #ccc;
                 padding: 10px;
                 border-radius: 12px;
