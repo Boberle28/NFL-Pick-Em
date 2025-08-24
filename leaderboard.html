@@ -112,7 +112,7 @@
 <body>
   <h1>Pigskin Pick'em Leaderboard</h1>
   <h2 class="total-pot">
-    Total Pot: $<span class="pot"></span> (Estimated)
+    Total Pot: <span class="pot"></span> (Estimated)
   </h2>
   <a href="picks.html">⬅ Back to Picks</a>
   <table>
@@ -175,7 +175,7 @@
       let pot = 50 * Object.values(players).length;
       
       let elem = document.getElementsByClassName("pot");
-      elem[0].textContent = String(pot);
+      elem[0].textContent = '$' + String(pot);
 
       const tbody = document.getElementById("leaderboard-body");
       Object.values(players).forEach(player => {
