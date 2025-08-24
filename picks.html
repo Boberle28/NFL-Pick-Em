@@ -99,7 +99,13 @@
       padding: 8px 14px;
       font-size: 16px;
       background-image: linear-gradient(to bottom, #404241, #2a2b2b);
+      /* prevent gradient in border (stops edge artifacts) */
       background-clip: padding-box;
+
+      /* remove native quirks */
+      appearance: none;
+      -webkit-appearance: none;
+      
       border: 2px solid transparent;
       cursor: pointer;
       transition: background-color 0.2s ease;
