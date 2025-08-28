@@ -25,6 +25,37 @@
       color:rgb(191, 191, 201);
     }
 
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%) translateY(12px);
+      background: #1f2020;
+      color: #e8e8ea;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 3px;
+      padding: 10px 14px;
+      font-size: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 160s ease, transform 160ms ease;
+      z-index: 9999;
+    }
+
+    .toast.show{
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    toast.success{
+      border-color: rgba(124, 255, 136, 0.35);
+    }
+
+    toast.error{
+      border-color: rgba(255, 120, 120, 0,35);
+    }
+
     .open {
       color: green;
     }
@@ -218,6 +249,7 @@
 
   <div id="matchupsContainer"></div>
 
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <div class="parent">
     <button id="submitBtn">Submit Picks</button>
   </div>
@@ -278,6 +310,16 @@
       const teamBtns = btn.parentElement.parentElement.querySelectorAll("button");
       teamBtns.forEach(b => b.classList.remove("selected"));
       btn.classList.toggle("selected");
+    }
+
+    function showToast(message, variant = 'success', timeout = 2200)
+    {
+      const t = document.getElementById("toast");
+      t.classname = `toast ${variant}`;
+      t.textContent = message;
+      requestAnimationFrame(() => t.classList.add("show"));
+      clearTimeout(showToast._hideT);
+      showToast._hideT = setTimeout(() => t.classList.remove("show"), timeout);
     }
 
     function renderWeek(weekObj) {
@@ -377,7 +419,8 @@
         bettingStatus.textContent = "Betting Window Closed";
         bettingStatus.className = "closed";
 
-        alert("You are outside the betting window for the week");
+        showToast("Betting window is closed. Nice Try.", "error");
+        
         return;
       }
 
