@@ -313,7 +313,6 @@
       btn.classList.toggle("selected");
     }
 
-    let hideT;
     function showToast(message, variant = 'success', timeout = 2200)
     {
       const t = document.getElementById("toast");
@@ -321,8 +320,8 @@
       t.textContent = message;
       t.classList.add(variant);
       requestAnimationFrame(() => t.classList.add("show"));
-      clearTimeout(_hideT);
-      _hideT = setTimeout(() => t.classList.remove("show"), timeout);
+      clearTimeout(showToast._hideT);
+      showToast._hideT = setTimeout(() => t.classList.remove("show"), timeout);
     }
 
     function renderWeek(weekObj) {
