@@ -26,8 +26,6 @@
     }
 
     .toast{
-      width: 80%;
-      height: 40%;
       position: fixed;
       left: 50%;
       bottom: 24px;
@@ -41,7 +39,7 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
       opacity: 0;
       pointer-events: none;
-     /* transition: opacity 160s ease, transform 160ms ease;*/
+      transition: opacity 160s ease, transform 160ms ease;
       z-index: 9999;
     }
 
@@ -315,12 +313,14 @@
       btn.classList.toggle("selected");
     }
 
+    let hideT;
     function showToast(message, variant = 'success', timeout = 2200)
     {
       const t = document.getElementById("toast");
-      t.classname = `toast ${variant}`;
+      t.className = "toast";
       t.textContent = message;
-      requestAnimationFrame(() => t.classList.add("show"));
+      t.classList.add(variant);
+      t.offsetWidth;
       clearTimeout(showToast._hideT);
       showToast._hideT = setTimeout(() => t.classList.remove("show"), timeout);
     }
