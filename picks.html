@@ -28,15 +28,15 @@
     .toast{
       position: fixed;
       left: 50%;
-      bottom: 24px;
+      bottom: 50%;
       transform: translateX(-50%) translateY(12px);
       background: #000000;
       color: #e8e8ea;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255);
       border-radius: 3px;
       padding: 10px 14px;
       font-size: 14px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.75);
       opacity: 0;
       pointer-events: none;
       /*transition: opacity 160s ease, transform 160ms ease;*/
@@ -49,11 +49,11 @@
     }
 
     toast.success{
-      border-color: rgba(124, 255, 136, 0.35);
+      border-color: rgb(8, 201, 63);
     }
 
     toast.error{
-      border-color: rgba(255, 120, 120, 0,35);
+      border-color: rgb(221, 7, 7);
     }
 
     .open {
@@ -407,6 +407,16 @@
     
     let WEEK = 1;
 
+    const snarkyResponse = [
+      `Betting window is closed. Nice try.`,
+      `${username}, you're outside the betting window, dumbass`,
+      `In all matters of opinion, yours doesn't matter. And the proof is you trying to pick outside of the betting window.`,
+      `I don't know what to tell you other then you are outside of the betting window. And stupid`,
+      `No matter how many people talk behind your back, they probably have good reason to, because you're trying to make your picks outside of the betting window!`,
+      `An early bird gets the worm, but the second mouse gets the cheese... Anyways you're outside of the betting window dipshit.`,
+      `Talent is a flame, genius is a fire. You're a wet sack of shit for trying to pick outside of a betting window!`
+    ]
+
     async function submitPicks(userid) {
 
       const id = userid.uid;
@@ -421,7 +431,8 @@
         bettingStatus.textContent = "Betting Window Closed";
         bettingStatus.className = "closed";
 
-        alert("Betting window is closed. Nice try.");
+        //alert("Betting window is closed. Nice try.");
+        showToast("Betting window is closed. Nice try.", "error");
         return;
       }
 
