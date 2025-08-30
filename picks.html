@@ -322,6 +322,7 @@
       t.className = `toast ${variant}`;
       t.textContent = message;
       t.classList.add(variant);
+      t.classList.add("show");
       requestAnimationFrame(() => t.classList.add("show"));
       clearTimeout(showToast._hideT);
       showToast._hideT = setTimeout(() => t.classList.remove("show"), timeout);
