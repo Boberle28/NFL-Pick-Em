@@ -326,7 +326,7 @@
       btn.classList.toggle("selected");
     }
 
-    function showToast(message, variant = 'success', timeout = 2200)
+    function showToast(message, variant = 'success', timeout = 3500)
     {
       const t = document.getElementById("toast");
       t.className = `toast ${variant}`;
@@ -421,7 +421,7 @@
     
     let WEEK = 1;
 
-    const snarkyResponse = [
+    const snarkyResponseOutBet = [
       `Betting window is closed. Nice try.`,
       `${username}, you're outside the betting window, dumbass`,
       `In all matters of opinion, yours doesn't matter. And the proof is you trying to pick outside of the betting window.`,
@@ -429,7 +429,19 @@
       `No matter how many people talk behind your back, they probably have good reason, because you're trying to make your picks outside of the betting window!`,
       `An early bird gets the worm, but the second mouse gets the cheese... Anyways you're outside of the betting window dipshit.`,
       `Talent is a flame, genius is a fire. You have neither. You are trying to pick outside of a betting window!`
-    ]
+    ];
+
+    let _lastSnarkIdx = -1;
+    function randomSnark() {
+      let i = Math.floor(Math.random() * snarkyResponseOutBet.length);
+      if (snarkyResponseOutBet.length > 1 && i === _lastSnarkIdx) {
+        (i + 1) % snarkyResponseOutBet.length;
+      }
+
+      _lastSnarkIdx = i;
+
+      return snarkyResponseOutBet[i];
+    }
 
     async function submitPicks(userid) {
 
@@ -446,7 +458,7 @@
         bettingStatus.className = "closed";
 
         //alert("Betting window is closed. Nice try.");
-        showToast("Betting window is closed. Nice try.", "error");
+        showToast(randomSnark(), "error");
         return;
       }
 
