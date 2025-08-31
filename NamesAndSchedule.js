@@ -129,8 +129,8 @@ class Pair{
       // Take care of the scenario where they are both negative
       if(this.homeValue < 0 && this.awayValue < 0)
       {
-        let homeTemp = homeValue / 100;
-        let awayTemp = awayValue / 100;
+        let homeTemp = this.homeValue / 100;
+        let awayTemp = this.awayValue / 100;
 
         // Away is the favorite
         if(homeTemp > awayTemp)
