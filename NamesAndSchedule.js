@@ -368,9 +368,6 @@ class Pair{
     }
 
     AddGame(home, away) {
-      console.log("Adding game");
-      console.log("Home team: ", home);
-      console.log("Away team: ", away);
         let gameNum = `Game ${this.games.length + 1}`;
         this.games.push(new Game(home, away, gameNum));
     }
