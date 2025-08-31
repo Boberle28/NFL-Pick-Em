@@ -131,6 +131,7 @@ class Pair{
       this.homeValue = this.homeOdds;
       this.awayValue = this.awayOdds;
 
+      /*
       let bool = false;
       if(this.home.name = "Buffalo Bills" && this.away == "Baltimore Ravens")
       {
@@ -239,7 +240,7 @@ class Pair{
       }
 
       return;
-      
+      */
       // New function above!!!!!!!!!!!!!!
 
 
