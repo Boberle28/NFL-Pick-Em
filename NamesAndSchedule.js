@@ -126,28 +126,29 @@ class Pair{
       this.homeValue = this.homeOdds;
       this.awayValue = this.awayOdds;
 
+      
       // Calc value for home team
       if(this.homeValue < 0){
         let MoneyBet = this.homeValue;
         let MoneyWinnings = 100;
-        this.homeValue = MoneyBet / MoneyWinnings
+        this.homeValue = MoneyWinnings / MoneyBet;
       }
       else{
         let MoneyBet = 100;
         let MoneyWinnings = this.homeValue;
-        this.homeValue = MoneyBet / MoneyWinnings
+        this.homeValue = MoneyWinnings / MoneyBet;
       }
 
       // Calc value for away team
       if(this.awayValue < 0){
         let MoneyBet = this.awayValue;
         let MoneyWinnings = 100;
-        this.awayValue = MoneyBet / MoneyWinnings
+        this.awayValue = MoneyWinnings / MoneyBet;
       }
       else{
         let MoneyBet = 100;
         let MoneyWinnings = this.awayValue;
-        this.awayValue = MoneyBet / MoneyWinnings
+        this.awayValue = MoneyWinnings / MoneyBet;
       }
 
       // Make favored team's value to one and adjust underdog relative to that
