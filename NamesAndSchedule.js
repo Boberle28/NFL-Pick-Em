@@ -126,7 +126,75 @@ class Pair{
       this.homeValue = this.homeOdds;
       this.awayValue = this.awayOdds;
 
+      // Take care of the scenario where they are both negative
+      if(this.homeValue < 0 && this.awayValue < 0)
+      {
+        let homeTemp = homeValue / 100;
+        let awayTemp = awayValue / 100;
+
+        // Away is the favorite
+        if(homeTemp > awayTemp)
+        {
+          this.homeValue += Math.abs(homeTemp) - Math.abs(awayTemp);
+          this.awayValue = 1.00;
+          this.homeFavorite = false;
+        }
+        else if(awayTemp < homeTemp) {
+          // Home is the favorite
+          this.awayValue += Math.abs(awayValue) - Math.abs(homeValue);
+          this.homeValue = 1;
+          this.homeFavorite = true;
+        }
+        else{
+          // They are both even
+          this.homeValue = 1;
+          this.awayValue = 1;
+        }
+
+        return;
+      }
+
+      // Now test if one or both are even
+      if(this.homeValue == 100 || this.awayValue == 100)
+      {
+        if(this.homeValue == 100 && this.awayValue == 100)
+        {
+          this.homeValue = 1;
+          this.awayValue = 1;
+        }
+        else if(this.homeValue < 0)
+        {
+          // Home is the favorite
+          this.awayValue = Math.abs(this.homeValue / 100);
+          this.homeValue = 1;
+        }
+        else{
+          // Away is favorite
+          this.homeValue = Math.abs(this.awayValue / 100);
+          this.awayValue = 1;
+        }
+
+        return;
+      }
+
+      // And finally the easiest part
+      let total = Math.abs(this.homeValue) + Math.abs(this.awayValue);
+      let underdog = (total / 100) - 1;
+      if(this.homeFavorite){
+        this.homeValue = 1;
+        this.awayValue = underdog;
+      }
+      else{
+        this.awayValue = 1;
+        this.homeValue = underdog;
+      }
+
+      return;
       
+      // New function above!!!!!!!!!!!!!!
+
+
+
       // Calc value for home team
       if(this.homeValue < 0){
         let MoneyBet = this.homeValue;
