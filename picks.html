@@ -326,7 +326,7 @@
       btn.classList.toggle("selected");
     }
 
-    function showToast(message, variant = 'success', timeout = 3500)
+    function showToast(message, variant = 'success', timeout = 5500)
     {
       const t = document.getElementById("toast");
       t.className = `toast ${variant}`;
@@ -425,9 +425,9 @@
       `Betting window is closed. Nice try.`,
       `${username}, you're outside the betting window, dumbass`,
       `In all matters of opinion, yours doesn't matter. And the proof is you trying to pick outside of the betting window.`,
-      `I don't know what to tell you other then you are outside of the betting window. And stupid`,
+      `I don't know what to tell you other then you are outside of the betting window. And stupid ;)`,
       `No matter how many people talk behind your back, they probably have good reason, because you're trying to make your picks outside of the betting window!`,
-      `An early bird gets the worm, but the second mouse gets the cheese... Anyways you're outside of the betting window dipshit.`,
+      `An early bird gets the worm, but the second mouse gets the cheese... Anyways you're outside of the betting window dipshit. ;)`,
       `Talent is a flame, genius is a fire. You have neither. You are trying to pick outside of a betting window!`
     ];
 
@@ -497,7 +497,7 @@
       // Check if all picks are made
       if(bool == 1)
       {
-        alert("You can not submit until you've picked all the games!");
+        showToast("You can not submit until you've picked all the games!", "error");
         return;
       }
 
@@ -519,7 +519,7 @@
 
         if (weekPicks) {
           // They already made picks for that week
-          alert(username + ", you've already made your picks for the week dumbass!");
+          showToast(username + ", you've already made your picks for the week dumbass!", "error");
           return;
         } 
       } 
@@ -539,11 +539,11 @@
           }
         }, { merge: true });
 
-        alert("✅ Your picks have been submitted successfully!");
+        showToast("✅ Your picks have been submitted successfully!");
 
       } catch (error) {
         console.error("❌ Error submitting picks:", error);
-        alert("⚠️ There was a problem submitting your picks. Please try again later.");
+        showToast("⚠️ There was a problem submitting your picks. Please try again later.", "error");
 
       }finally{
         submitBtn.disabled = false;
