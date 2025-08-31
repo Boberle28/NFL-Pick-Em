@@ -151,6 +151,8 @@ class Pair{
         this.awayValue = MoneyWinnings / MoneyBet;
       }
 
+      this.homeValue = Math.abs(this.homeValue);
+      this.awayValue = Math.abs(this.awayValue);
       // Make favored team's value to one and adjust underdog relative to that
       let valDifference = this.homeFavorite ? this.homeValue - 1 : this.awayValue - 1
       if(valDifference < 0){
