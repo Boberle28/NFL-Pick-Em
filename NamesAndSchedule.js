@@ -133,7 +133,7 @@ class Pair{
 
       /*
       let bool = false;
-      if(this.home.name = "Buffalo Bills" && this.away == "Baltimore Ravens")
+      if(this.home.name == "Buffalo Bills" && this.away == "Baltimore Ravens")
       {
         bool = true;
         console.log("We are inside set odds " + this.home.name + " " + this.away.name);
@@ -368,6 +368,9 @@ class Pair{
     }
 
     AddGame(home, away) {
+      console.log("Adding game");
+      console.log("Home team: ", home);
+      console.log("Away team: ", away);
         let gameNum = `Game ${this.games.length + 1}`;
         this.games.push(new Game(home, away, gameNum));
     }
@@ -615,7 +618,7 @@ class Pair{
 
   let NFLteams = [];
   // Team objects
-  let PHI = new Team("Philadelphia Eagles", "PHI", 0, 0, 0);
+let PHI = new Team("Philadelphia Eagles", "PHI", 0, 0, 0);
 NFLteams.push(PHI);
 let DAL = new Team("Dallas Cowboys", "DAL", 0, 0, 0);
 NFLteams.push(DAL);
