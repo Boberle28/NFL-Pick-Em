@@ -129,24 +129,30 @@ class Pair{
       // Take care of the scenario where they are both negative
       if(this.homeValue < 0 && this.awayValue < 0)
       {
-        let homeTemp = this.homeValue / 100;
-        let awayTemp = this.awayValue / 100;
-
-        // Away is the favorite
-        if(homeTemp > awayTemp)
+        let difference = 0;
+        if(this.homeValue > this.awayValue)
         {
-          this.homeValue += Math.abs(homeTemp) - Math.abs(awayTemp);
-          this.awayValue = 1.00;
-          this.homeFavorite = false;
+          // Away is the favorite
+          difference = this.homeValue - this.awayValue;
+          if(difference < 100)
+            this.homeValue = 1 + (difference / 100);
+          else
+            this.homeValue = difference / 100;
+
+          this.awayValue = 1;
         }
-        else if(awayTemp < homeTemp) {
+        else if(this.awayValue > this.homeValue){
           // Home is the favorite
-          this.awayValue += Math.abs(awayValue) - Math.abs(homeValue);
+          difference = this.awayValue - this.homeValue;
+          if(difference < 100)
+            this.awayValue = 1 + (difference / 100);
+          else
+            this.awayValue = difference / 100;
+
           this.homeValue = 1;
-          this.homeFavorite = true;
         }
         else{
-          // They are both even
+          // They are even
           this.homeValue = 1;
           this.awayValue = 1;
         }
