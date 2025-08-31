@@ -435,7 +435,7 @@
     function randomSnark() {
       let i = Math.floor(Math.random() * snarkyResponseOutBet.length);
       if (snarkyResponseOutBet.length > 1 && i === _lastSnarkIdx) {
-        (i + 1) % snarkyResponseOutBet.length;
+        i = (i + 1) % snarkyResponseOutBet.length;
       }
 
       _lastSnarkIdx = i;
@@ -457,7 +457,6 @@
         bettingStatus.textContent = "Betting Window Closed";
         bettingStatus.className = "closed";
 
-        //alert("Betting window is closed. Nice try.");
         showToast(randomSnark(), "error");
         return;
       }
