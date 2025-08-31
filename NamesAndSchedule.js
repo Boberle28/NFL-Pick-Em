@@ -121,11 +121,6 @@ class Pair{
       this.homeOdds = homeOdds;
       this.awayOdds = awayOdds;
 
-      if(this.homeOdds == -100)
-        this.homeOdds = 100;
-      if(this.awayOdds == -100)
-        this.awayOdds = 100;
-
       this.homeFavorite = this.homeOdds < this.awayOdds ? true : false;
 
       this.homeValue = this.homeOdds;
