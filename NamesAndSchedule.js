@@ -121,6 +121,11 @@ class Pair{
       this.homeOdds = homeOdds;
       this.awayOdds = awayOdds;
 
+      if(this.homeOdds == 100)
+        this.homeOdds = -100;
+      if(this.awayOdds == 100)
+        this.awayOdds = -100;
+
       this.homeFavorite = this.homeOdds < this.awayOdds ? true : false;
 
       this.homeValue = this.homeOdds;
@@ -128,7 +133,7 @@ class Pair{
 
       /*
       let bool = false;
-      if(this.home.name == "Buffalo Bills" && this.away == "Baltimore Ravens")
+      if(this.home.name == "Buffalo Bills" && this.away.name == "Baltimore Ravens")
       {
         bool = true;
         console.log("We are inside set odds " + this.home.name + " " + this.away.name);
@@ -239,6 +244,57 @@ class Pair{
       // New function above!!!!!!!!!!!!!!
 
 
+      // Take care of ther scenario where they are both negative
+      if(this.homeValue < 0 && this.awayValue < 0)
+      {
+        if(this.homeValue == -100 && this.awayValue == -100)
+        {
+          this.homeValue = 1;
+          this.awayValue = 1;
+          return;
+        }
+
+        if(this.homeValue == -100 || this.awayValue == -100)
+        {
+          if(this.homeFavorite)
+          {
+            this.awayValue = this.homeValue / 100;
+            this.homeValue = 1;
+          }
+          else
+          {
+            this.homeValue = this.awayValue / 100;
+            this.awayValue = 1;
+          }
+        }
+        else
+        {
+          if(this.homeFavorite)
+          {
+            this.awayValue = this.awayValue + ((this.homeValue / 100) - 1);
+            this.homeValue = 1;
+          }
+          else
+          {
+            this.homeValue = this.homeValue + ((this.awayValue / 100) - 1);
+            this.awayValue = 1;
+          }
+        }
+      }
+
+      // And finally the easiest part
+      let total = Math.abs(this.homeValue) + Math.abs(this.awayValue);
+      let underdog = (total / 100) - 1;
+      if(this.homeFavorite){
+        this.homeValue = 1;
+        this.awayValue = underdog;
+      }
+      else{
+        this.awayValue = 1;
+        this.homeValue = underdog;
+      }
+
+      return;
 
       // Calc value for home team
       if(this.homeValue < 0){
