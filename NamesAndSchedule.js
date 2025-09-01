@@ -154,6 +154,8 @@ class Pair{
             console.log(1 - b);
             console.log("(-100 / this.awayValue)");
             console.log(-100 / this.awayValue);
+            console.log("(-100 / this.awayValue) + (1 - b);: ");
+            console.log((-100 / this.awayValue) + (1 - b));
           }
           this.awayValue = (-100 / this.awayValue) + (1 - b);
         }
@@ -170,6 +172,8 @@ class Pair{
             console.log(1 - b);
             console.log("(-100 / this.homeValue)");
             console.log(-100 / this.homeValue);
+            console.log("(-100 / this.homeValue) + (1 - b);: ");
+            console.log((-100 / this.homeValue) + (1 - b));
           }
           this.homeValue = (-100 / this.homeValue) + (1 - b);
         }
