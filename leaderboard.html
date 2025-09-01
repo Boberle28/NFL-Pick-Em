@@ -174,7 +174,7 @@
     
       let snapshot = await asyncStuff();
       PullUsersAndGetWins(snapshot);
-      let pot = 50 * Object.values(players).length;
+      let pot = (50 * Object.values(players).length) + 200;
       
       let elem = document.getElementsByClassName("pot");
       elem[0].textContent = '$' + String(pot);
