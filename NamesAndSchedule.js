@@ -158,6 +158,7 @@ class Pair{
             console.log((-100 / this.awayValue) + (1 - b));
           }
           this.awayValue = (-100 / this.awayValue) + (1 - b);
+          this.homeValue = 1;
         }
         else
         {
@@ -176,8 +177,10 @@ class Pair{
             console.log((-100 / this.homeValue) + (1 - b));
           }
           this.homeValue = (-100 / this.homeValue) + (1 - b);
+          this.awayValue = 1;
         }
         
+        return;
       }
 
       // And finally the easiest part
