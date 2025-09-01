@@ -149,7 +149,7 @@ class Pair{
         else
         {
           let b = Math.abs(100 / this.awayValue);
-          this.homeValue = (100 / this.homeValue) + (1 - b);
+          this.homeValue = (-100 / this.homeValue) + (1 - b);
         }
         
       }
