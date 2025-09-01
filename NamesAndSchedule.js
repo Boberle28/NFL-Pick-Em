@@ -131,118 +131,6 @@ class Pair{
       this.homeValue = this.homeOdds;
       this.awayValue = this.awayOdds;
 
-      /*
-      let bool = false;
-      if(this.home.name == "Buffalo Bills" && this.away.name == "Baltimore Ravens")
-      {
-        bool = true;
-        console.log("We are inside set odds " + this.home.name + " " + this.away.name);
-      }
-
-      // Take care of the scenario where they are both negative
-      if(this.homeValue < 0 && this.awayValue < 0)
-      {
-        if(bool)
-          console.log("We are inside if(this.homeValue < 0 && this.awayValue < 0)");
-
-        let difference = 0;
-        if(this.homeValue > this.awayValue)
-        {
-          if(bool)
-            console.log("We are inside if(this.homeValue > this.awayValue)");
-
-          // Away is the favorite
-          difference = this.homeValue - this.awayValue;
-          if(difference < 100)
-            this.homeValue = 1 + (difference / 100);
-          else
-            this.homeValue = difference / 100;
-
-          this.awayValue = 1;
-
-          if(bool)
-            console.log("this.homeValue: ", this.homeValue);
-          if(bool)
-            console.log("this.awayValue: ", this.awayValue);
-
-        }
-        else if(this.awayValue > this.homeValue){
-
-          if(bool)
-            console.log("We are inside else if(this.awayValue > this.homeValue)");
-
-          // Home is the favorite
-          difference = this.awayValue - this.homeValue;
-          if(difference < 100)
-            this.awayValue = 1 + (difference / 100);
-          else
-            this.awayValue = difference / 100;
-
-          this.homeValue = 1;
-
-          if(bool)
-            console.log("this.homeValue: ", this.homeValue);
-          if(bool)
-            console.log("this.awayValue: ", this.awayValue);
-
-        }
-        else{
-
-          if(bool)
-            console.log("We are inside else, so they are even");
-
-          // They are even
-          this.homeValue = 1;
-          this.awayValue = 1;
-
-          if(bool)
-            console.log("this.homeValue: ", this.homeValue);
-          if(bool)
-            console.log("this.awayValue: ", this.awayValue);
-        }
-
-        return;
-      }
-
-      // Now test if one or both are even
-      if(this.homeValue == 100 || this.awayValue == 100 || this.homeValue == -100 || this.awayValue == -100)
-      {
-        if((this.homeValue == 100 && this.awayValue == 100))
-        {
-          this.homeValue = 1;
-          this.awayValue = 1;
-        }
-        else if(this.homeValue < this.awayValue)
-        {
-          // Home is the favorite
-          this.awayValue = Math.abs(this.homeValue / 100);
-          this.homeValue = 1;
-        }
-        else{
-          // Away is favorite
-          this.homeValue = Math.abs(this.awayValue / 100);
-          this.awayValue = 1;
-        }
-
-        return;
-      }
-
-      // And finally the easiest part
-      let total = Math.abs(this.homeValue) + Math.abs(this.awayValue);
-      let underdog = (total / 100) - 1;
-      if(this.homeFavorite){
-        this.homeValue = 1;
-        this.awayValue = underdog;
-      }
-      else{
-        this.awayValue = 1;
-        this.homeValue = underdog;
-      }
-
-      return;
-      */
-      // New function above!!!!!!!!!!!!!!
-
 
       // Take care of ther scenario where they are both negative
       if(this.homeValue < 0 && this.awayValue < 0)
@@ -271,12 +159,12 @@ class Pair{
         {
           if(this.homeFavorite)
           {
-            this.awayValue = this.awayValue + ((this.homeValue / 100) - 1);
+            this.awayValue = this.awayValue + ((this.homeValue / 100));
             this.homeValue = 1;
           }
           else
           {
-            this.homeValue = this.homeValue + ((this.awayValue / 100) - 1);
+            this.homeValue = this.homeValue + ((this.awayValue / 100));
             this.awayValue = 1;
           }
         }
