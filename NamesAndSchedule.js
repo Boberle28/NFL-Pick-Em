@@ -144,7 +144,7 @@ class Pair{
         if (this.homeFavorite)
         {
           let b = Math.abs(100 / this.homeValue);
-          this.awayValue = (100 / this.awayValue) + (1 - b);
+          this.awayValue = (-100 / this.awayValue) + (1 - b);
         }
         else
         {
