@@ -143,9 +143,9 @@ class Pair{
 
         let b = 0;
         if(this.homeFavorite)
-          b = (Math.abs(this.awayValue) - Math.abs(this.homeValue)) + 100;
-        else
           b = (Math.abs(this.homeValue) - Math.abs(this.awayValue)) + 100;
+        else
+          b = (Math.abs(this.awayValue) - Math.abs(this.homeValue)) + 100;
 
         if(this.homeFavorite)
         {
