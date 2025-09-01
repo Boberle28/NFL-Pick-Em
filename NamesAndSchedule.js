@@ -131,10 +131,6 @@ class Pair{
       this.homeValue = this.homeOdds;
       this.awayValue = this.awayOdds;
 
-      let b = false;
-      if(this.homeValue == -112 && this.awayValue == -104)
-        b = true;
-
       // Take care of ther scenario where they are both negative
       if(this.homeValue < 0 && this.awayValue < 0)
       {
@@ -145,48 +141,17 @@ class Pair{
           return;
         }
 
-        if(this.homeValue == -100 || this.awayValue == -100)
+        if (this.homeFavorite)
         {
-          if(this.homeFavorite)
-          {
-            this.awayValue = this.homeValue / 100;
-            this.homeValue = 1;
-          }
-          else
-          {
-            this.homeValue = this.awayValue / 100;
-            this.awayValue = 1;
-          }
+          let b = Math.abs(100 / this.homeValue);
+          this.awayValue = (100 / this.awayValue) + (1 - b);
         }
         else
         {
-          if(this.homeFavorite)
-          {
-            if(b)
-            {
-              console.log("this.homeFavorite@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
-              console.log("this.awayValue: ");
-              console.log(this.awayValue);
-              console.log("this.homeValue: ");
-              console.log(this.homeValue);
-            }
-            this.awayValue = this.awayValue + ((this.homeValue / 100));
-            this.homeValue = 1;
-          }
-          else
-          {
-            if(b)
-            {
-              console.log("this.homeFavorite@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2");
-              console.log("this.awayValue: ");
-              console.log(this.awayValue);
-              console.log("this.homeValue: ");
-              console.log(this.homeValue);
-            }
-            this.homeValue = this.homeValue + ((this.awayValue / 100));
-            this.awayValue = 1;
-          }
+          let b = Math.abs(100 / this.awayValue);
+          this.homeValue = (100 / this.homeValue) + (1 - b);
         }
+        
       }
 
       // And finally the easiest part
