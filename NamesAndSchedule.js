@@ -144,11 +144,33 @@ class Pair{
         if (this.homeFavorite)
         {
           let b = Math.abs(100 / this.homeValue);
+          if(this.awayValue == -104)
+          {
+            console.log("this.awayValue:");
+            console.log(this.awayValue);
+            console.log("b: ");
+            console.log(b);
+            console.log("(1 - b): ");
+            console.log(1 - b);
+            console.log("(-100 / this.awayValue)");
+            console.log(-100 / this.awayValue);
+          }
           this.awayValue = (-100 / this.awayValue) + (1 - b);
         }
         else
         {
           let b = Math.abs(100 / this.awayValue);
+          if(this.awayValue == -104)
+          {
+            console.log("this.homeValue:");
+            console.log(this.homeValue);
+            console.log("b: ");
+            console.log(b);
+            console.log("(1 - b): ");
+            console.log(1 - b);
+            console.log("(-100 / this.homeValue)");
+            console.log(-100 / this.homeValue);
+          }
           this.homeValue = (-100 / this.homeValue) + (1 - b);
         }
         
