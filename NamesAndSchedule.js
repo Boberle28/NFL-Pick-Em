@@ -141,45 +141,21 @@ class Pair{
           return;
         }
 
-        if (this.homeFavorite)
-        {
-          let b = Math.abs(100 / this.homeValue);
-          if(this.awayValue == -104)
-          {
-            console.log("this.awayValue:");
-            console.log(this.awayValue);
-            console.log("b: ");
-            console.log(b);
-            console.log("(1 - b): ");
-            console.log(1 - b);
-            console.log("(-100 / this.awayValue)");
-            console.log(-100 / this.awayValue);
-            console.log("(-100 / this.awayValue) + (1 - b);: ");
-            console.log((-100 / this.awayValue) + (1 - b));
-          }
-          this.awayValue = (-100 / this.awayValue) + (1 - b);
-          this.homeValue = 1;
-        }
+        let b = 0;
+        if(this.homeFavorite)
+          b = (Math.abs(this.awayValue) - Math.abs(this.homeValue)) + 100;
         else
+          b = (Math.abs(this.homeValue) - Math.abs(this.awayValue)) + 100;
+
+        if(this.homeFavorite)
         {
-          let b = Math.abs(100 / this.awayValue);
-          if(this.awayValue == -104)
-          {
-            console.log("this.homeValue:");
-            console.log(this.homeValue);
-            console.log("b: ");
-            console.log(b);
-            console.log("(1 - b): ");
-            console.log(1 - b);
-            console.log("(-100 / this.homeValue)");
-            console.log(-100 / this.homeValue);
-            console.log("(-100 / this.homeValue) + (1 - b);: ");
-            console.log((-100 / this.homeValue) + (1 - b));
-          }
-          this.homeValue = (-100 / this.homeValue) + (1 - b);
-          this.awayValue = 1;
+          this.homeValue = 1;
+          this.awayValue = b / 100;
         }
-        
+        else{
+          this.awayValue = 1;
+          this.homeValue = b / 100;
+        }
         return;
       }
 
