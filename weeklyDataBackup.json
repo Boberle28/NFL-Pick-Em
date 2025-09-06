@@ -6,8 +6,8 @@
         "away": "Dallas Cowboys",
         "homeMoneyline": -375,
         "awayMoneyline": 300,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 20
       },
       "Game 2": {
         "home": "Los Angeles Chargers",
@@ -2221,7 +2221,7 @@
     },
     "Dallas Cowboys": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Los Angeles Chargers": {
@@ -2230,7 +2230,7 @@
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },

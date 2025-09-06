@@ -14,8 +14,8 @@
         "away": "Kansas City Chiefs",
         "homeMoneyline": 142,
         "awayMoneyline": -168,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 21
       },
       "Game 3": {
         "home": "Atlanta Falcons",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
@@ -2225,13 +2225,13 @@
       "ties": 0
     },
     "Los Angeles Chargers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 1,
-      "losses": 0,
+      "wins": 0,
+      "losses": 1,
       "ties": 0
     },
     "Atlanta Falcons": {
