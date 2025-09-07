@@ -102,8 +102,8 @@
         "away": "Detroit Lions",
         "homeMoneyline": -144,
         "awayMoneyline": 122,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 13
       },
       "Game 14": {
         "home": "Los Angeles Rams",
@@ -2335,13 +2335,13 @@
       "ties": 0
     },
     "Green Bay Packers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Detroit Lions": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Los Angeles Rams": {
