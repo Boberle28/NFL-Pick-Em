@@ -110,8 +110,8 @@
         "away": "Houston Texans",
         "homeMoneyline": -142,
         "awayMoneyline": 120,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 14,
+        "awayScore": 9
       },
       "Game 15": {
         "home": "Buffalo Bills",
@@ -2345,13 +2345,13 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Houston Texans": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Buffalo Bills": {

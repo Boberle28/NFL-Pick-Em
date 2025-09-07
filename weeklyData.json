@@ -86,8 +86,8 @@
         "away": "Tennessee Titans",
         "homeMoneyline": -400,
         "awayMoneyline": 315,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 12
       },
       "Game 12": {
         "home": "Seattle Seahawks",
@@ -2315,13 +2315,13 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Tennessee Titans": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Seattle Seahawks": {
