@@ -78,8 +78,8 @@
         "away": "Carolina Panthers",
         "homeMoneyline": -156,
         "awayMoneyline": 132,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 10
       },
       "Game 11": {
         "home": "Denver Broncos",
@@ -2305,13 +2305,13 @@
       "ties": 0
     },
     "Jacksonville Jaguars": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Carolina Panthers": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Denver Broncos": {
