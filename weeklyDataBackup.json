@@ -94,8 +94,8 @@
         "away": "San Francisco 49ers",
         "homeMoneyline": 116,
         "awayMoneyline": -136,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 17
       },
       "Game 13": {
         "home": "Green Bay Packers",
@@ -2326,11 +2326,11 @@
     },
     "Seattle Seahawks": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
