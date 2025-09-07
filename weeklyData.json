@@ -30,40 +30,40 @@
         "away": "Cincinnati Bengals",
         "homeMoneyline": 184,
         "awayMoneyline": -220,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 17
       },
       "Game 5": {
         "home": "Indianapolis Colts",
         "away": "Miami Dolphins",
         "homeMoneyline": -120,
         "awayMoneyline": 102,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 33,
+        "awayScore": 8
       },
       "Game 6": {
         "home": "New England Patriots",
         "away": "Las Vegas Raiders",
         "homeMoneyline": -148,
         "awayMoneyline": 126,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 20
       },
       "Game 7": {
         "home": "New Orleans Saints",
         "away": "Arizona Cardinals",
         "homeMoneyline": 220,
         "awayMoneyline": -270,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 20
       },
       "Game 8": {
         "home": "New York Jets",
         "away": "Pittsburgh Steelers",
         "homeMoneyline": 120,
         "awayMoneyline": -142,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 32,
+        "awayScore": 34
       },
       "Game 9": {
         "home": "Washington Commanders",
@@ -2246,41 +2246,41 @@
     },
     "Cleveland Browns": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Cincinnati Bengals": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Indianapolis Colts": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Miami Dolphins": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "New England Patriots": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Las Vegas Raiders": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "New Orleans Saints": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Arizona Cardinals": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
