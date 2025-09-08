@@ -118,8 +118,8 @@
         "away": "Baltimore Ravens",
         "homeMoneyline": -112,
         "awayMoneyline": -104,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 41,
+        "awayScore": 40
       },
       "Game 16": {
         "home": "Chicago Bears",
@@ -2355,13 +2355,13 @@
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Baltimore Ravens": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Chicago Bears": {
