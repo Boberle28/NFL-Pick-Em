@@ -126,8 +126,8 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": 112,
         "awayMoneyline": -132,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 27
       }
     },
     "week2": {
@@ -2366,11 +2366,11 @@
     },
     "Chicago Bears": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     }
