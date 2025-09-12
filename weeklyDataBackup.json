@@ -136,8 +136,8 @@
         "away": "Washington Commanders",
         "homeMoneyline": -198,
         "awayMoneyline": 166,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 18
       },
       "Game 2": {
         "home": "Cincinnati Bengals",
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "New York Giants": {
@@ -2335,7 +2335,7 @@
       "ties": 0
     },
     "Green Bay Packers": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
