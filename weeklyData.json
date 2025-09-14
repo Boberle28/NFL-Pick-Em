@@ -216,8 +216,8 @@
         "away": "Denver Broncos",
         "homeMoneyline": 102,
         "awayMoneyline": -120,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 29,
+        "awayScore": 28
       },
       "Game 12": {
         "home": "Arizona Cardinals",
@@ -2255,7 +2255,7 @@
       "ties": 0
     },
     "Indianapolis Colts": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2316,7 +2316,7 @@
     },
     "Denver Broncos": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Tennessee Titans": {
