@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2231,7 +2231,7 @@
     },
     "Kansas City Chiefs": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Atlanta Falcons": {
@@ -2280,7 +2280,7 @@
       "ties": 0
     },
     "Arizona Cardinals": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2311,7 +2311,7 @@
     },
     "Carolina Panthers": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Denver Broncos": {
