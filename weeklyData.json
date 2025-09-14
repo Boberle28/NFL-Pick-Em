@@ -152,8 +152,8 @@
         "away": "New York Giants",
         "homeMoneyline": -255,
         "awayMoneyline": 210,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 40,
+        "awayScore": 37
       },
       "Game 4": {
         "home": "Detroit Lions",
@@ -2220,7 +2220,7 @@
       "ties": 0
     },
     "Dallas Cowboys": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
@@ -2301,7 +2301,7 @@
     },
     "New York Giants": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Jacksonville Jaguars": {
