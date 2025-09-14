@@ -168,24 +168,24 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": 205,
         "awayMoneyline": -250,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 33
       },
       "Game 6": {
         "home": "Miami Dolphins",
         "away": "New England Patriots",
         "homeMoneyline": -118,
         "awayMoneyline": 100,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 33
       },
       "Game 7": {
         "home": "New Orleans Saints",
         "away": "San Francisco 49ers",
         "homeMoneyline": 194,
         "awayMoneyline": -235,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 26
       },
       "Game 8": {
         "home": "New York Jets",
@@ -208,8 +208,8 @@
         "away": "Cleveland Browns",
         "homeMoneyline": -750,
         "awayMoneyline": 530,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 41,
+        "awayScore": 17
       },
       "Game 11": {
         "home": "Indianapolis Colts",
@@ -2286,7 +2286,7 @@
     },
     "New York Jets": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Pittsburgh Steelers": {
@@ -2355,7 +2355,7 @@
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
