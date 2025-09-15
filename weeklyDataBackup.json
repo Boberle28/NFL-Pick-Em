@@ -240,8 +240,8 @@
         "away": "Atlanta Falcons",
         "homeMoneyline": -205,
         "awayMoneyline": 172,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 6,
+        "awayScore": 22
       },
       "Game 15": {
         "home": "Houston Texans",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2231,11 +2231,11 @@
     },
     "Kansas City Chiefs": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Atlanta Falcons": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
@@ -2280,7 +2280,7 @@
       "ties": 0
     },
     "Arizona Cardinals": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2311,7 +2311,7 @@
     },
     "Carolina Panthers": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Denver Broncos": {
@@ -2371,7 +2371,7 @@
     },
     "Minnesota Vikings": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     }
   }
