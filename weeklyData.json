@@ -240,8 +240,8 @@
         "away": "Atlanta Falcons",
         "homeMoneyline": -205,
         "awayMoneyline": 172,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 6,
+        "awayScore": 22
       },
       "Game 15": {
         "home": "Houston Texans",
@@ -2235,7 +2235,7 @@
       "ties": 0
     },
     "Atlanta Falcons": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
@@ -2371,7 +2371,7 @@
     },
     "Minnesota Vikings": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     }
   }
