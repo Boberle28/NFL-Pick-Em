@@ -248,8 +248,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -148,
         "awayMoneyline": 126,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 20
       },
       "Game 16": {
         "home": "Las Vegas Raiders",
@@ -2240,7 +2240,7 @@
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2351,7 +2351,7 @@
     },
     "Houston Texans": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Buffalo Bills": {
