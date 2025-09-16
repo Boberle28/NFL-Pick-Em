@@ -256,8 +256,8 @@
         "away": "Los Angeles Chargers",
         "homeMoneyline": 148,
         "awayMoneyline": -176,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 9,
+        "awayScore": 20
       }
     },
     "week3": {
@@ -2225,7 +2225,7 @@
       "ties": 0
     },
     "Los Angeles Chargers": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "New Orleans Saints": {
