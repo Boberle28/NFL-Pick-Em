@@ -1139,6 +1139,7 @@ week18.AddGame(HOU, IND);
             totalLosses += result.losses;
             totalPoints += result.points;
             console.log(`Accumulated totals → totalWins = ${totalWins}, totalPoints = ${totalPoints}`);
+            console.log("result:", result);
           }
           else{
             console.log("weeks is undefined!");
