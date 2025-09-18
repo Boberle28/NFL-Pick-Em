@@ -377,7 +377,7 @@
                     // Sticky header
                     const header = document.createElement("h3");
                     header.className = "week-header";
-                    header.textContent = `Week ${week}  •  Wins ${player.weekStats[i].wins}  •  Points ${Number(player.weekStats[i].points).toFixed(2)}`;
+                    header.textContent = `Week ${week}  •  Wins ${player.weekStats[i].wins}  •  Points ${Number(player.weekStats[i].points).toFixed(2)}  •  Pct  ${Number(player.weekStats[i].pct).toFixed(3).replace(/^0+/, "")}`;
                     weekSection.appendChild(header);
 
                     // Container where matchups will be rendered

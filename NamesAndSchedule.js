@@ -1107,7 +1107,7 @@ week18.AddGame(HOU, IND);
       {
         weekStats = [];
         for (let i = 0; i < 18; i++) {
-          weekStats.push({ wins: 0, points: 0, weekPicks: null});
+          weekStats.push({ wins: 0, points: 0, pct: 0, weekPicks: null});
         }
       }
 
@@ -1133,7 +1133,8 @@ week18.AddGame(HOU, IND);
           if(week !== undefined){
             const result = week.GetWinners(weekData.picks);
             console.log(`Week ${weekNumber}: result.wins = ${result.wins}, result.points = ${result.points}`);
-            weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, weekPicks: weekData.picks};
+            let winPct = result.wins + result.losses > 0 ? result.wins / (result.wins + result.losses) : 0;
+            weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, pct: winPct, weekPicks: weekData.picks};
             console.log("weekStats[1] = ", weekStats[weekNumber - 1]);
             totalWins += result.wins;
             totalLosses += result.losses;
