@@ -266,8 +266,8 @@
         "away": "Miami Dolphins",
         "homeMoneyline": -900,
         "awayMoneyline": 610,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 21
       },
       "Game 2": {
         "home": "Cleveland Browns",
@@ -2261,7 +2261,7 @@
     },
     "Miami Dolphins": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "New England Patriots": {
@@ -2355,7 +2355,7 @@
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0
     },
