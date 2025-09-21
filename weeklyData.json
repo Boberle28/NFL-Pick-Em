@@ -274,16 +274,16 @@
         "away": "Green Bay Packers",
         "homeMoneyline": 350,
         "awayMoneyline": -450,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 10
       },
       "Game 3": {
         "home": "Tennessee Titans",
         "away": "Indianapolis Colts",
         "homeMoneyline": 154,
         "awayMoneyline": -184,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 41
       },
       "Game 4": {
         "home": "Minnesota Vikings",
@@ -298,8 +298,8 @@
         "away": "Pittsburgh Steelers",
         "homeMoneyline": -102,
         "awayMoneyline": -116,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 14,
+        "awayScore": 21
       },
       "Game 6": {
         "home": "Philadelphia Eagles",
@@ -330,8 +330,8 @@
         "away": "Atlanta Falcons",
         "homeMoneyline": 190,
         "awayMoneyline": -230,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 30,
+        "awayScore": 0
       },
       "Game 10": {
         "home": "Jacksonville Jaguars",
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2255,7 +2255,7 @@
       "ties": 0
     },
     "Indianapolis Colts": {
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0
     },
@@ -2266,7 +2266,7 @@
     },
     "New England Patriots": {
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Las Vegas Raiders": {
@@ -2290,7 +2290,7 @@
       "ties": 0
     },
     "Pittsburgh Steelers": {
-      "wins": 1,
+      "wins": 2,
       "losses": 1,
       "ties": 0
     },
@@ -2310,7 +2310,7 @@
       "ties": 0
     },
     "Carolina Panthers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 2,
       "ties": 0
     },
@@ -2321,7 +2321,7 @@
     },
     "Tennessee Titans": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Seattle Seahawks": {
