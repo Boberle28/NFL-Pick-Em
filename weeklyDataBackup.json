@@ -306,8 +306,8 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": -178,
         "awayMoneyline": 150,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 33,
+        "awayScore": 26
       },
       "Game 7": {
         "home": "Tampa Bay Buccaneers",
@@ -322,8 +322,8 @@
         "away": "Las Vegas Raiders",
         "homeMoneyline": -158,
         "awayMoneyline": 134,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 41,
+        "awayScore": 24
       },
       "Game 9": {
         "home": "Carolina Panthers",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0
     },
@@ -2346,7 +2346,7 @@
     },
     "Los Angeles Rams": {
       "wins": 2,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Houston Texans": {
