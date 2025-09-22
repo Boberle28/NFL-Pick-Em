@@ -378,8 +378,8 @@
         "away": "Kansas City Chiefs",
         "homeMoneyline": 215,
         "awayMoneyline": -260,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 9,
+        "awayScore": 22
       },
       "Game 16": {
         "home": "Baltimore Ravens",
@@ -2230,7 +2230,7 @@
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 0,
+      "wins": 1,
       "losses": 2,
       "ties": 0
     },
@@ -2301,7 +2301,7 @@
     },
     "New York Giants": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Jacksonville Jaguars": {
