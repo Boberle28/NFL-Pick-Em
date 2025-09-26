@@ -396,8 +396,8 @@
         "away": "Seattle Seahawks",
         "homeMoneyline": -116,
         "awayMoneyline": -102,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 23
       },
       "Game 2": {
         "home": "Pittsburgh Steelers",
@@ -2281,7 +2281,7 @@
     },
     "Arizona Cardinals": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "New York Jets": {
@@ -2325,7 +2325,7 @@
       "ties": 0
     },
     "Seattle Seahawks": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
