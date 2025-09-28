@@ -484,16 +484,16 @@
         "away": "Baltimore Ravens",
         "homeMoneyline": 124,
         "awayMoneyline": -146,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 37,
+        "awayScore": 20
       },
       "Game 13": {
         "home": "Las Vegas Raiders",
         "away": "Chicago Bears",
         "homeMoneyline": -116,
         "awayMoneyline": -102,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 25
       },
       "Game 14": {
         "home": "Dallas Cowboys",
@@ -2230,7 +2230,7 @@
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "New Orleans Saints": {
@@ -2361,11 +2361,11 @@
     },
     "Baltimore Ravens": {
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
