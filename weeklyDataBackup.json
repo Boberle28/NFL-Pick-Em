@@ -412,8 +412,8 @@
         "away": "Washington Commanders",
         "homeMoneyline": 120,
         "awayMoneyline": -142,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 27
       },
       "Game 4": {
         "home": "Buffalo Bills",
@@ -428,16 +428,16 @@
         "away": "Cleveland Browns",
         "homeMoneyline": -480,
         "awayMoneyline": 370,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 10
       },
       "Game 6": {
         "home": "New England Patriots",
         "away": "Carolina Panthers",
         "homeMoneyline": -250,
         "awayMoneyline": 205,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 42,
+        "awayScore": 13
       },
       "Game 7": {
         "home": "New York Giants",
@@ -460,8 +460,8 @@
         "away": "Tennessee Titans",
         "homeMoneyline": -335,
         "awayMoneyline": 270,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 0
       },
       "Game 10": {
         "home": "Los Angeles Rams",
@@ -2225,7 +2225,7 @@
       "ties": 0
     },
     "Los Angeles Chargers": {
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0
     },
@@ -2235,7 +2235,7 @@
       "ties": 0
     },
     "Atlanta Falcons": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -2265,7 +2265,7 @@
       "ties": 0
     },
     "New England Patriots": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "New York Giants": {
@@ -2311,17 +2311,17 @@
     },
     "Carolina Panthers": {
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Denver Broncos": {
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Tennessee Titans": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Seattle Seahawks": {
@@ -2330,8 +2330,8 @@
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 2,
-      "losses": 1,
+      "wins": 3,
+      "losses": 0,
       "ties": 0
     },
     "Green Bay Packers": {
@@ -2350,7 +2350,7 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 0,
+      "wins": 1,
       "losses": 3,
       "ties": 0
     },

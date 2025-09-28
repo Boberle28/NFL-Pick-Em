@@ -420,8 +420,8 @@
         "away": "New Orleans Saints",
         "homeMoneyline": -1600,
         "awayMoneyline": 900,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 19
       },
       "Game 5": {
         "home": "Detroit Lions",
@@ -444,16 +444,16 @@
         "away": "Los Angeles Chargers",
         "homeMoneyline": 205,
         "awayMoneyline": -250,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 18
       },
       "Game 8": {
         "home": "Tampa Bay Buccaneers",
         "away": "Philadelphia Eagles",
         "homeMoneyline": 136,
         "awayMoneyline": -162,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 25,
+        "awayScore": 31
       },
       "Game 9": {
         "home": "Houston Texans",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 3,
+      "wins": 4,
       "losses": 0,
       "ties": 0
     },
@@ -2226,7 +2226,7 @@
     },
     "Los Angeles Chargers": {
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Kansas City Chiefs": {
@@ -2241,12 +2241,12 @@
     },
     "Tampa Bay Buccaneers": {
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Cleveland Browns": {
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Cincinnati Bengals": {
@@ -2276,7 +2276,7 @@
     },
     "New Orleans Saints": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Arizona Cardinals": {
@@ -2300,7 +2300,7 @@
       "ties": 0
     },
     "New York Giants": {
-      "wins": 0,
+      "wins": 1,
       "losses": 3,
       "ties": 0
     },
@@ -2340,7 +2340,7 @@
       "ties": 0
     },
     "Detroit Lions": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
@@ -2355,7 +2355,7 @@
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 3,
+      "wins": 4,
       "losses": 0,
       "ties": 0
     },
