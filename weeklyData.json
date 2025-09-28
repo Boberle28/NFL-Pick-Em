@@ -468,16 +468,16 @@
         "away": "Indianapolis Colts",
         "homeMoneyline": -198,
         "awayMoneyline": 166,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 20
       },
       "Game 11": {
         "home": "San Francisco 49ers",
         "away": "Jacksonville Jaguars",
         "homeMoneyline": -184,
         "awayMoneyline": 154,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 26
       },
       "Game 12": {
         "home": "Kansas City Chiefs",
@@ -2256,7 +2256,7 @@
     },
     "Indianapolis Colts": {
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Miami Dolphins": {
@@ -2305,7 +2305,7 @@
       "ties": 0
     },
     "Jacksonville Jaguars": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
@@ -2331,7 +2331,7 @@
     },
     "San Francisco 49ers": {
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Green Bay Packers": {
@@ -2345,7 +2345,7 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
