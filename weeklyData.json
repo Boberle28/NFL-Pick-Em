@@ -404,8 +404,8 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": 124,
         "awayMoneyline": -146,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 21
       },
       "Game 3": {
         "home": "Atlanta Falcons",
@@ -2290,7 +2290,7 @@
       "ties": 0
     },
     "Pittsburgh Steelers": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
@@ -2371,7 +2371,7 @@
     },
     "Minnesota Vikings": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     }
   }
