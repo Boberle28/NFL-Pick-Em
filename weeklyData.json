@@ -500,8 +500,8 @@
         "away": "Green Bay Packers",
         "homeMoneyline": 265,
         "awayMoneyline": -330,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 40,
+        "awayScore": 40
       },
       "Game 15": {
         "home": "Miami Dolphins",
@@ -2222,7 +2222,7 @@
     "Dallas Cowboys": {
       "wins": 1,
       "losses": 2,
-      "ties": 0
+      "ties": 1
     },
     "Los Angeles Chargers": {
       "wins": 3,
@@ -2337,7 +2337,7 @@
     "Green Bay Packers": {
       "wins": 2,
       "losses": 1,
-      "ties": 0
+      "ties": 1
     },
     "Detroit Lions": {
       "wins": 3,
