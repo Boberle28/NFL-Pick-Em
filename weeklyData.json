@@ -516,8 +516,8 @@
         "away": "Cincinnati Bengals",
         "homeMoneyline": -360,
         "awayMoneyline": 290,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 28,
+        "awayScore": 3
       }
     },
     "week5": {
@@ -2251,7 +2251,7 @@
     },
     "Cincinnati Bengals": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Indianapolis Colts": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
