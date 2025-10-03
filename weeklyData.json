@@ -526,8 +526,8 @@
         "away": "San Francisco 49ers",
         "homeMoneyline": -250,
         "awayMoneyline": 205,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 26
       },
       "Game 2": {
         "home": "Cleveland Browns",
