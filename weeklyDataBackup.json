@@ -598,8 +598,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -166,
         "awayMoneyline": 140,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 35,
+        "awayScore": 38
       },
       "Game 11": {
         "home": "Cincinnati Bengals",
@@ -2240,7 +2240,7 @@
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0
     },
@@ -2326,7 +2326,7 @@
     },
     "Seattle Seahawks": {
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "San Francisco 49ers": {
