@@ -2216,11 +2216,11 @@
   "teams": {
     "Philadelphia Eagles": {
       "wins": 4,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Dallas Cowboys": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 1
     },
@@ -2255,13 +2255,13 @@
       "ties": 0
     },
     "Indianapolis Colts": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0
     },
     "Miami Dolphins": {
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "New England Patriots": {
@@ -2271,11 +2271,11 @@
     },
     "Las Vegas Raiders": {
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "New Orleans Saints": {
-      "wins": 0,
+      "wins": 1,
       "losses": 4,
       "ties": 0
     },
@@ -2286,7 +2286,7 @@
     },
     "New York Jets": {
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Pittsburgh Steelers": {
@@ -2301,7 +2301,7 @@
     },
     "New York Giants": {
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Jacksonville Jaguars": {
@@ -2310,12 +2310,12 @@
       "ties": 0
     },
     "Carolina Panthers": {
-      "wins": 1,
+      "wins": 2,
       "losses": 3,
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
       "ties": 0
     },
@@ -2350,7 +2350,7 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 1,
+      "wins": 2,
       "losses": 3,
       "ties": 0
     },
@@ -2361,7 +2361,7 @@
     },
     "Baltimore Ravens": {
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Chicago Bears": {

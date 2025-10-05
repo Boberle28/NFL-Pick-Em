@@ -2246,7 +2246,7 @@
     },
     "Cleveland Browns": {
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Cincinnati Bengals": {
@@ -2330,7 +2330,7 @@
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0
     },
@@ -2346,7 +2346,7 @@
     },
     "Los Angeles Rams": {
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Houston Texans": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
       "ties": 0
     }
