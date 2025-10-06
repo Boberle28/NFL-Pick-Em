@@ -606,8 +606,8 @@
         "away": "Detroit Lions",
         "homeMoneyline": 350,
         "awayMoneyline": -450,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 37
       },
       "Game 12": {
         "home": "Los Angeles Chargers",
@@ -2251,7 +2251,7 @@
     },
     "Cincinnati Bengals": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Indianapolis Colts": {
@@ -2340,7 +2340,7 @@
       "ties": 1
     },
     "Detroit Lions": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0
     },
