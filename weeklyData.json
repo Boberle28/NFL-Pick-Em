@@ -630,8 +630,8 @@
         "away": "Kansas City Chiefs",
         "homeMoneyline": 142,
         "awayMoneyline": -168,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 28
       }
     },
     "week6": {
@@ -2231,7 +2231,7 @@
     },
     "Kansas City Chiefs": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Atlanta Falcons": {
@@ -2305,7 +2305,7 @@
       "ties": 0
     },
     "Jacksonville Jaguars": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0
     },
