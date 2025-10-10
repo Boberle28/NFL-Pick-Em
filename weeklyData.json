@@ -640,8 +640,8 @@
         "away": "Philadelphia Eagles",
         "homeMoneyline": 310,
         "awayMoneyline": -400,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 37,
+        "awayScore": 17
       },
       "Game 2": {
         "home": "New York Jets",
@@ -2216,7 +2216,7 @@
   "teams": {
     "Philadelphia Eagles": {
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Dallas Cowboys": {
@@ -2300,7 +2300,7 @@
       "ties": 0
     },
     "New York Giants": {
-      "wins": 1,
+      "wins": 2,
       "losses": 4,
       "ties": 0
     },
