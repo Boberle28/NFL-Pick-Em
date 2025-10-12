@@ -648,8 +648,8 @@
         "away": "Denver Broncos",
         "homeMoneyline": 310,
         "awayMoneyline": -390,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 11,
+        "awayScore": 13
       },
       "Game 3": {
         "home": "Indianapolis Colts",
@@ -2286,7 +2286,7 @@
     },
     "New York Jets": {
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Pittsburgh Steelers": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 0
     },
