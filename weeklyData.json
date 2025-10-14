@@ -744,8 +744,8 @@
         "away": "Buffalo Bills",
         "homeMoneyline": 180,
         "awayMoneyline": -215,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 14
       },
       "Game 15": {
         "home": "Washington Commanders",
@@ -2235,7 +2235,7 @@
       "ties": 0
     },
     "Atlanta Falcons": {
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
       "ties": 0
     },
@@ -2356,7 +2356,7 @@
     },
     "Buffalo Bills": {
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Baltimore Ravens": {
