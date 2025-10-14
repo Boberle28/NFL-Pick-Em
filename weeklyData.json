@@ -752,8 +752,8 @@
         "away": "Chicago Bears",
         "homeMoneyline": -215,
         "awayMoneyline": 180,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 25
       }
     },
     "week7": {
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "New York Giants": {
@@ -2365,7 +2365,7 @@
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
       "ties": 0
     },
