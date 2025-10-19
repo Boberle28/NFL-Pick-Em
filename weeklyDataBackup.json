@@ -794,16 +794,16 @@
         "away": "New England Patriots",
         "homeMoneyline": 265,
         "awayMoneyline": -330,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 31
       },
       "Game 6": {
         "home": "Kansas City Chiefs",
         "away": "Las Vegas Raiders",
         "homeMoneyline": -700,
         "awayMoneyline": 500,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 0
       },
       "Game 7": {
         "home": "Minnesota Vikings",
@@ -2306,7 +2306,7 @@
     },
     "Jacksonville Jaguars": {
       "wins": 4,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Carolina Panthers": {
@@ -2345,7 +2345,7 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },

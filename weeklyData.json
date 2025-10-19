@@ -778,16 +778,16 @@
         "away": "New Orleans Saints",
         "homeMoneyline": -198,
         "awayMoneyline": 166,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 14
       },
       "Game 4": {
         "home": "Cleveland Browns",
         "away": "Miami Dolphins",
         "homeMoneyline": -142,
         "awayMoneyline": 118,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 6
       },
       "Game 5": {
         "home": "Tennessee Titans",
@@ -2230,7 +2230,7 @@
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 3,
+      "wins": 4,
       "losses": 3,
       "ties": 0
     },
@@ -2265,13 +2265,13 @@
       "ties": 0
     },
     "New England Patriots": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
     "Las Vegas Raiders": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "New Orleans Saints": {
@@ -2321,7 +2321,7 @@
     },
     "Tennessee Titans": {
       "wins": 1,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Seattle Seahawks": {
