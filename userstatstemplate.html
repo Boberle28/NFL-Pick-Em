@@ -434,6 +434,9 @@
                     container.appendChild(weekSection);
                 }
 
+                console.log("WEEK:");
+                console.log(WEEK);
+
                 const currentWeekEl = document.getElementById(WEEK);
                 if(currentWeekEl){
                     currentWeekEl.scrollIntoView({
@@ -441,6 +444,9 @@
                         block: "start"
                     });
                 }
+
+                console.log("currentWeekEl:");
+                console.log(currentWeekEl);
             }
 
             window.addEventListener("DOMContentLoaded", () => {
