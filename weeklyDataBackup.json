@@ -770,8 +770,8 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": 130,
         "awayMoneyline": -154,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 7,
+        "awayScore": 35
       },
       "Game 3": {
         "home": "Chicago Bears",
@@ -2240,7 +2240,7 @@
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
-      "wins": 4,
+      "wins": 5,
       "losses": 1,
       "ties": 0
     },
@@ -2331,7 +2331,7 @@
     },
     "San Francisco 49ers": {
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Green Bay Packers": {
