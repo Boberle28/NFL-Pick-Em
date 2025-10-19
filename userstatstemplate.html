@@ -6,41 +6,98 @@
             <title id="page-title">Pigskin Pick'em Player Stats</title>
         </head>
         <style>
-            a {
-                display: inline-block;
-                margin-bottom: 1rem;
-                color: #007bff;
-                text-decoration: none;
+            :root {
+                /* Height of the fixed top bar (adjust to your liking) */
+                --topbar-height: 64px;
+
+                /* Used by sticky week headers */
+                --sticky-offset: var(--topbar-height);
+            }
+
+            /* ===== FIXED TOP BAR ===== */
+            #topbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+
+                height: var(--topbar-height);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 12px;
+
+                padding: 0 16px;
+                background: #1f2020; /* match site theme */
+                color: #e8e8ea;
+                border-bottom: 1px solid rgba(255,255,255,0.12);
+                z-index: 1000; /* above week headers */
+            }
+
+            /* Title */
+            #stats-name {
+                margin: 0;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            /* Each week becomes a full-width section so the header can stick */
+            .week {
+                position: relative;
+                width: 100%;
+                margin-bottom: 24px;
+            }
+
+            /* The sticky header itself */
+            .week-header {
+                text-align: center;
+                position: sticky;           /* magic */
+                top: var(--sticky-offset);
+                z-index: 5;
+                margin: 0;
+                padding: 10px 12px;
+                background: #0d037c;        /* solid so cards don't show through */
+                color: rgb(191,191,201);
+                border-radius: 4px;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+                /* optional polish */
+                backdrop-filter: blur(2px);
+                -webkit-backdrop-filter: blur(2px);
+            }
+
+            .week .games {
+                padding-top: 8px;
+                display: flex;              /* or: display: grid; justify-items: center; */
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;    
             }
 
             body {
-                font-family: sans-serif;
-                background: #e0d9d9;
-                padding: 20px;
-                max-width: 600px;
-                margin: auto;
+                box-sizing: border-box;
+                background: #000000 !important;
+                padding-top: var(--topbar-height); /* ← add this line */
+                margin: 0;
             }
+            *, *::before, *::after { box-sizing: inherit; }
 
             h1 {
                 text-align: center;
-                color:rgb(23, 23, 24)
+                color:rgb(191, 191, 201);
             }
 
             #user-stats-container {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
+                align-items: stretch;
             }
 
             .matchup {
                 width: 100%;
                 max-width: 500px;
-                border: 1px solid #ccc;
+                margin: 0 auto;
                 padding: 10px;
-                border-radius: 12px;
-                background-color: #ffffff;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                background-color: #121212;
+                box-shadow: 0 2px 6px rgba(60, 61, 61, 0.1);
             }
 
             .row {
@@ -49,7 +106,7 @@
                 justify-content: center; /* centers children in the parent */
                 align-items: center; 
                 border-radius: 5px;
-                background: #f3f3f3;
+                background: #121212;
                 margin-top: 5px;
             }
 
@@ -71,6 +128,7 @@
                 font-size: 0.9em;
                 margin-bottom: 5px;
                 font-weight: bold;
+                color: #8e8e91;
             }
 
             .team-btn {
@@ -79,26 +137,46 @@
                 gap: 8px;
                 padding: 8px 14px;
                 font-size: 16px;
-                background-color: #eee;
-                border: 2px solid transparent;
-                border-radius: 8px;
+                background-image: linear-gradient(to bottom, #404241, #2a2b2b);
+
+                /* prevent gradient in border (stops edge artifacts) */
+                background-clip: padding-box;
+
+                /* remove native quirks */
+                appearance: none;
+                -webkit-appearance: none;
+
+                border: none;
+                outline: none;
+                
                 cursor: pointer;
                 transition: background-color 0.2s ease;
             }
 
             .team-btn.selected {
-                border-color: #007bff;
-                background-color: rgba(0, 123, 255, 0.1);
+                border: 1px solid;
+                border-color: #757575;
+                background-image: linear-gradient(to bottom, #202c38, #101e2b);
             }
 
             .team-btn.wrong {
-                border-color: #007bff;
-                background-color: rgba(255, 0, 0, 0.5); /* light transparent red */
+                border-color: red;
+                color: red;
             }
-            
+
+            .team-score{
+                font-family: "Saira Condensed", sans-serif;
+                color: white;
+            }
+
+            .team-name {
+                font-weight: bold;
+                color: #c5c5d1;
+            }
+
             .team-btn.right {
-                border-color: #007bff;
-                background-color: rgba(0, 255, 0, 1); /* light transparent green */
+                border-color: green;
+                color: green;
             }
 
             .team-logo {
@@ -106,21 +184,17 @@
                 width: auto;
             }
 
-            .team-name {
-                font-weight: bold;
-            }
-
             .record {
                 padding: 5px;
                 font-size: 0.85em;
-                color: #333;
+                color: #a7a7ab;
                 font-weight: bold;
             }
 
             .teamvalue{
                 padding: 5px;
                 font-size: 0.85em;
-                color: #333;
+                color: #a7a7ab;
                 font-weight: bold;
             }
 
@@ -134,12 +208,17 @@
         <script src ="NamesAndSchedule.js"></script>
 
         <body>
-            <h1 id="stats-name">Pigskin Pick'em </h1>
-            <div class="parent">
-                <a href="leaderboard.html">⬅ Back to Leaderboard</a>
-            </div>
-            <div id="user-stats-container"></div>
+            <!-- Fixed top bar -->
+            <header id="topbar">
+                <h1 id="stats-name">Pigskin Pick'em </h1>
+            </header>
+
+            <!-- Page content area -->
+            <main id="content">
+                <div id="user-stats-container"></div>
+            </main>
         </body>
+
         <script type="module">
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
             import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
@@ -216,7 +295,7 @@
 
                         const scoreLabel = document.createElement("div");
                         scoreLabel.classList.add("team-score");
-                        scoreLabel.textContent = "Score: " + score;
+                        scoreLabel.textContent = score;
 
                         wrapper.appendChild(scoreLabel);
 
@@ -316,26 +395,37 @@
                         break;
                     }
                 }
-
-
+                
                 const container = document.getElementById("user-stats-container");
 
                 for (let i = 0; i < allWeeks.length; i++) {
-                    const week = i + 1; // assuming week is something like { weekNumber: 1, games: [...] }
+                    const week = i + 1;
 
-                    console.log("player");
-                    console.log(player);
+                    // Create a full-width section for this week
+                    const weekSection = document.createElement("section");
+                    weekSection.className = "week";
+
+                    // Sticky header
                     const header = document.createElement("h3");
-                    header.textContent = `Week ${week}`;
-                    header.textContent += " Wins " + player.weekStats[i].wins + " Points " + Number(player.weekStats[i].points).toFixed(2);
+                    header.className = "week-header";
+                    header.textContent = `Week ${week}  •  Wins ${player.weekStats[i].wins}  •  Points ${Number(player.weekStats[i].points).toFixed(2)}  •  Pct  ${Number(player.weekStats[i].pct).toFixed(3).replace(/^0+/, "")}`;
+                    weekSection.appendChild(header);
 
-                    container.appendChild(header);
+                    // Container where matchups will be rendered
+                    const gamesDiv = document.createElement("div");
+                    gamesDiv.className = "games";
+                    weekSection.appendChild(gamesDiv);
 
+                    // Player's picks for this week
                     const weekPicks = player.weekStats[i].weekPicks;
-                    // renderWeekStats is your function to create matchup UI for this week
-                    renderWeekStats(allWeeks[i], container, weekPicks); 
 
+                    // Render all games for this week inside the .games div
+                    renderWeekStats(allWeeks[i], gamesDiv, weekPicks);
+
+                    // Append the whole section to the main container
+                    container.appendChild(weekSection);
                 }
+
             }
 
             window.addEventListener("DOMContentLoaded", () => {

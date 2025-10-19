@@ -155,6 +155,8 @@
 
     const auth = getAuth(app);
 
+    const logged_username = localStorage.getItem("username");
+
     async function asyncStuff(){
         const predata = await fetch("preseason.json").then(res => res.json());
         const data = await fetch("weeklyData.json").then(res => res.json());
@@ -184,7 +186,8 @@
         const row = document.createElement("tr");
         const perc = player.winpercent == 0 ? 0 : Number(player.winpercent).toFixed(3).replace(/^0+/, "");
         const points = player.points == 0 ? 0 : Number(player.points).toFixed(2);
-        row.innerHTML = `
+        if(logged_username != "Brando"){
+          row.innerHTML = `
           <td data-label="Username" class="userrow">
             <a href="userstats.html?user=${player.username}">${player.username}</a>
           </td>
@@ -193,6 +196,18 @@
           <td data-label="Win Percentage">${perc}</td>
           <td data-label="Picks Made">${player.picksMade}</td>
         `;
+        }
+        else{
+          row.innerHTML = `
+          <td data-label="Username" class="userrow">
+            <a href="userstatstemplate.html?user=${player.username}">${player.username}</a>
+          </td>
+          <td data-label="Wins">${player.wins}</td>
+          <td data-label="Points">${points}</td>
+          <td data-label="Win Percentage">${perc}</td>
+          <td data-label="Picks Made">${player.picksMade}</td>
+        `;
+        }
         tbody.appendChild(row);
       });
     }
