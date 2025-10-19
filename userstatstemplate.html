@@ -242,6 +242,8 @@
             const params = new URLSearchParams(window.location.search);
             const username = params.get("user");
 
+            let WEEK = "week";
+
             async function asyncStuff(){
                 document.getElementById("stats-name").innerText = `Stats for ${username}`;
 
@@ -396,12 +398,20 @@
                 
                 const container = document.getElementById("user-stats-container");
 
+                const currentWeek = getCurrentWeek(now);
+                bettingTarget = isBettingWindowOpen(now);
+                if(currentWeek)
+                    WEEK = `week${currentWeek.week}`;
+                else
+                    WEEK = `week${bettingTarget.week}`;
+
                 for (let i = 0; i < allWeeks.length; i++) {
                     const week = i + 1;
 
                     // Create a full-width section for this week
                     const weekSection = document.createElement("section");
                     weekSection.className = "week";
+                    weekSection.id == `week${i + 1}`;
 
                     // Sticky header
                     const header = document.createElement("h3");
@@ -430,6 +440,13 @@
                 onAuthStateChanged(auth, (user) => {
                     if (user) {
                         buildPlayerStats(); // safe to access Firestore now
+                        const currentWeekEl = document.getElementById(WEEK);
+                        if(currentWeekEl){
+                            currentWeekEl.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+                        }
                     } else {
                         window.location.href = "index.html"; // redirect if not logged in
                     }
