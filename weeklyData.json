@@ -810,16 +810,16 @@
         "away": "Philadelphia Eagles",
         "homeMoneyline": 120,
         "awayMoneyline": -142,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 22,
+        "awayScore": 28
       },
       "Game 8": {
         "home": "New York Jets",
         "away": "Carolina Panthers",
         "homeMoneyline": 110,
         "awayMoneyline": -130,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 6,
+        "awayScore": 13
       },
       "Game 9": {
         "home": "Denver Broncos",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
@@ -2245,7 +2245,7 @@
       "ties": 0
     },
     "Cleveland Browns": {
-      "wins": 1,
+      "wins": 2,
       "losses": 5,
       "ties": 0
     },
@@ -2261,7 +2261,7 @@
     },
     "Miami Dolphins": {
       "wins": 1,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "New England Patriots": {
@@ -2276,7 +2276,7 @@
     },
     "New Orleans Saints": {
       "wins": 1,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Arizona Cardinals": {
@@ -2365,13 +2365,13 @@
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 0
     },
     "Minnesota Vikings": {
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     }
   }
