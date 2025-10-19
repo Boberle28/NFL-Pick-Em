@@ -399,7 +399,7 @@
                 const container = document.getElementById("user-stats-container");
 
                 const currentWeek = getCurrentWeek(now);
-                bettingTarget = isBettingWindowOpen(now);
+                let bettingTarget = isBettingWindowOpen(now);
                 if(currentWeek)
                     WEEK = `week${currentWeek.week}`;
                 else
