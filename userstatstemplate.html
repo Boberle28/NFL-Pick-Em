@@ -434,19 +434,19 @@
                     container.appendChild(weekSection);
                 }
 
+                const currentWeekEl = document.getElementById(WEEK);
+                if(currentWeekEl){
+                    currentWeekEl.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
             }
 
             window.addEventListener("DOMContentLoaded", () => {
                 onAuthStateChanged(auth, (user) => {
                     if (user) {
                         buildPlayerStats(); // safe to access Firestore now
-                        const currentWeekEl = document.getElementById(WEEK);
-                        if(currentWeekEl){
-                            currentWeekEl.scrollIntoView({
-                                behavior: "smooth",
-                                block: "start"
-                            });
-                        }
                     } else {
                         window.location.href = "index.html"; // redirect if not logged in
                     }
