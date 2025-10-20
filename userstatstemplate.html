@@ -446,7 +446,7 @@
 
                 const currentWeekEl = document.getElementById(WEEK);
                 if(currentWeekEl){
-                    const yOffset = -64 + 24; // match your --topbar-height
+                    const yOffset = -64; // match your --topbar-height
                     const y = currentWeekEl.getBoundingClientRect().top + window.scrollY + yOffset;
                     window.scrollTo({top: y, behavior: 'smooth'});
                 }
