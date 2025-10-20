@@ -363,6 +363,11 @@
                 });
             }
 
+            function pxVar(name, fallback = 0) {
+                const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+                return v.endsWith('px') ? parseFloat(v) : (parseFloat(v) || fallback);
+            }
+
             async function buildPlayerStats()
             {
                 document.getElementById("stats-name").innerText = `Stats for ${username}`;
@@ -441,6 +446,15 @@
 
                 const currentWeekEl = document.getElementById(WEEK);
                 if(currentWeekEl){
+                    const firstGame = currentWeekEl.nextElementSibling;
+                    if(firstGame){
+                        const topbarH = pxVar('--topbar-height', 64);
+                        const headerH = currentWeekEl.offsetHeight || 0;
+                        
+                        const y = firstGame.getBoundingClientRect().top + window.scrollY;
+                        window.scrollTo({top: y, behavior: 'smooth'});
+                    }
+                        
                     currentWeekEl.scrollIntoView({
                         behavior: "smooth",
                         block: "start"
