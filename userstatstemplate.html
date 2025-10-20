@@ -451,7 +451,7 @@
                         const topbarH = pxVar('--topbar-height', 64);
                         const headerH = currentWeekEl.offsetHeight || 0;
                         
-                        const y = firstGame.getBoundingClientRect().top + window.scrollY;
+                        const y = (firstGame.getBoundingClientRect().top + window.scrollY) - 24;
                         window.scrollTo({top: y, behavior: 'smooth'});
                     }
                         
