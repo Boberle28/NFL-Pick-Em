@@ -858,8 +858,8 @@
         "away": "Atlanta Falcons",
         "homeMoneyline": -168,
         "awayMoneyline": 142,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 10
       },
       "Game 14": {
         "home": "Detroit Lions",
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2330,7 +2330,7 @@
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
