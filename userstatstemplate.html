@@ -446,14 +446,9 @@
 
                 const currentWeekEl = document.getElementById(WEEK);
                 if(currentWeekEl){
-                    const firstGame = currentWeekEl.nextElementSibling;
-                    if(firstGame){
-                        const topbarH = pxVar('--topbar-height', 64);
-                        const headerH = currentWeekEl.offsetHeight || 0;
-                        
-                        const y = (firstGame.getBoundingClientRect().top + window.scrollY) - 24;
-                        window.scrollTo({top: y, behavior: 'smooth'});
-                    }
+                    const yOffset = -64; // match your --topbar-height
+                    const y = currentWeekEl.getBoundingClientRect().top + window.scrollY + yOffset;
+                    window.scrollTo({top: y, behavior: 'smooth'});
                 }
 
                 console.log("currentWeekEl:");
