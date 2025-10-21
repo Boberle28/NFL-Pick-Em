@@ -866,8 +866,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -240,
         "awayMoneyline": 198,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 9
       },
       "Game 15": {
         "home": "Seattle Seahawks",
@@ -2241,7 +2241,7 @@
     },
     "Tampa Bay Buccaneers": {
       "wins": 5,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Cleveland Browns": {
@@ -2340,7 +2340,7 @@
       "ties": 1
     },
     "Detroit Lions": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
