@@ -874,8 +874,8 @@
         "away": "Houston Texans",
         "homeMoneyline": -176,
         "awayMoneyline": 148,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 19
       }
     },
     "week8": {
@@ -2325,7 +2325,7 @@
       "ties": 0
     },
     "Seattle Seahawks": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
@@ -2351,7 +2351,7 @@
     },
     "Houston Texans": {
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Buffalo Bills": {
