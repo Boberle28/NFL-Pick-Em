@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pigskin Pick'em — Leaderboard</title>
+<style>
+  :root{
+    --bg:#0b0b0f;           /* dark page background */
+    --panel:#141419;        /* card/table background */
+    --ink:#e8e8ea;          /* primary text */
+    --muted:#a6a7ad;        /* secondary text */
+    --line:rgba(255,255,255,.08);
+    --accent:#46a0ff;
+    --row-odd:rgba(255,255,255,.02);
+    --row-even:transparent;
+    --row-hover:rgba(70,160,255,.10);
+    --sticky-shadow: 0 6px 12px rgba(0,0,0,.35);
+  }
+
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:#000; /* matches the rest of your site */
+    color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.35;
+  }
+
+  .wrap{
+    max-width: 1100px;
+    margin: 24px auto 80px;
+    padding: 0 16px;
+  }
+
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,.30);
+  }
+
+  .table-wrap{
+    overflow:auto;
+  }
+
+  table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    font-size:14px;
+  }
+
+  thead th{
+    position:sticky; top:0; z-index:2;
+    background:var(--panel);
+    border-bottom:1px solid var(--line);
+    text-align:left;
+    font-weight:600;
+    padding:12px 12px;
+    white-space:nowrap;
+  }
+  thead th.sticky-shadow::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:-1px; height:1px;
+    box-shadow:var(--sticky-shadow);
+    opacity:.4;
+  }
+
+  tbody td{
+    padding:10px 12px;
+    border-bottom:1px solid var(--line);
+    vertical-align:middle;
+  }
+
+  tbody tr:nth-child(odd){ background:var(--row-odd); }
+  tbody tr:nth-child(even){ background:var(--row-even); }
+  tbody tr:hover{ background:var(--row-hover); }
+
+  .rank{
+    width:56px; text-align:right; color:var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .player{
+    display:flex; align-items:center; gap:10px; min-width:220px;
+  }
+  .avatar{
+    width:28px; height:28px; border-radius:50%; overflow:hidden; flex:0 0 auto;
+    background:#222;
+  }
+  .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .player .name{font-weight:600}
+  .player .team{color:var(--muted); font-size:12px}
+
+  .num, .center{
+    text-align:center;
+    font-variant-numeric: tabular-nums;
+  }
+  .right{ text-align:right; font-variant-numeric: tabular-nums; }
+
+  /* mobile: stack some columns */
+  @media (max-width: 720px){
+    .rank{ width:44px; }
+    .hide-sm{ display:none; }
+    .player{ min-width:160px; }
+    thead th, tbody td{ padding:10px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header id="topbar" style="position:sticky;top:0;background:#000;border-bottom:1px solid var(--line);padding:10px 16px;z-index:10">
+  <h1 style="margin:0;font-size:18px">Pigskin Pick'em — Leaderboard</h1>
+</header>
+
+<main class="wrap">
+  <div class="card">
+    <div class="toolbar">
+      <h2>Season Leaderboard</h2>
+      <div class="spacer"></div>
+      <div class="search">
+        <input id="searchBox" type="search" placeholder="Search player or team…" aria-label="Search leaderboard" />
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M13.5 13.5l4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="board">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Points</th>
+            <th>Win Percentage</th>
+            <th>Picks Made</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAHTX6gGorh3Flmvbw0THBfk9i7ILeZ2E4",
+      authDomain: "football-pickem-1d2ab.firebaseapp.com",
+      projectId: "football-pickem-1d2ab",
+      storageBucket: "football-pickem-1d2ab.firebasestorage.app",
+      messagingSenderId: "1065963734942",
+      appId: "1:1065963734942:web:042b5fbe5082b9cd29788f",
+      measurementId: "G-K8JV62VJ6P"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const auth = getAuth(app);
+/* -------------------------------------------
+   Demo data — replace with your real stats
+   Each item can include: avatar (optional)
+-------------------------------------------- */
+const DATA = [
+  { name:"Brando",   team:"PHI", wins:72, losses:38, points:128, picksmade:0 },
+  { name:"Chef Len", team:"KC",  wins:70, losses:40, points:121, avatar:"" },
+  { name:"M. Jones", team:"DAL", wins:69, losses:41, points:118, avatar:"" },
+  { name:"A. Smith", team:"GB",  wins:66, losses:44, points:113, avatar:"" },
+  { name:"S. Lee",   team:"BUF", wins:65, losses:45, points:110, avatar:"" },
+];
+
+// compute pct once
+DATA.forEach(r => r.pct = r.wins + r.losses ? (r.wins / (r.wins + r.losses)) : 0);
+
+let state = {
+  sortKey: "points",
+  sortDir: "desc", // 'asc' | 'desc'
+  q: ""
+};
+
+const rowsEl = document.getElementById("rows");
+const board = document.getElementById("board");
+
+function render() {
+  let filtered = DATA.filter(r => {
+    if (!state.q) return true;
+    const q = state.q.toLowerCase();
+    return r.name.toLowerCase().includes(q) || String(r.team).toLowerCase().includes(q);
+  });
+
+  const dir = state.sortDir === "asc" ? 1 : -1;
+  filtered.sort((a,b)=>{
+    const k = state.sortKey;
+    const va = a[k], vb = b[k];
+    if (typeof va === "string" || typeof vb === "string") {
+      return va.toString().localeCompare(vb.toString(), undefined, {numeric:true}) * dir;
+    }
+    return (va - vb) * dir;
+  });
+
+  // rank recalculates after filtering/sorting
+  rowsEl.innerHTML = filtered.map((r, idx) => `
+    <tr>
+      <td class="rank">${idx+1}</td>
+      <td>
+        <div class="player">
+          <span class="avatar">${r.avatar ? `<img src="${r.avatar}" alt="">` : ""}</span>
+          <div>
+            <div class="name">${r.name}</div>
+            <div class="team hide-sm">${r.team}</div>
+          </div>
+        </div>
+      </td>
+      <td class="hide-sm">${r.team}</td>
+      <td class="center">${r.wins}</td>
+      <td class="center hide-sm">${r.losses}</td>
+      <td class="center">${(r.pct).toFixed(3)}</td>
+      <td class="right">${r.points}</td>
+    </tr>
+  `).join("");
+
+    async function asyncStuff(){
+        const predata = await fetch("preseason.json").then(res => res.json());
+        const data = await fetch("weeklyData.json").then(res => res.json());
+
+        UpdateRecords(data.teams);
+
+        season.LoadOdds(data.weeks)
+        season.LoadOddsPreseason(predata);
+
+        const picksRef = collection(db, "picks");
+        const snapshot = await getDocs(picksRef);
+
+        return snapshot;
+    }
+
+    async function buildLeaderboard() {
+    
+      let snapshot = await asyncStuff();
+      PullUsersAndGetWins(snapshot);
+      let pot = (50 * Object.values(players).length) + 200;
+      
+      let elem = document.getElementsByClassName("pot");
+      elem[0].textContent = '$' + String(pot);
+
+      const tbody = document.getElementById("leaderboard-body");
+      Object.values(players).forEach(player => {
+        const row = document.createElement("tr");
+        const perc = player.winpercent == 0 ? 0 : Number(player.winpercent).toFixed(3).replace(/^0+/, "");
+        const points = player.points == 0 ? 0 : Number(player.points).toFixed(2);
+        row.innerHTML = `
+          <td data-label="Username" class="userrow">
+            <a href="userstatstemplate.html?user=${player.username}">${player.username}</a>
+          </td>
+          <td data-label="Wins">${player.wins}</td>
+          <td data-label="Points">${points}</td>
+          <td data-label="Win Percentage">${perc}</td>
+          <td data-label="Picks Made">${player.picksMade}</td>
+        `;
+        
+        tbody.appendChild(row);
+      });
+    }
+
+  // update sort header styles
+  document.querySelectorAll("th.sortable").forEach(th=>{
+    th.classList.toggle("active", th.dataset.key === state.sortKey);
+    th.classList.toggle("asc", th.dataset.key === state.sortKey && state.sortDir==="asc");
+  });
+}
+
+
+// sticky header shadow helper (nice polish)
+const thead = board.tHead;
+const observer = new IntersectionObserver(([entry])=>{
+  const ths = thead.querySelectorAll("th");
+  ths.forEach(th => th.classList.toggle("sticky-shadow", !entry.isIntersecting));
+}, { root: document.querySelector(".table-wrap"), threshold: 1 });
+observer.observe(thead);
+
+// initial render
+render();
+
+window.addEventListener("DOMContentLoaded", () => {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          buildLeaderboard(); // safe to access Firestore now
+        } else {
+          window.location.href = "index.html"; // redirect if not logged in
+        }
+    });
+});
+
+/* -------------------------------------------
+   Hooking up to your real data later:
+   - Replace DATA with results from Firestore or your JSON.
+   - Be sure to recompute r.pct after setting wins/losses.
+-------------------------------------------- */
+</script>
+</body>
+</html>
