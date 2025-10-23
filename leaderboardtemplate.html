@@ -113,6 +113,8 @@ a {
   position: sticky;
   left: 0;
   z-index: 3;                /* keep above other cells */
+  min-width: 140px;     /* was too wide — tighten it up */
+  max-width: 160px;
   background: var(--panel);  /* same as header/table bg */
 }
 
@@ -122,7 +124,8 @@ a {
 }
 #board tbody td:first-child {
   z-index: 2; /* under header but above other cells */
-  box-shadow: 4px 0 0 0 var(--line);
+  border-right: 1px solid var(--line);
+  box-shadow: none;
 }
 
 .header-meta {
