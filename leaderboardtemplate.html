@@ -278,9 +278,6 @@ const observer = new IntersectionObserver(([entry])=>{
 }, { root: document.querySelector(".table-wrap"), threshold: 1 });
 observer.observe(thead);
 
-// initial render
-render();
-
 window.addEventListener("DOMContentLoaded", () => {
     onAuthStateChanged(auth, (user) => {
         if (user) {
