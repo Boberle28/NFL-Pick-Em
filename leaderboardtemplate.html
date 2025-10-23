@@ -103,6 +103,33 @@ a {
   tbody tr:nth-child(even){ background:var(--row-even); }
   tbody tr:hover{ background:var(--row-hover); }
 
+  #board {
+  min-width: 860px; /* adjust as needed */
+}
+
+/* Freeze the first column (header + cells) */
+#board thead th:first-child,
+#board tbody td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;                /* keep above other cells */
+  background: var(--panel);  /* same as header/table bg */
+}
+
+/* A tiny divider & depth so it looks natural */
+#board thead th:first-child {
+  box-shadow: 4px 0 0 0 var(--line), 6px 0 10px rgba(0,0,0,.25);
+}
+#board tbody td:first-child {
+  z-index: 2; /* under header but above other cells */
+  box-shadow: 4px 0 0 0 var(--line);
+}
+
+.header-meta {
+  text-align: center;
+  margin: 12px 0 16px;
+}
+
   .rank{
     width:56px; text-align:right; color:var(--muted);
     font-variant-numeric: tabular-nums;
@@ -139,11 +166,11 @@ a {
   <h1 style="margin:0;font-size:18px">Pigskin Pick'em — Leaderboard</h1>
 </header>
 
-    <h1>Pigskin Pick'em Leaderboard</h1>
-    <h2 class="total-pot">
-        Total Pot: <span class="pot"></span>
-    </h2>
-    <a href="picks.html">⬅ Back to Picks</a>
+    <div class="header-meta">
+        <h1>Pigskin Pick'em Leaderboard</h1>
+        <h2 class="total-pot">Total Pot: <span class="pot"></span></h2>
+        <a class="back-link" href="picks.html">⬅ Back to Picks</a>
+    </div>
 <main class="wrap">
   <div class="card">
     
