@@ -214,6 +214,13 @@ function render() {
     </tr>
   `).join("");
 
+  // update sort header styles
+  document.querySelectorAll("th.sortable").forEach(th=>{
+    th.classList.toggle("active", th.dataset.key === state.sortKey);
+    th.classList.toggle("asc", th.dataset.key === state.sortKey && state.sortDir==="asc");
+  });
+}
+
     async function asyncStuff(){
         const predata = await fetch("preseason.json").then(res => res.json());
         const data = await fetch("weeklyData.json").then(res => res.json());
@@ -256,14 +263,6 @@ function render() {
         tbody.appendChild(row);
       });
     }
-
-  // update sort header styles
-  document.querySelectorAll("th.sortable").forEach(th=>{
-    th.classList.toggle("active", th.dataset.key === state.sortKey);
-    th.classList.toggle("asc", th.dataset.key === state.sortKey && state.sortDir==="asc");
-  });
-}
-
 
 // sticky header shadow helper (nice polish)
 const thead = board.tHead;
