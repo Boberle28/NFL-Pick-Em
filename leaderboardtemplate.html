@@ -321,13 +321,6 @@ function render() {
       });
     }
 
-// sticky header shadow helper (nice polish)
-const thead = board.tHead;
-const observer = new IntersectionObserver(([entry])=>{
-  const ths = thead.querySelectorAll("th");
-  ths.forEach(th => th.classList.toggle("sticky-shadow", !entry.isIntersecting));
-}, { root: document.querySelector(".table-wrap"), threshold: 1 });
-observer.observe(thead);
 
 window.addEventListener("DOMContentLoaded", () => {
     onAuthStateChanged(auth, (user) => {
