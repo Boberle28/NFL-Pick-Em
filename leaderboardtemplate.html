@@ -201,15 +201,10 @@ function render() {
   // rank recalculates after filtering/sorting
   rowsEl.innerHTML = filtered.map((r, idx) => `
     <tr>
-      <td class="rank">${idx+1}</td>
       <td>
-        <div class="player">
-          <span class="avatar">${r.avatar ? `<img src="${r.avatar}" alt="">` : ""}</span>
-          <div>
-            <div class="name">${r.name}</div>
-            <div class="team hide-sm">${r.team}</div>
-          </div>
-        </div>
+        
+      <div class="name">${r.name}</div>
+          
       </td>
       <td class="hide-sm">${r.team}</td>
       <td class="center">${r.wins}</td>
@@ -243,7 +238,7 @@ function render() {
       let elem = document.getElementsByClassName("pot");
       elem[0].textContent = '$' + String(pot);
 
-      const tbody = document.getElementById("leaderboard-body");
+      const tbody = document.getElementById("rows");
       Object.values(players).forEach(player => {
         const row = document.createElement("tr");
         const perc = player.winpercent == 0 ? 0 : Number(player.winpercent).toFixed(3).replace(/^0+/, "");
