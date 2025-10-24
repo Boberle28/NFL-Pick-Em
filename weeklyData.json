@@ -884,8 +884,8 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": -166,
         "awayMoneyline": 140,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 37,
+        "awayScore": 10
       },
       "Game 2": {
         "home": "Atlanta Falcons",
@@ -2225,7 +2225,7 @@
       "ties": 1
     },
     "Los Angeles Chargers": {
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0
     },
@@ -2371,7 +2371,7 @@
     },
     "Minnesota Vikings": {
       "wins": 3,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     }
   }
