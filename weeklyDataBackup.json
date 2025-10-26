@@ -866,16 +866,16 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -240,
         "awayMoneyline": 198,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 9
       },
       "Game 15": {
         "home": "Seattle Seahawks",
         "away": "Houston Texans",
         "homeMoneyline": -176,
         "awayMoneyline": 148,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 19
       }
     },
     "week8": {
@@ -884,102 +884,102 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": -166,
         "awayMoneyline": 140,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 37,
+        "awayScore": 10
       },
       "Game 2": {
         "home": "Atlanta Falcons",
         "away": "Miami Dolphins",
-        "homeMoneyline": -230,
-        "awayMoneyline": 190,
+        "homeMoneyline": -370,
+        "awayMoneyline": 295,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 3": {
         "home": "Cincinnati Bengals",
         "away": "New York Jets",
-        "homeMoneyline": -144,
-        "awayMoneyline": 122,
+        "homeMoneyline": -320,
+        "awayMoneyline": 250,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 4": {
         "home": "New England Patriots",
         "away": "Cleveland Browns",
-        "homeMoneyline": -330,
-        "awayMoneyline": 265,
+        "homeMoneyline": -320,
+        "awayMoneyline": 260,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 5": {
         "home": "Philadelphia Eagles",
         "away": "New York Giants",
-        "homeMoneyline": -430,
-        "awayMoneyline": 340,
+        "homeMoneyline": -360,
+        "awayMoneyline": 290,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 6": {
         "home": "Carolina Panthers",
         "away": "Buffalo Bills",
-        "homeMoneyline": 315,
-        "awayMoneyline": -400,
+        "homeMoneyline": 360,
+        "awayMoneyline": -460,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 7": {
         "home": "Baltimore Ravens",
         "away": "Chicago Bears",
-        "homeMoneyline": -280,
-        "awayMoneyline": 230,
+        "homeMoneyline": -330,
+        "awayMoneyline": 265,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 8": {
         "home": "Houston Texans",
         "away": "San Francisco 49ers",
-        "homeMoneyline": -122,
-        "awayMoneyline": 104,
+        "homeMoneyline": -138,
+        "awayMoneyline": 118,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 9": {
         "home": "New Orleans Saints",
         "away": "Tampa Bay Buccaneers",
-        "homeMoneyline": 198,
-        "awayMoneyline": -240,
+        "homeMoneyline": 210,
+        "awayMoneyline": -255,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 10": {
         "home": "Denver Broncos",
         "away": "Dallas Cowboys",
-        "homeMoneyline": -205,
-        "awayMoneyline": 172,
+        "homeMoneyline": -156,
+        "awayMoneyline": 132,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 11": {
         "home": "Indianapolis Colts",
         "away": "Tennessee Titans",
-        "homeMoneyline": -700,
-        "awayMoneyline": 500,
+        "homeMoneyline": -1200,
+        "awayMoneyline": 750,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 12": {
         "home": "Pittsburgh Steelers",
         "away": "Green Bay Packers",
-        "homeMoneyline": 128,
-        "awayMoneyline": -152,
+        "homeMoneyline": 148,
+        "awayMoneyline": -176,
         "homeScore": -1,
         "awayScore": -1
       },
       "Game 13": {
         "home": "Kansas City Chiefs",
         "away": "Washington Commanders",
-        "homeMoneyline": -270,
-        "awayMoneyline": 220,
+        "homeMoneyline": -620,
+        "awayMoneyline": 460,
         "homeScore": -1,
         "awayScore": -1
       }
@@ -2225,7 +2225,7 @@
       "ties": 1
     },
     "Los Angeles Chargers": {
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0
     },
@@ -2241,7 +2241,7 @@
     },
     "Tampa Bay Buccaneers": {
       "wins": 5,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Cleveland Browns": {
@@ -2325,7 +2325,7 @@
       "ties": 0
     },
     "Seattle Seahawks": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
@@ -2340,7 +2340,7 @@
       "ties": 1
     },
     "Detroit Lions": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
@@ -2351,7 +2351,7 @@
     },
     "Houston Texans": {
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Buffalo Bills": {
@@ -2371,7 +2371,7 @@
     },
     "Minnesota Vikings": {
       "wins": 3,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     }
   }

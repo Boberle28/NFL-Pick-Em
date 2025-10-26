@@ -892,56 +892,56 @@
         "away": "Miami Dolphins",
         "homeMoneyline": -370,
         "awayMoneyline": 295,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 34
       },
       "Game 3": {
         "home": "Cincinnati Bengals",
         "away": "New York Jets",
         "homeMoneyline": -320,
         "awayMoneyline": 250,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 38,
+        "awayScore": 39
       },
       "Game 4": {
         "home": "New England Patriots",
         "away": "Cleveland Browns",
         "homeMoneyline": -320,
         "awayMoneyline": 260,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 32,
+        "awayScore": 13
       },
       "Game 5": {
         "home": "Philadelphia Eagles",
         "away": "New York Giants",
         "homeMoneyline": -360,
         "awayMoneyline": 290,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 38,
+        "awayScore": 20
       },
       "Game 6": {
         "home": "Carolina Panthers",
         "away": "Buffalo Bills",
         "homeMoneyline": 360,
         "awayMoneyline": -460,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 9,
+        "awayScore": 40
       },
       "Game 7": {
         "home": "Baltimore Ravens",
         "away": "Chicago Bears",
         "homeMoneyline": -330,
         "awayMoneyline": 265,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 30,
+        "awayScore": 16
       },
       "Game 8": {
         "home": "Houston Texans",
         "away": "San Francisco 49ers",
         "homeMoneyline": -138,
         "awayMoneyline": 118,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 15
       },
       "Game 9": {
         "home": "New Orleans Saints",
@@ -2301,7 +2301,7 @@
     },
     "New York Giants": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Jacksonville Jaguars": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
