@@ -1052,8 +1052,8 @@
       "Game 9": {
         "home": "Houston Texans",
         "away": "Denver Broncos",
-        "homeMoneyline": -108,
-        "awayMoneyline": -108,
+        "homeMoneyline": 100,
+        "awayMoneyline": -118,
         "homeScore": -1,
         "awayScore": -1
       },
