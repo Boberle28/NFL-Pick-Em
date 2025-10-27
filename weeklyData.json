@@ -972,8 +972,8 @@
         "away": "Green Bay Packers",
         "homeMoneyline": 148,
         "awayMoneyline": -176,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 25,
+        "awayScore": 35
       },
       "Game 13": {
         "home": "Kansas City Chiefs",
@@ -2291,7 +2291,7 @@
     },
     "Pittsburgh Steelers": {
       "wins": 4,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Washington Commanders": {
@@ -2335,7 +2335,7 @@
       "ties": 0
     },
     "Green Bay Packers": {
-      "wins": 4,
+      "wins": 5,
       "losses": 1,
       "ties": 1
     },
