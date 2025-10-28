@@ -980,8 +980,8 @@
         "away": "Washington Commanders",
         "homeMoneyline": -620,
         "awayMoneyline": 460,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 28,
+        "awayScore": 7
       }
     },
     "week9": {
@@ -2230,7 +2230,7 @@
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 4,
+      "wins": 5,
       "losses": 3,
       "ties": 0
     },
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "New York Giants": {
