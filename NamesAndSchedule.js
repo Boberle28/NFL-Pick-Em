@@ -800,7 +800,7 @@ week8.AddGame(IND, TEN);
 week8.AddGame(PIT, GB);
 week8.AddGame(KC, WAS);
 
-let week9 = new Week(9, "2025-10-31T04:20:00Z", "2025-11-04T03:15:00Z");
+let week9 = new Week(9, "2025-10-31T00:15:00Z", "2025-11-04T10:00:00Z");
 week9.AddGame(MIA, BAL);
 week9.AddGame(CIN, CHI);
 week9.AddGame(DET, MIN);
