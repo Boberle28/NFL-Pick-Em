@@ -990,8 +990,8 @@
         "away": "Baltimore Ravens",
         "homeMoneyline": 320,
         "awayMoneyline": -420,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 6,
+        "awayScore": 28
       },
       "Game 2": {
         "home": "Cincinnati Bengals",
@@ -2261,7 +2261,7 @@
     },
     "Miami Dolphins": {
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "New England Patriots": {
@@ -2360,7 +2360,7 @@
       "ties": 0
     },
     "Baltimore Ravens": {
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0
     },
