@@ -1070,8 +1070,8 @@
         "away": "New Orleans Saints",
         "homeMoneyline": -950,
         "awayMoneyline": 640,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 10
       },
       "Game 12": {
         "home": "Buffalo Bills",
@@ -2276,7 +2276,7 @@
     },
     "New Orleans Saints": {
       "wins": 1,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "Arizona Cardinals": {
@@ -2345,7 +2345,7 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0
     },
