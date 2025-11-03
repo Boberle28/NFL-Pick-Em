@@ -1086,8 +1086,8 @@
         "away": "Seattle Seahawks",
         "homeMoneyline": 148,
         "awayMoneyline": -176,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 14,
+        "awayScore": 38
       },
       "Game 14": {
         "home": "Dallas Cowboys",
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "New York Giants": {
@@ -2325,7 +2325,7 @@
       "ties": 0
     },
     "Seattle Seahawks": {
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0
     },
