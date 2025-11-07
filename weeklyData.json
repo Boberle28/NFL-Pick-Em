@@ -1104,8 +1104,8 @@
         "away": "Las Vegas Raiders",
         "homeMoneyline": -500,
         "awayMoneyline": 385,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 7
       },
       "Game 2": {
         "home": "Indianapolis Colts",
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "New Orleans Saints": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 7,
+      "wins": 8,
       "losses": 2,
       "ties": 0
     },
