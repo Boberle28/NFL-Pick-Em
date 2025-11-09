@@ -1112,8 +1112,8 @@
         "away": "Atlanta Falcons",
         "homeMoneyline": -270,
         "awayMoneyline": 220,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 25
       },
       "Game 3": {
         "home": "Chicago Bears",
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2255,7 +2255,7 @@
       "ties": 0
     },
     "Indianapolis Colts": {
-      "wins": 7,
+      "wins": 8,
       "losses": 2,
       "ties": 0
     },
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 2,
-      "losses": 7,
+      "losses": 6,
       "ties": 0
     },
     "New Orleans Saints": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 8,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
