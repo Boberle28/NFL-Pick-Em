@@ -1168,8 +1168,8 @@
         "away": "Jacksonville Jaguars",
         "homeMoneyline": -118,
         "awayMoneyline": 100,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 36,
+        "awayScore": 29
       },
       "Game 10": {
         "home": "Seattle Seahawks",
@@ -2301,7 +2301,7 @@
     },
     "New York Giants": {
       "wins": 2,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "Jacksonville Jaguars": {
@@ -2360,18 +2360,18 @@
       "ties": 0
     },
     "Baltimore Ravens": {
-      "wins": 3,
+      "wins": 4,
       "losses": 5,
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 5,
+      "wins": 6,
       "losses": 3,
       "ties": 0
     },
     "Minnesota Vikings": {
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     }
   }
