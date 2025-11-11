@@ -1266,8 +1266,8 @@
         "away": "Green Bay Packers",
         "homeMoneyline": 360,
         "awayMoneyline": -460,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 7,
+        "awayScore": 10
       },
       "Game 8": {
         "home": "Pittsburgh Steelers",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 6,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
@@ -2336,7 +2336,7 @@
     },
     "Green Bay Packers": {
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 1
     },
     "Detroit Lions": {
