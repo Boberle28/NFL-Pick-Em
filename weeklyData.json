@@ -1266,8 +1266,8 @@
         "away": "Green Bay Packers",
         "homeMoneyline": 360,
         "awayMoneyline": -460,
-        "homeScore": 0,
-        "awayScore": 0
+        "homeScore": -1,
+        "awayScore": -1
       },
       "Game 8": {
         "home": "Pittsburgh Steelers",
