@@ -1242,8 +1242,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -260,
         "awayMoneyline": 215,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 44,
+        "awayScore": 32
       },
       "Game 5": {
         "home": "Tennessee Titans",
@@ -2241,7 +2241,7 @@
     },
     "Tampa Bay Buccaneers": {
       "wins": 6,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Cleveland Browns": {
@@ -2251,7 +2251,7 @@
     },
     "Cincinnati Bengals": {
       "wins": 3,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Indianapolis Colts": {
@@ -2290,7 +2290,7 @@
       "ties": 0
     },
     "Pittsburgh Steelers": {
-      "wins": 5,
+      "wins": 6,
       "losses": 4,
       "ties": 0
     },
@@ -2355,7 +2355,7 @@
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 6,
+      "wins": 7,
       "losses": 3,
       "ties": 0
     },

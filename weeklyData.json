@@ -1234,8 +1234,8 @@
         "away": "Carolina Panthers",
         "homeMoneyline": -210,
         "awayMoneyline": 176,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 30
       },
       "Game 4": {
         "home": "Buffalo Bills",
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 3,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2310,7 +2310,7 @@
       "ties": 0
     },
     "Carolina Panthers": {
-      "wins": 5,
+      "wins": 6,
       "losses": 5,
       "ties": 0
     },
