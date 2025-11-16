@@ -1208,8 +1208,8 @@
         "away": "Philadelphia Eagles",
         "homeMoneyline": -136,
         "awayMoneyline": 116,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 7,
+        "awayScore": 10
       }
     },
     "week11": {
@@ -1218,8 +1218,8 @@
         "away": "New York Jets",
         "homeMoneyline": -720,
         "awayMoneyline": 520,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 14
       },
       "Game 2": {
         "home": "Miami Dolphins",
@@ -1266,8 +1266,8 @@
         "away": "Green Bay Packers",
         "homeMoneyline": 360,
         "awayMoneyline": -460,
-        "homeScore": 7,
-        "awayScore": 10
+        "homeScore": -1,
+        "awayScore": -1
       },
       "Game 8": {
         "home": "Pittsburgh Steelers",
@@ -2265,7 +2265,7 @@
       "ties": 0
     },
     "New England Patriots": {
-      "wins": 8,
+      "wins": 9,
       "losses": 2,
       "ties": 0
     },
@@ -2286,7 +2286,7 @@
     },
     "New York Jets": {
       "wins": 2,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "Pittsburgh Steelers": {
