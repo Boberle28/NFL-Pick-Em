@@ -1226,8 +1226,8 @@
         "away": "Washington Commanders",
         "homeMoneyline": -152,
         "awayMoneyline": 128,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 13
       },
       "Game 3": {
         "home": "Atlanta Falcons",
@@ -2260,7 +2260,7 @@
       "ties": 0
     },
     "Miami Dolphins": {
-      "wins": 3,
+      "wins": 4,
       "losses": 7,
       "ties": 0
     },
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 3,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "New York Giants": {
