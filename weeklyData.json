@@ -1274,8 +1274,8 @@
         "away": "Cincinnati Bengals",
         "homeMoneyline": -240,
         "awayMoneyline": 198,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 12
       },
       "Game 9": {
         "home": "Jacksonville Jaguars",
@@ -2301,7 +2301,7 @@
     },
     "New York Giants": {
       "wins": 2,
-      "losses": 8,
+      "losses": 9,
       "ties": 0
     },
     "Jacksonville Jaguars": {
@@ -2321,7 +2321,7 @@
     },
     "Tennessee Titans": {
       "wins": 1,
-      "losses": 8,
+      "losses": 9,
       "ties": 0
     },
     "Seattle Seahawks": {
@@ -2335,7 +2335,7 @@
       "ties": 0
     },
     "Green Bay Packers": {
-      "wins": 5,
+      "wins": 6,
       "losses": 3,
       "ties": 1
     },
@@ -2350,7 +2350,7 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 4,
+      "wins": 5,
       "losses": 5,
       "ties": 0
     },
@@ -2365,13 +2365,13 @@
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 6,
+      "wins": 7,
       "losses": 3,
       "ties": 0
     },
     "Minnesota Vikings": {
       "wins": 4,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     }
   }

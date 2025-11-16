@@ -1250,24 +1250,24 @@
         "away": "Houston Texans",
         "homeMoneyline": 315,
         "awayMoneyline": -400,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 16
       },
       "Game 6": {
         "home": "Minnesota Vikings",
         "away": "Chicago Bears",
         "homeMoneyline": -162,
         "awayMoneyline": 136,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 19
       },
       "Game 7": {
         "home": "New York Giants",
         "away": "Green Bay Packers",
         "homeMoneyline": 360,
         "awayMoneyline": -460,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 27
       },
       "Game 8": {
         "home": "Pittsburgh Steelers",
@@ -1282,8 +1282,8 @@
         "away": "Los Angeles Chargers",
         "homeMoneyline": 126,
         "awayMoneyline": -146,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 35,
+        "awayScore": 6
       },
       "Game 10": {
         "home": "Los Angeles Rams",
@@ -2226,7 +2226,7 @@
     },
     "Los Angeles Chargers": {
       "wins": 7,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Kansas City Chiefs": {
@@ -2305,7 +2305,7 @@
       "ties": 0
     },
     "Jacksonville Jaguars": {
-      "wins": 5,
+      "wins": 6,
       "losses": 4,
       "ties": 0
     },
