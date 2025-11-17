@@ -1314,8 +1314,8 @@
         "away": "Kansas City Chiefs",
         "homeMoneyline": 158,
         "awayMoneyline": -188,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 22,
+        "awayScore": 19
       },
       "Game 14": {
         "home": "Philadelphia Eagles",
@@ -2231,7 +2231,7 @@
     },
     "Kansas City Chiefs": {
       "wins": 5,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Atlanta Falcons": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 8,
+      "wins": 9,
       "losses": 2,
       "ties": 0
     },
