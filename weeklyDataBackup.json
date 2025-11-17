@@ -1338,8 +1338,8 @@
       "Game 1": {
         "home": "Houston Texans",
         "away": "Buffalo Bills",
-        "homeMoneyline": -100,
-        "awayMoneyline": -100,
+        "homeMoneyline": 184,
+        "awayMoneyline": -220,
         "homeScore": -1,
         "awayScore": -1
       },
