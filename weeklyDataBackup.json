@@ -1306,8 +1306,8 @@
         "away": "Baltimore Ravens",
         "homeMoneyline": 350,
         "awayMoneyline": -450,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 23
       },
       "Game 13": {
         "home": "Denver Broncos",
@@ -2246,7 +2246,7 @@
     },
     "Cleveland Browns": {
       "wins": 2,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "Cincinnati Bengals": {
@@ -2360,7 +2360,7 @@
       "ties": 0
     },
     "Baltimore Ravens": {
-      "wins": 4,
+      "wins": 5,
       "losses": 5,
       "ties": 0
     },
