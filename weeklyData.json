@@ -1330,8 +1330,8 @@
         "away": "Dallas Cowboys",
         "homeMoneyline": 164,
         "awayMoneyline": -196,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 33
       }
     },
     "week12": {
@@ -2220,7 +2220,7 @@
       "ties": 0
     },
     "Dallas Cowboys": {
-      "wins": 3,
+      "wins": 4,
       "losses": 5,
       "ties": 1
     },
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 2,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "New Orleans Saints": {
