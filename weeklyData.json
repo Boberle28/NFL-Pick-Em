@@ -1348,8 +1348,8 @@
         "away": "Pittsburgh Steelers",
         "homeMoneyline": -164,
         "awayMoneyline": 138,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 28
       },
       "Game 3": {
         "home": "Cincinnati Bengals",
@@ -1380,8 +1380,8 @@
         "away": "Seattle Seahawks",
         "homeMoneyline": 610,
         "awayMoneyline": -900,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 30
       },
       "Game 7": {
         "home": "Kansas City Chiefs",
@@ -1396,8 +1396,8 @@
         "away": "New York Jets",
         "homeMoneyline": -950,
         "awayMoneyline": 640,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 10
       },
       "Game 9": {
         "home": "Las Vegas Raiders",
@@ -2286,7 +2286,7 @@
     },
     "New York Jets": {
       "wins": 2,
-      "losses": 8,
+      "losses": 9,
       "ties": 0
     },
     "Pittsburgh Steelers": {
@@ -2350,17 +2350,17 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 5,
+      "wins": 6,
       "losses": 5,
       "ties": 0
     },
     "Buffalo Bills": {
       "wins": 7,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Baltimore Ravens": {
-      "wins": 5,
+      "wins": 6,
       "losses": 5,
       "ties": 0
     },

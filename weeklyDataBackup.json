@@ -1372,8 +1372,8 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": -300,
         "awayMoneyline": 245,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 6
       },
       "Game 6": {
         "home": "Tennessee Titans",
@@ -2335,7 +2335,7 @@
       "ties": 0
     },
     "Green Bay Packers": {
-      "wins": 6,
+      "wins": 7,
       "losses": 3,
       "ties": 1
     },
@@ -2350,13 +2350,13 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 6,
+      "wins": 5,
       "losses": 5,
       "ties": 0
     },
     "Buffalo Bills": {
       "wins": 7,
-      "losses": 4,
+      "losses": 3,
       "ties": 0
     },
     "Baltimore Ravens": {
@@ -2371,7 +2371,7 @@
     },
     "Minnesota Vikings": {
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     }
   }
