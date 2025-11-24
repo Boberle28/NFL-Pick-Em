@@ -1436,8 +1436,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -330,
         "awayMoneyline": 265,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 7
       },
       "Game 14": {
         "home": "San Francisco 49ers",
@@ -2241,7 +2241,7 @@
     },
     "Tampa Bay Buccaneers": {
       "wins": 6,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Cleveland Browns": {
@@ -2345,7 +2345,7 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 8,
+      "wins": 9,
       "losses": 2,
       "ties": 0
     },
