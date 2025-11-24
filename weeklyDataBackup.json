@@ -1388,8 +1388,8 @@
         "away": "Indianapolis Colts",
         "homeMoneyline": -184,
         "awayMoneyline": 154,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 20
       },
       "Game 8": {
         "home": "Baltimore Ravens",
@@ -2230,7 +2230,7 @@
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 5,
+      "wins": 6,
       "losses": 5,
       "ties": 0
     },
@@ -2256,7 +2256,7 @@
     },
     "Indianapolis Colts": {
       "wins": 8,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Miami Dolphins": {
