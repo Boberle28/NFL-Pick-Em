@@ -1462,8 +1462,8 @@
         "away": "Kansas City Chiefs",
         "homeMoneyline": 152,
         "awayMoneyline": -180,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 28
       },
       "Game 3": {
         "home": "Baltimore Ravens",
@@ -2220,7 +2220,7 @@
       "ties": 0
     },
     "Dallas Cowboys": {
-      "wins": 5,
+      "wins": 6,
       "losses": 5,
       "ties": 1
     },
@@ -2231,7 +2231,7 @@
     },
     "Kansas City Chiefs": {
       "wins": 6,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Atlanta Falcons": {
