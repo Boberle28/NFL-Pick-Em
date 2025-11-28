@@ -1470,8 +1470,8 @@
         "away": "Cincinnati Bengals",
         "homeMoneyline": -370,
         "awayMoneyline": 295,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 14,
+        "awayScore": 32
       },
       "Game 4": {
         "home": "Philadelphia Eagles",
@@ -2250,7 +2250,7 @@
       "ties": 0
     },
     "Cincinnati Bengals": {
-      "wins": 3,
+      "wins": 4,
       "losses": 8,
       "ties": 0
     },
@@ -2361,7 +2361,7 @@
     },
     "Baltimore Ravens": {
       "wins": 6,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Chicago Bears": {
