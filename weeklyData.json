@@ -1494,8 +1494,8 @@
         "away": "Jacksonville Jaguars",
         "homeMoneyline": 290,
         "awayMoneyline": -360,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 3,
+        "awayScore": 25
       },
       "Game 7": {
         "home": "Indianapolis Colts",
@@ -1510,16 +1510,16 @@
         "away": "New Orleans Saints",
         "homeMoneyline": -290,
         "awayMoneyline": 235,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 17
       },
       "Game 9": {
         "home": "New York Jets",
         "away": "Atlanta Falcons",
         "homeMoneyline": 124,
         "awayMoneyline": -146,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 24
       },
       "Game 10": {
         "home": "Tampa Bay Buccaneers",
