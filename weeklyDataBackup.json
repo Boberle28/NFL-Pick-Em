@@ -1550,16 +1550,16 @@
         "away": "Buffalo Bills",
         "homeMoneyline": 184,
         "awayMoneyline": -220,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 7,
+        "awayScore": 26
       },
       "Game 14": {
         "home": "Los Angeles Chargers",
         "away": "Las Vegas Raiders",
         "homeMoneyline": -590,
         "awayMoneyline": 430,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 14
       },
       "Game 15": {
         "home": "Washington Commanders",
