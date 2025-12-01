@@ -1566,8 +1566,8 @@
         "away": "Denver Broncos",
         "homeMoneyline": 280,
         "awayMoneyline": -350,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 27
       },
       "Game 16": {
         "home": "New England Patriots",
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0
     },
     "New York Giants": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 9,
+      "wins": 10,
       "losses": 2,
       "ties": 0
     },
