@@ -1616,8 +1616,8 @@
         "away": "Washington Commanders",
         "homeMoneyline": 100,
         "awayMoneyline": -118,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 0
       },
       "Game 6": {
         "home": "New York Jets",
@@ -2221,7 +2221,7 @@
     },
     "Dallas Cowboys": {
       "wins": 6,
-      "losses": 6,
+      "losses": 5,
       "ties": 1
     },
     "Los Angeles Chargers": {
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 3,
-      "losses": 9,
+      "losses": 10,
       "ties": 0
     },
     "New York Giants": {
@@ -2340,7 +2340,7 @@
       "ties": 1
     },
     "Detroit Lions": {
-      "wins": 8,
+      "wins": 7,
       "losses": 5,
       "ties": 0
     },
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 4,
+      "wins": 5,
       "losses": 8,
       "ties": 0
     }

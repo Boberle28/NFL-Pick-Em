@@ -1592,8 +1592,8 @@
         "away": "Seattle Seahawks",
         "homeMoneyline": 340,
         "awayMoneyline": -430,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 9,
+        "awayScore": 37
       },
       "Game 3": {
         "home": "Cleveland Browns",
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 4,
-      "losses": 8,
+      "losses": 9,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2325,7 +2325,7 @@
       "ties": 0
     },
     "Seattle Seahawks": {
-      "wins": 9,
+      "wins": 10,
       "losses": 3,
       "ties": 0
     },
