@@ -1680,8 +1680,8 @@
         "away": "Houston Texans",
         "homeMoneyline": -178,
         "awayMoneyline": 150,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 20
       },
       "Game 14": {
         "home": "Los Angeles Chargers",
@@ -2231,7 +2231,7 @@
     },
     "Kansas City Chiefs": {
       "wins": 6,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Atlanta Falcons": {
@@ -2350,7 +2350,7 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 7,
+      "wins": 8,
       "losses": 5,
       "ties": 0
     },
