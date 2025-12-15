@@ -1810,8 +1810,8 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": -295,
         "awayMoneyline": 240,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 34
       },
       "Game 16": {
         "home": "Pittsburgh Steelers",
@@ -2221,7 +2221,7 @@
     },
     "Dallas Cowboys": {
       "wins": 6,
-      "losses": 6,
+      "losses": 7,
       "ties": 1
     },
     "Los Angeles Chargers": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 11,
+      "wins": 12,
       "losses": 2,
       "ties": 0
     },
@@ -2336,7 +2336,7 @@
     },
     "Green Bay Packers": {
       "wins": 9,
-      "losses": 3,
+      "losses": 4,
       "ties": 1
     },
     "Detroit Lions": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 5,
+      "wins": 6,
       "losses": 8,
       "ties": 0
     }
