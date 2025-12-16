@@ -1818,8 +1818,8 @@
         "away": "Miami Dolphins",
         "homeMoneyline": -180,
         "awayMoneyline": 152,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 28,
+        "awayScore": 15
       }
     },
     "week16": {
@@ -2261,7 +2261,7 @@
     },
     "Miami Dolphins": {
       "wins": 6,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "New England Patriots": {
@@ -2290,7 +2290,7 @@
       "ties": 0
     },
     "Pittsburgh Steelers": {
-      "wins": 7,
+      "wins": 8,
       "losses": 6,
       "ties": 0
     },
