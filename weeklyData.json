@@ -1828,8 +1828,8 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": -106,
         "awayMoneyline": -110,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 38,
+        "awayScore": 37
       },
       "Game 2": {
         "home": "Chicago Bears",
@@ -2325,7 +2325,7 @@
       "ties": 0
     },
     "Seattle Seahawks": {
-      "wins": 11,
+      "wins": 12,
       "losses": 3,
       "ties": 0
     },
@@ -2346,7 +2346,7 @@
     },
     "Los Angeles Rams": {
       "wins": 11,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Houston Texans": {
