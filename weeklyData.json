@@ -1844,8 +1844,8 @@
         "away": "Philadelphia Eagles",
         "homeMoneyline": 240,
         "awayMoneyline": -295,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 18,
+        "awayScore": 29
       },
       "Game 4": {
         "home": "Cleveland Browns",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 9,
+      "wins": 10,
       "losses": 5,
       "ties": 0
     },
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 4,
-      "losses": 10,
+      "losses": 11,
       "ties": 0
     },
     "New York Giants": {
