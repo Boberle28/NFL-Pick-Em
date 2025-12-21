@@ -1836,8 +1836,8 @@
         "away": "Green Bay Packers",
         "homeMoneyline": -104,
         "awayMoneyline": -112,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 22,
+        "awayScore": 16
       },
       "Game 3": {
         "home": "Washington Commanders",
@@ -2336,7 +2336,7 @@
     },
     "Green Bay Packers": {
       "wins": 9,
-      "losses": 4,
+      "losses": 5,
       "ties": 1
     },
     "Detroit Lions": {
@@ -2365,7 +2365,7 @@
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 10,
+      "wins": 11,
       "losses": 4,
       "ties": 0
     },
