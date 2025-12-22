@@ -1908,16 +1908,16 @@
         "away": "Jacksonville Jaguars",
         "homeMoneyline": -166,
         "awayMoneyline": 140,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 34
       },
       "Game 12": {
         "home": "Arizona Cardinals",
         "away": "Atlanta Falcons",
         "homeMoneyline": 120,
         "awayMoneyline": -142,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 26
       },
       "Game 13": {
         "home": "Detroit Lions",
@@ -1932,8 +1932,8 @@
         "away": "Las Vegas Raiders",
         "homeMoneyline": -1400,
         "awayMoneyline": 830,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 21
       },
       "Game 15": {
         "home": "Miami Dolphins",
@@ -2235,7 +2235,7 @@
       "ties": 0
     },
     "Atlanta Falcons": {
-      "wins": 5,
+      "wins": 6,
       "losses": 9,
       "ties": 0
     },
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 2,
-      "losses": 12,
+      "losses": 13,
       "ties": 0
     },
     "New Orleans Saints": {
@@ -2281,7 +2281,7 @@
     },
     "Arizona Cardinals": {
       "wins": 3,
-      "losses": 11,
+      "losses": 12,
       "ties": 0
     },
     "New York Jets": {
@@ -2305,7 +2305,7 @@
       "ties": 0
     },
     "Jacksonville Jaguars": {
-      "wins": 10,
+      "wins": 11,
       "losses": 4,
       "ties": 0
     },
@@ -2316,7 +2316,7 @@
     },
     "Denver Broncos": {
       "wins": 12,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Tennessee Titans": {
@@ -2350,7 +2350,7 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 9,
+      "wins": 10,
       "losses": 5,
       "ties": 0
     },
