@@ -1924,8 +1924,8 @@
         "away": "Pittsburgh Steelers",
         "homeMoneyline": -350,
         "awayMoneyline": 280,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 29
       },
       "Game 14": {
         "home": "Houston Texans",
@@ -2290,7 +2290,7 @@
       "ties": 0
     },
     "Pittsburgh Steelers": {
-      "wins": 8,
+      "wins": 9,
       "losses": 6,
       "ties": 0
     },
@@ -2341,7 +2341,7 @@
     },
     "Detroit Lions": {
       "wins": 8,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Los Angeles Rams": {
