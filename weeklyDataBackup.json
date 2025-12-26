@@ -1966,8 +1966,8 @@
         "away": "Detroit Lions",
         "homeMoneyline": 225,
         "awayMoneyline": -275,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 10
       },
       "Game 3": {
         "home": "Kansas City Chiefs",
@@ -2341,7 +2341,7 @@
     },
     "Detroit Lions": {
       "wins": 8,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "Los Angeles Rams": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 7,
+      "wins": 8,
       "losses": 8,
       "ties": 0
     }
