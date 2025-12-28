@@ -1990,8 +1990,8 @@
         "away": "Baltimore Ravens",
         "homeMoneyline": -134,
         "awayMoneyline": 114,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 41
       },
       "Game 6": {
         "home": "Las Vegas Raiders",
@@ -2336,7 +2336,7 @@
     },
     "Green Bay Packers": {
       "wins": 9,
-      "losses": 5,
+      "losses": 6,
       "ties": 1
     },
     "Detroit Lions": {
@@ -2360,7 +2360,7 @@
       "ties": 0
     },
     "Baltimore Ravens": {
-      "wins": 7,
+      "wins": 8,
       "losses": 8,
       "ties": 0
     },
