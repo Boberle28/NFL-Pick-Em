@@ -2006,8 +2006,8 @@
         "away": "Houston Texans",
         "homeMoneyline": -132,
         "awayMoneyline": 112,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 20
       },
       "Game 8": {
         "home": "Carolina Panthers",
@@ -2226,7 +2226,7 @@
     },
     "Los Angeles Chargers": {
       "wins": 11,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Kansas City Chiefs": {
@@ -2350,7 +2350,7 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 10,
+      "wins": 11,
       "losses": 5,
       "ties": 0
     },

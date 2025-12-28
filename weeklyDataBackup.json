@@ -1974,8 +1974,8 @@
         "away": "Denver Broncos",
         "homeMoneyline": 610,
         "awayMoneyline": -900,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 20
       },
       "Game 4": {
         "home": "Cincinnati Bengals",
@@ -2231,7 +2231,7 @@
     },
     "Kansas City Chiefs": {
       "wins": 6,
-      "losses": 9,
+      "losses": 10,
       "ties": 0
     },
     "Atlanta Falcons": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 12,
+      "wins": 13,
       "losses": 3,
       "ties": 0
     },
