@@ -2078,8 +2078,8 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": 390,
         "awayMoneyline": -520,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 24
       }
     },
     "week18": {
@@ -2235,7 +2235,7 @@
       "ties": 0
     },
     "Atlanta Falcons": {
-      "wins": 6,
+      "wins": 7,
       "losses": 9,
       "ties": 0
     },
@@ -2346,7 +2346,7 @@
     },
     "Los Angeles Rams": {
       "wins": 11,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Houston Texans": {
