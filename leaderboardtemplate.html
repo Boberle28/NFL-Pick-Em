@@ -288,6 +288,7 @@ function render() {
       elem[0].textContent = '$' + String(pot);
 
       const tbody = document.getElementById("rows");
+      let podiumNumber = 1;
 
       Object.values(players).forEach(player => {
         const row = document.createElement("tr");
