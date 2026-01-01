@@ -116,6 +116,15 @@
   <h2 class="total-pot">
     Total Pot: <span class="pot"></span>
   </h2>
+  <h3 class="total-pot" id="1st">
+    1st <span class="winners"></span> <span class="pot"></span>
+  </h3>
+  <h4 class="total-pot" id="2nd">
+    2nd <span class="winners"></span> <span class="pot"></span>
+  </h4>
+  <h5 class="total-pot" id="3rd">
+    3rd <span class="winners"></span> <span class="pot"></span>
+  </h5>
   <table>
     <thead>
       <tr>
@@ -180,7 +189,6 @@
       let elem = document.getElementsByClassName("pot");
       elem[0].textContent = '$' + String(pot);
 
-      let podium = document.querySelector("h2");
       let podiumNumber = 1;
 
       const tbody = document.getElementById("leaderboard-body");
@@ -200,23 +208,23 @@
         
         if(podiumNumber == 1)
         {
-          let p = document.createElement("span");
-          p.innerHTML = `1st ${player.username} $${pot - 150}`;
-          podium.appendChild(p);
+          let pod = document.getElementById("1st");
+          pod.getElementById("winners").textContent = player.username;
+          pod.getElementByClassName("pot").textContent = "$1000";
         }
         else if(podiumNumber == 2)
         {
-          let p = document.createElement("span");
-          p.innerHTML = `1st ${player.username} $100`;
-          podium.appendChild(p);
+          let pod = document.getElementById("2nd");
+          pod.getElementById("winners").textContent = player.username;
+          pod.getElementByClassName("pot").textContent = "$100";
         }
         else if(podiumNumber == 3){
-          let p = document.createElement("span");
-          p.innerHTML = `1st ${player.username} $50`;
-          podium.appendChild(p);
+          let pod = document.getElementById("3rd");
+          pod.getElementById("winners").textContent = player.username;
+          pod.getElementByClassName("pot").textContent = "$50";
         }
 
-        ++podium
+        ++podiumNumber
         tbody.appendChild(row);
       });
     }
