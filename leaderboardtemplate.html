@@ -209,18 +209,18 @@
         if(podiumNumber == 1)
         {
           let pod = document.getElementById("1st");
-          pod.getElementById("winners").textContent = player.username;
+          pod.getElementByClassName("winners").textContent = player.username;
           pod.getElementByClassName("pot").textContent = "$1000";
         }
         else if(podiumNumber == 2)
         {
           let pod = document.getElementById("2nd");
-          pod.getElementById("winners").textContent = player.username;
+          pod.getElementByClassName("winners").textContent = player.username;
           pod.getElementByClassName("pot").textContent = "$100";
         }
         else if(podiumNumber == 3){
           let pod = document.getElementById("3rd");
-          pod.getElementById("winners").textContent = player.username;
+          pod.getElementByClassName("winners").textContent = player.username;
           pod.getElementByClassName("pot").textContent = "$50";
         }
 
