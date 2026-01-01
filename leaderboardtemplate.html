@@ -200,17 +200,20 @@
         
         if(podiumNumber == 1)
         {
-          let p = document.createElement("h3");
+          let p = document.createElement("span");
           p.innerHTML = `1st ${player.username} $${pot - 150}`;
+          podium.appendChild(p);
         }
         else if(podiumNumber == 2)
         {
-          let p = document.createElement("h3");
+          let p = document.createElement("span");
           p.innerHTML = `1st ${player.username} $100`;
+          podium.appendChild(p);
         }
         else if(podiumNumber == 3){
-          let p = document.createElement("h3");
+          let p = document.createElement("span");
           p.innerHTML = `1st ${player.username} $50`;
+          podium.appendChild(p);
         }
 
         ++podium
