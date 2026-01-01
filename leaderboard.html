@@ -116,6 +116,18 @@
   <h2 class="total-pot">
     Total Pot: <span class="pot"></span>
   </h2>
+  <h3 class="total-pot">
+    <span>Current Podium (Not Final)</span>
+  </h3>
+  <h3 class="total-pot" id="1st">
+    1st <span class="winners"></span> <span class="pot"></span>
+  </h3>
+  <h3 class="total-pot" id="2nd">
+    2nd <span class="winners"></span> <span class="pot"></span>
+  </h3>
+  <h3 class="total-pot" id="3rd">
+    3rd <span class="winners"></span> <span class="pot"></span>
+  </h3>
   <a href="picks.html">⬅ Back to Picks</a>
   <table>
     <thead>
@@ -181,6 +193,8 @@
       let elem = document.getElementsByClassName("pot");
       elem[0].textContent = '$' + String(pot);
 
+      let podiumNumber = 1;
+
       const tbody = document.getElementById("leaderboard-body");
       Object.values(players).forEach(player => {
         const row = document.createElement("tr");
@@ -195,6 +209,26 @@
           <td data-label="Win Percentage">${perc}</td>
           <td data-label="Picks Made">${player.picksMade}</td>
         `;
+        
+        if(podiumNumber == 1)
+        {
+          let pod = document.getElementById("1st");
+          pod.getElementsByClassName("winners")[0].textContent = player.username;
+          pod.getElementsByClassName("pot")[0].textContent = "$1000";
+        }
+        else if(podiumNumber == 2)
+        {
+          let pod = document.getElementById("2nd");
+          pod.getElementsByClassName("winners")[0].textContent = player.username;
+          pod.getElementsByClassName("pot")[0].textContent = "$100";
+        }
+        else if(podiumNumber == 3){
+          let pod = document.getElementById("3rd");
+          pod.getElementsByClassName("winners")[0].textContent = player.username;
+          pod.getElementsByClassName("pot")[0].textContent = "$50";
+        }
+
+        ++podiumNumber;
         
         tbody.appendChild(row);
       });
