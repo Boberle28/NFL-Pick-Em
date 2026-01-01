@@ -1,200 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Pigskin Pick'em — Leaderboard</title>
-<style>
-  :root{
-    --bg:#0b0b0f;           /* dark page background */
-    --panel:#141419;        /* card/table background */
-    --ink:#e8e8ea;          /* primary text */
-    --muted:#a6a7ad;        /* secondary text */
-    --line:rgba(255,255,255,.08);
-    --accent:#46a0ff;
-    --row-odd:rgba(255,255,255,.02);
-    --row-even:transparent;
-    --row-hover:rgba(70,160,255,.10);
-    --sticky-shadow: 0 6px 12px rgba(0,0,0,.35);
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pigskin Pick'em Leaderboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background: #000000 !important;
+      text-align: center;
+    }
 
-  html,body{height:100%}
-  body{
-    margin:0;
-    background:#000; /* matches the rest of your site */
-    color:var(--ink);
-    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.35;
-  }
+    h1 {
+      margin-bottom: 1rem;
+      color: #d4d2d2;
+    }
 
-h1 {
-    margin-bottom: 1rem;
-    color: #d4d2d2;
-}
+    .total-pot {
+      margin-bottom: 1rem;
+      color: #d4d2d2;
+    }
 
-.total-pot {
-    margin-bottom: 1rem;
-    color: #d4d2d2;
-}
+    .total-pot .pot{
+      background: linear-gradient(90deg, #05ab37, #077528);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
-.total-pot .pot{
-    background: linear-gradient(90deg, #05ab37, #077528);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
+    a {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #007bff;
+      text-decoration: none;
+    }
 
-a {
-    display: inline;
-    margin-bottom: 1rem;
-    color: #007bff;
-    text-decoration: none;
-}
+    table {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      border-collapse: collapse;
+      background: #121212;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
 
-  .wrap{
-    max-width: 1100px;
-    margin: 24px auto 80px;
-    padding: 0 16px;
-  }
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #000000;
+      color: white;
+    }
 
-  .card{
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 10px 40px rgba(0,0,0,.30);
-  }
+    th {
+      background-color: #333;
+      color: white;
+      font-family: "Saira Condensed", sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+      position: sticky;
+      top: 0;
+    }
 
-  .table-wrap{
-    overflow:auto;
-  }
+    tr:nth-child(even) {
+      background-color: #1f1e1e;
+    }
 
-  table{
-    width:100%;
-    border-collapse:separate;
-    border-spacing:0;
-    font-size:14px;
-  }
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+        background-color: #1f1e1e;
+      }
 
-  thead th{
-    position:sticky; top:0; z-index:2;
-    background:var(--panel);
-    border-bottom:1px solid var(--line);
-    text-align:left;
-    font-weight:600;
-    padding:12px 12px;
-    white-space:nowrap;
-  }
-  thead th.sticky-shadow::after{
-    content:"";
-    position:absolute; left:0; right:0; bottom:-1px; height:1px;
-    box-shadow:var(--sticky-shadow);
-    opacity:.4;
-  }
+      thead {
+        display: none;
+      }
 
-  tbody td{
-    padding:10px 12px;
-    border-bottom:1px solid var(--line);
-    vertical-align:middle;
-  }
+      tr {
+        margin-bottom: 1rem;
+        border: 1px solid #000000;
+        border-radius: 6px;
+        padding: 0.5rem;
+      }
 
-  tbody tr:nth-child(odd){ background:var(--row-odd); }
-  tbody tr:nth-child(even){ background:var(--row-even); }
-  tbody tr:hover{ background:var(--row-hover); }
+      td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+        width: 95%;
+      }
 
-  #board {
-  min-width: 860px; /* adjust as needed */
-}
+      td::before {
+        content: attr(data-label);
+        font-family: "Saira Condensed", sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        color: #737070;
+        margin-bottom: 5px;
+      }
 
-/* Freeze the first column (header + cells) */
-#board thead th:first-child,
-#board tbody td:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 3;                /* keep above other cells */
-  min-width: 80px;     /* was too wide — tighten it up */
-  max-width: 120px;
-  background: var(--panel);  /* same as header/table bg */
-}
-
-/* A tiny divider & depth so it looks natural */
-#board thead th:first-child {
-  border-right: 1px solid var(--line);
-  box-shadow: none;
-}
-#board tbody td:first-child {
-  z-index: 2; /* under header but above other cells */
-  border-right: 1px solid var(--line);
-  box-shadow: none;
-}
-
-.header-meta {
-  text-align: center;
-  margin: 12px 0 16px;
-}
-
-  .rank{
-    width:56px; text-align:right; color:var(--muted);
-    font-variant-numeric: tabular-nums;
-  }
-  .player{
-    display:flex; align-items:center; gap:10px; min-width:220px;
-  }
-  .avatar{
-    width:28px; height:28px; border-radius:50%; overflow:hidden; flex:0 0 auto;
-    background:#222;
-  }
-  .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .player .name{font-weight:600}
-  .player .team{color:var(--muted); font-size:12px}
-
-  .num, .center{
-    text-align:center;
-    font-variant-numeric: tabular-nums;
-  }
-  .right{ text-align:right; font-variant-numeric: tabular-nums; }
-
-  /* mobile: stack some columns */
-  @media (max-width: 720px){
-    .rank{ width:44px; }
-    .hide-sm{ display:none; }
-    .player{ min-width:160px; }
-    thead th, tbody td{ padding:10px 10px; }
-  }
-</style>
+      td.userrow{
+       background-color: #382f2f;
+       border-radius: 6px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <h1>Pigskin Pick'em Leaderboard</h1>
+  <h2 class="total-pot">
+    Total Pot: <span class="pot"></span>
+  </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Wins</th>
+        <th>Points</th>
+        <th>Win Percentage</th>
+        <th>Picks Made</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboard-body">
+      <!-- JS will inject rows here -->
+    </tbody>
+  </table>
 
-    <div class="header-meta">
-        <h1>Pigskin Pick'em Leaderboard</h1>
-        <h2 class="total-pot">Total Pot: <span class="pot"></span></h2>
-        <a class="back-link" href="picks.html">⬅ Back to Picks</a>
-    </div>
-<main class="wrap">
-  <div class="card">
-    
+  <script src ="NamesAndSchedule.js"></script>
 
-    <div class="table-wrap">
-      <table id="board">
-        <thead>
-          <tr>
-            <th>Username</th>
-            <th>Wins</th>
-            <th>Losses</th>
-            <th>Points</th>
-            <th>Win Percentage</th>
-            <th>Picks Made</th>
-          </tr>
-        </thead>
-        <tbody id="rows"></tbody>
-      </table>
-    </div>
-  </div>
-</main>
-<script src ="NamesAndSchedule.js"></script>
-<script type="module">
-
+  <!-- Firebase App (modular) -->
+  <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
@@ -213,69 +153,8 @@ a {
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
     const auth = getAuth(app);
-/* -------------------------------------------
-   Demo data — replace with your real stats
-   Each item can include: avatar (optional)
--------------------------------------------- */
-const DATA = [
-  { name:"Brando",   team:"PHI", wins:72, losses:38, points:128, picksmade:0 },
-  { name:"Chef Len", team:"KC",  wins:70, losses:40, points:121, avatar:"" },
-  { name:"M. Jones", team:"DAL", wins:69, losses:41, points:118, avatar:"" },
-  { name:"A. Smith", team:"GB",  wins:66, losses:44, points:113, avatar:"" },
-  { name:"S. Lee",   team:"BUF", wins:65, losses:45, points:110, avatar:"" },
-];
 
-// compute pct once
-DATA.forEach(r => r.pct = r.wins + r.losses ? (r.wins / (r.wins + r.losses)) : 0);
-
-let state = {
-  sortKey: "points",
-  sortDir: "desc", // 'asc' | 'desc'
-  q: ""
-};
-
-const rowsEl = document.getElementById("rows");
-const board = document.getElementById("board");
-
-function render() {
-  let filtered = DATA.filter(r => {
-    if (!state.q) return true;
-    const q = state.q.toLowerCase();
-    return r.name.toLowerCase().includes(q) || String(r.team).toLowerCase().includes(q);
-  });
-
-  const dir = state.sortDir === "asc" ? 1 : -1;
-  filtered.sort((a,b)=>{
-    const k = state.sortKey;
-    const va = a[k], vb = b[k];
-    if (typeof va === "string" || typeof vb === "string") {
-      return va.toString().localeCompare(vb.toString(), undefined, {numeric:true}) * dir;
-    }
-    return (va - vb) * dir;
-  });
-
-  // rank recalculates after filtering/sorting
-  rowsEl.innerHTML = filtered.map((r, idx) => `
-    <tr>
-      <td>
-        
-      <div class="name">${r.name}</div>
-          
-      </td>
-      <td class="hide-sm">${r.team}</td>
-      <td class="center">${r.wins}</td>
-      <td class="center hide-sm">${r.losses}</td>
-      <td class="center">${(r.pct).toFixed(3)}</td>
-      <td class="right">${r.points}</td>
-    </tr>
-  `).join("");
-
-  // update sort header styles
-  document.querySelectorAll("th.sortable").forEach(th=>{
-    th.classList.toggle("active", th.dataset.key === state.sortKey);
-    th.classList.toggle("asc", th.dataset.key === state.sortKey && state.sortDir==="asc");
-  });
-}
+    const logged_username = localStorage.getItem("username");
 
     async function asyncStuff(){
         const predata = await fetch("preseason.json").then(res => res.json());
@@ -301,7 +180,10 @@ function render() {
       let elem = document.getElementsByClassName("pot");
       elem[0].textContent = '$' + String(pot);
 
-      const tbody = document.getElementById("rows");
+      let podium = document.getElementsByClassName("total-pot");
+      let podiumNumber = 1;
+
+      const tbody = document.getElementById("leaderboard-body");
       Object.values(players).forEach(player => {
         const row = document.createElement("tr");
         const perc = player.winpercent == 0 ? 0 : Number(player.winpercent).toFixed(3).replace(/^0+/, "");
@@ -311,32 +193,44 @@ function render() {
             <a href="userstatstemplate.html?user=${player.username}">${player.username}</a>
           </td>
           <td data-label="Wins">${player.wins}</td>
-          <td data-label="Losses">${player.losses}</td>
           <td data-label="Points">${points}</td>
           <td data-label="Win Percentage">${perc}</td>
           <td data-label="Picks Made">${player.picksMade}</td>
         `;
         
+        if(podiumNumber == 1)
+        {
+          let p = document.createElement("h3");
+          p.innerHTML = `1st ${player.username} $${pot - 150}`;
+          document.appendChild(p);
+        }
+        else if(podiumNumber == 2)
+        {
+          let p = document.createElement("h3");
+          p.innerHTML = `1st ${player.username} $100`;
+          document.appendChild(p);
+        }
+        else if(podiumNumber == 3){
+          let p = document.createElement("h3");
+          p.innerHTML = `1st ${player.username} $50`;
+          document.appendChild(p);
+        }
+
+        ++podium
         tbody.appendChild(row);
       });
     }
 
-
-window.addEventListener("DOMContentLoaded", () => {
-    onAuthStateChanged(auth, (user) => {
+    window.addEventListener("DOMContentLoaded", () => {
+      onAuthStateChanged(auth, (user) => {
         if (user) {
           buildLeaderboard(); // safe to access Firestore now
         } else {
           window.location.href = "index.html"; // redirect if not logged in
         }
+      });
     });
-});
 
-/* -------------------------------------------
-   Hooking up to your real data later:
-   - Replace DATA with results from Firestore or your JSON.
-   - Be sure to recompute r.pct after setting wins/losses.
--------------------------------------------- */
-</script>
+  </script>
 </body>
 </html>
