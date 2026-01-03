@@ -953,7 +953,7 @@ week17.AddGame(BUF, PHI);
 week17.AddGame(SF, CHI);
 week17.AddGame(ATL, LAR);
 
-let week18 = new Week(18, "2026-01-03T21:45:00Z", "2026-01-05T04:20:00Z");
+let week18 = new Week(18, "2026-01-03T21:30:00Z", "2026-01-05T04:20:00Z");
 week18.AddGame(ATL, NO);
 week18.AddGame(BUF, NYJ);
 week18.AddGame(CHI, DET);
