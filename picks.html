@@ -593,7 +593,14 @@
 
         const betOpening = new Date(currentWeek.endDate);
         const displayDate = formatDisplayDate(betOpening);
-        bettingDateOpenClose.textContent = `Betting for Week ${nextWeek} Opens On ${displayDate}`;
+        if(WEEK == 18) // final week
+        {
+          bettingDateOpenClose.textContent = "Final Week";
+        }
+        else
+        {
+          bettingDateOpenClose.textContent = `Betting for Week ${nextWeek} Opens On ${displayDate}`;
+        }
 
         renderWeek(currentWeek);
 
