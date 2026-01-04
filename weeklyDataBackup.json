@@ -2184,8 +2184,8 @@
         "away": "Seattle Seahawks",
         "homeMoneyline": -110,
         "awayMoneyline": -106,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 3,
+        "awayScore": 13
       },
       "Game 14": {
         "home": "Tampa Bay Buccaneers",
@@ -2325,13 +2325,13 @@
       "ties": 0
     },
     "Seattle Seahawks": {
-      "wins": 13,
+      "wins": 14,
       "losses": 3,
       "ties": 0
     },
     "San Francisco 49ers": {
       "wins": 12,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Green Bay Packers": {
