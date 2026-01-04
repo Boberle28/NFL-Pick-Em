@@ -2144,8 +2144,8 @@
         "away": "Green Bay Packers",
         "homeMoneyline": -270,
         "awayMoneyline": 220,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 3
       },
       "Game 9": {
         "home": "New England Patriots",
@@ -2336,7 +2336,7 @@
     },
     "Green Bay Packers": {
       "wins": 9,
-      "losses": 6,
+      "losses": 7,
       "ties": 1
     },
     "Detroit Lions": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 8,
+      "wins": 9,
       "losses": 8,
       "ties": 0
     }
