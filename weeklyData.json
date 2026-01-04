@@ -2088,8 +2088,8 @@
         "away": "New Orleans Saints",
         "homeMoneyline": -146,
         "awayMoneyline": 124,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 17
       },
       "Game 2": {
         "home": "Buffalo Bills",
@@ -2112,8 +2112,8 @@
         "away": "Cleveland Browns",
         "homeMoneyline": -390,
         "awayMoneyline": 310,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 18,
+        "awayScore": 20
       },
       "Game 5": {
         "home": "Denver Broncos",
@@ -2160,8 +2160,8 @@
         "away": "Dallas Cowboys",
         "homeMoneyline": 235,
         "awayMoneyline": -290,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 17
       },
       "Game 11": {
         "home": "Philadelphia Eagles",
@@ -2208,8 +2208,8 @@
         "away": "Indianapolis Colts",
         "homeMoneyline": -650,
         "awayMoneyline": 480,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 38,
+        "awayScore": 30
       }
     }
   },
@@ -2221,7 +2221,7 @@
     },
     "Dallas Cowboys": {
       "wins": 7,
-      "losses": 8,
+      "losses": 9,
       "ties": 1
     },
     "Los Angeles Chargers": {
@@ -2235,7 +2235,7 @@
       "ties": 0
     },
     "Atlanta Falcons": {
-      "wins": 7,
+      "wins": 8,
       "losses": 9,
       "ties": 0
     },
@@ -2245,13 +2245,13 @@
       "ties": 0
     },
     "Cleveland Browns": {
-      "wins": 4,
+      "wins": 5,
       "losses": 12,
       "ties": 0
     },
     "Cincinnati Bengals": {
       "wins": 6,
-      "losses": 10,
+      "losses": 11,
       "ties": 0
     },
     "Indianapolis Colts": {
@@ -2276,7 +2276,7 @@
     },
     "New Orleans Saints": {
       "wins": 6,
-      "losses": 10,
+      "losses": 11,
       "ties": 0
     },
     "Arizona Cardinals": {
@@ -2300,7 +2300,7 @@
       "ties": 0
     },
     "New York Giants": {
-      "wins": 3,
+      "wins": 4,
       "losses": 13,
       "ties": 0
     },
