@@ -2192,8 +2192,8 @@
         "away": "Carolina Panthers",
         "homeMoneyline": -156,
         "awayMoneyline": 132,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 14
       },
       "Game 15": {
         "home": "Jacksonville Jaguars",
@@ -2240,7 +2240,7 @@
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
-      "wins": 7,
+      "wins": 8,
       "losses": 9,
       "ties": 0
     },
@@ -2311,7 +2311,7 @@
     },
     "Carolina Panthers": {
       "wins": 8,
-      "losses": 8,
+      "losses": 9,
       "ties": 0
     },
     "Denver Broncos": {
