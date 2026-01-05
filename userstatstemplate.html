@@ -407,8 +407,10 @@
                 let bettingTarget = isBettingWindowOpen(now);
                 if(currentWeek)
                     WEEK = `week${currentWeek.week}`;
-                else
+                else if(bettingTarget)
                     WEEK = `week${bettingTarget.week}`;
+                else
+                    WEEK = 18;
 
                 for (let i = 0; i < allWeeks.length; i++) {
                     const week = i + 1;
