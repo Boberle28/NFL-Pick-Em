@@ -2120,16 +2120,16 @@
         "away": "Los Angeles Chargers",
         "homeMoneyline": -400,
         "awayMoneyline": 315,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 3
       },
       "Game 6": {
         "home": "Las Vegas Raiders",
         "away": "Kansas City Chiefs",
         "homeMoneyline": 245,
         "awayMoneyline": -300,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 14,
+        "awayScore": 12
       },
       "Game 7": {
         "home": "Los Angeles Rams",
@@ -2168,16 +2168,16 @@
         "away": "Washington Commanders",
         "homeMoneyline": -450,
         "awayMoneyline": 350,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 24
       },
       "Game 12": {
         "home": "Pittsburgh Steelers",
         "away": "Baltimore Ravens",
         "homeMoneyline": 144,
         "awayMoneyline": -172,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 24
       },
       "Game 13": {
         "home": "San Francisco 49ers",
@@ -2216,7 +2216,7 @@
   "teams": {
     "Philadelphia Eagles": {
       "wins": 11,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Dallas Cowboys": {
@@ -2231,7 +2231,7 @@
     },
     "Kansas City Chiefs": {
       "wins": 6,
-      "losses": 10,
+      "losses": 11,
       "ties": 0
     },
     "Atlanta Falcons": {
@@ -2270,7 +2270,7 @@
       "ties": 0
     },
     "Las Vegas Raiders": {
-      "wins": 2,
+      "wins": 3,
       "losses": 14,
       "ties": 0
     },
@@ -2295,7 +2295,7 @@
       "ties": 0
     },
     "Washington Commanders": {
-      "wins": 4,
+      "wins": 5,
       "losses": 12,
       "ties": 0
     },
