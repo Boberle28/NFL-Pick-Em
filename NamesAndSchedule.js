@@ -106,6 +106,7 @@ class Pair{
         this.gameName = gameName;
 
         this.homeFavorite = true;
+        this.startTime = new Date.now();
     }
 
     SetGameName(gameName){
