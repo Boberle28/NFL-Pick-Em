@@ -1128,8 +1128,9 @@ week18.AddGame(HOU, IND);
 
           const weekNumber = parseInt(weekNumberMatch[0]);
           
-          const regulareSeasonStart = Date.now() >= new Date("2025-09-04T19:20:00");
-          const week = regulareSeasonStart ? season.GetWeek(weekNumber - 1) : season.GetPreseasonWeek(weekNumber - 1);
+          const regulareSeasonStart = Date.now() >= new Date("2026-09-09T19:20:00");
+          //const week = regulareSeasonStart ? season.GetWeek(weekNumber - 1) : season.GetPreseasonWeek(weekNumber - 1);
+          const week = season.GetWeek(weekNumber - 1);
           
           if(week !== undefined){
             const result = week.GetWinners(weekData.picks);
