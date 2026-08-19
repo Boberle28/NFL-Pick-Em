@@ -287,12 +287,13 @@ class Pair{
 
   class Week
   {
-    constructor (week, startDateStr, endDateStr, regular = true){
+    constructor (week, startDateStr, endDateStr, date = Date(), regular = true){
         this.week = week;
         this.games = [];
         this.startDate = new Date(startDateStr).getTime();
         this.endDate = new Date(endDateStr).getTime();
         this.regularSeason = regular;
+        this.startDate = new Date(date).getTime();
     }
 
     AddGame(home, away) {
