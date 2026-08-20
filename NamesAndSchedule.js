@@ -1512,7 +1512,7 @@ week18.AddGame(HOU, TEN);
     const allWeeks = [...season.preseasonWeeks, ...season.weeks];
 
     const firstWeek = season.weeks[0];
-    const lastWeek = season[season.length - 1];
+    const lastWeek = season[season.length - 1].weeks;
 
     if (now < firstWeek.startDate) {
       return firstWeek;
