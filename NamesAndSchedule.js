@@ -1494,7 +1494,10 @@ week18.AddGame(HOU, TEN);
 
     const allWeeks = [...season.preseasonWeeks, ...season.weeks];
 
-    for (const week of allWeeks) {
+    if(season.weeks[0].startDate > now)
+      return season.weeks[0];
+
+    for (const week of season.weeks) {
       if (now >= week.startDate && now <= week.endDate) {
         return week;  // Found the current week
       }
