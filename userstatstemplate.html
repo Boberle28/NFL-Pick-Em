@@ -243,6 +243,7 @@
             const username = params.get("user");
 
             let WEEK = "week";
+            var userCheck;
 
             async function asyncStuff(){
                 document.getElementById("stats-name").innerText = `Stats for ${username}`;
@@ -461,6 +462,7 @@
                 onAuthStateChanged(auth, (user) => {
                     if (user) {
                         buildPlayerStats(); // safe to access Firestore now
+                        userCheck = user;
                     } else {
                         window.location.href = "index.html"; // redirect if not logged in
                     }
