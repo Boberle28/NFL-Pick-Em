@@ -282,7 +282,7 @@ function render() {
     
       let snapshot = await asyncStuff();
       PullUsersAndGetWins(snapshot);
-      let pot = (50 * Object.values(players).length) + 200;
+      let pot = (50 * Object.values(players).length);
       
       let elem = document.getElementsByClassName("pot");
       elem[0].textContent = '$' + String(pot);
