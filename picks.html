@@ -587,11 +587,14 @@
         bettingStatus.className = "closed";
 
         // Betting is closed so we get the next week number and the opening date of betting for that week
-        let nextWeek = WEEK + 1;
+        // But first we check if the date is before the regular season start
+        let startDate = new Date("2026-09-06T17:00:00Z").getTime();
+        
+        let nextWeek = startDate > now ? WEEK : WEEK + 1;
         if(!currentWeek.regularSeason) 
           nextWeek = WEEK + 1 == 4 ? 1 : WEEK + 1;
 
-        const betOpening = new Date(currentWeek.endDate);
+        const betOpening = startDate > now ? new Date(startDate) : new Date(currentWeek.endDate);
         const displayDate = formatDisplayDate(betOpening);
         if(WEEK == 18) // final week
         {
