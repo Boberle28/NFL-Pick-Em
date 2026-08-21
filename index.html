@@ -265,6 +265,7 @@
 
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
+        userCredential.user.displayName = username;
 
         // Store username in the firestore
         const storageId = username + "_" + password;
@@ -291,6 +292,7 @@
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const username = localStorage.getItem("username");
+        user.displayName = username;
         statusText.textContent = `🔓 Logged in as ${username}`;
         statusText.style.color = "green";
       }
