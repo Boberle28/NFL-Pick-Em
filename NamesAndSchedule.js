@@ -257,6 +257,9 @@ class Pair{
     }
 
     IsGameBothTeams(home, away){
+      console.log("In IsGameBothTeams!!!!!!!!!!!!!!!!!");
+      console.log(this.home, home);
+      console.log(this.away, away);
       return this.home.IsTeam(home) && this.away.IsTeam(away);
     }
 
