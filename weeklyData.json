@@ -374,8 +374,8 @@
         "awayScore": -1
       },
       "Game 15": {
-        "home": " Denver Broncos",
-        "away": " Los Angeles Rams",
+        "home": "Denver Broncos",
+        "away": "Los Angeles Rams",
         "homeMoneyline": 1.00,
         "awayMoneyline": 1.00,
         "homeScore": -1,
@@ -480,8 +480,8 @@
         "awayScore": -1
       },
       "Game 12": {
-        "home": " Las Vegas Raiders",
-        "away": " Kansas City Chiefs",
+        "home": "Las Vegas Raiders",
+        "away": "Kansas City Chiefs",
         "homeMoneyline": 1.00,
         "awayMoneyline": 1.00,
         "homeScore": -1,
@@ -1254,8 +1254,8 @@
         "awayScore": -1
       },
       "Game 5": {
-        "home": " Detroit Lions",
-        "away": " Tampa Bay Buccaneers",
+        "home": "Detroit Lions",
+        "away": "Tampa Bay Buccaneers",
         "homeMoneyline": 1.00,
         "awayMoneyline": 1.00,
         "homeScore": -1,
