@@ -1434,7 +1434,7 @@ week18.AddGame(HOU, TEN);
       fillWeekStats();
 
       // Loop through each week's picks
-      Object.keys(data).forEach(weekKey => {
+      Object.keys(data).filter(key => /^week\d+$/.test(key)).forEach(weekKey => {
         if (weekKey === "username") return;
 
         const weekData = data[weekKey];
