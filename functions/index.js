@@ -8,7 +8,7 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
-const {setGlobalOptions} = require("firebase-functions");
+const {setGlobalOptions} = require("firebase-functions/v2");
 const {onSchedule} = require("firebase-functions/v2/scheduler");
 const {getMessaging} = require("firebase-admin/messaging");
 
@@ -41,7 +41,7 @@ setGlobalOptions({maxInstances: 10});
 
 
 const lockTimes = {
-  week1: "2026-08-23T21:20:00Z",
+  week1: "2026-08-23T22:30:00Z",
   week2: "2026-09-18T00:15:00Z",
   week3: "2026-09-25T00:15:00Z",
   week4: "2026-10-02T00:15:00Z",
@@ -94,7 +94,7 @@ exports.pickReminder = onSchedule(
       const lockTime = new Date(lockTimes[currentWeek]).getTime();
       const minutesUntilLock = (lockTime - now) / (1000 * 60);
 
-      if (minutesUntilLock <= 45 || minutesUntilLock > 60) {
+      if (minutesUntilLock <= 0 || minutesUntilLock > 60) {
         return;
       }
 
