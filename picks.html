@@ -757,8 +757,13 @@
 
     async function NotificationButton(){
 
-      if(username !== "Brando")
-       return;
+      if(username !== "Brando"){
+        console.log("Username is not Brando!");
+        console.log(username);
+        return;
+      }
+       
+      console.log("Username is Brando!!!!!!!!!!!!!!!!!!!!!!!!!!");
         const reminderButton = document.getElementById("notificationToggle");
         const spanText = document.getElementById("reminderNotification");
         const reminderContainer = document.getElementById("nfs");
@@ -811,7 +816,7 @@
               );
 
               const registration = await navigator.serviceWorker.ready;
-              
+
               const token = await getToken(messaging, {
                 vapidKey: "BJpdyPbTXkCicyrdHTLM7Dx7We6-6EnIdiL-6Im-jsRoANhR0xCp1gaHB0FjDATcL0UYl460DMsiEFgu6P1B3ag",
                 serviceWorkerRegistration: registration
