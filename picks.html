@@ -357,7 +357,7 @@
     <div class="notification-setting" id="nfs">
         <span id="reminderNotification">Turn On Reminders</span>
 
-        <label class="switch">
+        <label class="switch" id="switchId">
             <input type="checkbox" id="notificationToggle">
              <span class="slider"></span>
         </label>
@@ -783,6 +783,7 @@
               reminderContainer.style.display = "flex";
               spanText.textContent = "Add to Home Screen to enable weekly reminders";
               reminderButton.style.display = "none";
+              document.getElementById("switchId").style.display = "none";
           } else {
             reminderContainer.style.display = "none";
           }
