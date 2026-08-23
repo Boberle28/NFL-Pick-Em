@@ -354,7 +354,7 @@
   <div class="body-container">
 
     <div class="parent">
-    <div class="notification-setting">
+    <div class="notification-setting" id="nfs">
         <span id="reminderNotification">Turn On Reminders</span>
 
         <label class="switch">
@@ -761,7 +761,7 @@
        return;
         const reminderButton = document.getElementById("notificationToggle");
         const spanText = document.getElementById("reminderNotification");
-        const reminderContainer = document.getElementsByClassName("notification-setting");
+        const reminderContainer = document.getElementById("nfs");
 
         if (!("Notification" in window)) {
           reminderContainer.style.display = "none";
