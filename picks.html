@@ -769,6 +769,24 @@
         const reminderContainer = document.getElementById("nfs");
 
         if (!("Notification" in window)) {
+          const isIOS =
+          /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+          (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+          const isStandalone =
+              window.matchMedia("(display-mode: standalone)").matches ||
+              window.navigator.standalone === true;
+
+          if (isIOS && !isStandalone) {
+              // They're on iPhone/iPad but haven't launched
+              // the installed Home Screen app
+              reminderContainer.style.display = "flex";
+              spanText.textContent = "Add to Home Screen for weekly remin";
+          } else {
+            reminderContainer.style.display = "none";
+          }
+
+          return;
           reminderContainer.style.display = "none";
           console.log("Notification in window is false!!!");
         }
