@@ -767,6 +767,7 @@
           reminderContainer.style.display = "none";
         }
         else{
+          console.log(userCred);
           reminderContainer.style.display = "block";
           const userRef = doc(db, "picks", userCred.id);
           const userSnap = await getDoc(userRef);
