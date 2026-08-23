@@ -105,11 +105,11 @@ exports.pickReminder = onSchedule(
             const data = doc.data();
             
             // User doesn't have notifications enabled
-            if (!data.notifications?.enabled)
+            if (!data.notifications || !data.notifications.enabled)
                 continue;
 
             // User doesn't have a notification token
-            if (!data.notifications?.token)
+            if (!data.notifications || !data.notifications.token)
                 continue;
 
             // User already submitted this week's picks
