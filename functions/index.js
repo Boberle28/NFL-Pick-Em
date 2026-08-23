@@ -41,7 +41,7 @@ setGlobalOptions({maxInstances: 10});
 
 
 const lockTimes = {
-  week1: "2026-08-23T22:30:00Z",
+  week1: "2026-09-10T00:20:00Z",
   week2: "2026-09-18T00:15:00Z",
   week3: "2026-09-25T00:15:00Z",
   week4: "2026-10-02T00:15:00Z",
@@ -115,6 +115,9 @@ exports.pickReminder = onSchedule(
           continue;
         }
 
+        if(data.notifications.lastReminderWeek && currentWeek === data.notifications.lastReminderWeek)
+            continue;
+
         // User already submitted this week's picks
         if (data[currentWeek]) {
           continue;
@@ -141,6 +144,10 @@ exports.pickReminder = onSchedule(
         } catch (error) {
           console.error(`Failed to notify ${doc.id}:`, error);
         }
+
+        await doc.ref.update({
+         "notifications.lastReminderWeek": currentWeek
+        });
       }
     },
 );
