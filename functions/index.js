@@ -115,8 +115,11 @@ exports.pickReminder = onSchedule(
           continue;
         }
 
-        if (data.notifications.lastReminderWeek && currentWeek === data.notifications.lastReminderWeek) {
-          continue;
+        if(data.notifications.lastReminderWeek)
+        {
+            if(currentWeek === data.notifications.lastReminderWeek){
+                continue;
+            }
         }
 
         // User already submitted this week's picks
@@ -147,7 +150,7 @@ exports.pickReminder = onSchedule(
         }
 
         await doc.ref.update({
-          "notifications.lastReminderWeek": currentWeek,
+         "notifications.lastReminderWeek": currentWeek
         });
       }
     },
