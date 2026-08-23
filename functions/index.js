@@ -1,4 +1,4 @@
-/**
+Ok i corrected it.  /**
  * Import function triggers from their respective submodules:
  *
  * const {onCall} = require("firebase-functions/v2/https");
@@ -8,8 +8,15 @@
  */
 
 const {setGlobalOptions} = require("firebase-functions");
-const {onRequest} = require("firebase-functions/https");
-const logger = require("firebase-functions/logger");
+const {onSchedule} = require("firebase-functions/v2/scheduler");
+const {getMessaging} = require("firebase-admin/messaging");
+
+const {initializeApp} = require("firebase-admin/app");
+const {getFirestore} = require("firebase-admin/firestore");
+
+initializeApp();
+
+const db = getFirestore();
 
 // For cost control, you can set the maximum number of containers that can be
 // running at the same time. This helps mitigate the impact of unexpected
@@ -52,3 +59,83 @@ const lockTimes = {
     week17: "2027-01-01T01:15:00Z",
     week18: "2027-01-10T18:00:00Z"
 };
+
+exports.pickReminder = onSchedule(
+    {
+        schedule: "every 15 minutes",
+        timeZone: "America/Chicago",
+    },
+    async () => {
+
+        // 1. Get current time
+        // 2. Determine current NFL week
+        // 3. Get that week's betting lock time
+        // 4. Check whether lock is 45–60 minutes away
+        // 5. If not, return immediately
+        // 6. If yes, check users who haven't made picks
+        // 7. Send notifications
+
+        const now = Date.now();
+
+        let currentWeek = null;
+        for (const [week, lockString] of Object.entries(lockTimes)) {
+            const lockTime = new Date(lockString).getTime();
+            
+            if (now < lockTime) {
+                currentWeek = week;
+                break;
+            }
+        }
+
+        if(!currentWeek)
+            return;
+
+        const lockTime = new Date(lockTimes[currentWeek]).getTime();
+        const minutesUntilLock = (lockTime - now) / (1000 * 60);
+
+        if (minutesUntilLock <= 45 || minutesUntilLock > 60)
+            return;
+
+        console.log(`Sending reminders for ${currentWeek}`);
+
+        const snapshot = await db.collection("picks").get();
+
+        for (const doc of snapshot.docs) {
+            const data = doc.data();
+            
+            // User doesn't have notifications enabled
+            if (!data.notifications?.enabled)
+                continue;
+
+            // User doesn't have a notification token
+            if (!data.notifications?.token)
+                continue;
+
+            // User already submitted this week's picks
+            if (data[currentWeek])
+                continue;
+
+            console.log(`${doc.id} needs a reminder`);
+
+            const displayWeek = `Week ${currentWeek.replace("week", "")}`;
+
+            // Send notification here
+            const message = {
+            notification: {
+                title: "NFL Pick'Em Reminder",
+                body: `You haven't made your ${displayWeek} picks yet! You have less than an hour left!`,
+            },
+                token: data.notifications.token,
+            };
+
+            try {
+                await getMessaging().send(message);
+                console.log(`Reminder sent to ${doc.id}`);
+            }
+            catch (error) {
+                console.error(`Failed to notify ${doc.id}:`, error);
+            }
+        }
+        
+    }
+);
