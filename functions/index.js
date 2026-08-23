@@ -41,7 +41,7 @@ setGlobalOptions({maxInstances: 10});
 
 
 const lockTimes = {
-  week1: "2026-09-10T00:20:00Z",
+  week1: "2026-08-23T21:20:00Z",
   week2: "2026-09-18T00:15:00Z",
   week3: "2026-09-25T00:15:00Z",
   week4: "2026-10-02T00:15:00Z",
