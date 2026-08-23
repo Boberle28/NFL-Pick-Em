@@ -769,7 +769,7 @@
         else{
           console.log(userCred);
           reminderContainer.style.display = "block";
-          const userRef = doc(db, "picks", userCred.id);
+          const userRef = doc(db, "picks", userCred.uid);
           const userSnap = await getDoc(userRef);
 
           if(userSnap.exists()){
@@ -783,7 +783,7 @@
           }
 
           reminderButton.addEventListener("click", async () => {
-            const userRef = doc(db, "picks", userCred.id);
+            const userRef = doc(db, "picks", userCred.uid);
             const userSnap = await getDoc(userRef);
 
             const data = userSnap.exists() ? userSnap.data() : {};
