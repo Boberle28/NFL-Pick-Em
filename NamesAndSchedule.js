@@ -88,7 +88,7 @@ class Pair{
 
   class Game
   {
-    constructor(home, away, gameName){
+    constructor(home, away, gameName, startDateStr = ""){
         this.away = away;
         this.home = home;
 
@@ -106,6 +106,7 @@ class Pair{
         this.gameName = gameName;
 
         this.homeFavorite = true;
+        this.startDate = new Date(startDateStr).getTime();
     }
 
     SetGameName(gameName){
@@ -293,18 +294,17 @@ class Pair{
 
   class Week
   {
-    constructor (week, startDateStr, endDateStr, date = Date(), regular = true){
+    constructor (week, startDateStr, endDateStr, regular = true){
         this.week = week;
         this.games = [];
         this.startDate = new Date(startDateStr).getTime();
         this.endDate = new Date(endDateStr).getTime();
         this.regularSeason = regular;
-        this.startDate = new Date(date).getTime();
     }
 
-    AddGame(home, away) {
+    AddGame(home, away, startDateStr = "") {
         let gameNum = `Game ${this.games.length + 1}`;
-        this.games.push(new Game(home, away, gameNum));
+        this.games.push(new Game(home, away, gameNum, startDateStr));
     }
 
     GetWinners(obj){
