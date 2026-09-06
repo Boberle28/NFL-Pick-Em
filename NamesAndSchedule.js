@@ -1500,7 +1500,7 @@ week18.AddGame(HOU, TEN);
 
     //const allWeeks = [...season.preseasonWeeks, ...season.weeks];
 
-    if(season.weeks[0].startDate > now)
+    if(season.weeks[0].startDate <= now)
     {
       console.log("Returning season.weeks[0]!");
       console.log("season.weeks[0].startDate", season.weeks[0].startDate);
