@@ -396,6 +396,7 @@
 
     // Global var used to determine if we are inside a betting window
     let bettingTarget = null;
+    let betLocked = true;
 
     // Global var used to get dates between weeks
     let seasonJson = null;
@@ -683,6 +684,13 @@
       const currentWeek = getCurrentWeek(now);
       bettingTarget = isBettingWindowOpen(now);
 
+      if(currentWeek){
+        betLocked = true;
+      }
+      else if(bettingTarget){
+        betLocked = false;
+      }
+
       const title = document.getElementById("page-title");
       const weekHeading = document.getElementById("current-week-heading");
       const bettingStatus = document.getElementById("betting-status");
@@ -753,6 +761,48 @@
          button.addEventListener('click', () => selectWinner(button));
       });
     }
+
+    async function refreshPageState(){
+      const now = new Date();
+
+      const currentWeek = getCurrentWeek(now);
+      bettingTarget = isBettingWindowOpen(now);
+
+      let tempBetLocked = true;
+      if(currentWeek){
+        tempBetLocked = true;
+      }
+      else if(bettingTarget){
+        tempBetLocked = false;
+      }
+
+      if(tempBetLocked !== betLocked){
+        Init();
+      }
+    }
+
+    // Check every minute while page is running
+    setInterval(() => {
+        if (!document.hidden) {
+            refreshBettingState();
+        }
+    }, 60000);
+
+    // This is the important one for iPhone/PWA
+    document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) {
+            refreshBettingState();
+        }
+    });
+
+    // Also useful when returning to the page
+    window.addEventListener("focus", () => {
+        refreshBettingState();
+    });
+
+    window.addEventListener("pageshow", () => {
+        refreshBettingState();
+    });
 
     async function NotificationButton(){
        
