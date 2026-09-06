@@ -1498,7 +1498,7 @@ week18.AddGame(HOU, TEN);
   function getCurrentWeek(currentDate) {
     const now = new Date(currentDate).getTime();
 
-    //const allWeeks = [...season.preseasonWeeks, ...season.weeks];
+    const allWeeks = [...season.preseasonWeeks, ...season.weeks];
 
     if(season.weeks[0].startDate <= now)
     {
