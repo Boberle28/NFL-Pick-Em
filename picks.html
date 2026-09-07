@@ -791,17 +791,17 @@
     // This is the important one for iPhone/PWA
     document.addEventListener("visibilitychange", () => {
         if (!document.hidden) {
-            refreshBettingState();
+            refreshPageState();
         }
     });
 
     // Also useful when returning to the page
     window.addEventListener("focus", () => {
-        refreshBettingState();
+        refreshPageState();
     });
 
     window.addEventListener("pageshow", () => {
-        refreshBettingState();
+        refreshPageState();
     });
 
     async function NotificationButton(){
