@@ -22,8 +22,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -205,
         "awayMoneyline": 172,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 33
       },
       "Game 4": {
         "home": "Detroit Lions",
@@ -38,16 +38,16 @@
         "away": "New York Jets",
         "homeMoneyline": -130,
         "awayMoneyline": 110,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 23
       },
       "Game 6": {
         "home": "Indianapolis Colts",
         "away": "Baltimore Ravens",
         "homeMoneyline": 150,
         "awayMoneyline": -178,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 41
       },
       "Game 7": {
         "home": "Pittsburgh Steelers",
@@ -78,8 +78,8 @@
         "away": "Buffalo Bills",
         "homeMoneyline": -104,
         "awayMoneyline": -112,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 36
       },
       "Game 11": {
         "home": "Las Vegas Raiders",
