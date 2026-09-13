@@ -2236,17 +2236,17 @@
     },
     "Atlanta Falcons": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Cleveland Browns": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Cincinnati Bengals": {
@@ -2256,7 +2256,7 @@
     },
     "Indianapolis Colts": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Miami Dolphins": {
@@ -2276,7 +2276,7 @@
     },
     "New Orleans Saints": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Arizona Cardinals": {
@@ -2285,12 +2285,12 @@
       "ties": 0
     },
     "New York Jets": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Pittsburgh Steelers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
@@ -2305,13 +2305,13 @@
       "ties": 0
     },
     "Jacksonville Jaguars": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Carolina Panthers": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Denver Broncos": {
@@ -2321,16 +2321,16 @@
     },
     "Tennessee Titans": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Seattle Seahawks": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
@@ -2340,32 +2340,32 @@
       "ties": 0
     },
     "Detroit Lions": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Los Angeles Rams": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Houston Texans": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Baltimore Ravens": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
