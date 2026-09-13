@@ -94,8 +94,8 @@
         "away": "Green Bay Packers",
         "homeMoneyline": -118,
         "awayMoneyline": 100,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 39,
+        "awayScore": 22
       },
       "Game 13": {
         "home": "Philadelphia Eagles",
@@ -2336,7 +2336,7 @@
     },
     "Green Bay Packers": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Detroit Lions": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     }
