@@ -2221,7 +2221,7 @@
     },
     "Dallas Cowboys": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Los Angeles Chargers": {
@@ -2300,7 +2300,7 @@
       "ties": 0
     },
     "New York Giants": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
