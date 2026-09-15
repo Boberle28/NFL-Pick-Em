@@ -86,24 +86,24 @@
         "away": "Miami Dolphins",
         "homeMoneyline": -176,
         "awayMoneyline": 148,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 13
       },
       "Game 12": {
         "home": "Minnesota Vikings",
         "away": "Green Bay Packers",
         "homeMoneyline": -118,
         "awayMoneyline": 100,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 39,
+        "awayScore": 22
       },
       "Game 13": {
         "home": "Philadelphia Eagles",
         "away": "Washington Commanders",
         "homeMoneyline": -230,
         "awayMoneyline": 194,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 22
       },
       "Game 14": {
         "home": "Los Angeles Chargers",
@@ -2261,7 +2261,7 @@
     },
     "Miami Dolphins": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "New England Patriots": {
@@ -2270,7 +2270,7 @@
       "ties": 0
     },
     "Las Vegas Raiders": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     },
@@ -2336,7 +2336,7 @@
     },
     "Green Bay Packers": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Detroit Lions": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
       "ties": 0
     }
