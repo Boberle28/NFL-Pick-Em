@@ -255,6 +255,16 @@
       background-image: linear-gradient(to bottom, #202c38, #101e2b);
     }
 
+    .team-btn.right {
+      border-color: green;
+      color: green;
+    }
+
+    .team-btn.wrong {
+      border-color: red;
+      color: red;
+    }
+
     .team-logo {
       height: 28px;
       width: auto;
@@ -440,6 +450,8 @@
     const auth = getAuth(app);
     const messaging = getMessaging(app);
 
+    let matchedPlayer = null;
+
     function selectWinner(btn) {
       const teamBtns = btn.parentElement.parentElement.querySelectorAll("button");
       teamBtns.forEach(b => b.classList.remove("selected"));
@@ -456,6 +468,118 @@
       requestAnimationFrame(() => t.classList.add("show"));
       clearTimeout(showToast._hideT);
       showToast._hideT = setTimeout(() => t.classList.remove("show"), timeout);
+    }
+
+    async function renderPlayerPicks(weekObj)
+    {
+      const submitBtn = document.getElementById('submitBtn');
+      if(!submitBtn.disabled)
+        submitBtn.disabled = true;
+
+      if(Object.keys(players).length === 0){
+        // Pull users and get wins
+        const picksRef = collection(db, "picks");
+        const snapshot = await getDocs(picksRef);
+
+        PullUsersAndGetWins(snapshot);
+      }
+
+      matchedPlayer = Object.values(players).find(p =>
+                        p.username === username
+                      );
+
+      const weekPicks = matchedPlayer.weekStats[i].weekPicks;
+
+      const container = document.getElementById("matchupsContainer");
+      container.innerHTML = ""; // Clear previous content
+
+      weekObj.games.forEach((game, index) =>{
+        const matchupDiv = document.createElement("div");
+        matchupDiv.classList.add("matchup");
+        matchupDiv.dataset.game = `Game ${index + 1}`;
+
+        const teamsDiv = document.createElement("div");
+        teamsDiv.classList.add("teams");
+
+        function createTeamCard(team, isHome){
+          const wrapper = document.createElement("div");
+          wrapper.classList.add("team-card");
+
+          const label = document.createElement("div");
+          label.classList.add("team-label");
+          label.textContent = isHome ? "Home" : "Away";
+
+          let score = label.textContent == "Home" ? game.homeScore : game.awayScore;
+
+          // If the score is -1 which means the game has not been played yet display it as 0
+          score = score == -1 ? 0 : score;
+
+          label.textContent += "    " + score;
+
+          wrapper.appendChild(label);
+
+          const teamvalue = isHome ? game.homeValue : game.awayValue;
+          
+          const btn = document.createElement("button");
+          btn.classList.add("team-btn");
+
+          if(weekPicks){
+            if(team.name == weekPicks[gameName]){
+                console.log("In pick == team.name!");
+                btn.classList.add("selected");
+
+              if(game.homeScore != -1){           
+                if(game.IsWinner(weekPicks[gameName]))
+                  btn.classList.add("right");
+                else
+                  btn.classList.add("wrong");
+              }
+            }
+          }
+
+          // Add logo
+          const img = document.createElement("img");
+          img.src = `Images/${team.shortName}.png`;
+          img.alt = team.name;
+          img.classList.add("team-logo");
+
+          // Add team name
+          const span = document.createElement("span");
+          span.textContent = team.name;
+          span.classList.add("team-name");
+
+          btn.appendChild(img);   // logo first
+          btn.appendChild(span);  // then text
+
+           wrapper.appendChild(btn);
+
+          const row = document.createElement("div");
+          row.classList.add("row");
+
+          const teamVal = document.createElement("div");
+          teamVal.classList.add("teamvalue")
+          teamVal.textContent = (Number(teamvalue).toFixed(2));
+
+          const record = document.createElement("div");
+          record.classList.add("record");
+          record.textContent = `${team.wins}-${team.losses}${team.ties > 0 ? '-' + team.ties : ''}`;
+
+          row.appendChild(teamVal);
+          row.appendChild(record);
+
+          wrapper.appendChild(row);
+
+          return wrapper;
+        }
+
+        // Home team on the left, Away on the right
+        teamsDiv.appendChild(createTeamCard(game.home, true));
+        teamsDiv.appendChild(createTeamCard(game.away, false));
+
+        matchupDiv.appendChild(teamsDiv);
+        container.appendChild(matchupDiv);
+
+      });
     }
 
     function renderWeek(weekObj) {
@@ -728,6 +852,11 @@
           bettingDateOpenClose.textContent = `Betting for Week ${nextWeek} Opens On ${displayDate}`;
         }
 
+        if(username === "Brando"){
+          renderPlayerPicks(currentWeek);
+          return;
+        }
+        else
         renderWeek(currentWeek);
 
       } else if (bettingTarget) {
@@ -749,12 +878,6 @@
         bettingStatus.textContent = "Betting is Closed";
         bettingStatus.className = "closed";
       }
-
-      // Pull users and get wins
-      const picksRef = collection(db, "picks");
-      const snapshot = await getDocs(picksRef);
-
-      PullUsersAndGetWins(snapshot);
       
       const buttons = document.querySelectorAll('.teams button');
       buttons.forEach(button => {
