@@ -860,12 +860,8 @@
           bettingDateOpenClose.textContent = `Betting for Week ${nextWeek} Opens On ${displayDate}`;
         }
 
-        if(username === "Brando"){
-          renderPlayerPicks(currentWeek);
-          return;
-        }
-        else
-        renderWeek(currentWeek);
+        renderPlayerPicks(currentWeek);
+        return;
 
       } else if (bettingTarget) {
         WEEK = bettingTarget.week;
