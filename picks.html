@@ -489,7 +489,8 @@
                       );
 
       const weekPicks = matchedPlayer.weekStats[WEEK - 1].weekData;
-      console.log(WEEK);
+      console.log(matchedPlayer.weekStats);
+      console.log(WEEK - 1);
       console.log(matchedPlayer);
       console.log(weekPicks);
 
@@ -517,9 +518,11 @@
           // If the score is -1 which means the game has not been played yet display it as 0
           score = score == -1 ? 0 : score;
 
-          label.textContent += "         " + score;
-
           wrapper.appendChild(label);
+          const scoreLabel = document.createElement("div");
+          scoreLabel.classList.add("team-label");
+          label.textContent = score;
+          wrapper.appendChild(scoreLabel);
 
           const teamvalue = isHome ? game.homeValue : game.awayValue;
           
