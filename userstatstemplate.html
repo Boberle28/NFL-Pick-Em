@@ -250,7 +250,7 @@
 
             const auth = getAuth(app);
 
-            let players1 = {};
+            let loggedInPlayer = {};
             const params = new URLSearchParams(window.location.search);
             const username = params.get("user");
 
@@ -405,6 +405,9 @@
 
                 console.log("players");
                 console.log(players);
+
+                loggedInPlayer = players[usernameLoggedIn];
+                console.log("loggedInPlayer", loggedInPlayer);
 
                 let player = null;
                 for (let p of Object.values(players)){
