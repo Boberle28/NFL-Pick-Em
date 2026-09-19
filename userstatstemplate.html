@@ -414,8 +414,11 @@
                     console.log("inside let player of Object.values(players)")
                     if(username == p.username){
                         console.log("username match!!!");
-                        player = p
-                        break;
+                        player = p;
+                    }
+                    if(usernameLoggedIn === p.username)
+                    {
+                        loggedInPlayer = p;
                     }
                 }
                 
