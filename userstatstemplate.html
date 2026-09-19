@@ -473,11 +473,11 @@
             window.addEventListener("DOMContentLoaded", () => {
                 onAuthStateChanged(auth, (user) => {
                     if (user) {
-                        buildPlayerStats(); // safe to access Firestore now
                         userCheck = user;
                         user.displayName = "user";
                         console.log("User stuff__________________________________");
                         console.log(user);
+                        buildPlayerStats(); // safe to access Firestore now
                     } else {
                         window.location.href = "index.html"; // redirect if not logged in
                     }
