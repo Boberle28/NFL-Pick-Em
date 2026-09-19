@@ -403,12 +403,6 @@
                 let snapshot = await asyncStuff();
                 PullUsersAndGetWins(snapshot);
 
-                console.log("players");
-                console.log(players);
-
-                loggedInPlayer = players[usernameLoggedIn];
-                console.log("loggedInPlayer", loggedInPlayer);
-
                 let player = null;
                 for (let p of Object.values(players)){
                     console.log("inside let player of Object.values(players)")
@@ -419,6 +413,7 @@
                     if(usernameLoggedIn === p.username)
                     {
                         loggedInPlayer = p;
+                        console.log("loggedInPlayer", loggedInPlayer);
                     }
                 }
                 
