@@ -450,8 +450,18 @@
                     // Player's picks for this week
                     const weekPicks = player.weekStats[i].weekPicks;
 
-                    // Render all games for this week inside the .games div
-                    renderWeekStats(allWeeks[i], gamesDiv, weekPicks);
+                    if(!currentWeek && bettingTarget && 
+                     usernameLoggedIn !== username && i + 1 === bettingTarget.week
+                     && !loggedInPlayer.weekStats[i].weekPicks){
+                        // We render the current betting week without showing other players picks because the logged
+                        // in player has not made their picks yet
+                        renderWeekStats(allWeeks[i], gamesDiv, null);
+                    }
+                    else{
+                        // Render all games for this week inside the .games div
+                        // No need to worry about others picks we can show them all
+                        renderWeekStats(allWeeks[i], gamesDiv, weekPicks);
+                    }
 
                     // Append the whole section to the main container
                     container.appendChild(weekSection);
