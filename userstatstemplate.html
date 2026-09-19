@@ -254,6 +254,8 @@
             const params = new URLSearchParams(window.location.search);
             const username = params.get("user");
 
+            const usernameLoggedIn = localStorage.getItem("username");
+
             let WEEK = "week";
             var userCheck;
 
@@ -474,7 +476,7 @@
                 onAuthStateChanged(auth, (user) => {
                     if (user) {
                         userCheck = user;
-                        user.displayName = "user";
+                        user.displayName = usernameLoggedIn;
                         console.log("User stuff__________________________________");
                         console.log(user);
                         buildPlayerStats(); // safe to access Firestore now
