@@ -200,8 +200,8 @@
         "away": "Cincinnati Bengals",
         "homeMoneyline": -152,
         "awayMoneyline": 128,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 6,
+        "awayScore": 20
       },
       "Game 10": {
         "home": "Denver Broncos",
@@ -2250,7 +2250,7 @@
       "ties": 0
     },
     "Cincinnati Bengals": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2351,7 +2351,7 @@
     },
     "Houston Texans": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Buffalo Bills": {

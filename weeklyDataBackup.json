@@ -144,8 +144,8 @@
         "away": "Carolina Panthers",
         "homeMoneyline": 100,
         "awayMoneyline": -118,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 3,
+        "awayScore": 34
       },
       "Game 3": {
         "home": "Chicago Bears",
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2310,7 +2310,7 @@
       "ties": 0
     },
     "Carolina Panthers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
