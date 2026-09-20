@@ -144,8 +144,8 @@
         "away": "Carolina Panthers",
         "homeMoneyline": 100,
         "awayMoneyline": -118,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 3,
+        "awayScore": 34
       },
       "Game 3": {
         "home": "Chicago Bears",
@@ -160,8 +160,8 @@
         "away": "Philadelphia Eagles",
         "homeMoneyline": 295,
         "awayMoneyline": -370,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 24
       },
       "Game 5": {
         "home": "New England Patriots",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2265,7 +2265,7 @@
       "ties": 0
     },
     "New England Patriots": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
@@ -2275,7 +2275,7 @@
       "ties": 0
     },
     "New Orleans Saints": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
@@ -2291,7 +2291,7 @@
     },
     "Pittsburgh Steelers": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Washington Commanders": {
@@ -2310,7 +2310,7 @@
       "ties": 0
     },
     "Carolina Panthers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
@@ -2321,7 +2321,7 @@
     },
     "Tennessee Titans": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Seattle Seahawks": {
@@ -2361,16 +2361,16 @@
     },
     "Baltimore Ravens": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Chicago Bears": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     }

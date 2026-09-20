@@ -152,24 +152,24 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": -250,
         "awayMoneyline": 205,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 3,
+        "awayScore": 9
       },
       "Game 4": {
         "home": "Tennessee Titans",
         "away": "Philadelphia Eagles",
         "homeMoneyline": 295,
         "awayMoneyline": -370,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 24
       },
       "Game 5": {
         "home": "New England Patriots",
         "away": "Pittsburgh Steelers",
         "homeMoneyline": -250,
         "awayMoneyline": 205,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 3
       },
       "Game 6": {
         "home": "New York Jets",
@@ -192,8 +192,8 @@
         "away": "New Orleans Saints",
         "homeMoneyline": -450,
         "awayMoneyline": 350,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 24
       },
       "Game 9": {
         "home": "Houston Texans",
@@ -2215,7 +2215,7 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -2265,8 +2265,8 @@
       "ties": 0
     },
     "New England Patriots": {
-      "wins": 0,
-      "losses": 0,
+      "wins": 1,
+      "losses": 1,
       "ties": 0
     },
     "Las Vegas Raiders": {
@@ -2275,7 +2275,7 @@
       "ties": 0
     },
     "New Orleans Saints": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
@@ -2291,7 +2291,7 @@
     },
     "Pittsburgh Steelers": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Washington Commanders": {
@@ -2321,7 +2321,7 @@
     },
     "Tennessee Titans": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Seattle Seahawks": {
@@ -2361,16 +2361,16 @@
     },
     "Baltimore Ravens": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Chicago Bears": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     }
