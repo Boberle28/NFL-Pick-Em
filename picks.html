@@ -869,6 +869,11 @@
         return;
 
       } else if (bettingTarget) {
+
+        const submitBtn = document.getElementById('submitBtn');
+        if(submitBtn.disabled)
+          submitBtn.disabled = false;
+
         WEEK = bettingTarget.week;
         title.textContent = `Pigskin Pick'em - Week ${bettingTarget.week}`;
         weekHeading.textContent = `Pigskin Pick'em - Week ${bettingTarget.week}`;
