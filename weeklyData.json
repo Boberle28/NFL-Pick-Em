@@ -248,8 +248,8 @@
         "away": "Indianapolis Colts",
         "homeMoneyline": -335,
         "awayMoneyline": 270,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 33,
+        "awayScore": 30
       },
       "Game 16": {
         "home": "Los Angeles Rams",
