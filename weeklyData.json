@@ -256,8 +256,8 @@
         "away": "New York Giants",
         "homeMoneyline": -360,
         "awayMoneyline": 290,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 28,
+        "awayScore": 6
       }
     },
     "week3": {
@@ -2301,7 +2301,7 @@
     },
     "New York Giants": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Jacksonville Jaguars": {
@@ -2345,7 +2345,7 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0
     },
