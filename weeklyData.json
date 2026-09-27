@@ -370,8 +370,8 @@
         "away": "Las Vegas Raiders",
         "homeMoneyline": -168,
         "awayMoneyline": 142,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 35
       },
       "Game 15": {
         "home": "Denver Broncos",
@@ -2270,13 +2270,13 @@
       "ties": 0
     },
     "Las Vegas Raiders": {
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0
     },
     "New Orleans Saints": {
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Arizona Cardinals": {
