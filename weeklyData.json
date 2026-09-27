@@ -346,8 +346,8 @@
         "away": "Arizona Cardinals",
         "homeMoneyline": -460,
         "awayMoneyline": 360,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 36,
+        "awayScore": 30
       },
       "Game 12": {
         "home": "Tampa Bay Buccaneers",
@@ -2281,7 +2281,7 @@
     },
     "Arizona Cardinals": {
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "New York Jets": {
@@ -2330,7 +2330,7 @@
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0
     },
