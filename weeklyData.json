@@ -354,8 +354,8 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": 102,
         "awayMoneyline": -120,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 23
       },
       "Game 13": {
         "home": "Dallas Cowboys",
@@ -2241,7 +2241,7 @@
     },
     "Tampa Bay Buccaneers": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Cleveland Browns": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0
     }
