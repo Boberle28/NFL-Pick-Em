@@ -378,8 +378,8 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": 118,
         "awayMoneyline": -138,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 30,
+        "awayScore": 26
       },
       "Game 16": {
         "home": "Chicago Bears",
