@@ -386,8 +386,8 @@
         "away": "Philadelphia Eagles",
         "homeMoneyline": 154,
         "awayMoneyline": -186,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 7
       }
     },
     "week4": {
@@ -2216,7 +2216,7 @@
   "teams": {
     "Philadelphia Eagles": {
       "wins": 2,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Dallas Cowboys": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 1,
+      "wins": 2,
       "losses": 1,
       "ties": 0
     },
@@ -2346,7 +2346,7 @@
     },
     "Los Angeles Rams": {
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Houston Texans": {
@@ -2365,7 +2365,7 @@
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 1,
+      "wins": 2,
       "losses": 1,
       "ties": 0
     },
