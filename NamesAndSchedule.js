@@ -1638,7 +1638,7 @@ week18.AddGame(HOU, TEN);
     const ampm = hours >= 12 ? "pm" : "am";
     hours = hours % 12 || 12; // convert 0 to 12-hour format
 
-  return `${weekday}, ${month} ${day}${ordinal}, at ${hours}:${minutes}${ampm}`;
+  return `${weekday}, ${month} ${day}${ordinal} at ${hours}:${minutes}${ampm}`;
 }
 
   
