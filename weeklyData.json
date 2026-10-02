@@ -396,8 +396,8 @@
         "away": "Pittsburgh Steelers",
         "homeMoneyline": 122,
         "awayMoneyline": -144,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 24
       },
       "Game 2": {
         "home": "Washington Commanders",
