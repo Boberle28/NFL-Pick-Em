@@ -404,8 +404,8 @@
         "away": "Indianapolis Colts",
         "homeMoneyline": 154,
         "awayMoneyline": -184,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 30
       },
       "Game 3": {
         "home": "Buffalo Bills",
@@ -2255,7 +2255,7 @@
       "ties": 0
     },
     "Indianapolis Colts": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "New York Giants": {
