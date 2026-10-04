@@ -444,8 +444,8 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": 113,
         "awayMoneyline": -135,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 24
       },
       "Game 8": {
         "home": "Tampa Bay Buccaneers",
@@ -476,8 +476,8 @@
         "away": "Miami Dolphins",
         "homeMoneyline": -620,
         "awayMoneyline": 460,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 15,
+        "awayScore": 10
       },
       "Game 12": {
         "home": "Las Vegas Raiders",
@@ -2216,11 +2216,11 @@
   "teams": {
     "Philadelphia Eagles": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Dallas Cowboys": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -2251,7 +2251,7 @@
     },
     "Cincinnati Bengals": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Indianapolis Colts": {
@@ -2261,11 +2261,11 @@
     },
     "Miami Dolphins": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "New England Patriots": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -2281,7 +2281,7 @@
     },
     "Arizona Cardinals": {
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "New York Jets": {
@@ -2300,12 +2300,12 @@
       "ties": 0
     },
     "New York Giants": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
     "Jacksonville Jaguars": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
@@ -2321,7 +2321,7 @@
     },
     "Tennessee Titans": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Seattle Seahawks": {
@@ -2345,22 +2345,22 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
     "Houston Texans": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Buffalo Bills": {
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "Baltimore Ravens": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 3,
+      "wins": 4,
       "losses": 0,
       "ties": 0
     }
