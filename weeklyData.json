@@ -476,8 +476,8 @@
         "away": "Miami Dolphins",
         "homeMoneyline": -620,
         "awayMoneyline": 460,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 15,
+        "awayScore": 10
       },
       "Game 12": {
         "home": "Las Vegas Raiders",
@@ -2261,7 +2261,7 @@
     },
     "Miami Dolphins": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "New England Patriots": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 3,
+      "wins": 4,
       "losses": 0,
       "ties": 0
     }
