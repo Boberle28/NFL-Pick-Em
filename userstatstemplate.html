@@ -417,7 +417,8 @@
                     }
                 }
                 
-                const container = document.getElementById("user-stats-container");
+                let container = document.getElementById("user-stats-container");
+                container.innerHTML = "";
 
                 const currentWeek = getCurrentWeek(now);
                 let bettingTarget = isBettingWindowOpen(now);
@@ -497,6 +498,17 @@
                 });
             });
 
+    window.addEventListener("pageshow", (event) => {
+       if (event.persisted) {
+           buildPlayerStats(); // safe to access Firestore now();
+       }
+    });
+
+    document.addEventListener("visibilitychange", () => {
+       if (document.visibilityState === "visible") {
+           buildPlayerStats();
+       }
+    });
             
         </script>
 

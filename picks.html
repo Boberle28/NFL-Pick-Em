@@ -1054,6 +1054,18 @@
         }
       });
     });
+
+    window.addEventListener("pageshow", (event) => {
+       if (event.persisted) {
+           Init();
+       }
+    });
+
+    document.addEventListener("visibilitychange", () => {
+       if (document.visibilityState === "visible") {
+           refreshPageState();
+       }
+    });
      
   </script>
   </div>

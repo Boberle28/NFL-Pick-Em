@@ -288,6 +288,7 @@ function render() {
       elem[0].textContent = '$' + String(pot);
 
       const tbody = document.getElementById("rows");
+      tbody.innerHTML = "";
       let podiumNumber = 1;
 
       Object.values(players).forEach(player => {
@@ -337,6 +338,18 @@ function render() {
           window.location.href = "index.html"; // redirect if not logged in
         }
       });
+    });
+
+    window.addEventListener("pageshow", (event) => {
+       if (event.persisted) {
+           buildLeaderboard(); // safe to access Firestore now();
+       }
+    });
+
+    document.addEventListener("visibilitychange", () => {
+       if (document.visibilityState === "visible") {
+           refreshPageState();
+       }
     });
 
   </script>
