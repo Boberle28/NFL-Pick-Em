@@ -508,8 +508,8 @@
         "away": "Detroit Lions",
         "homeMoneyline": 160,
         "awayMoneyline": -190,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 32,
+        "awayScore": 26
       },
       "Game 16": {
         "home": "New Orleans Saints",
@@ -2310,7 +2310,7 @@
       "ties": 0
     },
     "Carolina Panthers": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -2341,7 +2341,7 @@
     },
     "Detroit Lions": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Los Angeles Rams": {
