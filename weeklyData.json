@@ -516,8 +516,8 @@
         "away": "Atlanta Falcons",
         "homeMoneyline": -148,
         "awayMoneyline": 126,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 45
       }
     },
     "week5": {
@@ -2235,7 +2235,7 @@
       "ties": 0
     },
     "Atlanta Falcons": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -2276,7 +2276,7 @@
     },
     "New Orleans Saints": {
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Arizona Cardinals": {
