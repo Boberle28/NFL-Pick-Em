@@ -526,8 +526,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -520,
         "awayMoneyline": 400,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 24
       },
       "Game 2": {
         "home": "Jacksonville Jaguars",
