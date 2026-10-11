@@ -598,8 +598,8 @@
         "away": "Denver Broncos",
         "homeMoneyline": 156,
         "awayMoneyline": -186,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 23
       },
       "Game 11": {
         "home": "Green Bay Packers",
@@ -614,16 +614,16 @@
         "away": "Detroit Lions",
         "homeMoneyline": 184,
         "awayMoneyline": -220,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 45
       },
       "Game 13": {
         "home": "Seattle Seahawks",
         "away": "San Francisco 49ers",
         "homeMoneyline": -164,
         "awayMoneyline": 138,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 29,
+        "awayScore": 32
       },
       "Game 14": {
         "home": "Atlanta Falcons",
@@ -2226,7 +2226,7 @@
     },
     "Los Angeles Chargers": {
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Kansas City Chiefs": {
@@ -2281,7 +2281,7 @@
     },
     "Arizona Cardinals": {
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "New York Jets": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
       "ties": 0
     },
@@ -2326,11 +2326,11 @@
     },
     "Seattle Seahawks": {
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 4,
+      "wins": 5,
       "losses": 0,
       "ties": 0
     },
@@ -2340,7 +2340,7 @@
       "ties": 0
     },
     "Detroit Lions": {
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
       "ties": 0
     },
