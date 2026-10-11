@@ -534,8 +534,8 @@
         "away": "Philadelphia Eagles",
         "homeMoneyline": -250,
         "awayMoneyline": 205,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 17
       },
       "Game 3": {
         "home": "Tennessee Titans",
@@ -2216,7 +2216,7 @@
   "teams": {
     "Philadelphia Eagles": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Dallas Cowboys": {
@@ -2305,7 +2305,7 @@
       "ties": 0
     },
     "Jacksonville Jaguars": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0
     },
