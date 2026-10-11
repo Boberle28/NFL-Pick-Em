@@ -590,8 +590,8 @@
         "away": "New York Giants",
         "homeMoneyline": -184,
         "awayMoneyline": 154,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 27
       },
       "Game 10": {
         "home": "Los Angeles Chargers",
@@ -2297,12 +2297,12 @@
     "Washington Commanders": {
       "wins": 1,
       "losses": 3,
-      "ties": 0
+      "ties": 1
     },
     "New York Giants": {
       "wins": 3,
       "losses": 1,
-      "ties": 0
+      "ties": 1
     },
     "Jacksonville Jaguars": {
       "wins": 4,
