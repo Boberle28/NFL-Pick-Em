@@ -550,8 +550,8 @@
         "away": "Cincinnati Bengals",
         "homeMoneyline": 295,
         "awayMoneyline": -370,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 31
       },
       "Game 5": {
         "home": "New England Patriots",
@@ -574,8 +574,8 @@
         "away": "Cleveland Browns",
         "homeMoneyline": -130,
         "awayMoneyline": 110,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 12
       },
       "Game 8": {
         "home": "Pittsburgh Steelers",
