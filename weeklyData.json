@@ -606,8 +606,8 @@
         "away": "Chicago Bears",
         "homeMoneyline": 118,
         "awayMoneyline": -138,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 31,
+        "awayScore": 7
       },
       "Game 12": {
         "home": "Arizona Cardinals",
