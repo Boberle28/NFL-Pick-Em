@@ -542,8 +542,8 @@
         "away": "Houston Texans",
         "homeMoneyline": 265,
         "awayMoneyline": -330,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 3,
+        "awayScore": 26
       },
       "Game 4": {
         "home": "Miami Dolphins",
@@ -558,16 +558,16 @@
         "away": "Las Vegas Raiders",
         "homeMoneyline": -205,
         "awayMoneyline": 172,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 45,
+        "awayScore": 17
       },
       "Game 6": {
         "home": "New Orleans Saints",
         "away": "Minnesota Vikings",
         "homeMoneyline": 100,
         "awayMoneyline": -118,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 23
       },
       "Game 7": {
         "home": "New York Jets",
@@ -582,8 +582,8 @@
         "away": "Indianapolis Colts",
         "homeMoneyline": -136,
         "awayMoneyline": 116,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 22
       },
       "Game 9": {
         "home": "Washington Commanders",
