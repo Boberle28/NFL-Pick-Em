@@ -630,8 +630,8 @@
         "away": "Baltimore Ravens",
         "homeMoneyline": 138,
         "awayMoneyline": -164,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 30
       },
       "Game 15": {
         "home": "Los Angeles Rams",
