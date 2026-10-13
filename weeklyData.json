@@ -638,8 +638,8 @@
         "away": "Buffalo Bills",
         "homeMoneyline": -152,
         "awayMoneyline": 128,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 37
       }
     },
     "week6": {
@@ -2346,7 +2346,7 @@
     },
     "Los Angeles Rams": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Houston Texans": {
@@ -2355,7 +2355,7 @@
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0
     },
