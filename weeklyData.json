@@ -648,8 +648,8 @@
         "away": "Seattle Seahawks",
         "homeMoneyline": 132,
         "awayMoneyline": -156,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 14
       },
       "Game 2": {
         "home": "Jacksonville Jaguars",
