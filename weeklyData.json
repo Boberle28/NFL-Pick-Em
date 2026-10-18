@@ -728,8 +728,8 @@
         "away": "Los Angeles Chargers",
         "homeMoneyline": -460,
         "awayMoneyline": 360,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 22,
+        "awayScore": 6
       },
       "Game 12": {
         "home": "Las Vegas Raiders",
@@ -2226,11 +2226,11 @@
     },
     "Los Angeles Chargers": {
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 4,
+      "wins": 5,
       "losses": 0,
       "ties": 0
     },
