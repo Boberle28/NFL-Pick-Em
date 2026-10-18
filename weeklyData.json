@@ -664,8 +664,8 @@
         "away": "Chicago Bears",
         "homeMoneyline": 158,
         "awayMoneyline": -188,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 31
       },
       "Game 4": {
         "home": "Cleveland Browns",
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2365,7 +2365,7 @@
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 0
     },
