@@ -680,8 +680,8 @@
         "away": "Tennessee Titans",
         "homeMoneyline": -320,
         "awayMoneyline": 260,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 26
       },
       "Game 6": {
         "home": "New England Patriots",
@@ -2255,7 +2255,7 @@
       "ties": 0
     },
     "Indianapolis Colts": {
-      "wins": 2,
+      "wins": 3,
       "losses": 3,
       "ties": 0
     },
@@ -2321,7 +2321,7 @@
     },
     "Tennessee Titans": {
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Seattle Seahawks": {
