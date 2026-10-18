@@ -672,8 +672,8 @@
         "away": "Baltimore Ravens",
         "homeMoneyline": 190,
         "awayMoneyline": -230,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 10
       },
       "Game 5": {
         "home": "Indianapolis Colts",
@@ -2245,7 +2245,7 @@
       "ties": 0
     },
     "Cleveland Browns": {
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 0
     },
@@ -2361,7 +2361,7 @@
     },
     "Baltimore Ravens": {
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "Chicago Bears": {
