@@ -736,8 +736,8 @@
         "away": "Buffalo Bills",
         "homeMoneyline": 225,
         "awayMoneyline": -275,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 30,
+        "awayScore": 33
       },
       "Game 13": {
         "home": "Green Bay Packers",
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "New Orleans Saints": {
@@ -2355,7 +2355,7 @@
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 4,
+      "wins": 5,
       "losses": 1,
       "ties": 0
     },
