@@ -762,8 +762,8 @@
         "away": "New England Patriots",
         "homeMoneyline": -154,
         "awayMoneyline": 132,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 30,
+        "awayScore": 24
       },
       "Game 2": {
         "home": "New Orleans Saints",
