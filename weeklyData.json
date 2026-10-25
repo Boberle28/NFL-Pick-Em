@@ -834,16 +834,16 @@
         "away": "Denver Broncos",
         "homeMoneyline": 190,
         "awayMoneyline": -230,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 30
       },
       "Game 11": {
         "home": "Detroit Lions",
         "away": "Green Bay Packers",
         "homeMoneyline": -166,
         "awayMoneyline": 140,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 17
       },
       "Game 12": {
         "home": "Las Vegas Raiders",
@@ -2281,7 +2281,7 @@
     },
     "Arizona Cardinals": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "New York Jets": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
@@ -2336,11 +2336,11 @@
     },
     "Green Bay Packers": {
       "wins": 4,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Detroit Lions": {
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 0
     },
