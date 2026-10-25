@@ -826,8 +826,8 @@
         "away": "New York Giants",
         "homeMoneyline": -450,
         "awayMoneyline": 350,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 27
       },
       "Game 10": {
         "home": "Arizona Cardinals",
@@ -2300,7 +2300,7 @@
       "ties": 1
     },
     "New York Giants": {
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 1
     },
@@ -2351,7 +2351,7 @@
     },
     "Houston Texans": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Buffalo Bills": {
