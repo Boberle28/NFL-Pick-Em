@@ -794,8 +794,8 @@
         "away": "Indianapolis Colts",
         "homeMoneyline": -250,
         "awayMoneyline": 205,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 10
       },
       "Game 6": {
         "home": "New York Jets",
@@ -810,8 +810,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -178,
         "awayMoneyline": 150,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 43
       },
       "Game 8": {
         "home": "Baltimore Ravens",
@@ -2240,7 +2240,7 @@
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
-      "wins": 1,
+      "wins": 2,
       "losses": 5,
       "ties": 0
     },
@@ -2256,7 +2256,7 @@
     },
     "Indianapolis Colts": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Miami Dolphins": {
@@ -2311,7 +2311,7 @@
     },
     "Carolina Panthers": {
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Denver Broncos": {
@@ -2370,7 +2370,7 @@
       "ties": 0
     },
     "Minnesota Vikings": {
-      "wins": 5,
+      "wins": 6,
       "losses": 0,
       "ties": 0
     }
