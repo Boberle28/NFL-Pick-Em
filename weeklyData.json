@@ -770,8 +770,8 @@
         "away": "Pittsburgh Steelers",
         "homeMoneyline": 128,
         "awayMoneyline": -152,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 16
       },
       "Game 3": {
         "home": "Atlanta Falcons",
@@ -2276,7 +2276,7 @@
     },
     "New Orleans Saints": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Arizona Cardinals": {
@@ -2290,7 +2290,7 @@
       "ties": 0
     },
     "Pittsburgh Steelers": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
