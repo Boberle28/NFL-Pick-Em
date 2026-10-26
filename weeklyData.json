@@ -858,8 +858,8 @@
         "away": "Kansas City Chiefs",
         "homeMoneyline": -132,
         "awayMoneyline": 112,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 3
       },
       "Game 14": {
         "home": "Philadelphia Eagles",
