@@ -866,8 +866,8 @@
         "away": "Dallas Cowboys",
         "homeMoneyline": 188,
         "awayMoneyline": -225,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 38
       }
     },
     "week8": {
@@ -2216,11 +2216,11 @@
   "teams": {
     "Philadelphia Eagles": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Dallas Cowboys": {
-      "wins": 2,
+      "wins": 3,
       "losses": 4,
       "ties": 0
     },
