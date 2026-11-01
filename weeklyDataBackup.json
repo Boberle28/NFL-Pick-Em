@@ -908,40 +908,40 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": -172,
         "awayMoneyline": 144,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 19,
+        "awayScore": 15
       },
       "Game 6": {
         "home": "New York Jets",
         "away": "Las Vegas Raiders",
         "homeMoneyline": -108,
         "awayMoneyline": -108,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 33,
+        "awayScore": 38
       },
       "Game 7": {
         "home": "Pittsburgh Steelers",
         "away": "Cleveland Browns",
         "homeMoneyline": -198,
         "awayMoneyline": 164,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 6
       },
       "Game 8": {
         "home": "Tampa Bay Buccaneers",
         "away": "Atlanta Falcons",
         "homeMoneyline": -130,
         "awayMoneyline": 110,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 16,
+        "awayScore": 0
       },
       "Game 9": {
         "home": "Jacksonville Jaguars",
         "away": "Indianapolis Colts",
         "homeMoneyline": -420,
         "awayMoneyline": 330,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 42,
+        "awayScore": 7
       },
       "Game 10": {
         "home": "Los Angeles Rams",
@@ -2236,17 +2236,17 @@
     },
     "Atlanta Falcons": {
       "wins": 3,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0
     },
     "Cleveland Browns": {
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "Cincinnati Bengals": {
@@ -2256,7 +2256,7 @@
     },
     "Indianapolis Colts": {
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Miami Dolphins": {
@@ -2270,7 +2270,7 @@
       "ties": 0
     },
     "Las Vegas Raiders": {
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0
     },
@@ -2286,11 +2286,11 @@
     },
     "New York Jets": {
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Pittsburgh Steelers": {
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0
     },
@@ -2305,7 +2305,7 @@
       "ties": 1
     },
     "Jacksonville Jaguars": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
@@ -2340,7 +2340,7 @@
       "ties": 0
     },
     "Detroit Lions": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
@@ -2371,7 +2371,7 @@
     },
     "Minnesota Vikings": {
       "wins": 6,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     }
   }
