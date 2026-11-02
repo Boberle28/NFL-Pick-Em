@@ -948,8 +948,8 @@
         "away": "Los Angeles Chargers",
         "homeMoneyline": -295,
         "awayMoneyline": 240,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 9
       },
       "Game 11": {
         "home": "Denver Broncos",
@@ -2226,7 +2226,7 @@
     },
     "Los Angeles Chargers": {
       "wins": 0,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Kansas City Chiefs": {
@@ -2345,7 +2345,7 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
       "ties": 0
     },
