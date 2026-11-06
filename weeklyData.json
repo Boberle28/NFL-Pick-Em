@@ -990,8 +990,8 @@
         "away": "Jacksonville Jaguars",
         "homeMoneyline": -154,
         "awayMoneyline": 130,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 33
       },
       "Game 2": {
         "home": "Atlanta Falcons",
