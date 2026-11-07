@@ -152,7 +152,8 @@
     signInWithEmailAndPassword,
     onAuthStateChanged,
     setPersistence, 
-    browserSessionPersistence
+    browserSessionPersistence,
+    browserLocalPersistence
   } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
   const firebaseConfig = {
@@ -185,7 +186,7 @@
     const passwordInput = document.getElementById("password");
     const statusText = document.getElementById("status");
 
-    await setPersistence(auth, browserSessionPersistence);
+    await setPersistence(auth, browserLocalPersistence);
 
     function formatUsernameAsEmail(username) {
       return `${username}@fake.com`;
@@ -209,7 +210,7 @@
       try {
         localStorage.setItem("username", username);
         await signInWithEmailAndPassword(auth, email, password);
-        window.location.href = "picks.html";
+       // window.location.href = "picks.html";
       } catch (err) {
         statusText.textContent = `⛔ Login failed: ${err.message}`;
         statusText.style.color = "red";
@@ -279,7 +280,6 @@
         statusText.textContent = `✅ Account created for ${usernameInput.value}`;
         statusText.style.color = "green";
 
-
         window.location.href = "picks.html";
 
       } catch (err) {
@@ -294,6 +294,7 @@
         user.displayName = username;
         statusText.textContent = `🔓 Logged in as ${username}`;
         statusText.style.color = "green";
+        window.location.replace("picks.html");
       }
     });
   });
