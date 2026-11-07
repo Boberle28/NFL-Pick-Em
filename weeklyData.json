@@ -980,8 +980,8 @@
         "away": "Chicago Bears",
         "homeMoneyline": -176,
         "awayMoneyline": 148,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 34
       }
     },
     "week9": {
@@ -990,8 +990,8 @@
         "away": "Jacksonville Jaguars",
         "homeMoneyline": -154,
         "awayMoneyline": 130,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 33
       },
       "Game 2": {
         "home": "Atlanta Falcons",
@@ -2326,7 +2326,7 @@
     },
     "Seattle Seahawks": {
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "San Francisco 49ers": {
@@ -2365,7 +2365,7 @@
       "ties": 0
     },
     "Chicago Bears": {
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0
     },
