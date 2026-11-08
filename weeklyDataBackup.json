@@ -998,8 +998,8 @@
         "away": "Cincinnati Bengals",
         "homeMoneyline": 142,
         "awayMoneyline": -168,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 17,
+        "awayScore": 34
       },
       "Game 3": {
         "home": "Indianapolis Colts",
@@ -2236,7 +2236,7 @@
     },
     "Atlanta Falcons": {
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Tampa Bay Buccaneers": {
@@ -2250,7 +2250,7 @@
       "ties": 0
     },
     "Cincinnati Bengals": {
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0
     },
