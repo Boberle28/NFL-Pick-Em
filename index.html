@@ -210,7 +210,7 @@
       try {
         localStorage.setItem("username", username);
         await signInWithEmailAndPassword(auth, email, password);
-       // window.location.href = "picks.html";
+        window.location.href = "picks.html";
       } catch (err) {
         statusText.textContent = `⛔ Login failed: ${err.message}`;
         statusText.style.color = "red";
