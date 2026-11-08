@@ -398,17 +398,17 @@
 
   <script type="module">
     
-    /*
+    
     // check if logged in
     const username = localStorage.getItem("username");
     let userCred = null;
     if (username) {
       // Use this to store picks
       console.log("Logged in as", username);
-    } else {
-      // Redirect to login if not logged in
-      window.location.href = "index.html";
-    }*/
+    }
+    else{
+      username = "user";
+    }
 
     // Global var used to determine if we are inside a betting window
     let bettingTarget = null;
