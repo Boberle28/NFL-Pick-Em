@@ -1022,8 +1022,8 @@
         "away": "Detroit Lions",
         "homeMoneyline": 350,
         "awayMoneyline": -450,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 9,
+        "awayScore": 19
       },
       "Game 6": {
         "home": "New Orleans Saints",
@@ -2261,7 +2261,7 @@
     },
     "Miami Dolphins": {
       "wins": 1,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "New England Patriots": {
@@ -2340,7 +2340,7 @@
       "ties": 0
     },
     "Detroit Lions": {
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0
     },
