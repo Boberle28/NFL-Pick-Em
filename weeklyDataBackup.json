@@ -1054,8 +1054,8 @@
         "away": "Denver Broncos",
         "homeMoneyline": 120,
         "awayMoneyline": -142,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 26
       },
       "Game 10": {
         "home": "Los Angeles Chargers",
@@ -2311,11 +2311,11 @@
     },
     "Carolina Panthers": {
       "wins": 3,
-      "losses": 3,
+      "losses": 5,
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 6,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },

@@ -1006,8 +1006,8 @@
         "away": "Dallas Cowboys",
         "homeMoneyline": 198,
         "awayMoneyline": -240,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 27
       },
       "Game 4": {
         "home": "Kansas City Chiefs",
@@ -1030,8 +1030,8 @@
         "away": "Cleveland Browns",
         "homeMoneyline": -148,
         "awayMoneyline": 126,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 22
       },
       "Game 7": {
         "home": "Philadelphia Eagles",
@@ -2220,7 +2220,7 @@
       "ties": 0
     },
     "Dallas Cowboys": {
-      "wins": 3,
+      "wins": 4,
       "losses": 5,
       "ties": 0
     },
@@ -2246,7 +2246,7 @@
     },
     "Cleveland Browns": {
       "wins": 5,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "Cincinnati Bengals": {
@@ -2256,7 +2256,7 @@
     },
     "Indianapolis Colts": {
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Miami Dolphins": {
@@ -2275,7 +2275,7 @@
       "ties": 0
     },
     "New Orleans Saints": {
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0
     },
