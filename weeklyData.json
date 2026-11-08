@@ -1046,8 +1046,8 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": 180,
         "awayMoneyline": -215,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 20
       },
       "Game 9": {
         "home": "Carolina Panthers",
@@ -2230,7 +2230,7 @@
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 5,
+      "wins": 6,
       "losses": 2,
       "ties": 0
     },
@@ -2286,7 +2286,7 @@
     },
     "New York Jets": {
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Pittsburgh Steelers": {
@@ -2296,7 +2296,7 @@
     },
     "Washington Commanders": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 1
     },
     "New York Giants": {
@@ -2345,7 +2345,7 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 4,
+      "wins": 5,
       "losses": 4,
       "ties": 0
     },

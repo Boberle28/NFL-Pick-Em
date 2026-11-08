@@ -1014,8 +1014,8 @@
         "away": "New York Jets",
         "homeMoneyline": -520,
         "awayMoneyline": 400,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 35,
+        "awayScore": 12
       },
       "Game 5": {
         "home": "Miami Dolphins",
