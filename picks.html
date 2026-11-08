@@ -1003,7 +1003,7 @@
                 }
               }, {merge: true})
 
-              spanText.textContent = "Disable Reminders";
+              spanText.textContent = "Enable Reminders";
             }
             else{
               // Enable Reminders
@@ -1032,6 +1032,8 @@
                 "notifications.enabled": true,
                 "notifications.token": token,
               });
+
+              spanText.textContent = "Enable Reminders";
             }
           });
         }
