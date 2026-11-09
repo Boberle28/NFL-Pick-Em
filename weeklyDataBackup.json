@@ -1062,8 +1062,8 @@
         "away": "Houston Texans",
         "homeMoneyline": 160,
         "awayMoneyline": -190,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 22,
+        "awayScore": 44
       },
       "Game 11": {
         "home": "San Francisco 49ers",
@@ -1094,8 +1094,8 @@
         "away": "Tampa Bay Buccaneers",
         "homeMoneyline": -310,
         "awayMoneyline": 250,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 24
       },
       "Game 15": {
         "home": "Minnesota Vikings",
@@ -2226,7 +2226,7 @@
     },
     "Los Angeles Chargers": {
       "wins": 0,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "Kansas City Chiefs": {
@@ -2350,7 +2350,7 @@
       "ties": 0
     },
     "Houston Texans": {
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
       "ties": 0
     },
