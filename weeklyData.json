@@ -1038,8 +1038,8 @@
         "away": "New York Giants",
         "homeMoneyline": -102,
         "awayMoneyline": -116,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 11,
+        "awayScore": 19
       },
       "Game 8": {
         "home": "Washington Commanders",
@@ -1070,8 +1070,8 @@
         "away": "Las Vegas Raiders",
         "homeMoneyline": -650,
         "awayMoneyline": 480,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 38,
+        "awayScore": 17
       },
       "Game 12": {
         "home": "New England Patriots",
@@ -2216,7 +2216,7 @@
   "teams": {
     "Philadelphia Eagles": {
       "wins": 2,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Dallas Cowboys": {
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "New Orleans Saints": {
@@ -2300,7 +2300,7 @@
       "ties": 1
     },
     "New York Giants": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
       "ties": 1
     },
@@ -2330,7 +2330,7 @@
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0
     },
