@@ -1102,8 +1102,8 @@
         "away": "Buffalo Bills",
         "homeMoneyline": 118,
         "awayMoneyline": -138,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 6,
+        "awayScore": 23
       }
     },
     "week10": {
@@ -2355,7 +2355,7 @@
       "ties": 0
     },
     "Buffalo Bills": {
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0
     },
@@ -2371,7 +2371,7 @@
     },
     "Minnesota Vikings": {
       "wins": 6,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     }
   }
