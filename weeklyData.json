@@ -1142,10 +1142,10 @@
       "Game 5": {
         "home": "Green Bay Packers",
         "away": "Minnesota Vikings",
-        "homeMoneyline": -176,
-        "awayMoneyline": 148,
-        "homeScore": -210,
-        "awayScore": 176
+        "homeMoneyline": -210,
+        "awayMoneyline": 176,
+        "homeScore": -1,
+        "awayScore": -1
       },
       "Game 6": {
         "home": "Tennessee Titans",
