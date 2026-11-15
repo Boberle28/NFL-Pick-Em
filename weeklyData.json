@@ -1144,8 +1144,8 @@
         "away": "Minnesota Vikings",
         "homeMoneyline": -168,
         "awayMoneyline": 142,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 10,
+        "awayScore": 30
       },
       "Game 6": {
         "home": "Tennessee Titans",
