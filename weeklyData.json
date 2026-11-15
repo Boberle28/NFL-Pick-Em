@@ -1120,8 +1120,8 @@
         "away": "New England Patriots",
         "homeMoneyline": -154,
         "awayMoneyline": 130,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 35,
+        "awayScore": 10
       },
       "Game 3": {
         "home": "Atlanta Falcons",
@@ -2266,7 +2266,7 @@
     },
     "New England Patriots": {
       "wins": 5,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Las Vegas Raiders": {
@@ -2340,7 +2340,7 @@
       "ties": 0
     },
     "Detroit Lions": {
-      "wins": 6,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
