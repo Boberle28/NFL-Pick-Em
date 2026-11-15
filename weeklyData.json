@@ -1136,8 +1136,8 @@
         "away": "Houston Texans",
         "homeMoneyline": 194,
         "awayMoneyline": -235,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 27,
+        "awayScore": 24
       },
       "Game 5": {
         "home": "Green Bay Packers",
@@ -2245,7 +2245,7 @@
       "ties": 0
     },
     "Cleveland Browns": {
-      "wins": 5,
+      "wins": 6,
       "losses": 4,
       "ties": 0
     },
@@ -2351,7 +2351,7 @@
     },
     "Houston Texans": {
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Buffalo Bills": {
