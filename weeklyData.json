@@ -1192,8 +1192,8 @@
         "away": "Los Angeles Rams",
         "homeMoneyline": 275,
         "awayMoneyline": -340,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 6,
+        "awayScore": 34
       },
       "Game 12": {
         "home": "Dallas Cowboys",
@@ -2281,7 +2281,7 @@
     },
     "Arizona Cardinals": {
       "wins": 3,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "New York Jets": {
@@ -2345,7 +2345,7 @@
       "ties": 0
     },
     "Los Angeles Rams": {
-      "wins": 5,
+      "wins": 6,
       "losses": 4,
       "ties": 0
     },
