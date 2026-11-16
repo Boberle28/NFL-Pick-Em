@@ -185,6 +185,7 @@ a {
             <th>Points</th>
             <th>Win Percentage</th>
             <th>Picks Made</th>
+            <th>Midseason Summary</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
@@ -320,7 +321,7 @@ function render() {
         if(!summary)
         {
           summary = "";
-        }
+        };
         row.innerHTML = `
           <td data-label="Username" class="userrow">
             <a href="userstatstemplate.html?user=${player.username}">${player.username}</a>
