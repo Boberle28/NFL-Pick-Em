@@ -278,6 +278,27 @@ function render() {
         return snapshot;
     }
 
+    const midseasonSum = {
+     "KelsN22": "Who invited her?",
+     "Avamarie2409": "She thinks she's good but likely is just the luckiest person in the universe.",
+     "Brando": "We all agree this motherfucker is cheating, right?",
+     "Oberlej": "$50 was too much for him",
+     "lukeoberle": "Related in name only",
+     "BennyMac38": "Like microwaved macoroni and cheese, pretty good when you're drunk, but not good enough right now.",
+     "pamelalissa": "Beginners luck? Nah, just stealing goberle's picks and changing them to the correct team",
+     "Michael": "He needs the money more than anyone but will likely blow it on fortnite skins",
+     "goberle": "He's right where he wants to be.",
+     "Kelly": "She once told me Santa Claus was real and I believed her, never again.",
+     "Salad": "Once a Marine always a Marine. But never a game picker you will be.",
+     "Amccalister88": "Be Better",
+     "offside": "There's always next year",
+     "JesseTyge": "See comment above.",
+     "KingLeo55": "Oh what could have been",
+     "Kalaoberle1": "Peaked too soon",
+     "Clancaster53": "Oh what never would have been",
+     "Augerbob": "Everyone thanks you for your $50 donation"
+    };
+
     async function buildLeaderboard() {
     
       let snapshot = await asyncStuff();
@@ -295,6 +316,11 @@ function render() {
         const row = document.createElement("tr");
         const perc = player.winpercent == 0 ? 0 : Number(player.winpercent).toFixed(3).replace(/^0+/, "");
         const points = player.points == 0 ? 0 : Number(player.points).toFixed(2);
+        let summary = midseasonSum[player.username];
+        if(!summary)
+        {
+          summary = "";
+        }
         row.innerHTML = `
           <td data-label="Username" class="userrow">
             <a href="userstatstemplate.html?user=${player.username}">${player.username}</a>
@@ -304,6 +330,7 @@ function render() {
           <td data-label="Points">${points}</td>
           <td data-label="Win Percentage">${perc}</td>
           <td data-label="Picks Made">${player.picksMade}</td>
+          <td data-label="Midseason Summary">${summary}</td>
         `;
         
         /*
