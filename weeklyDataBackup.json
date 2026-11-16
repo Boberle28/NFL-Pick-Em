@@ -1200,16 +1200,16 @@
         "away": "San Francisco 49ers",
         "homeMoneyline": 180,
         "awayMoneyline": -215,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 40,
+        "awayScore": 46
       },
       "Game 13": {
         "home": "Cincinnati Bengals",
         "away": "Pittsburgh Steelers",
         "homeMoneyline": -198,
         "awayMoneyline": 166,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 38,
+        "awayScore": 18
       },
       "Game 14": {
         "home": "Baltimore Ravens",
@@ -2221,7 +2221,7 @@
     },
     "Dallas Cowboys": {
       "wins": 4,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "Los Angeles Chargers": {
@@ -2330,7 +2330,7 @@
       "ties": 0
     },
     "San Francisco 49ers": {
-      "wins": 7,
+      "wins": 8,
       "losses": 1,
       "ties": 0
     },
