@@ -180,12 +180,12 @@ a {
         <thead>
           <tr>
             <th>Username</th>
+            <th>Midseason Summary</th>
             <th>Wins</th>
             <th>Losses</th>
             <th>Points</th>
             <th>Win Percentage</th>
             <th>Picks Made</th>
-            <th>Midseason Summary</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
@@ -280,11 +280,11 @@ function render() {
     }
 
     const midseasonSum = {
-     "KelsN22": "Who invited her?",
+     "KelsN22": "Who invited her? She's too good",
      "Avamarie2409": "She thinks she's good but likely is just the luckiest person in the universe.",
      "Brando": "We all agree this motherfucker is cheating, right?",
      "Oberlej": "$50 was too much for him",
-     "lukeoberle": "Related in name only",
+     "lukeoberle": "Can Micah Parsons play on the offensive line? Asking for a friend",
      "BennyMac38": "Like microwaved macoroni and cheese, pretty good when you're drunk, but not good enough right now.",
      "pamelalissa": "Beginners luck? Nah, just stealing goberle's picks and changing them to the correct team",
      "Michael": "He needs the money more than anyone but will likely blow it on fortnite skins",
@@ -326,12 +326,12 @@ function render() {
           <td data-label="Username" class="userrow">
             <a href="userstatstemplate.html?user=${player.username}">${player.username}</a>
           </td>
+          <td data-label="Midseason Summary">${summary}</td>
           <td data-label="Wins">${player.wins}</td>
           <td data-label="Losses">${player.losses}</td>
           <td data-label="Points">${points}</td>
           <td data-label="Win Percentage">${perc}</td>
           <td data-label="Picks Made">${player.picksMade}</td>
-          <td data-label="Midseason Summary">${summary}</td>
         `;
         
         /*
