@@ -1165,6 +1165,7 @@ week11.AddGame(PHI, PIT);
 week11.AddGame(SF, MIN);
 week11.AddGame(WAS, CIN);
 
+/*
 let week12 = new Week(12, "2026-11-26T01:00:00Z", "2026-12-01T01:15:00Z");
 week12.AddGame(LAR, GB);
 week12.AddGame(DET, CHI);
@@ -1182,6 +1183,26 @@ week12.AddGame(ARI, WAS);
 week12.AddGame(SF, SEA);
 week12.AddGame(LAC, NE);
 week12.AddGame(TB, CAR);
+*/
+
+let week12 = new Week(12, "2026-11-26T01:00:00Z", "2026-12-01T01:15:00Z");
+week12.AddGame(LAR, GB, "2026-11-26T01:00:00Z");
+week12.AddGame(DET, CHI, "2026-11-26T18:00:00Z");
+week12.AddGame(DAL, PHI, "2026-11-26T21:30:00Z");
+week12.AddGame(BUF, KC, "2026-11-27T01:20:00Z");
+week12.AddGame(PIT, DEN, "2026-11-27T20:00:00Z");
+week12.AddGame(CIN, NO, "2026-11-29T18:00:00Z");
+week12.AddGame(IND, NYG, "2026-11-29T18:00:00Z");
+week12.AddGame(MIA, NYJ, "2026-11-29T18:00:00Z");
+week12.AddGame(MIN, ATL, "2026-11-29T18:00:00Z");
+week12.AddGame(JAX, TEN, "2026-11-29T18:00:00Z");
+week12.AddGame(HOU, BAL, "2026-11-29T18:00:00Z");
+week12.AddGame(LAC, NE, "2026-11-29T21:05:00Z");
+week12.AddGame(ARI, WAS, "2026-11-29T21:25:00Z");
+week12.AddGame(SF, SEA, "2026-11-29T21:25:00Z");
+week12.AddGame(CLE, LV, "2026-11-30T01:20:00Z");
+week12.AddGame(TB, CAR, "2026-12-01T01:15:00Z");
+
 
 let week13 = new Week(13, "2026-12-04T01:15:00Z", "2026-12-08T01:15:00Z");
 week13.AddGame(LAR, KC);
