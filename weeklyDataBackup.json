@@ -1216,8 +1216,8 @@
         "away": "Los Angeles Chargers",
         "homeMoneyline": -235,
         "awayMoneyline": 194,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 20,
+        "awayScore": 23
       }
     },
     "week11": {
@@ -2225,7 +2225,7 @@
       "ties": 0
     },
     "Los Angeles Chargers": {
-      "wins": 0,
+      "wins": 1,
       "losses": 8,
       "ties": 0
     },
@@ -2361,7 +2361,7 @@
     },
     "Baltimore Ravens": {
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "Chicago Bears": {
