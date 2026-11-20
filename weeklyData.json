@@ -1226,8 +1226,8 @@
         "away": "Indianapolis Colts",
         "homeMoneyline": -650,
         "awayMoneyline": 480,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 3
       },
       "Game 2": {
         "home": "Buffalo Bills",
