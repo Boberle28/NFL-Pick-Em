@@ -300,6 +300,11 @@ class Pair{
         this.startDate = new Date(startDateStr).getTime();
         this.endDate = new Date(endDateStr).getTime();
         this.regularSeason = regular;
+        this.underdogWins = 0;
+        this.underdogPoints = 0;
+        this.favoriteWins = 0;
+        this.favoritePoints = 0;
+        this.numOfFavorites = 0;
     }
 
     AddGame(home, away, startDateStr = "") {
@@ -374,6 +379,11 @@ class Pair{
         this.weeks = [];
         this.doneAddingOdds = false;
         this.preseasonWeeks = [];
+        this.underdogWins = 0;
+        this.underdogPoints = 0;
+        this.favoriteWins = 0;
+        this.favoritePoints = 0;
+        this.numOfFavorites = 0;
     }
 
     AddWeek(week){
@@ -421,8 +431,47 @@ class Pair{
         if(game1.homeScore != -1){
           // We have scores
           game1.SetScore(game.homeScore, game.awayScore);
+
+          let game2 = new Game();
+          let week2 = new Week();
+          if(game1.homeScore !== game1.awayScore) // Make sure we don't include ties
+          {
+            week.numOfFavorites++;
+            if(game1.homeFavorite) // Home is the favorite
+            {
+              game1.home;
+              if(game1.homeScore > game1.awayScore)
+              {
+                week.favoriteWins++;
+                week.favoritePoints++;
+              }
+              else{
+                week.underdogWins++;
+                week.underdogPoints += game1.awayValue;
+              }
+            }
+            else{  // Away is the favorite
+              if(game1.homeScore > game1.awayScore)
+              {
+                week.underdogWins++;
+                week.underdogPoints += game1.homeValue;
+              }
+              else
+              {
+                week.favoriteWins++;
+                week.favoritePoints++;
+              }
+            }
+          } 
         }
       }
+
+      week.numOfFavorites = week.favoriteWins + week.underdogWins / 2;
+      this.numOfFavorites += week.numOfFavorites;
+      this.favoriteWins += week.favoriteWins;
+      this.favoritePoints += this.favoriteWins;
+      this.underdogWins += week.underdogWins;
+      this.underdogPoints += week.underdogPoints;
     }
 
     LoadOdds(data){ 
@@ -1334,8 +1383,10 @@ week18.AddGame(HOU, TEN);
   season.AddPreseasonWeek(preWeek2);
   season.AddPreseasonWeek(preWeek3);
 
+  let weekAdvancedStats = {}
   let playersStats = { wins: 0, points: 0, picksMade: 0 };
   let players = {};
+  let perfectPlayer = {};
 
   /*
   function PullUsersAndGetWins(snapshot){
@@ -1514,6 +1565,11 @@ week18.AddGame(HOU, TEN);
       });
 
       return players;
+  }
+
+  function advancedStats()
+  {
+    
   }
 
   function getCurrentWeek(currentDate) {
