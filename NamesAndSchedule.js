@@ -312,7 +312,7 @@ class Pair{
         this.games.push(new Game(home, away, gameNum, startDateStr));
     }
 
-    GetWinners(obj){
+    GetWinners(obj, weekAdvanced = null){
       let count = 0;
       let losses = 0;
       let value = 0;
@@ -341,10 +341,50 @@ class Pair{
         let r = gamefound.GetResult(name);
         if(r == 1){
           count++;
-          value += gamefound.GetTeamValue(name);
+          let pointVal = gamefound.GetTeamValue(name);
+          value += pointVal;
+          if(weekAdvanced)
+          {
+            if(pointVal > 1) // Underdog picked and won
+            {
+              weekAdvanced.underdogsPicked++;
+              weekAdvanced.underdogsWon++;
+              weekAdvanced.underdogPoints += pointVal;
+            }
+            else{
+              weekAdvanced.favoritesPicked++;
+              weekAdvanced.favoritesWon++;
+            }
+          }
         }
         else if(r == 2)
+        {
           ++losses;
+          if(weekAdvanced)
+          {
+            let gamee = new Game();
+            let teamm = new Team();
+            gamee.homeFavorite;
+            gamee.home;
+            if(gamefound.homeFavorite) // Favorite is at home
+            {
+              if(gamefound.home.IsTeam(name)){ // Favorite picked and lost
+                weekAdvanced.favoritesPicked++;
+              }
+              else{  // Underdog picked and lost
+                weekAdvanced.underdogsPicked++;
+              }
+            }
+            else{ // Favorite is on the road
+              if(gamefound.away.IsTeam(name)){ // Favorite picked and lost
+                weekAdvanced.favoritesPicked++
+              }
+              else{ // Underdog picked and lost
+                weekAdvanced.underdogsPicked++;
+              }
+            }
+          }
+        }
       });
 
       return {wins: count, losses: losses, points: value};
@@ -1493,11 +1533,17 @@ week18.AddGame(HOU, TEN);
       let picksMade = 0;
 
       let weekStats = [];
+      let weekAdvanced = [];
+      let weekK = new Week();
+      weekK.GetWinners
+
       function fillWeekStats()
       {
         weekStats = [];
+        weekAdvanced = [];
         for (let i = 0; i < 18; i++) {
           weekStats.push({ wins: 0, points: 0, pct: 0, weekPicks: null});
+          weekAdvanced.push({ favoritesPicked: 0, underdogsPicked: 0, favoritesWon: 0, underdogsWon: 0, underdogPoints: 0 });
         }
       }
 
@@ -1522,7 +1568,7 @@ week18.AddGame(HOU, TEN);
           const week = season.GetWeek(weekNumber - 1);
           
           if(week !== undefined){
-            const result = week.GetWinners(weekData.picks);
+            const result = week.GetWinners(weekData.picks, weekAdvanced[weekNumber - 1]);
             console.log(`Week ${weekNumber}: result.wins = ${result.wins}, result.points = ${result.points}`);
             let winPct = result.wins + result.losses > 0 ? result.wins / (result.wins + result.losses) : 0;
             weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, pct: winPct, weekPicks: weekData.picks};
@@ -1541,6 +1587,7 @@ week18.AddGame(HOU, TEN);
         }
       });
 
+      console.log(weekAdvanced);
       players[username] = {
         username: username, // ✅ Add this
         wins: totalWins,
@@ -1548,7 +1595,8 @@ week18.AddGame(HOU, TEN);
         points: totalPoints,
         picksMade: picksMade,
         winpercent: totalWins + totalLosses > 0 ? totalWins / (totalWins + totalLosses) : 0,
-        weekStats: weekStats
+        weekStats: weekStats,
+        weekAdvanced: weekAdvanced
       };
 
     });
