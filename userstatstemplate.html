@@ -220,6 +220,7 @@
                 <h1 id="stats-name">Pigskin Pick'em </h1>
                 <div id="appNavigation" style="display:flex; justify-content: center;">
                     <a class="back-link" href="leaderboardtemplate.html">⬅ Leaderboard</a>
+                    <a class="back-link" id="advanced-stats" href="advancedstats.html">Advanced Stats</a>
                 </div>
             </header>
 
@@ -266,6 +267,9 @@
                 const data = await fetch("weeklyData.json", { cache: "no-store" }).then(res => res.json());
 
                 UpdateRecords(data.teams);
+
+                const elem = document.getElementById("advanced-stats");
+                elem.href = `advancedstats.html?user=${username}`;
 
                 season.LoadOdds(data.weeks)
                 season.LoadOddsPreseason(predata);

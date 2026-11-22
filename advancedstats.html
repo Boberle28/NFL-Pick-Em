@@ -28,6 +28,13 @@
     line-height:1.35;
   }
 
+  /* Title */
+    #stats-name {
+        margin: 0;
+        line-height: 1;
+    }
+
+
 h1 {
     margin-bottom: 1rem;
     color: #d4d2d2;
@@ -167,8 +174,7 @@ a {
 </head>
 <body>
   <div class="header-meta">
-        <h1>Pigskin Pick'em Leaderboard</h1>
-        <h2 class="total-pot">Total Pot: <span class="pot"></span></h2>
+        <h1 id="stats-name">Pigskin Pick'em </h1>
         <a class="back-link" href="userstatstemplate.html">⬅ Back to User Stats</a>
     </div>
 <main class="wrap">
@@ -287,27 +293,6 @@ function render() {
         return snapshot;
     }
 
-    const midseasonSum = {
-     "KelsN22": "Who invited her? She's too good",
-     "Avamarie2409": "She thinks she's good but likely is just the luckiest person in the universe.",
-     "Brando": "We all agree this motherfucker is cheating, right?",
-     "Oberlej": "$50 was too much for him",
-     "lukeoberle": "Can Micah Parsons play on the offensive line? Asking for a friend",
-     "BennyMac38": "Like microwaved macoroni and cheese, pretty good when you're drunk, but not good enough right now.",
-     "pamelalissa": "Beginners luck? Nah, just stealing goberle's picks and changing them to the correct team",
-     "Michael": "He needs the money more than anyone but will likely blow it on fortnite skins",
-     "goberle": "He's right where he wants to be.",
-     "Kelly": "She once told me Santa Claus was real and I believed her, never again.",
-     "Salad": "Once a Marine always a Marine. But never a game picker you will be.",
-     "Amccalister88": "Be Better",
-     "offside": "Someone needs a Christmas miracle... and to pick better teams",
-     "Jessetyge": "See comment above.",
-     "KingLeo55": "Oh what could have been",
-     "Kalaoberle1": "Peaked too soon",
-     "Clancaster53": "Peaked in the womb.",
-     "Augerbob": "Everyone thanks you for your $50 donation"
-    };
-
     async function buildLeaderboard() {
     
       let snapshot = await asyncStuff();
@@ -317,6 +302,8 @@ function render() {
       let elem = document.getElementsByClassName("pot");
       elem[0].textContent = '$' + String(pot);
 
+      document.getElementById("stats-name").innerText = `Advanced Stats for ${username}`;
+
       const tbody = document.getElementById("rows");
       tbody.innerHTML = "";
       let weekNum = 1;
@@ -325,72 +312,28 @@ function render() {
       for (let stat of Object.values(statsPlayer.weekAdvanced)){
         const row = document.createElement("tr");
 
-        let favoriteWinP = stat.favoritesPicked ? Number((stat.favoritesWon / stat.favoritesPicked) * 100).toFixed(3) : 0;
-        let underdogWinP = stat.underdogsWon ? Number((stat.underdogsWon / stat.underdogsPicked) * 100).toFixed(3) : 0;
+        let favoriteWinP = stat.favoritesPicked ? Number((stat.favoritesWon / stat.favoritesPicked) * 100).toFixed(2) : 0;
+        let underdogWinP = stat.underdogsWon ? Number((stat.underdogsWon / stat.underdogsPicked) * 100).toFixed(2) : 0;
         const weekstat = statsPlayer.weekStats[weekNum - 1];
+        const totalPointsPossible = Number(season.weeks[weekNum -1].underdogPoints + season.weeks[weekNum -1].favoritePoints).toFixed(2);
+
         row.innerHTML = `
           <td data-label="Week" class="userrow">Week ${weekNum}</td>
           <td data-label="Total Wins">${weekstat.wins}</td>
           <td data-label="Favorites Picked">${stat.favoritesPicked}</td>
           <td data-label="Favorites Won">${stat.favoritesWon}</td>
           <td data-label="Favorite Win Percent">${favoriteWinP}%</td>
-          <td data-label="Underdogs Picked">${perc}</td>
-          <td data-label="Underdogs Won">${player.picksMade}</td>
-          <td data-label="Underdog Win Percent">${player.picksMade}</td>
-          <td data-label="Underdog Points">${player.picksMade}</td>
-          <td data-label="Total Possible Points">${player.picksMade}</td>
-          <td data-label="Rank">${player.picksMade}</td>
+          <td data-label="Underdogs Picked">${stat.underdogsPicked}</td>
+          <td data-label="Underdogs Won">${stat.underdogsWon}</td>
+          <td data-label="Underdog Win Percent">${underdogWinP}%</td>
+          <td data-label="Underdog Points">${Number(stats.underdogPoints).toFixed(2)}</td>
+          <td data-label="Total Possible Points">totalPointsPossible</td>
+          <td data-label="Rank">--</td>
         `;
 
         tbody.appendChild(row);
         ++weekNum;
       }
-
-      Object.values(players).forEach(player => {
-        const row = document.createElement("tr");
-        const perc = player.winpercent == 0 ? 0 : Number(player.winpercent).toFixed(3).replace(/^0+/, "");
-        const points = player.points == 0 ? 0 : Number(player.points).toFixed(2);
-        let summary = midseasonSum[player.username];
-        if(!summary)
-        {
-          summary = "";
-        };
-        row.innerHTML = `
-          <td data-label="Week" class="userrow">Week ${weekNum}</td>
-          <td data-label="Total Wins">${summary}</td>
-          <td data-label="Favorites Picked">${player.wins}</td>
-          <td data-label="Favorites Won">${player.losses}</td>
-          <td data-label="Favorite Win Percent">${points}</td>
-          <td data-label="Underdogs Picked">${perc}</td>
-          <td data-label="Underdogs Won">${player.picksMade}</td>
-          <td data-label="Underdog Win Percent">${player.picksMade}</td>
-          <td data-label="Underdog Points">${player.picksMade}</td>
-          <td data-label="Total Possible Points">${player.picksMade}</td>
-          <td data-label="Rank">${player.picksMade}</td>
-        `;
-        
-        /*
-        if(podiumNumber == 1)
-        {
-          let pod = document.getElementById("1st");
-          pod.getElementsByClassName("winners")[0].textContent = player.username;
-          pod.getElementsByClassName("pot")[0].textContent = "$1000";
-        }
-        else if(podiumNumber == 2)
-        {
-          let pod = document.getElementById("2nd");
-          pod.getElementsByClassName("winners")[0].textContent = player.username;
-          pod.getElementsByClassName("pot")[0].textContent = "$100";
-        }
-        else if(podiumNumber == 3){
-          let pod = document.getElementById("3rd");
-          pod.getElementsByClassName("winners")[0].textContent = player.username;
-          pod.getElementsByClassName("pot")[0].textContent = "$50";
-        }
-        */
-        ++weekNum
-        tbody.appendChild(row);
-      });
     }
 
     function refreshPageState()
