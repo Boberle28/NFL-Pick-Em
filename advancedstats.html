@@ -304,11 +304,17 @@ function render() {
       tbody.innerHTML = "";
       let weekNum = 1;
 
-      let statsPlayer = players[username];
-      console.log("players", players);
-      console.log("username", username)
-      console.log("statsPlayer", statsPlayer);
-      for (let stat of Object.values(statsPlayer.weekAdvanced)){
+      let player = null;
+      for (let p of Object.values(players)){
+        console.log("inside let player of Object.values(players)")
+        if(username == p.username){
+            console.log("username match!!!");
+            player = p;
+        }
+      }
+                
+      console.log("player", player);
+      for (let stat of Object.values(player.weekAdvanced)){
         const row = document.createElement("tr");
 
         let favoriteWinP = stat.favoritesPicked ? Number((stat.favoritesWon / stat.favoritesPicked) * 100).toFixed(2) : 0;
