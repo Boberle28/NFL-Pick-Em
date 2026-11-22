@@ -1234,24 +1234,24 @@
         "away": "Miami Dolphins",
         "homeMoneyline": -1600,
         "awayMoneyline": 900,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 26,
+        "awayScore": 9
       },
       "Game 3": {
         "home": "Chicago Bears",
         "away": "New Orleans Saints",
         "homeMoneyline": -800,
         "awayMoneyline": 560,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 21,
+        "awayScore": 13
       },
       "Game 4": {
         "home": "Dallas Cowboys",
         "away": "Tennessee Titans",
         "homeMoneyline": -450,
         "awayMoneyline": 350,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 51,
+        "awayScore": 30
       },
       "Game 5": {
         "home": "Detroit Lions",
@@ -1266,8 +1266,8 @@
         "away": "Arizona Cardinals",
         "homeMoneyline": -1500,
         "awayMoneyline": 870,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 34,
+        "awayScore": 7
       },
       "Game 7": {
         "home": "New York Giants",
@@ -2220,7 +2220,7 @@
       "ties": 0
     },
     "Dallas Cowboys": {
-      "wins": 4,
+      "wins": 5,
       "losses": 6,
       "ties": 0
     },
@@ -2230,7 +2230,7 @@
       "ties": 0
     },
     "Kansas City Chiefs": {
-      "wins": 7,
+      "wins": 8,
       "losses": 2,
       "ties": 0
     },
@@ -2281,7 +2281,7 @@
     },
     "Arizona Cardinals": {
       "wins": 3,
-      "losses": 7,
+      "losses": 8,
       "ties": 0
     },
     "New York Jets": {
@@ -2321,7 +2321,7 @@
     },
     "Tennessee Titans": {
       "wins": 1,
-      "losses": 8,
+      "losses": 9,
       "ties": 0
     },
     "Seattle Seahawks": {
