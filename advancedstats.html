@@ -319,7 +319,7 @@ function render() {
 
         let favoriteWinP = stat.favoritesPicked ? Number((stat.favoritesWon / stat.favoritesPicked) * 100).toFixed(2) : 0;
         let underdogWinP = stat.underdogsWon ? Number((stat.underdogsWon / stat.underdogsPicked) * 100).toFixed(2) : 0;
-        const weekstat = statsPlayer.weekStats[weekNum - 1];
+        const weekstat = player.weekStats[weekNum - 1];
         const totalPointsPossible = Number(season.weeks[weekNum -1].underdogPoints + season.weeks[weekNum -1].favoritePoints).toFixed(2);
 
         row.innerHTML = `
