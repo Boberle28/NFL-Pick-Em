@@ -305,6 +305,7 @@ function render() {
       let weekNum = 1;
 
       let statsPlayer = players[username];
+      console.log(statsPlayer);
       for (let stat of Object.values(statsPlayer.weekAdvanced)){
         const row = document.createElement("tr");
 
