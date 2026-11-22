@@ -8,7 +8,7 @@
         <style>
             :root {
                 /* Height of the fixed top bar (adjust to your liking) */
-                --topbar-height: 80px;
+                --topbar-height: 120px;
 
                 /* Used by sticky week headers */
                 --sticky-offset: var(--topbar-height);
@@ -33,6 +33,13 @@
                 color: #e8e8ea;
                 border-bottom: 1px solid rgba(255,255,255,0.12);
                 z-index: 1000; /* above week headers */
+            }
+
+            #appNavigation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
             }
 
             /* Title */
@@ -220,6 +227,7 @@
                 <h1 id="stats-name">Pigskin Pick'em </h1>
                 <div id="appNavigation" style="display:flex; justify-content: center;">
                     <a class="back-link" href="leaderboardtemplate.html">⬅ Leaderboard</a>
+                    <a class="back-link" id="advanced-stats" href="advancedstats.html">Advanced Stats</a>
                 </div>
                 <div id="appNavigation" style="display:flex; justify-content: center;">
                     <a class="back-link" id="advanced-stats" href="advancedstats.html">Advanced Stats</a>
