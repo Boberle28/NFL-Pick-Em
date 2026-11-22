@@ -1516,6 +1516,7 @@ week18.AddGame(HOU, TEN);
 
   function PullUsersAndGetWins(snapshot){
 
+    players = {};
     console.log("In PullUsersAndGetWins");
     snapshot.forEach(doc => {
       console.log("In snapshot.forEach");
