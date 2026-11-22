@@ -358,6 +358,11 @@ function render() {
       });
     }
 
+    function refreshPageState()
+    {
+      buildLeaderboard();
+    }
+
     window.addEventListener("DOMContentLoaded", () => {
       onAuthStateChanged(auth, (user) => {
         if (user) {
