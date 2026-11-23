@@ -1692,6 +1692,7 @@ week18.AddGame(HOU, TEN);
       }
     }
 
+    let tied = false;
     let rankedAhead = 0;
     let rankedBehind = 0;
     for(let p of Object.values(players))
@@ -1708,6 +1709,9 @@ week18.AddGame(HOU, TEN);
             else if(points < p.weekAdvanced[week].favoritesWon + p.weekAdvanced[week].underdogPoints){
               rankedAhead++;
             }
+            else{
+              tied = true;
+            }
             break;
           }
           case sortByUnderdogWinP:{
@@ -1722,6 +1726,9 @@ week18.AddGame(HOU, TEN);
             else if(winP < winPP){
               rankedAhead++
             }
+            else{
+              tied = true;
+            }
             break;
           }
           case sortByWins:{
@@ -1733,12 +1740,19 @@ week18.AddGame(HOU, TEN);
             else if(rankedWins < rankedWinsP){
               rankedAhead++;
             }
+            else{
+              tied = true;
+            }
             break;
           }
         }
       }
     }
 
+    if(tied){
+      return "T" + String(rankedAhead + 1) + getOrdinalSuffix(rankedAhead + 1);
+    }
+    
     return String(rankedAhead + 1) + getOrdinalSuffix(rankedAhead + 1);
   }
 
