@@ -532,7 +532,7 @@ class Pair{
 
     LoadOdds(data){ 
 
-      ClearFavoriteAndUnderdogVariables();
+      this.ClearFavoriteAndUnderdogVariables();
       console.log("\n\nStart LoadOdds()");
       console.log(this.weeks[0]);
       console.log(data.week1);
