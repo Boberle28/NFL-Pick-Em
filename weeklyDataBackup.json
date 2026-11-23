@@ -1290,8 +1290,8 @@
         "away": "New York Jets",
         "homeMoneyline": -180,
         "awayMoneyline": 152,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 24,
+        "awayScore": 27
       },
       "Game 10": {
         "home": "Denver Broncos",
@@ -2226,7 +2226,7 @@
     },
     "Los Angeles Chargers": {
       "wins": 1,
-      "losses": 8,
+      "losses": 9,
       "ties": 0
     },
     "Kansas City Chiefs": {
@@ -2285,7 +2285,7 @@
       "ties": 0
     },
     "New York Jets": {
-      "wins": 2,
+      "wins": 3,
       "losses": 8,
       "ties": 0
     },
@@ -2310,7 +2310,7 @@
       "ties": 0
     },
     "Carolina Panthers": {
-      "wins": 4,
+      "wins": 5,
       "losses": 5,
       "ties": 0
     },
@@ -2361,7 +2361,7 @@
     },
     "Baltimore Ravens": {
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Chicago Bears": {

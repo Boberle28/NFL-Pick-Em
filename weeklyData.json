@@ -1274,8 +1274,8 @@
         "away": "Jacksonville Jaguars",
         "homeMoneyline": 205,
         "awayMoneyline": -250,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 23,
+        "awayScore": 18
       },
       "Game 8": {
         "home": "Carolina Panthers",
@@ -1298,8 +1298,8 @@
         "away": "Las Vegas Raiders",
         "homeMoneyline": -550,
         "awayMoneyline": 410,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 38,
+        "awayScore": 24
       },
       "Game 11": {
         "home": "Philadelphia Eagles",
@@ -2271,7 +2271,7 @@
     },
     "Las Vegas Raiders": {
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "New Orleans Saints": {
@@ -2315,7 +2315,7 @@
       "ties": 0
     },
     "Denver Broncos": {
-      "wins": 7,
+      "wins": 8,
       "losses": 2,
       "ties": 0
     },
