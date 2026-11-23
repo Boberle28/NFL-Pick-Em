@@ -331,11 +331,16 @@ function render() {
 
         let favoriteWinP = stat.favoritesPicked ? Number((stat.favoritesWon / stat.favoritesPicked) * 100).toFixed(2) : 0;
         let underdogWinP = stat.underdogsWon ? Number((stat.underdogsWon / stat.underdogsPicked) * 100).toFixed(2) : 0;
-        const weekstat = player.weekStats[weekNum - 1];
-        console.log("weekStat", weekStat);
-        weekstatWins += weekstat.wins;
-        const totalPointsPossible = Number(season.weeks[weekNum -1].underdogPoints + season.weeks[weekNum -1].favoritePoints).toFixed(2);
-
+        const weekstat = stat.favoritesWon = stat.underdogsWon;
+        weekstatWins += weekstat;
+        let totalPointsPossible = null;
+        if(weekNum < 19)
+        {
+            totalPointsPossible = Number(season.weeks[weekNum -1].underdogPoints + season.weeks[weekNum -1].favoritePoints).toFixed(2);
+        }
+        else {
+            totalPointsPossible = Number(season.favoriteWins + season.underdogPoints).toFixed(2);
+        }
         favoritesPicked += stat.favoritesPicked;
         favoritesWon += stat.favoritesWon;
         underdogsPicked += stat.underdogsPicked;
@@ -364,6 +369,7 @@ function render() {
         ++weekNum;
       }
 
+      /*
       let favoriteWinP = favoritesPicked ? Number((favoritesWon / favoritesPicked) * 100).toFixed(2) : 0;
       let underdogWinP = underdogsPicked ? Number((underdogsWon / underdogsPicked) * 100).toFixed(2) : 0;
       let totalPointsForSeason = Number(season.favoriteWins + season.underdogPoints).toFixed(2);
@@ -387,6 +393,7 @@ function render() {
         `;
 
         tbody.appendChild(row);
+        */
     }
 
     function refreshPageState()
