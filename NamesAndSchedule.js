@@ -1701,7 +1701,7 @@ week18.AddGame(HOU, TEN);
         switch(type)
         {
           case sortByPoints:{
-            const points = rankedPlayer.weekAdvanced[week].favoritesWon + weekAdvanced[week].underdogPoints;
+            const points = rankedPlayer.weekAdvanced[week].favoritesWon + rankedPlayer.weekAdvanced[week].underdogPoints;
             if(points > p.weekAdvanced[week].favoritesWon + p.weekAdvanced[week].underdogPoints){
               rankedBehind++;
             }
