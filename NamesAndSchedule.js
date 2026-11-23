@@ -1613,10 +1613,10 @@ week18.AddGame(HOU, TEN);
             const result = week.GetWinners(weekData.picks, weekAdvanced[weekNumber - 1]);
 
             weekAdvanced[18].favoritesPicked += weekAdvanced[weekNumber - 1].favoritesPicked;
-            weekAdvanced[18].underdogsPicked += weekAdvanced[weekNumber - 1],underdogsPicked;
-            weekAdvanced[18].favoritesWon += weekAdvanced[weekNumber - 1],favoritesWon;
-            weekAdvanced[18].underdogsWon += weekAdvanced[weekNumber - 1],underdogsWon;
-            weekAdvanced[18].underdogPoints += weekAdvanced[weekNumber - 1],underdogPoints;
+            weekAdvanced[18].underdogsPicked += weekAdvanced[weekNumber - 1].underdogsPicked;
+            weekAdvanced[18].favoritesWon += weekAdvanced[weekNumber - 1].favoritesWon;
+            weekAdvanced[18].underdogsWon += weekAdvanced[weekNumber - 1].underdogsWon;
+            weekAdvanced[18].underdogPoints += weekAdvanced[weekNumber - 1].underdogPoints;
             
             console.log(`Week ${weekNumber}: result.wins = ${result.wins}, result.points = ${result.points}`);
             let winPct = result.wins + result.losses > 0 ? result.wins / (result.wins + result.losses) : 0;
