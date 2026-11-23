@@ -315,7 +315,14 @@ function render() {
             player = p;
         }
       }
-                
+      
+      let favoritesPicked = 0;
+      let favoritesWon = 0;
+      let underdogsPicked = 0;
+      let underdogsWon = 0;
+      let underdogPoints = 0;
+      let weekstatWins = 0;
+
       console.log("player", player);
       for (let stat of Object.values(player.weekAdvanced)){
         const row = document.createElement("tr");
@@ -323,7 +330,14 @@ function render() {
         let favoriteWinP = stat.favoritesPicked ? Number((stat.favoritesWon / stat.favoritesPicked) * 100).toFixed(2) : 0;
         let underdogWinP = stat.underdogsWon ? Number((stat.underdogsWon / stat.underdogsPicked) * 100).toFixed(2) : 0;
         const weekstat = player.weekStats[weekNum - 1];
+        weekstatWins += weekstat.wins;
         const totalPointsPossible = Number(season.weeks[weekNum -1].underdogPoints + season.weeks[weekNum -1].favoritePoints).toFixed(2);
+
+        favoritesPicked += stat.favoritesPicked;
+        favoritesWon += stat.favoritesWon;
+        underdogsPicked += stat.underdogsPicked;
+        underdogsWon += stat.underdogsWon;
+        underdogPoints += stat.underdogPoints;
 
         row.innerHTML = `
           <td data-label="Week" class="userrow">Week ${weekNum}</td>
@@ -343,6 +357,28 @@ function render() {
         tbody.appendChild(row);
         ++weekNum;
       }
+
+      let favoriteWinP = favoritesPicked ? Number((favoritesWon / favoritesPicked) * 100).toFixed(2) : 0;
+      let underdogWinP = underdogsPicked ? Number((underdogsWon / underdogsPicked) * 100).toFixed(2) : 0;
+      let totalPointsForSeason = Number(season.favoriteWins + season.underdogPoints).toFixed(2);
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+          <td data-label="Week" class="userrow">Total</td>
+          <td data-label="Total Wins">${weekstatWins}</td>
+          <td data-label="Favorites Picked">${favoritesPicked}</td>
+          <td data-label="Favorites Won">${favoritesWon}</td>
+          <td data-label="Favorite Win Percent">${favoriteWinP}%</td>
+          <td data-label="Underdogs Picked">${underdogsPicked}</td>
+          <td data-label="Underdogs Won">${underdogsWon}</td>
+          <td data-label="Underdog Win Percent">${underdogWinP}%</td>
+          <td data-label="Underdog Points">${Number(underdogPoints).toFixed(2)}</td>
+          <td data-label="Total Points">${Number(favoritesWon + underdogPoints).toFixed(2)}</td>
+          <td data-label="Total Possible Points">${totalPointsForSeason}</td>
+          <td data-label="Rank">--</td>
+        `;
+
+        tbody.appendChild(row);
     }
 
     function refreshPageState()
