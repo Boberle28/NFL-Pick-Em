@@ -332,7 +332,7 @@ function render() {
 
         let favoriteWinP = stat.favoritesPicked ? Number((stat.favoritesWon / stat.favoritesPicked) * 100).toFixed(2) : 0;
         let underdogWinP = stat.underdogsWon ? Number((stat.underdogsWon / stat.underdogsPicked) * 100).toFixed(2) : 0;
-        const weekstat = stat.favoritesWon = stat.underdogsWon;
+        const weekstat = stat.favoritesWon + stat.underdogsWon;
         weekstatWins += weekstat;
         let totalPointsPossible = null;
         if(weekNum < 19)
@@ -351,7 +351,7 @@ function render() {
 
         row.innerHTML = `
           <td data-label="Week" class="userrow">${weekDisplay}</td>
-          <td data-label="Total Wins">${weekstat.wins}</td>
+          <td data-label="Total Wins">${weekstat}</td>
           <td data-label="Favorites Picked">${stat.favoritesPicked}</td>
           <td data-label="Favorites Won">${stat.favoritesWon}</td>
           <td data-label="Favorite Win Percent">${favoriteWinP}%</td>
