@@ -1750,9 +1750,10 @@ week18.AddGame(HOU, TEN);
     }
 
     if(tied){
+      console.log("tied var is True!!!!!!!!!!!!!!!PPPPPPPPPPPPPPPPPPPP");
       return "T" + String(rankedAhead + 1) + getOrdinalSuffix(rankedAhead + 1);
     }
-    
+
     return String(rankedAhead + 1) + getOrdinalSuffix(rankedAhead + 1);
   }
 
