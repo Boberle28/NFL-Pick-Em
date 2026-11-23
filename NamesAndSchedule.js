@@ -410,6 +410,14 @@ class Pair{
 
       return undefined;
     }
+
+    ClearFavoriteAndUnderdogVariables(){
+      this.numOfFavorites = 0;
+      this.favoriteWins = 0;
+      this.favoritePoints = 0;
+      this.underdogWins = 0;
+      this.underdogPoints = 0;
+    }
   }
 
   class Season
@@ -514,11 +522,40 @@ class Pair{
       this.underdogPoints += week.underdogPoints;
     }
 
+    ClearFavoriteAndUnderdogVariables(){
+      this.numOfFavorites = 0;
+      this.favoriteWins = 0;
+      this.favoritePoints = 0;
+      this.underdogWins = 0;
+      this.underdogPoints = 0;
+    }
+
     LoadOdds(data){ 
 
+      ClearFavoriteAndUnderdogVariables();
       console.log("\n\nStart LoadOdds()");
       console.log(this.weeks[0]);
       console.log(data.week1);
+
+      this.weeks[0].ClearFavoriteAndUnderdogVariables();
+      this.weeks[1].ClearFavoriteAndUnderdogVariables();
+      this.weeks[2].ClearFavoriteAndUnderdogVariables();
+      this.weeks[3].ClearFavoriteAndUnderdogVariables();
+      this.weeks[4].ClearFavoriteAndUnderdogVariables();
+      this.weeks[5].ClearFavoriteAndUnderdogVariables();
+      this.weeks[6].ClearFavoriteAndUnderdogVariables();
+      this.weeks[7].ClearFavoriteAndUnderdogVariables();
+      this.weeks[8].ClearFavoriteAndUnderdogVariables();
+      this.weeks[9].ClearFavoriteAndUnderdogVariables();
+      this.weeks[10].ClearFavoriteAndUnderdogVariables();
+      this.weeks[11].ClearFavoriteAndUnderdogVariables();
+      this.weeks[12].ClearFavoriteAndUnderdogVariables();
+      this.weeks[13].ClearFavoriteAndUnderdogVariables();
+      this.weeks[14].ClearFavoriteAndUnderdogVariables();
+      this.weeks[15].ClearFavoriteAndUnderdogVariables();
+      this.weeks[16].ClearFavoriteAndUnderdogVariables();
+      this.weeks[17].ClearFavoriteAndUnderdogVariables();
+
       this.LoadWeekOdds(this.weeks[0], data.week1);
       this.LoadWeekOdds(this.weeks[1], data.week2);
       this.LoadWeekOdds(this.weeks[2], data.week3);
