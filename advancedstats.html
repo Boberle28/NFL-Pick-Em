@@ -175,7 +175,7 @@ a {
 <body>
   <div class="header-meta">
         <h1 id="stats-name">Pigskin Pick'em </h1>
-        <a class="back-link" href="userstatstemplate.html">⬅ Back to User Stats</a>
+        <a class="back-link" id="back-link" href="userstatstemplate.html">⬅ Back to User Stats</a>
     </div>
 <main class="wrap">
   <div class="card">
@@ -286,6 +286,9 @@ function render() {
 
         season.LoadOdds(data.weeks)
         season.LoadOddsPreseason(predata);
+
+        const elem = document.getElementById("back-link");
+        elem.href = `userstatstemplate.html?user=${username}`;
 
         const picksRef = collection(db, "picks");
         const snapshot = await getDocs(picksRef);
