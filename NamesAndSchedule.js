@@ -1715,7 +1715,7 @@ week18.AddGame(HOU, TEN);
             const underdogsPickedP = p.weekAdvanced[week].underdogsPicked;
 
             const winP = underdogsPicked ? rankedPlayer.weekAdvanced[week].underdogsWon / underdogsPicked : 0;
-            const winPP = underdogsPickedP ? p.p.weekAdvanced[week].underdogsWon / underdogsPickedP : 0;
+            const winPP = underdogsPickedP ? p.weekAdvanced[week].underdogsWon / underdogsPickedP : 0;
             if(winP > winPP){
               rankedBehind++;
             }
