@@ -340,9 +340,10 @@ function render() {
         underdogsPicked += stat.underdogsPicked;
         underdogsWon += stat.underdogsWon;
         underdogPoints += stat.underdogPoints;
+        const weekDisplay = weekNum < 19 ? `Week ${weekNum}` : "Total";
 
         row.innerHTML = `
-          <td data-label="Week" class="userrow">Week ${weekNum}</td>
+          <td data-label="Week" class="userrow">${weekDisplay}</td>
           <td data-label="Total Wins">${weekstat.wins}</td>
           <td data-label="Favorites Picked">${stat.favoritesPicked}</td>
           <td data-label="Favorites Won">${stat.favoritesWon}</td>
