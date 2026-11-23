@@ -1463,6 +1463,7 @@ week18.AddGame(HOU, TEN);
   let weekAdvancedStats = {}
   let playersStats = { wins: 0, points: 0, picksMade: 0 };
   let players = {};
+  let playersSorted = {};
   let perfectPlayer = {};
 
   /*
@@ -1583,6 +1584,9 @@ week18.AddGame(HOU, TEN);
           weekStats.push({ wins: 0, points: 0, pct: 0, weekPicks: null});
           weekAdvanced.push({ favoritesPicked: 0, underdogsPicked: 0, favoritesWon: 0, underdogsWon: 0, underdogPoints: 0 });
         }
+
+        // Add one more weekAdvanced element for the total
+        weekAdvanced.push({ favoritesPicked: 0, underdogsPicked: 0, favoritesWon: 0, underdogsWon: 0, underdogPoints: 0 });
       }
 
       // We call this first to make sure weekStats is filled with 18 weeks just in case they have no picks for any weeks
@@ -1607,6 +1611,13 @@ week18.AddGame(HOU, TEN);
           
           if(week !== undefined){
             const result = week.GetWinners(weekData.picks, weekAdvanced[weekNumber - 1]);
+
+            weekAdvanced[18].favoritesPicked += weekAdvanced[weekNumber - 1].favoritesPicked;
+            weekAdvanced[18].underdogsPicked += weekAdvanced[weekNumber - 1],underdogsPicked;
+            weekAdvanced[18].favoritesWon += weekAdvanced[weekNumber - 1],favoritesWon;
+            weekAdvanced[18].underdogsWon += weekAdvanced[weekNumber - 1],underdogsWon;
+            weekAdvanced[18].underdogPoints += weekAdvanced[weekNumber - 1],underdogPoints;
+            
             console.log(`Week ${weekNumber}: result.wins = ${result.wins}, result.points = ${result.points}`);
             let winPct = result.wins + result.losses > 0 ? result.wins / (result.wins + result.losses) : 0;
             weekStats[weekNumber - 1] = {wins: result.wins, points: result.points, pct: winPct, weekPicks: weekData.picks};
@@ -1653,9 +1664,82 @@ week18.AddGame(HOU, TEN);
       return players;
   }
 
-  function advancedStats()
+  function getOrdinalSuffix(day) {
+    if (day >= 11 && day <= 13) return "th";
+    switch (day % 10) {
+      case 1: return "st";
+      case 2: return "nd";
+      case 3: return "rd";
+      default: return "th";
+    }
+  }
+
+  function advancedStats(username, type, week)
   {
-    
+    playersSorted = {};
+    playersSorted = players;
+
+    const sortByPoints = 1;
+    const sortByUnderdogWinP = 2;
+    const sortByWins = 3;
+
+    let rankedPlayer = null;
+
+    // Find player that is getting ranked
+    for (let p of Object.values(players)){
+      if(p.username == username){
+        rankedPlayer = p;
+      }
+    }
+
+    let rankedAhead = 0;
+    let rankedBehind = 0;
+    for(let p of Object.values(players))
+    {
+      if(p !== rankedPlayer)
+      {
+        switch(type)
+        {
+          case sortByPoints:{
+            const points = rankedPlayer.weekAdvanced[week].favoritesWon + weekAdvanced[week].underdogPoints;
+            if(points > p.weekAdvanced[week].favoritesWon + p.weekAdvanced[week].underdogPoints){
+              rankedBehind++;
+            }
+            else if(points < p.weekAdvanced[week].favoritesWon + p.weekAdvanced[week].underdogPoints){
+              rankedAhead++;
+            }
+            break;
+          }
+          case sortByUnderdogWinP:{
+            const underdogsPicked = rankedPlayer.weekAdvanced[week].underdogsPicked;
+            const underdogsPickedP = p.weekAdvanced[week].underdogsPicked;
+
+            const winP = underdogsPicked ? rankedPlayer.weekAdvanced[week].underdogsWon / underdogsPicked : 0;
+            const winPP = underdogsPickedP ? p.p.weekAdvanced[week].underdogsWon / underdogsPickedP : 0;
+            if(winP > winPP){
+              rankedBehind++;
+            }
+            else if(winP < winPP){
+              rankedAhead++
+            }
+            break;
+          }
+          case sortByWins:{
+            const rankedWins = rankedPlayer.weekAdvanced[week].favoritesWon + rankedPlayer.weekAdvanced[week].underdogsWon;
+            const rankedWinsP = p.weekAdvanced[week].favoritesWon + p.weekAdvanced[week].underdogsWon
+            if(rankedWins > rankedWinsP){
+              rankedBehind++
+            }
+            else if(rankedWins < rankedWinsP){
+              rankedAhead++;
+            }
+            break;
+          }
+        }
+      }
+    }
+
+    return String(rankedAhead + 1) + getOrdinalSuffix(rankedAhead + 1);
   }
 
   function getCurrentWeek(currentDate) {
@@ -1773,16 +1857,6 @@ week18.AddGame(HOU, TEN);
       const record = records[teamCode]; // This gives you the { wins, losses, ties }
 
       NFLteams[i].updateRecords(record.wins, record.losses, record.ties);
-    }
-  }
-
-  function getOrdinalSuffix(day) {
-    if (day >= 11 && day <= 13) return "th";
-    switch (day % 10) {
-      case 1: return "st";
-      case 2: return "nd";
-      case 3: return "rd";
-      default: return "th";
     }
   }
 

@@ -351,7 +351,9 @@ function render() {
           <td data-label="Underdog Points">${Number(stat.underdogPoints).toFixed(2)}</td>
           <td data-label="Total Points">${Number(stat.favoritesWon + stat.underdogPoints).toFixed(2)}</td>
           <td data-label="Total Possible Points">${totalPointsPossible}</td>
-          <td data-label="Rank">--</td>
+          <td data-label="Points Rank">${advancedStats(username, 1, weekNum - 1)}</td>
+          <td data-label="Wins Rank">${advancedStats(username, 3, weekNum - 1)}</td>
+          <td data-label="Underdog Win Percent Rank">${advancedStats(username, 2, weekNum - 1)}</td>
         `;
 
         tbody.appendChild(row);
@@ -375,7 +377,9 @@ function render() {
           <td data-label="Underdog Points">${Number(underdogPoints).toFixed(2)}</td>
           <td data-label="Total Points">${Number(favoritesWon + underdogPoints).toFixed(2)}</td>
           <td data-label="Total Possible Points">${totalPointsForSeason}</td>
-          <td data-label="Rank">--</td>
+          <td data-label="Points Rank">${advancedStats(username, 1, 18)}</td>
+          <td data-label="Wins Rank">${advancedStats(username, 3, 18)}</td>
+          <td data-label="Underdog Win Percent Rank">${advancedStats(username, 2, 18)}</td>
         `;
 
         tbody.appendChild(row);
