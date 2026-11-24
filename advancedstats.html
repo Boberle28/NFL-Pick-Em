@@ -330,7 +330,7 @@ function render() {
 
       const now = new Date();
       const currentWeek = getCurrentWeek(now);
-      bettingTarget = isBettingWindowOpen(now);
+      let bettingTarget = isBettingWindowOpen(now);
 
       for (let stat of Object.values(player.weekAdvanced)){
         const row = document.createElement("tr");
