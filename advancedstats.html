@@ -371,6 +371,11 @@ function render() {
                 underdogWinPrank = advancedStats(username, 2, weekNum - 1);
             }
         }
+        else{
+            pointsRank = advancedStats(username, 1, weekNum - 1);
+            winsRank = advancedStats(username, 3, weekNum - 1);
+            underdogWinPrank = advancedStats(username, 2, weekNum - 1);
+        }
 
         row.innerHTML = `
           <td data-label="Week" class="userrow">${weekDisplay}</td>
