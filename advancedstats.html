@@ -327,6 +327,11 @@ function render() {
       let weekstatWins = 0;
 
       console.log("player", player);
+
+      const now = new Date();
+      const currentWeek = getCurrentWeek(now);
+      bettingTarget = isBettingWindowOpen(now);
+
       for (let stat of Object.values(player.weekAdvanced)){
         const row = document.createElement("tr");
 
@@ -349,6 +354,24 @@ function render() {
         underdogPoints += stat.underdogPoints;
         const weekDisplay = weekNum < 19 ? `Week ${weekNum}` : "Total";
 
+        let pointsRank = "--";
+        let winsRank = "--";
+        let underdogWinPrank = "--";
+        if(currentWeek){
+            if(currentWeek.week >= weekNum || weekNum > 18){
+                pointsRank = advancedStats(username, 1, weekNum - 1);
+                winsRank = advancedStats(username, 3, weekNum - 1);
+                underdogWinPrank = advancedStats(username, 2, weekNum - 1);
+            }
+        }
+        else if (bettingTarget){
+            if(bettingTarget.week > weekNum || weekNum > 18){
+                pointsRank = advancedStats(username, 1, weekNum - 1);
+                winsRank = advancedStats(username, 3, weekNum - 1);
+                underdogWinPrank = advancedStats(username, 2, weekNum - 1);
+            }
+        }
+
         row.innerHTML = `
           <td data-label="Week" class="userrow">${weekDisplay}</td>
           <td data-label="Total Wins">${weekstat}</td>
@@ -361,9 +384,9 @@ function render() {
           <td data-label="Underdog Points">${Number(stat.underdogPoints).toFixed(2)}</td>
           <td data-label="Total Points">${Number(stat.favoritesWon + stat.underdogPoints).toFixed(2)}</td>
           <td data-label="Total Possible Points">${totalPointsPossible}</td>
-          <td data-label="Points Rank">${advancedStats(username, 1, weekNum - 1)}</td>
-          <td data-label="Wins Rank">${advancedStats(username, 3, weekNum - 1)}</td>
-          <td data-label="Underdog Win Percent Rank">${advancedStats(username, 2, weekNum - 1)}</td>
+          <td data-label="Points Rank">${pointsRank}</td>
+          <td data-label="Wins Rank">${winsRank}</td>
+          <td data-label="Underdog Win Percent Rank">${underdogWinPrank}</td>
         `;
 
         tbody.appendChild(row);
