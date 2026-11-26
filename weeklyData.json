@@ -1340,8 +1340,8 @@
         "away": "Chicago Bears",
         "homeMoneyline": 112,
         "awayMoneyline": -132,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 35,
+        "awayScore": 39
       },
       "Game 3": {
         "home": "Dallas Cowboys",
