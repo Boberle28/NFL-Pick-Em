@@ -1348,16 +1348,16 @@
         "away": "Philadelphia Eagles",
         "homeMoneyline": -460,
         "awayMoneyline": 360,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 38,
+        "awayScore": 39
       },
       "Game 4": {
         "home": "Buffalo Bills",
         "away": "Kansas City Chiefs",
         "homeMoneyline": -154,
         "awayMoneyline": 132,
-        "homeScore": -1,
-        "awayScore": -1
+        "homeScore": 13,
+        "awayScore": 10
       },
       "Game 5": {
         "home": "Pittsburgh Steelers",
@@ -2215,13 +2215,13 @@
   },
   "teams": {
     "Philadelphia Eagles": {
-      "wins": 3,
+      "wins": 4,
       "losses": 7,
       "ties": 0
     },
     "Dallas Cowboys": {
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0
     },
     "Los Angeles Chargers": {
