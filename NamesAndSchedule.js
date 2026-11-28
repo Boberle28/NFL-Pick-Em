@@ -1347,8 +1347,8 @@ week13.AddGame(PIT, HOU);
 week13.AddGame(SEA, DAL);
 */
 
-let week13 = new Week(13, "1900-01-02T01:15:00Z", "2026-12-08T01:15:00Z");
-week13.AddGame(LAR, KC, "1900-01-02T01:15:00Z");
+let week13 = new Week(13, "2026-12-04T01:15:00Z", "2026-12-08T01:15:00Z");
+week13.AddGame(LAR, KC, "2026-12-04T01:15:00Z");
 week13.AddGame(ATL, DET, "2026-12-06T18:00:00Z");
 week13.AddGame(CHI, JAX, "2026-12-06T18:00:00Z");
 week13.AddGame(CLE, CIN, "2026-12-06T18:00:00Z");
